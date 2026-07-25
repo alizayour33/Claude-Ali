@@ -32,6 +32,22 @@ npm install
 npm start           # http://localhost:3000
 ```
 
+**لا يحتاج المشروع أي مترجم أو أدوات بناء.** قاعدة البيانات تعمل عبر `node:sqlite` المدمجة في
+نود ٢٢٫٥ أو أحدث. وإن كانت حزمة `better-sqlite3` (اختيارية) مثبّتة ومبنية بنجاح فسيستخدمها
+تلقائياً؛ وإن فشل بناؤها فلا يتوقّف التثبيت ولا التشغيل. السطر المطبوع عند الإقلاع يوضّح المحرّك
+المستخدم، ويمكن إجباره بـ`MANHAJ_SQLITE_DRIVER=node` أو `=better`.
+
+### على ويندوز (PowerShell)
+
+```powershell
+npm.cmd install     # npm.cmd تتجاوز منع تشغيل السكربتات في PowerShell
+npm.cmd start
+```
+
+إن ظهرت رسالة `running scripts is disabled on this system` فاستخدم `npm.cmd` كما أعلاه،
+أو نفّذ الأوامر في Command Prompt، أو اسمح بالسكربتات لمستخدمك:
+`Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned`.
+
 عند أول تشغيل تُنشأ قاعدة البيانات وتُهيَّأ ١٢ مستوى (أعمار ٦ إلى ١٧) بـ**٣٦٠٠ حصة**، مع أمثلة محتوى
 في المستوى الأول، وحسابان:
 
@@ -61,6 +77,7 @@ npm run reset   # حذف كل المناهج ثم إعادة التهيئة (ل�
 | `ADMIN_USER` / `ADMIN_PASSWORD` / `ADMIN_NAME` | `admin` / `admin12345` | حساب المشرف الأول |
 | `COOKIE_SECURE` | `0` | اجعله `1` عند العمل خلف HTTPS |
 | `NO_DEMO_STUDENT` | `0` | `1` لمنع إنشاء الحساب التجريبي |
+| `MANHAJ_SQLITE_DRIVER` | `auto` | `node` لإجبار sqlite المدمجة، `better` لإجبار better-sqlite3 |
 
 ---
 
@@ -108,7 +125,7 @@ npm run reset   # حذف كل المناهج ثم إعادة التهيئة (ل�
 ```
 server/
   index.js        تهيئة Express والمسارات ومعالجة الأخطاء
-  db.js           SQLite: المخطط والمجلدات
+  db.js           SQLite: اختيار المحرّك (node:sqlite أو better-sqlite3) والمخطط والمجلدات
   auth.js         تشفير كلمات المرور (scrypt) وجلسات الكوكيز والصلاحيات
   curriculum.js   توزيع الساعات على المواد وتوليد الجداول وإحصاءات السنة
   seed.js         البيانات الأوّلية (١٢ مستوى + أمثلة محتوى)
@@ -169,6 +186,9 @@ any mix of PDF, Office documents, video, audio, images, interactive **SCORM 1.2/
 packages, rich text, HTML and external links (YouTube/Vimeo auto-embed). Student progress,
 time-on-task and SCORM scores are tracked per user; staff get per-student reports.
 
-Stack: Node.js + Express + SQLite (`better-sqlite3`), no frontend build step (plain ES
-modules), installable as a PWA. Run `npm install && npm start`, then sign in as `admin` /
-`admin12345`. Tests: `npm test`.
+Stack: Node.js + Express + SQLite, no frontend build step (plain ES modules), installable
+as a PWA. **No native compilation required**: it uses the built-in `node:sqlite` module
+(Node 22.5+), falling back to it automatically when the optional `better-sqlite3` package
+isn't built. Run `npm install && npm start` (on Windows PowerShell: `npm.cmd install`),
+then sign in as `admin` / `admin12345`. Tests: `npm test` — the suite runs green on both
+drivers.

@@ -5,7 +5,7 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const multer = require('multer');
 
-const { db } = require('./db');
+const { db, driver } = require('./db');
 const { attachUser } = require('./auth');
 const { HttpError } = require('./util');
 const { ensureSeed } = require('./seed');
@@ -81,7 +81,7 @@ app.use((err, _req, res, _next) => {
 if (require.main === module) {
   ensureSeed();
   app.listen(PORT, '0.0.0.0', () => {
-    console.log(`منهاج يعمل على http://localhost:${PORT}`);
+    console.log(`منهاج يعمل على http://localhost:${PORT}  (SQLite: ${driver})`);
   });
 }
 

@@ -13,13 +13,15 @@
     "test": "node --test \"tests/**/*.test.js\""
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=22.5 (or >=18 with better-sqlite3 installed)"
   },
   "dependencies": {
     "adm-zip": "^0.6.0",
-    "better-sqlite3": "^11.10.0",
     "cookie-parser": "^1.4.7",
     "express": "^4.21.2",
     "multer": "^2.0.1"
+  },
+  "optionalDependencies": {
+    "better-sqlite3": "^12.11.1"
   }
 }

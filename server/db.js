@@ -2,7 +2,6 @@
 
 const fs = require('fs');
 const path = require('path');
-const Database = require('better-sqlite3');
 
 const DATA_DIR = process.env.DATA_DIR
   ? path.resolve(process.env.DATA_DIR)
@@ -16,9 +15,104 @@ for (const dir of [DATA_DIR, UPLOAD_DIR, SCORM_DIR, TMP_DIR]) {
   fs.mkdirSync(dir, { recursive: true });
 }
 
-const db = new Database(path.join(DATA_DIR, 'manhaj.db'));
-db.pragma('journal_mode = WAL');
-db.pragma('foreign_keys = ON');
+/**
+ * يغلّف sqlite المدمجة في نود (node:sqlite) بواجهة better-sqlite3 نفسها،
+ * حتى يعمل التطبيق دون أي مكوّن يحتاج مترجم C++ على جهاز المستخدم.
+ */
+function adaptNodeSqlite(raw) {
+  const isNamedParams = (args) =>
+    args.length === 1 &&
+    args[0] !== null &&
+    typeof args[0] === 'object' &&
+    !Array.isArray(args[0]) &&
+    !Buffer.isBuffer(args[0]);
+
+  const prepare = (sql) => {
+    const stmt = raw.prepare(sql);
+    const call = (method, args) => (isNamedParams(args) ? stmt[method](args[0]) : stmt[method](...args));
+    return {
+      get: (...args) => call('get', args) ?? undefined,
+      all: (...args) => call('all', args),
+      run: (...args) => {
+        const result = call('run', args);
+        return { changes: Number(result.changes), lastInsertRowid: Number(result.lastInsertRowid) };
+      },
+    };
+  };
+
+  let depth = 0; // المعاملات المتداخلة تُنفَّذ داخل المعاملة الخارجية
+  const transaction = (fn) => (...args) => {
+    if (depth > 0) return fn(...args);
+    depth++;
+    raw.exec('BEGIN');
+    try {
+      const out = fn(...args);
+      raw.exec('COMMIT');
+      return out;
+    } catch (err) {
+      try {
+        raw.exec('ROLLBACK');
+      } catch {
+        /* المعاملة أُلغيت أصلاً */
+      }
+      throw err;
+    } finally {
+      depth--;
+    }
+  };
+
+  return {
+    exec: (sql) => raw.exec(sql),
+    prepare,
+    transaction,
+    close: () => raw.close(),
+  };
+}
+
+/**
+ * يفضّل better-sqlite3 إن كان مبنياً على الجهاز (أسرع قليلاً ومتوافق مع نود ١٨)،
+ * وإلا يستخدم node:sqlite المدمجة (نود ٢٢٫٥ أو أحدث) دون الحاجة لأي تجهيز.
+ * يمكن الإجبار عبر MANHAJ_SQLITE_DRIVER=better|node
+ */
+function openDatabase(file) {
+  const preference = process.env.MANHAJ_SQLITE_DRIVER || 'auto';
+
+  if (preference !== 'node') {
+    try {
+      const Database = require('better-sqlite3');
+      return { db: new Database(file), driver: 'better-sqlite3' };
+    } catch (err) {
+      if (preference === 'better') throw err;
+    }
+  }
+
+  // كتم تنبيه «SQLite تجريبية» فقط، دون التأثير على بقية التنبيهات
+  const emitWarning = process.emitWarning;
+  process.emitWarning = (warning, ...rest) => {
+    const text = String(warning);
+    const type = typeof warning === 'object' && warning !== null ? warning.name : rest[0];
+    if (String(type).includes('ExperimentalWarning') && text.includes('SQLite')) return;
+    return emitWarning.call(process, warning, ...rest);
+  };
+  try {
+    let DatabaseSync;
+    try {
+      ({ DatabaseSync } = require('node:sqlite'));
+    } catch {
+      throw new Error(
+        'لا يوجد محرّك SQLite: حدِّث نود إلى الإصدار ٢٢٫٥ أو أحدث، أو ثبّت better-sqlite3.\n' +
+          'No SQLite driver available: upgrade Node.js to 22.5+ or install better-sqlite3.'
+      );
+    }
+    return { db: adaptNodeSqlite(new DatabaseSync(file)), driver: 'node:sqlite' };
+  } finally {
+    process.emitWarning = emitWarning;
+  }
+}
+
+const { db, driver } = openDatabase(path.join(DATA_DIR, 'manhaj.db'));
+db.exec('PRAGMA journal_mode = WAL');
+db.exec('PRAGMA foreign_keys = ON');
 
 db.exec(`
 CREATE TABLE IF NOT EXISTS users (
@@ -128,4 +222,4 @@ CREATE TABLE IF NOT EXISTS scorm_tracking (
 );
 `);
 
-module.exports = { db, DATA_DIR, UPLOAD_DIR, SCORM_DIR, TMP_DIR };
+module.exports = { db, driver, DATA_DIR, UPLOAD_DIR, SCORM_DIR, TMP_DIR };
