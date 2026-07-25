@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>مشغّل المحتوى التفاعلي — منهاج</title>
+  <style>
+    :root { color-scheme: light dark; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; font-family: "Segoe UI", "Noto Kufi Arabic", Tahoma, system-ui, sans-serif; background: #10201a; color: #eaf1ec; }
+    body { display: flex; flex-direction: column; }
+    header {
+      display: flex; align-items: center; gap: .5rem; padding: .45rem .6rem;
+      background: #0f3d2e; font-size: .85rem; flex: none;
+    }
+    header strong { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    header .status { background: rgba(255,255,255,.14); border-radius: 999px; padding: .1rem .55rem; font-size: .75rem; white-space: nowrap; }
+    button {
+      font: inherit; cursor: pointer; border: 0; border-radius: 8px; padding: .3rem .6rem;
+      background: rgba(255,255,255,.16); color: #fff;
+    }
+    #frame { flex: 1; width: 100%; border: 0; background: #fff; }
+    .msg { padding: 1.2rem; text-align: center; }
+    a { color: #8fd6b3; }
+  </style>
+</head>
+<body>
+  <header>
+    <strong id="title">جارٍ التحميل…</strong>
+    <span class="status" id="status">—</span>
+    <button type="button" id="save">حفظ التقدّم</button>
+  </header>
+  <div class="msg" id="msg" hidden></div>
+  <iframe id="frame" title="محتوى تفاعلي" allow="autoplay; fullscreen; microphone; camera" allowfullscreen hidden></iframe>
+
+  <script>
+  (() => {
+    'use strict';
+    const params = new URLSearchParams(location.search);
+    const resourceId = params.get('resource');
+    const titleEl = document.getElementById('title');
+    const statusEl = document.getElementById('status');
+    const msgEl = document.getElementById('msg');
+    const frame = document.getElementById('frame');
+
+    const fail = (text) => {
+      msgEl.hidden = false;
+      msgEl.innerHTML = text;
+      titleEl.textContent = 'تعذّر التشغيل';
+    };
+    if (!resourceId) return fail('لم يُحدَّد المرفق المطلوب.');
+
+    /* ------------------------- نموذج بيانات SCORM ------------------------- */
+    const startedAt = Date.now();
+    let dirty = false;
+    let lastError = '0';
+
+    const cmi = {
+      'cmi.core.student_id': '',
+      'cmi.core.student_name': '',
+      'cmi.core.lesson_location': '',
+      'cmi.core.lesson_status': 'not attempted',
+      'cmi.core.credit': 'credit',
+      'cmi.core.entry': 'ab-initio',
+      'cmi.core.lesson_mode': 'normal',
+      'cmi.core.score.raw': '',
+      'cmi.core.score.min': '0',
+      'cmi.core.score.max': '100',
+      'cmi.core.total_time': '0000:00:00',
+      'cmi.core.session_time': '00:00:00',
+      'cmi.suspend_data': '',
+      'cmi.launch_data': '',
+      'cmi.comments': '',
+      'cmi.student_data.mastery_score': '',
+      'cmi.completion_status': 'not attempted',
+      'cmi.success_status': 'unknown',
+      'cmi.score.raw': '',
+      'cmi.score.min': '0',
+      'cmi.score.max': '100',
+      'cmi.score.scaled': '',
+      'cmi.location': '',
+      'cmi.total_time': 'PT0H0M0S',
+      'cmi.session_time': 'PT0H0M0S',
+      'cmi.exit': '',
+      'cmi.mode': 'normal',
+      'cmi.credit': 'credit',
+      'cmi.entry': 'ab-initio',
+      'cmi.learner_id': '',
+      'cmi.learner_name': '',
+    };
+
+    const STATUS_LABEL = {
+      passed: 'ناجح ✔', completed: 'مكتمل ✔', failed: 'غير ناجح ✖',
+      incomplete: 'لم يكتمل ⏳', browsed: 'تمت المشاهدة 👁', 'not attempted': 'لم يبدأ',
+    };
+    const setStatusLabel = (status) => {
+      statusEl.textContent = STATUS_LABEL[status] || status || '—';
+    };
+
+    /** الحالة الموحّدة المُرسلة للسيرفر (تدعم 1.2 و2004). */
+    const unifiedStatus = () => {
+      const twelve = String(cmi['cmi.core.lesson_status'] || '').toLowerCase();
+      if (twelve && twelve !== 'not attempted') return twelve;
+      const success = String(cmi['cmi.success_status'] || '').toLowerCase();
+      if (success === 'passed' || success === 'failed') return success;
+      const completion = String(cmi['cmi.completion_status'] || '').toLowerCase();
+      if (completion === 'completed') return 'completed';
+      if (completion === 'incomplete') return 'incomplete';
+      return twelve || 'not attempted';
+    };
+
+    const pad = (n) => String(n).padStart(2, '0');
+    const totalTimeString = () => {
+      const seconds = Math.round((Date.now() - startedAt) / 1000);
+      return `${String(Math.floor(seconds / 3600)).padStart(4, '0')}:${pad(Math.floor((seconds % 3600) / 60))}:${pad(seconds % 60)}`;
+    };
+
+    async function commit() {
+      const payload = {
+        lesson_status: unifiedStatus(),
+        score_raw: cmi['cmi.core.score.raw'] || cmi['cmi.score.raw'] || '',
+        score_min: cmi['cmi.core.score.min'] || cmi['cmi.score.min'] || 0,
+        score_max: cmi['cmi.core.score.max'] || cmi['cmi.score.max'] || 100,
+        total_time: totalTimeString(),
+        location: cmi['cmi.core.lesson_location'] || cmi['cmi.location'] || '',
+        suspend_data: cmi['cmi.suspend_data'] || '',
+      };
+      try {
+        const res = await fetch(`/api/scorm/${resourceId}/tracking`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          credentials: 'same-origin',
+          body: JSON.stringify(payload),
+        });
+        if (!res.ok) throw new Error('فشل الحفظ');
+        dirty = false;
+        setStatusLabel(payload.lesson_status);
+        return true;
+      } catch {
+        statusEl.textContent = 'لم يُحفظ (سجّل الدخول؟)';
+        return false;
+      }
+    }
+
+    document.getElementById('save').addEventListener('click', commit);
+
+    let commitTimer = null;
+    const scheduleCommit = () => {
+      dirty = true;
+      clearTimeout(commitTimer);
+      commitTimer = setTimeout(commit, 1500);
+    };
+    window.addEventListener('pagehide', () => {
+      if (!dirty) return;
+      navigator.sendBeacon?.(
+        `/api/scorm/${resourceId}/tracking`,
+        new Blob([JSON.stringify({
+          lesson_status: unifiedStatus(),
+          score_raw: cmi['cmi.core.score.raw'] || cmi['cmi.score.raw'] || '',
+          total_time: totalTimeString(),
+          location: cmi['cmi.core.lesson_location'] || cmi['cmi.location'] || '',
+          suspend_data: cmi['cmi.suspend_data'] || '',
+        })], { type: 'application/json' })
+      );
+    });
+
+    /* ----------------------- واجهة SCORM 1.2 و2004 ----------------------- */
+    const get = (key) => {
+      lastError = '0';
+      if (key in cmi) return String(cmi[key] ?? '');
+      if (/_children$/.test(key) || /_count$/.test(key)) return '';
+      lastError = '401'; // عنصر غير مدعوم
+      return '';
+    };
+    const set = (key, value) => {
+      lastError = '0';
+      cmi[key] = String(value);
+      if (key === 'cmi.core.lesson_status' || key === 'cmi.completion_status' || key === 'cmi.success_status') {
+        setStatusLabel(unifiedStatus());
+      }
+      scheduleCommit();
+      return 'true';
+    };
+
+    window.API = {
+      LMSInitialize: () => { lastError = '0'; return 'true'; },
+      LMSFinish: () => { commit(); return 'true'; },
+      LMSGetValue: get,
+      LMSSetValue: set,
+      LMSCommit: () => { commit(); return 'true'; },
+      LMSGetLastError: () => lastError,
+      LMSGetErrorString: (code) => (code === '0' ? 'No error' : 'Error'),
+      LMSGetDiagnostic: (code) => String(code || ''),
+    };
+    window.API_1484_11 = {
+      Initialize: () => { lastError = '0'; return 'true'; },
+      Terminate: () => { commit(); return 'true'; },
+      GetValue: get,
+      SetValue: set,
+      Commit: () => { commit(); return 'true'; },
+      GetLastError: () => lastError,
+      GetErrorString: (code) => (code === '0' ? 'No error' : 'Error'),
+      GetDiagnostic: (code) => String(code || ''),
+    };
+
+    /* ---------------------------- تحميل الحزمة ---------------------------- */
+    (async () => {
+      try {
+        const [metaRes, meRes] = await Promise.all([
+          fetch(`/api/scorm/${resourceId}/meta`, { credentials: 'same-origin' }),
+          fetch('/api/auth/me', { credentials: 'same-origin' }),
+        ]);
+        if (!metaRes.ok) throw new Error((await metaRes.json().catch(() => ({}))).error || 'تعذّر تحميل الحزمة');
+        const meta = await metaRes.json();
+        const me = meRes.ok ? await meRes.json() : { user: null };
+
+        titleEl.textContent = meta.resource.title;
+        if (me.user) {
+          cmi['cmi.core.student_id'] = cmi['cmi.learner_id'] = String(me.user.id);
+          cmi['cmi.core.student_name'] = cmi['cmi.learner_name'] = me.user.full_name;
+        }
+        if (meta.tracking) {
+          cmi['cmi.core.lesson_status'] = meta.tracking.lesson_status || 'not attempted';
+          cmi['cmi.completion_status'] = ['completed', 'passed'].includes(meta.tracking.lesson_status) ? 'completed' : 'incomplete';
+          cmi['cmi.success_status'] = ['passed', 'failed'].includes(meta.tracking.lesson_status) ? meta.tracking.lesson_status : 'unknown';
+          cmi['cmi.suspend_data'] = meta.tracking.suspend_data || '';
+          cmi['cmi.core.lesson_location'] = cmi['cmi.location'] = meta.tracking.location || '';
+          cmi['cmi.core.total_time'] = meta.tracking.total_time || '0000:00:00';
+          if (meta.tracking.score_raw != null) {
+            cmi['cmi.core.score.raw'] = cmi['cmi.score.raw'] = String(meta.tracking.score_raw);
+          }
+          cmi['cmi.core.entry'] = cmi['cmi.entry'] = meta.tracking.suspend_data ? 'resume' : 'ab-initio';
+        }
+        setStatusLabel(unifiedStatus());
+
+        if (!meta.resource.launch_url) {
+          return fail('لم يُعرف ملف الانطلاق داخل الحزمة. تأكّد من احتوائها على imsmanifest.xml أو index.html.');
+        }
+        frame.hidden = false;
+        frame.src = meta.resource.launch_url;
+      } catch (err) {
+        fail(err.message || 'خطأ غير متوقّع');
+      }
+    })();
+  })();
+  </script>
+</body>
+</html>
