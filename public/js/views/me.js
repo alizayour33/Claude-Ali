@@ -1,4 +1,4 @@
-// لوحة الطالب: التقدّم في المستوى والمواد
+// لوحة الطالب: التقدّم في الصف والمواد
 import { h, num, pageHead, empty, chip, progressBar, ring, pct, fmtMinutes, fmtDate } from '../dom.js';
 import { api } from '../api.js';
 import { state } from '../store.js';
@@ -14,7 +14,7 @@ export async function meView() {
 
   return h('div', {},
     pageHead('لوحتي', `مرحباً ${state.user.full_name}`,
-      currentYear ? `مستواك الحالي: ${currentYear.title}` : 'لم يتم ربط حسابك بمستوى — حدّث عمرك من صفحة الحساب.'),
+      currentYear ? `صفّك الحالي: ${currentYear.title}` : 'لم يتم ربط حسابك بصف — حدّث عمرك من صفحة الحساب.'),
     h('div', { class: 'grid cols-4' },
       h('div', { class: 'stat' }, h('strong', {}, num(data.totals.completed)), h('small', {}, 'حصة منجزة')),
       h('div', { class: 'stat' }, h('strong', {}, num(Math.round((data.totals.minutes || 0) / 60))), h('small', {}, 'ساعة دراسية')),
@@ -33,7 +33,7 @@ export async function meView() {
           progressBar(currentYear.completed || 0, currentYear.total || 0),
           h('p', { class: 'small muted', style: { margin: '.4rem 0 0' } },
             `${num(currentYear.completed || 0)} من ${num(currentYear.total || 0)} حصة — ${fmtMinutes(currentYear.minutes_done || 0)} من ٣٠٠ ساعة`),
-          h('a', { class: 'btn soft sm', style: { marginTop: '.5rem' }, href: `#/year/${currentYear.id}` }, 'عرض المستوى'))
+          h('a', { class: 'btn soft sm', style: { marginTop: '.5rem' }, href: `#/year/${currentYear.id}` }, 'عرض الصف'))
       : null,
     h('h2', { style: { marginTop: '1.1rem' } }, 'المواد'),
     data.subjects.length
@@ -60,7 +60,7 @@ export async function meView() {
                   h('span', {}, `${r.subject_icon} ${r.subject_name}`),
                   h('span', {}, r.year_title),
                   h('span', {}, fmtDate(r.updated_at)))))))
-      : empty('🕓', 'لم تبدأ أي حصة بعد', 'اختر مستواك من الصفحة الرئيسية وابدأ أول حصة.'),
+      : empty('🕓', 'لم تبدأ أي حصة بعد', 'اختر صفّك من الصفحة الرئيسية وابدأ أول حصة.'),
     h('p', { class: 'small muted center', style: { marginTop: '1rem' } },
-      `نسبة إتمام مستواك: ${num(pct(currentYear?.completed || 0, currentYear?.total || 0))}٪`));
+      `نسبة إتمام صفّك: ${num(pct(currentYear?.completed || 0, currentYear?.total || 0))}٪`));
 }

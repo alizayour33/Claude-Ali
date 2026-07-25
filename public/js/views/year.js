@@ -1,4 +1,4 @@
-// صفحة المستوى (السنة) وصفحة المادة
+// صفحة الصف الدراسي وصفحة المادة
 import { h, num, pageHead, empty, chip, spinner, clear, progressBar, pct, fmtMinutes } from '../dom.js';
 import { api } from '../api.js';
 import { state, isStaff } from '../store.js';
@@ -33,10 +33,13 @@ export async function yearView({ params }) {
 
   return h('div', {},
     h('div', { class: 'row', style: { marginBottom: '.6rem' } },
-      backLink('#/', 'كل المستويات'),
-      isStaff() ? h('a', { class: 'btn sm soft', href: `#/admin/year/${year.id}` }, '⚙ إدارة هذا المستوى') : null),
+      backLink('#/', 'كل الصفوف'),
+      isStaff() ? h('a', { class: 'btn sm soft', href: `#/admin/year/${year.id}` }, '⚙ إدارة هذا الصف') : null),
     pageHead(
-      year.age_min === year.age_max ? `عمر ${num(year.age_min)} سنة` : `الأعمار ${num(year.age_min)}–${num(year.age_max)}`,
+      [
+        year.stage_name,
+        year.age_min === year.age_max ? `عمر ${num(year.age_min)} سنة` : `الأعمار ${num(year.age_min)}–${num(year.age_max)}`,
+      ].filter(Boolean).join(' · '),
       year.title,
       year.description
     ),
@@ -47,7 +50,7 @@ export async function yearView({ params }) {
       h('div', { class: 'stat' }, h('strong', {}, num(totals.resources)), h('small', {}, 'مرفق'))),
     state.user
       ? h('section', { class: 'card' },
-          h('div', { class: 'card-title' }, h('h3', {}, '📈 تقدّمك في هذا المستوى')),
+          h('div', { class: 'card-title' }, h('h3', {}, '📈 تقدّمك في هذا الصف')),
           progressBar(totals.completed, totals.sessions),
           h('p', { class: 'small muted', style: { margin: '.4rem 0 0' } },
             `${num(totals.completed)} من ${num(totals.sessions)} حصة (${num(pct(totals.completed, totals.sessions))}٪) — ما يعادل ${fmtMinutes(totals.completed * (year.session_minutes || 60))}`))
@@ -62,7 +65,7 @@ export async function subjectView({ params }) {
   const PAGE = 25;
   const { year } = await api.year(params.id);
   const subject = year.subjects.find((s) => String(s.id) === String(params.subjectId));
-  if (!subject) return empty('❓', 'المادة غير موجودة في هذا المستوى');
+  if (!subject) return empty('❓', 'المادة غير موجودة في هذا الصف');
 
   const listHost = h('div', {}, spinner());
   let term = '';

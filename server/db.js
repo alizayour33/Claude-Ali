@@ -115,6 +115,11 @@ db.exec('PRAGMA journal_mode = WAL');
 db.exec('PRAGMA foreign_keys = ON');
 
 db.exec(`
+CREATE TABLE IF NOT EXISTS app_meta (
+  key   TEXT PRIMARY KEY,
+  value TEXT NOT NULL
+);
+
 CREATE TABLE IF NOT EXISTS users (
   id            INTEGER PRIMARY KEY AUTOINCREMENT,
   username      TEXT NOT NULL UNIQUE,
@@ -133,10 +138,12 @@ CREATE TABLE IF NOT EXISTS auth_sessions (
   expires_at TEXT NOT NULL
 );
 
--- سنة دراسية / مستوى عمري
+-- صف دراسي: من الروضة الأولى (grade = -1) إلى الصف الثاني عشر (grade = 12)
 CREATE TABLE IF NOT EXISTS years (
   id              INTEGER PRIMARY KEY AUTOINCREMENT,
   title           TEXT NOT NULL,
+  grade           INTEGER,
+  stage           TEXT NOT NULL DEFAULT '',
   age_min         INTEGER NOT NULL,
   age_max         INTEGER NOT NULL,
   description     TEXT NOT NULL DEFAULT '',
@@ -222,4 +229,27 @@ CREATE TABLE IF NOT EXISTS scorm_tracking (
 );
 `);
 
-module.exports = { db, driver, DATA_DIR, UPLOAD_DIR, SCORM_DIR, TMP_DIR };
+// إضافة أعمدة الصف والمرحلة لقواعد البيانات المُنشأة قبل هذا التحديث
+for (const [column, definition] of [
+  ['grade', 'INTEGER'],
+  ['stage', "TEXT NOT NULL DEFAULT ''"],
+]) {
+  try {
+    db.exec(`ALTER TABLE years ADD COLUMN ${column} ${definition}`);
+  } catch {
+    /* العمود موجود مسبقاً */
+  }
+}
+
+const meta = {
+  get: (key) => db.prepare('SELECT value FROM app_meta WHERE key = ?').get(key)?.value ?? null,
+  set: (key, value) =>
+    db
+      .prepare(
+        `INSERT INTO app_meta (key, value) VALUES (?, ?)
+         ON CONFLICT(key) DO UPDATE SET value = excluded.value`
+      )
+      .run(key, String(value)),
+};
+
+module.exports = { db, driver, meta, DATA_DIR, UPLOAD_DIR, SCORM_DIR, TMP_DIR };

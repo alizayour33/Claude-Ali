@@ -52,7 +52,7 @@ function navItems() {
   ];
   if (isStaff()) {
     items.push({ group: 'الإدارة', links: [
-      { href: '#/admin', icon: '🗂️', label: 'المستويات والمناهج' },
+      { href: '#/admin', icon: '🗂️', label: 'الصفوف والمناهج' },
       { href: '#/admin/reports', icon: '📊', label: 'تقارير الطلاب' },
       ...(isAdmin() ? [{ href: '#/admin/users', icon: '👥', label: 'المستخدمون' }] : []),
     ] });

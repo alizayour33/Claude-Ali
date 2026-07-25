@@ -6,8 +6,14 @@ const { requireStaff, isStaff } = require('../auth');
 const { wrap, bad, notFound, clampInt, bool } = require('../util');
 const {
   DEFAULT_SUBJECTS,
+  GRADE_LEVELS,
+  STAGES,
   generateYearSchedule,
+  gradeLevel,
+  orderForGrade,
   reorderYearSchedule,
+  sharesForGrade,
+  stageName,
   yearOverview,
   sessionsPerYear,
 } = require('../curriculum');
@@ -23,6 +29,7 @@ router.get(
   wrap((req, res) => {
     const staff = isStaff(req.user);
     const age = req.query.age ? clampInt(req.query.age, 3, 99, null) : null;
+    const stage = STAGES[req.query.stage] ? req.query.stage : null;
     const rows = db
       .prepare(
         `SELECT y.*,
@@ -36,13 +43,17 @@ router.get(
          FROM years y
          WHERE (? = 1 OR y.is_published = 1)
            AND (? IS NULL OR ? BETWEEN y.age_min AND y.age_max)
+           AND (? IS NULL OR y.stage = ?)
          ORDER BY y.order_index, y.age_min, y.id`
       )
-      .all(uid(req), staff ? 1 : 0, age, age);
+      .all(uid(req), staff ? 1 : 0, age, age, stage, stage);
     res.json({
+      stages: Object.values(STAGES),
+      grades: GRADE_LEVELS,
       years: rows.map((y) => ({
         ...y,
         is_published: !!y.is_published,
+        stage_name: stageName(y.stage),
         planned_sessions: sessionsPerYear(y),
       })),
     });
@@ -63,24 +74,32 @@ router.post(
   '/years',
   requireStaff,
   wrap((req, res) => {
-    const title = String(req.body.title || '').trim();
-    if (!title) throw bad('عنوان السنة مطلوب');
-    const ageMin = clampInt(req.body.age_min, 3, 99, 6);
-    const ageMax = clampInt(req.body.age_max, ageMin, 99, ageMin);
+    // عند تمرير رقم الصف تُملأ بقيّة الحقول تلقائياً (العنوان والمرحلة والعمر والنِسب)
+    const level = req.body.grade != null ? gradeLevel(req.body.grade) : null;
+    const title = String(req.body.title || level?.title || '').trim();
+    if (!title) throw bad('عنوان الصف مطلوب');
+    const grade = level ? level.grade : null;
+    const stage = STAGES[req.body.stage] ? req.body.stage : level?.stage || '';
+    const ageMin = clampInt(req.body.age_min, 3, 99, level?.age ?? 6);
+    const ageMax = clampInt(req.body.age_max, ageMin, 99, level?.age ?? ageMin);
     const totalHours = clampInt(req.body.total_hours, 1, 5000, 300);
     const sessionMinutes = clampInt(req.body.session_minutes, 5, 480, 60);
     const orderIndex =
       req.body.order_index != null
         ? clampInt(req.body.order_index, 0, 999, 0)
-        : (db.prepare('SELECT COALESCE(MAX(order_index), 0) + 1 AS n FROM years').get().n);
+        : level
+          ? orderForGrade(level.grade)
+          : (db.prepare('SELECT COALESCE(MAX(order_index), 0) + 1 AS n FROM years').get().n);
 
     const info = db
       .prepare(
-        `INSERT INTO years (title, age_min, age_max, description, total_hours, session_minutes, order_index, is_published)
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?)`
+        `INSERT INTO years (title, grade, stage, age_min, age_max, description, total_hours, session_minutes, order_index, is_published)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
       )
       .run(
         title,
+        grade,
+        stage,
         ageMin,
         ageMax,
         String(req.body.description || ''),
@@ -96,9 +115,11 @@ router.post(
       `INSERT INTO subjects (year_id, key, name, icon, color, share, order_index)
        VALUES (?, ?, ?, ?, ?, ?, ?)`
     );
+    // المواد الافتراضية تأخذ نِسب المرحلة الخاصة بالصف، ما لم يرسل الطالبُ مواد بنِسب صريحة
+    const gradeShares = level ? sharesForGrade(level.grade) : null;
     const subjects = Array.isArray(req.body.subjects) && req.body.subjects.length
       ? req.body.subjects
-      : DEFAULT_SUBJECTS;
+      : DEFAULT_SUBJECTS.map((subject) => ({ ...subject, share: gradeShares?.[subject.key] ?? subject.share }));
     db.transaction(() => {
       subjects.forEach((s, i) => {
         const def = DEFAULT_SUBJECTS.find((d) => d.key === s.key) || DEFAULT_SUBJECTS[0];
@@ -128,25 +149,33 @@ router.patch(
   wrap((req, res) => {
     const year = db.prepare('SELECT * FROM years WHERE id = ?').get(Number(req.params.id));
     if (!year) throw notFound('السنة غير موجودة');
+    const nextLevel = req.body.grade != null ? gradeLevel(req.body.grade) : null;
     const next = {
       title: req.body.title != null ? String(req.body.title).trim() || year.title : year.title,
+      grade: req.body.grade != null ? (nextLevel ? nextLevel.grade : null) : year.grade,
+      stage: STAGES[req.body.stage] ? req.body.stage : nextLevel ? nextLevel.stage : year.stage,
       age_min: req.body.age_min != null ? clampInt(req.body.age_min, 3, 99, year.age_min) : year.age_min,
       age_max: req.body.age_max != null ? clampInt(req.body.age_max, 3, 99, year.age_max) : year.age_max,
       description: req.body.description != null ? String(req.body.description) : year.description,
       total_hours: req.body.total_hours != null ? clampInt(req.body.total_hours, 1, 5000, year.total_hours) : year.total_hours,
       session_minutes:
         req.body.session_minutes != null ? clampInt(req.body.session_minutes, 5, 480, year.session_minutes) : year.session_minutes,
-      order_index: req.body.order_index != null ? clampInt(req.body.order_index, 0, 999, year.order_index) : year.order_index,
+      order_index:
+        req.body.order_index != null
+          ? clampInt(req.body.order_index, 0, 999, year.order_index)
+          : nextLevel
+            ? orderForGrade(nextLevel.grade)
+            : year.order_index,
       is_published: req.body.is_published != null ? (bool(req.body.is_published) ? 1 : 0) : year.is_published,
     };
     if (next.age_max < next.age_min) next.age_max = next.age_min;
 
     db.prepare(
-      `UPDATE years SET title = ?, age_min = ?, age_max = ?, description = ?, total_hours = ?,
-                        session_minutes = ?, order_index = ?, is_published = ? WHERE id = ?`
+      `UPDATE years SET title = ?, grade = ?, stage = ?, age_min = ?, age_max = ?, description = ?,
+                        total_hours = ?, session_minutes = ?, order_index = ?, is_published = ? WHERE id = ?`
     ).run(
-      next.title, next.age_min, next.age_max, next.description, next.total_hours,
-      next.session_minutes, next.order_index, next.is_published, year.id
+      next.title, next.grade, next.stage, next.age_min, next.age_max, next.description,
+      next.total_hours, next.session_minutes, next.order_index, next.is_published, year.id
     );
     res.json({ year: yearOverview(year.id, uid(req)) });
   })

@@ -20,16 +20,36 @@ const field = (label, input, hint) =>
 
 export async function adminView() {
   if (!guard()) return h('div');
-  const { years } = await api.years();
+  const { years, grades = [], stages = [] } = await api.years();
 
-  const title = h('input', { required: true, placeholder: 'مثال: المستوى الثالث عشر' });
-  const ageMin = h('input', { type: 'number', min: 3, max: 99, value: '18' });
-  const ageMax = h('input', { type: 'number', min: 3, max: 99, value: '18' });
+  const used = new Set(years.map((y) => y.grade));
+  const available = grades.filter((g) => !used.has(g.grade));
+  const stageNames = Object.fromEntries(stages.map((st) => [st.key, st.name]));
+
+  const gradeSelect = h('select', {},
+    h('option', { value: '' }, 'صف مخصّص (بدون ربط)'),
+    ...available.map((g) => h('option', { value: String(g.grade) }, `${g.title} — عمر ${num(g.age)} (${stageNames[g.stage] || ''})`)));
+  const title = h('input', { required: true, placeholder: 'مثال: الصف الأول' });
+  const ageMin = h('input', { type: 'number', min: 3, max: 99, value: '6' });
+  const ageMax = h('input', { type: 'number', min: 3, max: 99, value: '6' });
+
+  // اختيار صف جاهز يملأ العنوان والعمر تلقائياً
+  gradeSelect.addEventListener('change', () => {
+    const level = grades.find((g) => String(g.grade) === gradeSelect.value);
+    if (!level) return;
+    title.value = level.title;
+    ageMin.value = String(level.age);
+    ageMax.value = String(level.age);
+  });
+  if (available.length) {
+    gradeSelect.value = String(available[0].grade);
+    gradeSelect.dispatchEvent(new Event('change'));
+  }
   const hours = h('input', { type: 'number', min: 1, max: 5000, value: '300' });
   const minutes = h('input', { type: 'number', min: 5, max: 480, value: '60' });
   const description = h('textarea', { rows: 2, placeholder: 'وصف مختصر للمستوى' });
   const generate = h('input', { type: 'checkbox', checked: true });
-  const submit = h('button', { class: 'btn', type: 'submit' }, 'إنشاء المستوى');
+  const submit = h('button', { class: 'btn', type: 'submit' }, 'إنشاء الصف');
 
   const createForm = h('form', {
     onsubmit: async (event) => {
@@ -37,6 +57,7 @@ export async function adminView() {
       submit.disabled = true;
       try {
         const { year, schedule } = await api.post('/api/years', {
+          grade: gradeSelect.value === '' ? null : Number(gradeSelect.value),
           title: title.value.trim(),
           age_min: Number(ageMin.value),
           age_max: Number(ageMax.value),
@@ -54,7 +75,8 @@ export async function adminView() {
       }
     },
   },
-    field('عنوان المستوى', title),
+    field('الصف الدراسي', gradeSelect, 'يملأ العنوان والعمر ونِسب المواد المناسبة للمرحلة تلقائياً'),
+    field('عنوان الصف', title),
     h('div', { class: 'field-row' }, field('العمر من', ageMin), field('العمر إلى', ageMax)),
     h('div', { class: 'field-row' },
       field('مجموع الساعات', hours, 'العدد الكلي لساعات المنهج في السنة'),
@@ -69,6 +91,7 @@ export async function adminView() {
         h('div', {},
           h('strong', {}, year.title),
           h('div', { class: 'row', style: { marginTop: '.3rem' } },
+            year.stage_name ? chip(year.stage_name, 'brand') : null,
             chip(year.age_min === year.age_max ? `${num(year.age_min)} سنة` : `${num(year.age_min)}–${num(year.age_max)} سنة`),
             chip(`${num(year.total_hours)} ساعة`),
             chip(`${num(year.session_count)} / ${num(year.planned_sessions)} حصة`),
@@ -93,14 +116,15 @@ export async function adminView() {
           }, '🗑')))));
 
   return h('div', {},
-    pageHead('لوحة الإدارة', 'المستويات والمناهج', 'كل مستوى مرتبط بفئة عمرية، ويحتوي المواد الخمس وجدول حصصه.'),
+    pageHead('لوحة الإدارة', 'الصفوف الدراسية والمناهج',
+      'من الروضة الأولى إلى الصف الثاني عشر — كل صف مرتبط بمرحلته وعمره، ويحتوي المواد الخمس وجدول حصصه.'),
     h('div', { class: 'row', style: { marginBottom: '.8rem' } },
       h('a', { class: 'btn sm soft', href: '#/admin/reports' }, '📊 تقارير الطلاب'),
       h('a', { class: 'btn sm soft', href: '#/admin/users' }, '👥 المستخدمون')),
     h('details', { class: 'acc' },
-      h('summary', {}, '➕ إضافة مستوى جديد'),
+      h('summary', {}, '➕ إضافة صف جديد'),
       h('div', {}, createForm)),
-    years.length ? h('div', {}, ...rows) : empty('🗂️', 'لا توجد مستويات', 'ابدأ بإضافة مستوى.'));
+    years.length ? h('div', {}, ...rows) : empty('🗂️', 'لا توجد صفوف', 'ابدأ بإضافة صف.'));
 }
 
 /* -------------------------- إدارة مستوى: مواد وحصص -------------------------- */
@@ -161,7 +185,7 @@ export async function adminYearView({ params, query }) {
   const { year } = await api.year(params.id);
   const totalShare = year.subjects.reduce((sum, s) => sum + s.share, 0);
 
-  /* إعدادات المستوى */
+  /* إعدادات الصف */
   const title = h('input', { value: year.title, required: true });
   const ageMin = h('input', { type: 'number', min: 3, max: 99, value: String(year.age_min) });
   const ageMax = h('input', { type: 'number', min: 3, max: 99, value: String(year.age_max) });
@@ -183,7 +207,7 @@ export async function adminYearView({ params, query }) {
           description: description.value,
           is_published: published.checked,
         });
-        toast('تم حفظ إعدادات المستوى', 'ok');
+        toast('تم حفظ إعدادات الصف', 'ok');
         reload();
       } catch (err) {
         toastError(err);
@@ -307,9 +331,9 @@ export async function adminYearView({ params, query }) {
 
   return h('div', {},
     h('div', { class: 'row', style: { marginBottom: '.6rem' } },
-      h('a', { class: 'btn ghost sm', href: '#/admin' }, '› المستويات'),
-      h('a', { class: 'btn ghost sm', href: `#/year/${year.id}` }, '👁 معاينة المستوى')),
-    pageHead('إدارة مستوى', year.title,
+      h('a', { class: 'btn ghost sm', href: '#/admin' }, '› الصفوف'),
+      h('a', { class: 'btn ghost sm', href: `#/year/${year.id}` }, '👁 معاينة الصف')),
+    pageHead(['إدارة صف', year.stage_name].filter(Boolean).join(' · '), year.title,
       `${num(year.totals.sessions)} حصة من أصل ${num(year.planned_sessions)} مخطّطة · ${num(year.totals.resources)} مرفق`),
 
     h('section', { class: 'card' },
@@ -347,6 +371,6 @@ export async function adminYearView({ params, query }) {
       sessionsHost),
 
     h('details', { class: 'acc', style: { marginTop: '1rem' } },
-      h('summary', {}, '⚙ إعدادات المستوى'),
+      h('summary', {}, '⚙ إعدادات الصف'),
       h('div', {}, settingsForm)));
 }

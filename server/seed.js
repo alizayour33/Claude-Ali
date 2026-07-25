@@ -1,58 +1,72 @@
 'use strict';
 
-const { db } = require('./db');
+const { db, meta } = require('./db');
 const { hashPassword } = require('./auth');
-const { DEFAULT_SUBJECTS, generateYearSchedule } = require('./curriculum');
+const {
+  DEFAULT_SUBJECTS,
+  GRADE_LEVELS,
+  generateYearSchedule,
+  gradeTitle,
+  gradeForAge,
+  orderForGrade,
+  sharesForGrade,
+  stageOfGrade,
+} = require('./curriculum');
 
-const ORDINALS = [
-  'الأول', 'الثاني', 'الثالث', 'الرابع', 'الخامس', 'السادس',
-  'السابع', 'الثامن', 'التاسع', 'العاشر', 'الحادي عشر', 'الثاني عشر',
-];
-
-/** نِسب المواد تتغيّر مع العمر: القرآن والأخلاق أكثر في الصغر، والفقه والعقيدة أكثر في الكبر. */
-function sharesForAge(age) {
-  if (age <= 9) return { quran: 45, fiqh: 10, aqeedah: 15, seerah: 15, akhlaq: 15 };
-  if (age <= 13) return { quran: 35, fiqh: 20, aqeedah: 18, seerah: 15, akhlaq: 12 };
-  return { quran: 30, fiqh: 25, aqeedah: 20, seerah: 13, akhlaq: 12 };
-}
-
-const AGES = Array.from({ length: 12 }, (_, i) => 6 + i); // ٦ إلى ١٧ سنة
-
-function seedYears() {
-  const insertYear = db.prepare(
-    `INSERT INTO years (title, age_min, age_max, description, total_hours, session_minutes, order_index, is_published)
-     VALUES (?, ?, ?, ?, 300, 60, ?, 1)`
+const insertYear = () =>
+  db.prepare(
+    `INSERT INTO years (title, grade, stage, age_min, age_max, description, total_hours, session_minutes, order_index, is_published)
+     VALUES (?, ?, ?, ?, ?, ?, 300, 60, ?, 1)`
   );
-  const insertSubject = db.prepare(
+
+const insertSubject = () =>
+  db.prepare(
     `INSERT INTO subjects (year_id, key, name, icon, color, share, order_index)
      VALUES (?, ?, ?, ?, ?, ?, ?)`
   );
 
+const describe = (level) =>
+  `منهاج ${level.title} (عمر ${level.age} سنة): ٣٠٠ ساعة موزّعة على القرآن والفقه والعقيدة والسيرة والأخلاق.`;
+
+/** ينشئ صفاً دراسياً واحداً بمواده الخمس (بدون توليد الحصص). */
+function createGradeYear(level) {
+  const info = insertYear().run(
+    level.title,
+    level.grade,
+    level.stage,
+    level.age,
+    level.age,
+    describe(level),
+    orderForGrade(level.grade)
+  );
+  const yearId = Number(info.lastInsertRowid);
+  const shares = sharesForGrade(level.grade);
+  const addSubject = insertSubject();
+  DEFAULT_SUBJECTS.forEach((subject, index) => {
+    addSubject.run(
+      yearId,
+      subject.key,
+      subject.name,
+      subject.icon,
+      subject.color,
+      shares[subject.key] ?? subject.share,
+      index
+    );
+  });
+  return yearId;
+}
+
+/** ينشئ سُلَّم الصفوف كاملاً: الروضة الأولى والثانية ثم الصفوف من الأول إلى الثاني عشر. */
+function seedGrades() {
   const created = [];
   db.transaction(() => {
-    AGES.forEach((age, i) => {
-      const title = `المستوى ${ORDINALS[i]}`;
-      const info = insertYear.run(
-        title,
-        age,
-        age,
-        `منهاج متكامل لعمر ${age} سنة: ٣٠٠ ساعة موزّعة على القرآن والفقه والعقيدة والسيرة والأخلاق.`,
-        i
-      );
-      const yearId = Number(info.lastInsertRowid);
-      const shares = sharesForAge(age);
-      DEFAULT_SUBJECTS.forEach((s, idx) => {
-        insertSubject.run(yearId, s.key, s.name, s.icon, s.color, shares[s.key] ?? s.share, idx);
-      });
-      created.push(yearId);
-    });
+    GRADE_LEVELS.forEach((level) => created.push(createGradeYear(level)));
   })();
-
   created.forEach((yearId) => generateYearSchedule(yearId));
   return created;
 }
 
-/** أمثلة محتوى في أول حصة من كل مادة بالمستوى الأول ليظهر التطبيق عاملاً من أول تشغيل. */
+/** أمثلة محتوى في أول حصة من كل مادة بصف معيّن ليظهر التطبيق عاملاً من أول تشغيل. */
 function seedSampleResources(yearId) {
   const sessions = db
     .prepare(
@@ -163,28 +177,81 @@ function ensureAdmin() {
   return { username, password };
 }
 
+/**
+ * ترحيل قواعد البيانات المنشأة قبل اعتماد الصفوف الدراسية:
+ * يملأ الصف والمرحلة من العمر، ويُصلح عناوين المستويات الآلية القديمة،
+ * ثم يضيف صفوف الروضة الناقصة مرة واحدة فقط. لا يحذف أي محتوى.
+ */
+function migrateToGrades() {
+  const pending = db.prepare('SELECT * FROM years WHERE grade IS NULL').all();
+  const report = { updated: 0, renamed: 0, added: 0 };
+
+  if (pending.length) {
+    const update = db.prepare(
+      'UPDATE years SET grade = ?, stage = ?, title = ?, order_index = ? WHERE id = ?'
+    );
+    db.transaction(() => {
+      pending.forEach((year) => {
+        const grade = gradeForAge(year.age_min);
+        if (grade === null) return; // صف خارج السُلَّم: يبقى كما هو
+        // العناوين الآلية القديمة («المستوى الأول» …) تُستبدل باسم الصف، وما عداها يبقى كما كتبه المشرف
+        const isAutoTitle = /^المستوى\s/.test(year.title);
+        const title = isAutoTitle ? gradeTitle(grade) : year.title;
+        if (isAutoTitle) report.renamed++;
+        update.run(grade, stageOfGrade(grade), title, orderForGrade(grade), year.id);
+        report.updated++;
+      });
+    })();
+  }
+
+  // صفوف الروضة لم تكن موجودة في النسخة السابقة: تُضاف مرة واحدة فقط
+  if (db.prepare('SELECT COUNT(*) AS c FROM years').get().c > 0 && !meta.get('grades_v2')) {
+    const missing = GRADE_LEVELS.filter(
+      (level) => !db.prepare('SELECT 1 FROM years WHERE grade = ?').get(level.grade)
+    );
+    missing.forEach((level) => {
+      const yearId = createGradeYear(level);
+      generateYearSchedule(yearId);
+      report.added++;
+    });
+  }
+  meta.set('grades_v2', '1');
+  return report;
+}
+
 /** بيانات أوّلية تُنشأ مرة واحدة فقط عند أول تشغيل. */
 function ensureSeed() {
   const admin = ensureAdmin();
   if (admin) {
     console.log(`تم إنشاء حساب المشرف: ${admin.username} / ${admin.password}`);
   }
+
   const years = db.prepare('SELECT COUNT(*) AS c FROM years').get().c;
   if (years === 0) {
-    console.log('جارٍ تهيئة المناهج (١٢ مستوى × ٣٠٠ ساعة)...');
-    const created = seedYears();
-    seedSampleResources(created[0]);
+    console.log('جارٍ تهيئة المناهج (من الروضة الأولى إلى الصف الثاني عشر × ٣٠٠ ساعة)...');
+    const created = seedGrades();
+    seedSampleResources(created[2]); // الصف الأول
     const sessions = db.prepare('SELECT COUNT(*) AS c FROM class_sessions').get().c;
-    console.log(`تمت التهيئة: ${created.length} مستوى، ${sessions} حصة.`);
+    console.log(`تمت التهيئة: ${created.length} صفاً دراسياً، ${sessions} حصة.`);
+    meta.set('grades_v2', '1');
 
     const demoUser = db.prepare('SELECT 1 FROM users WHERE username = ?').get('student');
     if (!demoUser && process.env.NO_DEMO_STUDENT !== '1') {
       db.prepare(
         `INSERT INTO users (username, password_hash, full_name, role, age, year_id)
          VALUES ('student', ?, 'طالب تجريبي', 'student', 8, ?)`
-      ).run(hashPassword('student123'), created[2]);
+      ).run(hashPassword('student123'), created[4]); // الصف الثالث
       console.log('تم إنشاء حساب طالب تجريبي: student / student123');
     }
+    return;
+  }
+
+  const migration = migrateToGrades();
+  if (migration.updated || migration.added) {
+    console.log(
+      `ترحيل إلى الصفوف الدراسية: ${migration.updated} صفاً محدّثاً، ` +
+        `${migration.renamed} عنواناً مُعاد تسميته، ${migration.added} صفاً جديداً.`
+    );
   }
 }
 
@@ -192,6 +259,7 @@ function reset() {
   db.exec(`
     DELETE FROM scorm_tracking; DELETE FROM progress; DELETE FROM resources;
     DELETE FROM class_sessions; DELETE FROM subjects; DELETE FROM years;
+    DELETE FROM app_meta WHERE key = 'grades_v2';
   `);
   console.log('تم حذف المناهج السابقة.');
 }
@@ -202,4 +270,4 @@ if (require.main === module) {
   console.log('انتهى.');
 }
 
-module.exports = { ensureSeed, sharesForAge, seedYears, ensureAdmin };
+module.exports = { ensureSeed, seedGrades, migrateToGrades, createGradeYear, ensureAdmin };

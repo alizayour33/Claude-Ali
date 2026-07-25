@@ -46,7 +46,7 @@ export async function usersView() {
     const roleSelect = h('select', { style: { minWidth: '7rem' } },
       ...Object.entries(ROLES).map(([value, label]) => h('option', { value, selected: value === user.role }, label)));
     const yearSelect = h('select', { style: { minWidth: '9rem' } },
-      h('option', { value: '' }, 'بدون مستوى'),
+      h('option', { value: '' }, 'بدون صف'),
       ...years.map((y) => h('option', { value: String(y.id), selected: y.id === user.year_id }, y.title)));
     const newPassword = h('input', { type: 'password', placeholder: 'كلمة مرور جديدة', style: { minWidth: '9rem' } });
 
@@ -62,7 +62,7 @@ export async function usersView() {
             chip(`${num(user.completed)} حصة منجزة`))),
         h('span', { class: 'small muted' }, fmtDate(user.created_at))),
       h('div', { class: 'field-row', style: { marginTop: '.5rem' } },
-        field('الصفة', roleSelect), field('المستوى', yearSelect), field('كلمة المرور', newPassword)),
+        field('الصفة', roleSelect), field('الصف', yearSelect), field('كلمة المرور', newPassword)),
       h('div', { class: 'btn-row' },
         h('button', {
           class: 'btn sm', type: 'button',
@@ -114,7 +114,7 @@ export async function reportsView() {
   const table = h('div', { class: 'table-wrap' },
     h('table', {},
       h('thead', {}, h('tr', {},
-        h('th', {}, 'الطالب'), h('th', {}, 'العمر'), h('th', {}, 'المستوى'),
+        h('th', {}, 'الطالب'), h('th', {}, 'العمر'), h('th', {}, 'الصف'),
         h('th', {}, 'الإنجاز'), h('th', {}, 'الساعات'), h('th', {}, 'آخر نشاط'))),
       h('tbody', {},
         ...students.map((s) =>

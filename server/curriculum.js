@@ -2,6 +2,53 @@
 
 const { db } = require('./db');
 
+/** المراحل الدراسية التي تنتظم تحتها الصفوف. */
+const STAGES = {
+  kindergarten: { key: 'kindergarten', name: 'رياض الأطفال', icon: '🧸', order: 0 },
+  primary: { key: 'primary', name: 'المرحلة الابتدائية', icon: '🏫', order: 1 },
+  middle: { key: 'middle', name: 'المرحلة المتوسطة', icon: '📚', order: 2 },
+  secondary: { key: 'secondary', name: 'المرحلة الثانوية', icon: '🎓', order: 3 },
+};
+
+const GRADE_ORDINALS = [
+  'الأول', 'الثاني', 'الثالث', 'الرابع', 'الخامس', 'السادس',
+  'السابع', 'الثامن', 'التاسع', 'العاشر', 'الحادي عشر', 'الثاني عشر',
+];
+
+/**
+ * سُلَّم الصفوف: الروضة الأولى (‎-1‎) والثانية (‎0‎) ثم الصفوف من الأول إلى الثاني عشر،
+ * وكل صف مرتبط بالعمر المعتاد له وبمرحلته الدراسية.
+ */
+const GRADE_LEVELS = [
+  { grade: -1, title: 'الروضة الأولى', stage: 'kindergarten', age: 4 },
+  { grade: 0, title: 'الروضة الثانية', stage: 'kindergarten', age: 5 },
+  ...GRADE_ORDINALS.map((ordinal, i) => ({
+    grade: i + 1,
+    title: `الصف ${ordinal}`,
+    stage: i + 1 <= 6 ? 'primary' : i + 1 <= 9 ? 'middle' : 'secondary',
+    age: 6 + i,
+  })),
+];
+
+const gradeLevel = (grade) => GRADE_LEVELS.find((level) => level.grade === Number(grade)) || null;
+const gradeTitle = (grade) => gradeLevel(grade)?.title || null;
+const stageOfGrade = (grade) => gradeLevel(grade)?.stage || '';
+const stageName = (stage) => STAGES[stage]?.name || '';
+const gradeForAge = (age) => GRADE_LEVELS.find((level) => level.age === Number(age))?.grade ?? null;
+
+/** ترتيب الصف في القوائم: الروضة الأولى = ١ ثم تصاعدياً حتى الثاني عشر = ١٤. */
+const orderForGrade = (grade) => Number(grade) + 2;
+
+/** نِسب المواد تختلف بحسب المرحلة: القرآن والأخلاق أكثر في الصغر، والفقه والعقيدة أكثر في الكبر. */
+function sharesForGrade(grade) {
+  const g = Number(grade);
+  if (g <= 0) return { quran: 50, fiqh: 5, aqeedah: 10, seerah: 15, akhlaq: 20 }; // الروضة
+  if (g <= 3) return { quran: 45, fiqh: 10, aqeedah: 15, seerah: 15, akhlaq: 15 }; // ابتدائي أوّل
+  if (g <= 6) return { quran: 38, fiqh: 17, aqeedah: 17, seerah: 15, akhlaq: 13 }; // ابتدائي عليا
+  if (g <= 9) return { quran: 35, fiqh: 20, aqeedah: 18, seerah: 15, akhlaq: 12 }; // متوسط
+  return { quran: 30, fiqh: 25, aqeedah: 20, seerah: 13, akhlaq: 12 }; // ثانوي
+}
+
 /** المواد الافتراضية لكل سنة، والنسبة الافتراضية لكل مادة من مجموع الساعات. */
 const DEFAULT_SUBJECTS = [
   { key: 'quran',   name: 'قرآن',  icon: '📖', color: '#2f7d55', share: 35 },
@@ -180,6 +227,7 @@ function yearOverview(yearId, userId = null) {
   return {
     ...year,
     is_published: !!year.is_published,
+    stage_name: stageName(year.stage),
     planned_sessions: sessionsPerYear(year),
     subjects: subjects.map((s) => ({ ...s, hours: Math.round((s.minutes / 60) * 10) / 10 })),
     totals: { ...totals, hours: Math.round((totals.minutes / 60) * 10) / 10 },
@@ -187,6 +235,15 @@ function yearOverview(yearId, userId = null) {
 }
 
 module.exports = {
+  STAGES,
+  GRADE_LEVELS,
+  gradeLevel,
+  gradeTitle,
+  gradeForAge,
+  stageOfGrade,
+  stageName,
+  orderForGrade,
+  sharesForGrade,
   DEFAULT_SUBJECTS,
   allocate,
   sessionsPerYear,

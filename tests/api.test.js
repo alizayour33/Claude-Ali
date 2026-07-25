@@ -61,25 +61,52 @@ test.after(() => {
   fs.rmSync(DATA_DIR, { recursive: true, force: true });
 });
 
-test('التهيئة تنشئ ١٢ مستوى بـ٣٠٠ حصة لكل مستوى', async () => {
+test('التهيئة تنشئ ١٤ صفاً من الروضة الأولى إلى الثاني عشر بـ٣٠٠ حصة لكل صف', async () => {
   const health = await call('GET', '/api/health');
   assert.equal(health.status, 200);
-  assert.equal(health.json.years, 12);
-  assert.equal(health.json.sessions, 3600);
+  assert.equal(health.json.years, 14);
+  assert.equal(health.json.sessions, 4200);
 
   const years = await call('GET', '/api/years');
-  assert.equal(years.json.years.length, 12);
+  assert.equal(years.json.years.length, 14);
   for (const year of years.json.years) {
     assert.equal(year.session_count, 300, `${year.title} يجب أن يحتوي ٣٠٠ حصة`);
     assert.equal(year.total_hours, 300);
   }
+
+  // الترتيب: الروضة الأولى ثم الثانية ثم الصفوف من الأول إلى الثاني عشر
+  const titles = years.json.years.map((y) => y.title);
+  assert.equal(titles[0], 'الروضة الأولى');
+  assert.equal(titles[1], 'الروضة الثانية');
+  assert.equal(titles[2], 'الصف الأول');
+  assert.equal(titles[13], 'الصف الثاني عشر');
+  assert.deepEqual(years.json.years.map((y) => y.grade), [-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
 });
 
-test('التصفية بالعمر تُرجع المستوى المناسب فقط', async () => {
+test('كل صف مربوط بمرحلته الدراسية', async () => {
+  const { json } = await call('GET', '/api/years');
+  const stageOf = (title) => json.years.find((y) => y.title === title).stage;
+  assert.equal(stageOf('الروضة الأولى'), 'kindergarten');
+  assert.equal(stageOf('الصف الأول'), 'primary');
+  assert.equal(stageOf('الصف السادس'), 'primary');
+  assert.equal(stageOf('الصف السابع'), 'middle');
+  assert.equal(stageOf('الصف التاسع'), 'middle');
+  assert.equal(stageOf('الصف العاشر'), 'secondary');
+  assert.equal(stageOf('الصف الثاني عشر'), 'secondary');
+  assert.equal(json.years.find((y) => y.title === 'الصف الأول').stage_name, 'المرحلة الابتدائية');
+
+  const middle = await call('GET', '/api/years?stage=middle');
+  assert.equal(middle.json.years.length, 3);
+});
+
+test('التصفية بالعمر تُرجع الصف المناسب فقط', async () => {
   const res = await call('GET', '/api/years?age=8');
   assert.equal(res.status, 200);
   assert.equal(res.json.years.length, 1);
-  assert.ok(res.json.years[0].age_min <= 8 && res.json.years[0].age_max >= 8);
+  assert.equal(res.json.years[0].title, 'الصف الثالث');
+
+  const kg = await call('GET', '/api/years?age=4');
+  assert.equal(kg.json.years[0].title, 'الروضة الأولى');
 });
 
 test('المواد الخمس موجودة ومجموع نِسبها ١٠٠٪ ومجموع حصصها ٣٠٠', async () => {
@@ -102,19 +129,37 @@ test('تسجيل الدخول كمشرف وإنشاء حساب طالب', async 
     body: { username: 'tester', password: 'tester123', full_name: 'طالب اختبار', age: 8 },
   });
   assert.equal(register.status, 201);
-  assert.ok(register.json.user.year_id, 'يجب ربط الطالب بمستوى عمره تلقائياً');
+  assert.ok(register.json.user.year_id, 'يجب ربط الطالب بصفّه تلقائياً');
   rememberCookie('student', register.setCookie);
 });
 
 test('الطالب لا يملك صلاحية تعديل المناهج', async () => {
-  const res = await call('POST', '/api/years', { as: 'student', body: { title: 'مستوى غير مسموح' } });
+  const res = await call('POST', '/api/years', { as: 'student', body: { title: 'صف غير مسموح' } });
   assert.equal(res.status, 403);
 });
 
-test('إنشاء مستوى جديد يولّد الحصص حسب النِسب ومدة الحصة', async () => {
+test('إنشاء صف برقم الصف يملأ العنوان والمرحلة والعمر والنِسب تلقائياً', async () => {
+  // نحذف الصف الثاني عشر ثم نعيد إنشاءه برقمه فقط
+  const before = await call('GET', '/api/years', { as: 'admin' });
+  const target = before.json.years.find((y) => y.grade === 12);
+  await call('DELETE', `/api/years/${target.id}`, { as: 'admin' });
+
+  const res = await call('POST', '/api/years', { as: 'admin', body: { grade: 12 } });
+  assert.equal(res.status, 201);
+  assert.equal(res.json.year.title, 'الصف الثاني عشر');
+  assert.equal(res.json.year.stage, 'secondary');
+  assert.equal(res.json.year.age_min, 17);
+  assert.equal(res.json.year.totals.sessions, 300);
+
+  // نِسب المرحلة الثانوية: الفقه أعلى منه في الروضة
+  const fiqh = res.json.year.subjects.find((s) => s.key === 'fiqh');
+  assert.equal(fiqh.share, 25);
+});
+
+test('إنشاء صف جديد يولّد الحصص حسب النِسب ومدة الحصة', async () => {
   const res = await call('POST', '/api/years', {
     as: 'admin',
-    body: { title: 'مستوى اختباري', age_min: 19, age_max: 20, total_hours: 100, session_minutes: 50 },
+    body: { title: 'صف اختباري', age_min: 19, age_max: 20, total_hours: 100, session_minutes: 50 },
   });
   assert.equal(res.status, 201);
   // ١٠٠ ساعة × ٦٠ ÷ ٥٠ دقيقة = ١٢٠ حصة
@@ -129,7 +174,7 @@ test('إنشاء مستوى جديد يولّد الحصص حسب النِسب �
 test('التوليد لا يحذف حصة تحتوي مرفقات', async () => {
   const created = await call('POST', '/api/years', {
     as: 'admin',
-    body: { title: 'مستوى الحماية', age_min: 21, age_max: 21, total_hours: 10, session_minutes: 60 },
+    body: { title: 'صف الحماية', age_min: 21, age_max: 21, total_hours: 10, session_minutes: 60 },
   });
   const yearId = created.json.year.id;
   // نأخذ آخر حصة في مادة القرآن، وهي أكبر مادة ومن المؤكّد أن تقليص الساعات سيمسّها
@@ -285,4 +330,42 @@ test('حذف مرفق يحذف ملفه من القرص', async () => {
   assert.equal(fs.existsSync(path.join(DATA_DIR, 'uploads', String(resource.id))), false);
   const gone = await call('GET', `/api/resources/${resource.id}/file`, { as: 'admin' });
   assert.equal(gone.status, 404);
+});
+
+test('الترحيل يحوّل قاعدة قديمة إلى صفوف دون فقد محتوى', async () => {
+  const { db } = require('../server/db');
+  const { migrateToGrades } = require('../server/seed');
+
+  // نحاكي صفاً قديماً بعنوان آلي وبدون رقم صف، وفيه حصة تحمل مرفقاً
+  const info = db
+    .prepare(
+      `INSERT INTO years (title, grade, stage, age_min, age_max, total_hours, session_minutes, order_index)
+       VALUES ('المستوى القديم', NULL, '', 13, 13, 10, 60, 50)`
+    )
+    .run();
+  const yearId = Number(info.lastInsertRowid);
+  const subject = db
+    .prepare(`INSERT INTO subjects (year_id, key, name, share, order_index) VALUES (?, 'quran', 'قرآن', 100, 0)`)
+    .run(yearId);
+  const session = db
+    .prepare(
+      `INSERT INTO class_sessions (year_id, subject_id, seq, global_seq, title) VALUES (?, ?, 1, 1, 'حصة قديمة')`
+    )
+    .run(yearId, Number(subject.lastInsertRowid));
+  db.prepare(
+    `INSERT INTO resources (session_id, kind, title, text_content) VALUES (?, 'text', 'مرفق قديم', 'محتوى')`
+  ).run(Number(session.lastInsertRowid));
+
+  db.prepare("DELETE FROM app_meta WHERE key = 'grades_v2'").run();
+  migrateToGrades();
+
+  const migrated = db.prepare('SELECT * FROM years WHERE id = ?').get(yearId);
+  assert.equal(migrated.grade, 8, 'عمر ١٣ يقابل الصف الثامن');
+  assert.equal(migrated.stage, 'middle');
+  assert.equal(migrated.title, 'الصف الثامن', 'العنوان الآلي القديم يُستبدل باسم الصف');
+
+  const kept = db
+    .prepare('SELECT COUNT(*) AS c FROM resources WHERE session_id = ?')
+    .get(Number(session.lastInsertRowid)).c;
+  assert.equal(kept, 1, 'المرفقات لا تُفقد أثناء الترحيل');
 });
