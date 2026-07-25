@@ -15,13 +15,19 @@ const GRADE_ORDINALS = [
   'السابع', 'الثامن', 'التاسع', 'العاشر', 'الحادي عشر', 'الثاني عشر',
 ];
 
+/** عدد حصص المقرر الافتراضي لكل صف، ومدة الحصة بالدقائق. */
+const DEFAULT_SESSIONS = 180;
+const DEFAULT_SESSION_MINUTES = 60;
+const DEFAULT_TOTAL_HOURS = (DEFAULT_SESSIONS * DEFAULT_SESSION_MINUTES) / 60;
+
 /**
- * سُلَّم الصفوف: الروضة الأولى (‎-1‎) والثانية (‎0‎) ثم الصفوف من الأول إلى الثاني عشر،
- * وكل صف مرتبط بالعمر المعتاد له وبمرحلته الدراسية.
+ * سُلَّم الصفوف: الروضة الأولى (‎-2‎) والثانية (‎-1‎) والثالثة (‎0‎)،
+ * ثم الصفوف من الأول إلى الثاني عشر، وكل صف مرتبط بعمره المعتاد وبمرحلته.
  */
 const GRADE_LEVELS = [
-  { grade: -1, title: 'الروضة الأولى', stage: 'kindergarten', age: 4 },
-  { grade: 0, title: 'الروضة الثانية', stage: 'kindergarten', age: 5 },
+  { grade: -2, title: 'الروضة الأولى', stage: 'kindergarten', age: 3 },
+  { grade: -1, title: 'الروضة الثانية', stage: 'kindergarten', age: 4 },
+  { grade: 0, title: 'الروضة الثالثة', stage: 'kindergarten', age: 5 },
   ...GRADE_ORDINALS.map((ordinal, i) => ({
     grade: i + 1,
     title: `الصف ${ordinal}`,
@@ -36,8 +42,8 @@ const stageOfGrade = (grade) => gradeLevel(grade)?.stage || '';
 const stageName = (stage) => STAGES[stage]?.name || '';
 const gradeForAge = (age) => GRADE_LEVELS.find((level) => level.age === Number(age))?.grade ?? null;
 
-/** ترتيب الصف في القوائم: الروضة الأولى = ١ ثم تصاعدياً حتى الثاني عشر = ١٤. */
-const orderForGrade = (grade) => Number(grade) + 2;
+/** ترتيب الصف في القوائم: الروضة الأولى = ١ ثم تصاعدياً حتى الثاني عشر = ١٥. */
+const orderForGrade = (grade) => Number(grade) + 3;
 
 /** نِسب المواد تختلف بحسب المرحلة: القرآن والأخلاق أكثر في الصغر، والفقه والعقيدة أكثر في الكبر. */
 function sharesForGrade(grade) {
@@ -145,7 +151,15 @@ function generateYearSchedule(yearId) {
   if (!subjects.length) throw new Error('أضف المواد أولاً');
 
   const total = sessionsPerYear(year);
-  const targets = allocate(total, subjects.map((s) => s.share));
+  // المواد التي حُدِّد لها عدد حصص صريح تأخذه كما هو، والباقي يتقاسم ما تبقّى حسب النِسب
+  const fixed = subjects.map((s) => (s.target_sessions == null ? null : Math.max(0, Number(s.target_sessions))));
+  const fixedTotal = fixed.reduce((sum, value) => sum + (value ?? 0), 0);
+  const remaining = Math.max(0, total - fixedTotal);
+  const shared = allocate(
+    remaining,
+    subjects.map((s, i) => (fixed[i] == null ? s.share : 0))
+  );
+  const targets = subjects.map((s, i) => (fixed[i] == null ? shared[i] : fixed[i]));
 
   const insert = db.prepare(`
     INSERT INTO class_sessions (year_id, subject_id, seq, global_seq, title, duration_minutes)
@@ -191,6 +205,7 @@ function generateYearSchedule(yearId) {
   })();
 
   report.total = reorderYearSchedule(yearId);
+  report.planned = targets.reduce((sum, value) => sum + value, 0);
   return report;
 }
 
@@ -235,6 +250,9 @@ function yearOverview(yearId, userId = null) {
 }
 
 module.exports = {
+  DEFAULT_SESSIONS,
+  DEFAULT_SESSION_MINUTES,
+  DEFAULT_TOTAL_HOURS,
   STAGES,
   GRADE_LEVELS,
   gradeLevel,

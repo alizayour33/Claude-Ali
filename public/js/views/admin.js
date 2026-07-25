@@ -45,9 +45,9 @@ export async function adminView() {
     gradeSelect.value = String(available[0].grade);
     gradeSelect.dispatchEvent(new Event('change'));
   }
-  const hours = h('input', { type: 'number', min: 1, max: 5000, value: '300' });
+  const hours = h('input', { type: 'number', min: 1, max: 5000, value: '180' });
   const minutes = h('input', { type: 'number', min: 5, max: 480, value: '60' });
-  const description = h('textarea', { rows: 2, placeholder: 'وصف مختصر للمستوى' });
+  const description = h('textarea', { rows: 2, placeholder: 'وصف مختصر للصف' });
   const generate = h('input', { type: 'checkbox', checked: true });
   const submit = h('button', { class: 'btn', type: 'submit' }, 'إنشاء الصف');
 
@@ -79,7 +79,7 @@ export async function adminView() {
     field('عنوان الصف', title),
     h('div', { class: 'field-row' }, field('العمر من', ageMin), field('العمر إلى', ageMax)),
     h('div', { class: 'field-row' },
-      field('مجموع الساعات', hours, 'العدد الكلي لساعات المنهج في السنة'),
+      field('مجموع الساعات', hours, 'الافتراضي ١٨٠ ساعة = ١٨٠ حصة'),
       field('مدة الحصة (دقيقة)', minutes, 'عدد الحصص = الساعات × ٦٠ ÷ مدة الحصة')),
     field('الوصف', description),
     h('label', { class: 'checkbox' }, generate, 'توليد جدول الحصص تلقائياً بعد الإنشاء'),
@@ -134,6 +134,10 @@ function subjectRow(subject, onChanged) {
   const icon = h('input', { value: subject.icon, style: { maxWidth: '4.5rem', textAlign: 'center' } });
   const color = h('input', { type: 'color', value: subject.color });
   const share = h('input', { type: 'number', min: 0, max: 100, value: String(subject.share), style: { maxWidth: '5.5rem' } });
+  const target = h('input', {
+    type: 'number', min: 0, max: 5000, placeholder: 'حسب النسبة',
+    value: subject.target_sessions == null ? '' : String(subject.target_sessions),
+  });
 
   return h('div', { class: 'card' },
     h('div', { class: 'row between' },
@@ -141,9 +145,10 @@ function subjectRow(subject, onChanged) {
       h('div', { class: 'row' },
         chip(`${num(subject.session_count)} حصة`),
         chip(fmtMinutes(subject.minutes)),
-        chip(`${num(subject.share)}٪`))),
+        subject.target_sessions == null ? chip(`${num(subject.share)}٪`) : chip(`عدد ثابت: ${num(subject.target_sessions)}`, 'brand'))),
     h('div', { class: 'field-row', style: { marginTop: '.5rem' } },
-      field('الاسم', name), field('الرمز', icon), field('اللون', color), field('النسبة ٪', share)),
+      field('الاسم', name), field('الرمز', icon), field('اللون', color), field('النسبة ٪', share),
+      field('عدد الحصص', target, 'اتركه فارغاً ليُحسب من النسبة')),
     h('div', { class: 'btn-row' },
       h('button', {
         class: 'btn sm',
@@ -155,8 +160,9 @@ function subjectRow(subject, onChanged) {
               icon: icon.value.trim(),
               color: color.value,
               share: Number(share.value),
+              target_sessions: target.value === '' ? null : Number(target.value),
             });
-            toast('تم حفظ المادة', 'ok');
+            toast('تم حفظ المادة — استخدم «توليد الجدول» لتطبيق عدد الحصص', 'ok');
             onChanged();
           } catch (err) {
             toastError(err);
@@ -226,6 +232,7 @@ export async function adminYearView({ params, query }) {
   const newSubjectKey = h('input', { placeholder: 'المفتاح بالإنجليزية (اختياري)' });
   const newSubjectIcon = h('input', { value: '📘', style: { maxWidth: '4.5rem', textAlign: 'center' } });
   const newSubjectShare = h('input', { type: 'number', min: 0, max: 100, value: '10' });
+  const newSubjectTarget = h('input', { type: 'number', min: 0, max: 5000, placeholder: 'حسب النسبة' });
   const addSubjectForm = h('form', {
     onsubmit: async (event) => {
       event.preventDefault();
@@ -235,6 +242,7 @@ export async function adminYearView({ params, query }) {
           key: newSubjectKey.value.trim(),
           icon: newSubjectIcon.value.trim(),
           share: Number(newSubjectShare.value),
+          target_sessions: newSubjectTarget.value === '' ? null : Number(newSubjectTarget.value),
         });
         toast('تمت إضافة المادة', 'ok');
         reload();
@@ -245,7 +253,8 @@ export async function adminYearView({ params, query }) {
   },
     h('div', { class: 'field-row' },
       field('اسم المادة', newSubjectName), field('المفتاح', newSubjectKey),
-      field('الرمز', newSubjectIcon), field('النسبة ٪', newSubjectShare)),
+      field('الرمز', newSubjectIcon), field('النسبة ٪', newSubjectShare),
+      field('عدد الحصص', newSubjectTarget, 'اختياري')),
     h('button', { class: 'btn sm', type: 'submit' }, '➕ إضافة المادة'));
 
   /* جدول الحصص */
@@ -302,18 +311,38 @@ export async function adminYearView({ params, query }) {
       clear(sessionsHost).append(
         h('div', { class: 'row between', style: { marginBottom: '.5rem' } },
           h('span', { class: 'small muted' }, `${num(page.total)} حصة في المادة`),
-          h('button', {
-            class: 'btn sm', type: 'button',
-            onclick: async () => {
-              try {
-                const { session } = await api.post(`/api/subjects/${subjectId}/sessions`, {});
-                toast('تمت إضافة حصة', 'ok');
-                navigate(`/admin/session/${session.id}`);
-              } catch (err) {
-                toastError(err);
-              }
-            },
-          }, '➕ حصة جديدة')),
+          h('span', { class: 'btn-row' },
+            h('button', {
+              class: 'btn sm', type: 'button',
+              onclick: async () => {
+                try {
+                  const { session } = await api.post(`/api/subjects/${subjectId}/sessions`, {});
+                  toast('تمت إضافة حصة', 'ok');
+                  navigate(`/admin/session/${session.id}`);
+                } catch (err) {
+                  toastError(err);
+                }
+              },
+            }, '➕ حصة جديدة'),
+            h('button', {
+              class: 'btn sm ghost', type: 'button',
+              onclick: async (event) => {
+                const answer = window.prompt('كم حصة تريد إضافتها إلى هذه المادة؟', '10');
+                if (!answer) return;
+                const count = Math.max(1, Math.min(200, parseInt(answer, 10) || 0));
+                const btn = event.currentTarget;
+                btn.disabled = true;
+                try {
+                  const result = await api.post(`/api/subjects/${subjectId}/sessions`, { count });
+                  toast(`تمت إضافة ${num(result.created)} حصة`, 'ok');
+                  loadSessions(subjectId, page.offset);
+                } catch (err) {
+                  toastError(err);
+                } finally {
+                  btn.disabled = false;
+                }
+              },
+            }, '➕➕ إضافة عدة حصص'))),
         sessions.length ? list : empty('📋', 'لا توجد حصص في هذه المادة'),
         pager(page, (nextOffset) => loadSessions(subjectId, nextOffset)) || h('span')
       );
@@ -339,7 +368,7 @@ export async function adminYearView({ params, query }) {
     h('section', { class: 'card' },
       h('div', { class: 'card-title' }, h('h3', {}, '🧮 توليد جدول الحصص')),
       h('p', { class: 'small muted' },
-        `توزيع ${num(year.total_hours)} ساعة (${num(year.planned_sessions)} حصة) على المواد حسب النِسب. الحصص الموجودة تبقى، ويُضاف الناقص فقط، ولا تُحذف أي حصة تحتوي مرفقات.`),
+        `توزيع ${num(year.total_hours)} ساعة (${num(year.planned_sessions)} حصة) على المواد: كل مادة حُدِّد لها «عدد حصص» تأخذه كما هو، والباقي يتقاسم ما تبقّى حسب النِسب. الحصص الموجودة تبقى، ويُضاف الناقص فقط، ولا تُحذف أي حصة تحتوي مرفقات.`),
       totalShare !== 100
         ? h('p', { class: 'small' }, chip(`مجموع النِسب ${num(totalShare)}٪ — يُفضّل أن يكون ١٠٠٪`, 'warn'))
         : null,

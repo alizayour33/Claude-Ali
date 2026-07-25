@@ -3,6 +3,9 @@
 const { db, meta } = require('./db');
 const { hashPassword } = require('./auth');
 const {
+  DEFAULT_SESSIONS,
+  DEFAULT_SESSION_MINUTES,
+  DEFAULT_TOTAL_HOURS,
   DEFAULT_SUBJECTS,
   GRADE_LEVELS,
   generateYearSchedule,
@@ -16,7 +19,7 @@ const {
 const insertYear = () =>
   db.prepare(
     `INSERT INTO years (title, grade, stage, age_min, age_max, description, total_hours, session_minutes, order_index, is_published)
-     VALUES (?, ?, ?, ?, ?, ?, 300, 60, ?, 1)`
+     VALUES (?, ?, ?, ?, ?, ?, ${DEFAULT_TOTAL_HOURS}, ${DEFAULT_SESSION_MINUTES}, ?, 1)`
   );
 
 const insertSubject = () =>
@@ -26,7 +29,7 @@ const insertSubject = () =>
   );
 
 const describe = (level) =>
-  `منهاج ${level.title} (عمر ${level.age} سنة): ٣٠٠ ساعة موزّعة على القرآن والفقه والعقيدة والسيرة والأخلاق.`;
+  `مقرر ${level.title} (عمر ${level.age} سنة): ${DEFAULT_SESSIONS} حصة موزّعة على القرآن والفقه والعقيدة والسيرة والأخلاق.`;
 
 /** ينشئ صفاً دراسياً واحداً بمواده الخمس (بدون توليد الحصص). */
 function createGradeYear(level) {
@@ -184,7 +187,7 @@ function ensureAdmin() {
  */
 function migrateToGrades() {
   const pending = db.prepare('SELECT * FROM years WHERE grade IS NULL').all();
-  const report = { updated: 0, renamed: 0, added: 0 };
+  const report = { updated: 0, renamed: 0, added: 0, rescaled: 0, trimmed: 0, kept: 0 };
 
   if (pending.length) {
     const update = db.prepare(
@@ -204,8 +207,30 @@ function migrateToGrades() {
     })();
   }
 
-  // صفوف الروضة لم تكن موجودة في النسخة السابقة: تُضاف مرة واحدة فقط
-  if (db.prepare('SELECT COUNT(*) AS c FROM years').get().c > 0 && !meta.get('grades_v2')) {
+  // إزاحة أرقام صفوف الروضة بعد إضافة سنة ثالثة (الأولى ‎-1‎→‎-2‎ والثانية ‎0‎→‎-1‎)
+  if (!meta.get('grades_v3')) {
+    const shift = db.prepare(
+      'UPDATE years SET grade = ?, age_min = ?, age_max = ?, order_index = ? WHERE id = ?'
+    );
+    db.transaction(() => {
+      [
+        { from: 0, title: 'الروضة الثانية', to: -1, oldAge: 5 },
+        { from: -1, title: 'الروضة الأولى', to: -2, oldAge: 4 },
+      ].forEach(({ from, title, to, oldAge }) => {
+        const year = db.prepare('SELECT * FROM years WHERE grade = ? AND title = ?').get(from, title);
+        if (!year) return;
+        const level = GRADE_LEVELS.find((l) => l.grade === to);
+        // العمر يُحدَّث فقط إن كان ما زال على قيمته الافتراضية القديمة
+        const ageMin = year.age_min === oldAge ? level.age : year.age_min;
+        const ageMax = year.age_max === oldAge ? level.age : year.age_max;
+        shift.run(to, ageMin, ageMax, orderForGrade(to), year.id);
+        report.updated++;
+      });
+    })();
+  }
+
+  // الصفوف الناقصة (رياض الأطفال في القواعد القديمة، والروضة الثالثة) تُضاف مرة واحدة
+  if (db.prepare('SELECT COUNT(*) AS c FROM years').get().c > 0 && !meta.get('grades_v3')) {
     const missing = GRADE_LEVELS.filter(
       (level) => !db.prepare('SELECT 1 FROM years WHERE grade = ?').get(level.grade)
     );
@@ -214,8 +239,33 @@ function migrateToGrades() {
       generateYearSchedule(yearId);
       report.added++;
     });
+
+    // ترتيب موحّد لكل الصفوف بعد إضافة سنة الروضة الثالثة
+    const reorder = db.prepare('UPDATE years SET order_index = ? WHERE id = ?');
+    db.transaction(() => {
+      db.prepare('SELECT id, grade FROM years WHERE grade IS NOT NULL')
+        .all()
+        .forEach((year) => reorder.run(orderForGrade(year.grade), year.id));
+    })();
+
+    // المقرر صار ١٨٠ حصة: تُحدَّث الصفوف التي ما زالت على الافتراضي القديم (٣٠٠ ساعة)
+    const legacy = db
+      .prepare('SELECT id FROM years WHERE total_hours = 300 AND session_minutes = 60')
+      .all();
+    if (legacy.length) {
+      const setHours = db.prepare('UPDATE years SET total_hours = ? WHERE id = ?');
+      legacy.forEach((year) => {
+        setHours.run(DEFAULT_TOTAL_HOURS, year.id);
+        // التوليد يحذف الحصص الفارغة الزائدة فقط، ولا يمسّ أي حصة فيها محتوى
+        const schedule = generateYearSchedule(year.id);
+        report.trimmed += schedule.deleted;
+        report.kept += schedule.kept;
+      });
+      report.rescaled = legacy.length;
+    }
   }
   meta.set('grades_v2', '1');
+  meta.set('grades_v3', '1');
   return report;
 }
 
@@ -228,29 +278,31 @@ function ensureSeed() {
 
   const years = db.prepare('SELECT COUNT(*) AS c FROM years').get().c;
   if (years === 0) {
-    console.log('جارٍ تهيئة المناهج (من الروضة الأولى إلى الصف الثاني عشر × ٣٠٠ ساعة)...');
+    console.log(`جارٍ تهيئة المناهج (من الروضة الأولى إلى الصف الثاني عشر × ${DEFAULT_SESSIONS} حصة)...`);
     const created = seedGrades();
-    seedSampleResources(created[2]); // الصف الأول
+    seedSampleResources(created[3]); // الصف الأول
     const sessions = db.prepare('SELECT COUNT(*) AS c FROM class_sessions').get().c;
     console.log(`تمت التهيئة: ${created.length} صفاً دراسياً، ${sessions} حصة.`);
     meta.set('grades_v2', '1');
+    meta.set('grades_v3', '1');
 
     const demoUser = db.prepare('SELECT 1 FROM users WHERE username = ?').get('student');
     if (!demoUser && process.env.NO_DEMO_STUDENT !== '1') {
       db.prepare(
         `INSERT INTO users (username, password_hash, full_name, role, age, year_id)
          VALUES ('student', ?, 'طالب تجريبي', 'student', 8, ?)`
-      ).run(hashPassword('student123'), created[4]); // الصف الثالث
+      ).run(hashPassword('student123'), created[5]); // الصف الثالث
       console.log('تم إنشاء حساب طالب تجريبي: student / student123');
     }
     return;
   }
 
   const migration = migrateToGrades();
-  if (migration.updated || migration.added) {
+  if (migration.updated || migration.added || migration.rescaled) {
     console.log(
-      `ترحيل إلى الصفوف الدراسية: ${migration.updated} صفاً محدّثاً، ` +
-        `${migration.renamed} عنواناً مُعاد تسميته، ${migration.added} صفاً جديداً.`
+      `ترحيل الصفوف: ${migration.updated} محدّثاً، ${migration.renamed} عنواناً مُعاد تسميته، ` +
+        `${migration.added} صفاً جديداً، ${migration.rescaled} مقرراً أُعيد ضبطه على ${DEFAULT_SESSIONS} حصة ` +
+        `(حُذفت ${migration.trimmed} حصة فارغة، وبقيت ${migration.kept} حصة فيها محتوى).`
     );
   }
 }
@@ -259,7 +311,7 @@ function reset() {
   db.exec(`
     DELETE FROM scorm_tracking; DELETE FROM progress; DELETE FROM resources;
     DELETE FROM class_sessions; DELETE FROM subjects; DELETE FROM years;
-    DELETE FROM app_meta WHERE key = 'grades_v2';
+    DELETE FROM app_meta WHERE key IN ('grades_v2', 'grades_v3');
   `);
   console.log('تم حذف المناهج السابقة.');
 }

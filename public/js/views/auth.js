@@ -4,7 +4,7 @@ import { api } from '../api.js';
 import { setUser, state, toast, toastError } from '../store.js';
 import { navigate } from '../router.js';
 
-const AGES = Array.from({ length: 15 }, (_, i) => 4 + i); // ٤ إلى ١٨ سنة
+const AGES = Array.from({ length: 16 }, (_, i) => 3 + i); // ٣ إلى ١٨ سنة
 
 function field(label, input) {
   return h('div', { class: 'field' }, h('label', { for: input.id || undefined }, label), input);
@@ -57,7 +57,7 @@ export async function loginView({ query }) {
       mode === 'register' ? field('الاسم الكامل', fullName) : null,
       field('كلمة المرور', password),
       mode === 'register' ? field('العمر', ageSelect) : null,
-      mode === 'register' ? h('p', { class: 'small muted' }, 'العمر يحدّد صفّك الدراسي تلقائياً (٦ سنوات = الصف الأول)، ويمكن تغييره لاحقاً.') : null,
+      mode === 'register' ? h('p', { class: 'small muted' }, 'العمر يحدّد صفّك الدراسي تلقائياً (٣ سنوات = الروضة الأولى، ٦ سنوات = الصف الأول)، ويمكن تغييره لاحقاً.') : null,
       submit);
 
     host.append(

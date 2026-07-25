@@ -147,7 +147,7 @@ CREATE TABLE IF NOT EXISTS years (
   age_min         INTEGER NOT NULL,
   age_max         INTEGER NOT NULL,
   description     TEXT NOT NULL DEFAULT '',
-  total_hours     INTEGER NOT NULL DEFAULT 300,
+  total_hours     INTEGER NOT NULL DEFAULT 180,
   session_minutes INTEGER NOT NULL DEFAULT 60,
   order_index     INTEGER NOT NULL DEFAULT 0,
   is_published    INTEGER NOT NULL DEFAULT 1,
@@ -163,6 +163,7 @@ CREATE TABLE IF NOT EXISTS subjects (
   icon        TEXT NOT NULL DEFAULT '📘',
   color       TEXT NOT NULL DEFAULT '#3f7d5f',
   share       INTEGER NOT NULL DEFAULT 20,
+  target_sessions INTEGER,
   order_index INTEGER NOT NULL DEFAULT 0,
   UNIQUE (year_id, key)
 );
@@ -229,13 +230,14 @@ CREATE TABLE IF NOT EXISTS scorm_tracking (
 );
 `);
 
-// إضافة أعمدة الصف والمرحلة لقواعد البيانات المُنشأة قبل هذا التحديث
-for (const [column, definition] of [
-  ['grade', 'INTEGER'],
-  ['stage', "TEXT NOT NULL DEFAULT ''"],
+// أعمدة أُضيفت بعد الإصدار الأول: تُضاف بهدوء لقواعد البيانات القديمة
+for (const [table, column, definition] of [
+  ['years', 'grade', 'INTEGER'],
+  ['years', 'stage', "TEXT NOT NULL DEFAULT ''"],
+  ['subjects', 'target_sessions', 'INTEGER'],
 ]) {
   try {
-    db.exec(`ALTER TABLE years ADD COLUMN ${column} ${definition}`);
+    db.exec(`ALTER TABLE ${table} ADD COLUMN ${column} ${definition}`);
   } catch {
     /* العمود موجود مسبقاً */
   }

@@ -61,32 +61,32 @@ test.after(() => {
   fs.rmSync(DATA_DIR, { recursive: true, force: true });
 });
 
-test('التهيئة تنشئ ١٤ صفاً من الروضة الأولى إلى الثاني عشر بـ٣٠٠ حصة لكل صف', async () => {
+test('التهيئة تنشئ ١٥ صفاً من الروضة الأولى إلى الثاني عشر بـ١٨٠ حصة لكل مقرر', async () => {
   const health = await call('GET', '/api/health');
   assert.equal(health.status, 200);
-  assert.equal(health.json.years, 14);
-  assert.equal(health.json.sessions, 4200);
+  assert.equal(health.json.years, 15);
+  assert.equal(health.json.sessions, 2700);
 
   const years = await call('GET', '/api/years');
-  assert.equal(years.json.years.length, 14);
+  assert.equal(years.json.years.length, 15);
   for (const year of years.json.years) {
-    assert.equal(year.session_count, 300, `${year.title} يجب أن يحتوي ٣٠٠ حصة`);
-    assert.equal(year.total_hours, 300);
+    assert.equal(year.session_count, 180, `${year.title} يجب أن يحتوي ١٨٠ حصة`);
+    assert.equal(year.total_hours, 180);
   }
 
-  // الترتيب: الروضة الأولى ثم الثانية ثم الصفوف من الأول إلى الثاني عشر
+  // الترتيب: ثلاث سنوات رياض أطفال ثم الصفوف من الأول إلى الثاني عشر
   const titles = years.json.years.map((y) => y.title);
-  assert.equal(titles[0], 'الروضة الأولى');
-  assert.equal(titles[1], 'الروضة الثانية');
-  assert.equal(titles[2], 'الصف الأول');
-  assert.equal(titles[13], 'الصف الثاني عشر');
-  assert.deepEqual(years.json.years.map((y) => y.grade), [-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
+  assert.deepEqual(titles.slice(0, 4), ['الروضة الأولى', 'الروضة الثانية', 'الروضة الثالثة', 'الصف الأول']);
+  assert.equal(titles[14], 'الصف الثاني عشر');
+  assert.deepEqual(years.json.years.map((y) => y.grade), [-2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
+  assert.deepEqual(years.json.years.slice(0, 3).map((y) => y.age_min), [3, 4, 5]);
 });
 
 test('كل صف مربوط بمرحلته الدراسية', async () => {
   const { json } = await call('GET', '/api/years');
   const stageOf = (title) => json.years.find((y) => y.title === title).stage;
   assert.equal(stageOf('الروضة الأولى'), 'kindergarten');
+  assert.equal(stageOf('الروضة الثالثة'), 'kindergarten');
   assert.equal(stageOf('الصف الأول'), 'primary');
   assert.equal(stageOf('الصف السادس'), 'primary');
   assert.equal(stageOf('الصف السابع'), 'middle');
@@ -97,6 +97,8 @@ test('كل صف مربوط بمرحلته الدراسية', async () => {
 
   const middle = await call('GET', '/api/years?stage=middle');
   assert.equal(middle.json.years.length, 3);
+  const kindergarten = await call('GET', '/api/years?stage=kindergarten');
+  assert.equal(kindergarten.json.years.length, 3);
 });
 
 test('التصفية بالعمر تُرجع الصف المناسب فقط', async () => {
@@ -105,16 +107,18 @@ test('التصفية بالعمر تُرجع الصف المناسب فقط', as
   assert.equal(res.json.years.length, 1);
   assert.equal(res.json.years[0].title, 'الصف الثالث');
 
-  const kg = await call('GET', '/api/years?age=4');
+  const kg = await call('GET', '/api/years?age=3');
   assert.equal(kg.json.years[0].title, 'الروضة الأولى');
+  const kg3 = await call('GET', '/api/years?age=5');
+  assert.equal(kg3.json.years[0].title, 'الروضة الثالثة');
 });
 
-test('المواد الخمس موجودة ومجموع نِسبها ١٠٠٪ ومجموع حصصها ٣٠٠', async () => {
+test('المواد الخمس موجودة ومجموع نِسبها ١٠٠٪ ومجموع حصصها ١٨٠', async () => {
   const { json } = await call('GET', '/api/years/1');
   const names = json.year.subjects.map((s) => s.name);
   assert.deepEqual(names, ['قرآن', 'فقه', 'عقيدة', 'سيرة', 'أخلاق']);
   assert.equal(json.year.subjects.reduce((sum, s) => sum + s.share, 0), 100);
-  assert.equal(json.year.subjects.reduce((sum, s) => sum + s.session_count, 0), 300);
+  assert.equal(json.year.subjects.reduce((sum, s) => sum + s.session_count, 0), 180);
 });
 
 test('تسجيل الدخول كمشرف وإنشاء حساب طالب', async () => {
@@ -149,7 +153,7 @@ test('إنشاء صف برقم الصف يملأ العنوان والمرحلة
   assert.equal(res.json.year.title, 'الصف الثاني عشر');
   assert.equal(res.json.year.stage, 'secondary');
   assert.equal(res.json.year.age_min, 17);
-  assert.equal(res.json.year.totals.sessions, 300);
+  assert.equal(res.json.year.totals.sessions, 180);
 
   // نِسب المرحلة الثانوية: الفقه أعلى منه في الروضة
   const fiqh = res.json.year.subjects.find((s) => s.key === 'fiqh');
@@ -169,6 +173,45 @@ test('إنشاء صف جديد يولّد الحصص حسب النِسب ومد�
   const again = await call('POST', `/api/years/${res.json.year.id}/generate`, { as: 'admin', body: {} });
   assert.equal(again.json.schedule.created, 0, 'إعادة التوليد لا تضيف حصصاً مكرّرة');
   assert.equal(again.json.schedule.total, 120);
+});
+
+test('تحديد عدد حصص ثابت لمادة يُطبَّق عند توليد الجدول', async () => {
+  const created = await call('POST', '/api/years', {
+    as: 'admin',
+    body: { title: 'صف الحصص الثابتة', age_min: 30, age_max: 30, total_hours: 100, session_minutes: 60 },
+  });
+  const yearId = created.json.year.id;
+  const quran = created.json.year.subjects.find((s) => s.key === 'quran');
+
+  // ٤٠ حصة ثابتة للقرآن، والباقي (٦٠) يتوزّع على المواد الأربع حسب نِسبها
+  const patched = await call('PATCH', `/api/subjects/${quran.id}`, { as: 'admin', body: { target_sessions: 40 } });
+  assert.equal(patched.status, 200);
+  assert.equal(patched.json.subject.target_sessions, 40);
+
+  await call('POST', `/api/years/${yearId}/generate`, { as: 'admin', body: {} });
+  const after = await call('GET', `/api/years/${yearId}`, { as: 'admin' });
+  const subjects = after.json.year.subjects;
+  assert.equal(subjects.find((s) => s.key === 'quran').session_count, 40);
+  assert.equal(subjects.reduce((sum, s) => sum + s.session_count, 0), 100);
+
+  // إلغاء التحديد يعيد المادة إلى التوزيع بالنسبة
+  await call('PATCH', `/api/subjects/${quran.id}`, { as: 'admin', body: { target_sessions: null } });
+  const reset = await call('GET', `/api/years/${yearId}`, { as: 'admin' });
+  assert.equal(reset.json.year.subjects.find((s) => s.key === 'quran').target_sessions, null);
+});
+
+test('إضافة عدة حصص دفعة واحدة إلى مادة', async () => {
+  const { json } = await call('GET', '/api/years/1', { as: 'admin' });
+  const subject = json.year.subjects.find((s) => s.key === 'akhlaq');
+  const before = subject.session_count;
+
+  const res = await call('POST', `/api/subjects/${subject.id}/sessions`, { as: 'admin', body: { count: 12 } });
+  assert.equal(res.status, 201);
+  assert.equal(res.json.created, 12);
+  assert.equal(res.json.sessions.length, 12);
+
+  const after = await call('GET', '/api/years/1', { as: 'admin' });
+  assert.equal(after.json.year.subjects.find((s) => s.key === 'akhlaq').session_count, before + 12);
 });
 
 test('التوليد لا يحذف حصة تحتوي مرفقات', async () => {
@@ -201,7 +244,7 @@ test('التوليد لا يحذف حصة تحتوي مرفقات', async () => 
 
 test('ترقيم صفحات الحصص يعمل', async () => {
   const res = await call('GET', '/api/years/1/sessions?limit=10&offset=20', { as: 'student' });
-  assert.equal(res.json.total, 300);
+  assert.equal(res.json.total, 192); // ١٨٠ + ١٢ حصة أُضيفت في اختبار سابق
   assert.equal(res.json.sessions.length, 10);
   assert.equal(res.json.offset, 20);
 });

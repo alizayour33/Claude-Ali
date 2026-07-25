@@ -5,6 +5,9 @@ const { db } = require('../db');
 const { requireStaff, isStaff } = require('../auth');
 const { wrap, bad, notFound, clampInt, bool } = require('../util');
 const {
+  DEFAULT_SESSIONS,
+  DEFAULT_SESSION_MINUTES,
+  DEFAULT_TOTAL_HOURS,
   DEFAULT_SUBJECTS,
   GRADE_LEVELS,
   STAGES,
@@ -82,8 +85,8 @@ router.post(
     const stage = STAGES[req.body.stage] ? req.body.stage : level?.stage || '';
     const ageMin = clampInt(req.body.age_min, 3, 99, level?.age ?? 6);
     const ageMax = clampInt(req.body.age_max, ageMin, 99, level?.age ?? ageMin);
-    const totalHours = clampInt(req.body.total_hours, 1, 5000, 300);
-    const sessionMinutes = clampInt(req.body.session_minutes, 5, 480, 60);
+    const totalHours = clampInt(req.body.total_hours, 1, 5000, DEFAULT_TOTAL_HOURS);
+    const sessionMinutes = clampInt(req.body.session_minutes, 5, 480, DEFAULT_SESSION_MINUTES);
     const orderIndex =
       req.body.order_index != null
         ? clampInt(req.body.order_index, 0, 999, 0)
@@ -226,8 +229,8 @@ router.post(
       .get(yearId).n;
     const info = db
       .prepare(
-        `INSERT INTO subjects (year_id, key, name, icon, color, share, order_index)
-         VALUES (?, ?, ?, ?, ?, ?, ?)`
+        `INSERT INTO subjects (year_id, key, name, icon, color, share, target_sessions, order_index)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?)`
       )
       .run(
         yearId,
@@ -236,6 +239,9 @@ router.post(
         String(req.body.icon || '📘'),
         String(req.body.color || '#3f7d5f'),
         clampInt(req.body.share, 0, 100, 10),
+        req.body.target_sessions === '' || req.body.target_sessions == null
+          ? null
+          : clampInt(req.body.target_sessions, 0, 5000, null),
         orderIndex
       );
     res.status(201).json({ subject: db.prepare('SELECT * FROM subjects WHERE id = ?').get(info.lastInsertRowid) });
@@ -248,13 +254,22 @@ router.patch(
   wrap((req, res) => {
     const subject = db.prepare('SELECT * FROM subjects WHERE id = ?').get(Number(req.params.id));
     if (!subject) throw notFound('المادة غير موجودة');
+    // target_sessions: عدد حصص ثابت للمادة، أو null لتأخذ نصيبها من النسبة المئوية
+    const target =
+      req.body.target_sessions === undefined
+        ? subject.target_sessions
+        : req.body.target_sessions === '' || req.body.target_sessions === null
+          ? null
+          : clampInt(req.body.target_sessions, 0, 5000, subject.target_sessions);
+
     db.prepare(
-      `UPDATE subjects SET name = ?, icon = ?, color = ?, share = ?, order_index = ? WHERE id = ?`
+      `UPDATE subjects SET name = ?, icon = ?, color = ?, share = ?, target_sessions = ?, order_index = ? WHERE id = ?`
     ).run(
       req.body.name != null ? String(req.body.name).trim() || subject.name : subject.name,
       req.body.icon != null ? String(req.body.icon) : subject.icon,
       req.body.color != null ? String(req.body.color) : subject.color,
       req.body.share != null ? clampInt(req.body.share, 0, 100, subject.share) : subject.share,
+      target,
       req.body.order_index != null ? clampInt(req.body.order_index, 0, 999, subject.order_index) : subject.order_index,
       subject.id
     );
@@ -377,6 +392,7 @@ router.get(
   })
 );
 
+/** إضافة حصة واحدة أو عدة حصص دفعة واحدة إلى مادة. */
 router.post(
   '/subjects/:id/sessions',
   requireStaff,
@@ -384,27 +400,42 @@ router.post(
     const subject = db.prepare('SELECT * FROM subjects WHERE id = ?').get(Number(req.params.id));
     if (!subject) throw notFound('المادة غير موجودة');
     const year = db.prepare('SELECT * FROM years WHERE id = ?').get(subject.year_id);
-    const seq = db
-      .prepare('SELECT COALESCE(MAX(seq), 0) + 1 AS n FROM class_sessions WHERE subject_id = ?')
-      .get(subject.id).n;
-    const info = db
-      .prepare(
-        `INSERT INTO class_sessions (year_id, subject_id, seq, global_seq, title, objectives, summary, duration_minutes, is_published)
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`
-      )
-      .run(
-        subject.year_id,
-        subject.id,
-        seq,
-        seq,
-        String(req.body.title || `${subject.name} — الحصة ${seq}`).trim(),
-        String(req.body.objectives || ''),
-        String(req.body.summary || ''),
-        clampInt(req.body.duration_minutes, 5, 480, year.session_minutes),
-        req.body.is_published === undefined ? 1 : bool(req.body.is_published) ? 1 : 0
-      );
+    const count = clampInt(req.body.count, 1, 200, 1);
+    const duration = clampInt(req.body.duration_minutes, 5, 480, year.session_minutes);
+    const published = req.body.is_published === undefined ? 1 : bool(req.body.is_published) ? 1 : 0;
+
+    const insert = db.prepare(
+      `INSERT INTO class_sessions (year_id, subject_id, seq, global_seq, title, objectives, summary, duration_minutes, is_published)
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`
+    );
+    const created = [];
+    db.transaction(() => {
+      let seq = db
+        .prepare('SELECT COALESCE(MAX(seq), 0) + 1 AS n FROM class_sessions WHERE subject_id = ?')
+        .get(subject.id).n;
+      for (let i = 0; i < count; i++, seq++) {
+        const title =
+          count === 1 && req.body.title
+            ? String(req.body.title).trim()
+            : `${subject.name} — الحصة ${seq}`;
+        const info = insert.run(
+          subject.year_id,
+          subject.id,
+          seq,
+          seq,
+          title,
+          String(req.body.objectives || ''),
+          String(req.body.summary || ''),
+          duration,
+          published
+        );
+        created.push(Number(info.lastInsertRowid));
+      }
+    })();
     reorderYearSchedule(subject.year_id);
-    res.status(201).json({ session: db.prepare('SELECT * FROM class_sessions WHERE id = ?').get(info.lastInsertRowid) });
+
+    const sessions = created.map((id) => db.prepare('SELECT * FROM class_sessions WHERE id = ?').get(id));
+    res.status(201).json({ session: sessions[0], sessions, created: sessions.length });
   })
 );
 

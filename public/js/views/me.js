@@ -32,7 +32,7 @@ export async function meView() {
           h('div', { class: 'card-title' }, h('h3', {}, `📈 تقدّمك في ${currentYear.title}`)),
           progressBar(currentYear.completed || 0, currentYear.total || 0),
           h('p', { class: 'small muted', style: { margin: '.4rem 0 0' } },
-            `${num(currentYear.completed || 0)} من ${num(currentYear.total || 0)} حصة — ${fmtMinutes(currentYear.minutes_done || 0)} من ٣٠٠ ساعة`),
+            `${num(currentYear.completed || 0)} من ${num(currentYear.total || 0)} حصة — ${fmtMinutes(currentYear.minutes_done || 0)} من ${fmtMinutes((currentYear.total || 0) * 60)}`),
           h('a', { class: 'btn soft sm', style: { marginTop: '.5rem' }, href: `#/year/${currentYear.id}` }, 'عرض الصف'))
       : null,
     h('h2', { style: { marginTop: '1.1rem' } }, 'المواد'),

@@ -4,7 +4,7 @@ import { api } from '../api.js';
 import { state, setAgeFilter, isStaff } from '../store.js';
 import { navigate } from '../router.js';
 
-const AGES = Array.from({ length: 15 }, (_, i) => 4 + i); // ٤ إلى ١٨ سنة
+const AGES = Array.from({ length: 16 }, (_, i) => 3 + i); // ٣ إلى ١٨ سنة
 
 const STAGE_ICONS = {
   kindergarten: '🧸',
@@ -90,7 +90,7 @@ export async function homeView() {
     pageHead(
       'منصة منهاج',
       'اختر الصف الدراسي',
-      'من الروضة الأولى إلى الصف الثاني عشر — كل صف ٣٠٠ ساعة موزّعة على القرآن والفقه والعقيدة والسيرة والأخلاق، مع مرفقات فيديو وصوت وPDF وأوفيس وSCORM.'
+      'من الروضة الأولى إلى الصف الثاني عشر — مقرر كل صف ١٨٠ حصة موزّعة على القرآن والفقه والعقيدة والسيرة والأخلاق، مع مرفقات فيديو وصوت وPDF وأوفيس وSCORM.'
     ),
     continueCard,
     statsRow,
