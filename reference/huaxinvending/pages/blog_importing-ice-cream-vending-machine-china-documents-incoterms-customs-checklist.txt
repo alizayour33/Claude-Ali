@@ -1,0 +1,662 @@
+Huaxin
+
+HOME
+PRODUCTS
+ABOUT
+SYSTEM
+BLOG
+SOLUTIONS
+FAQ
+CONTACT
+
+Send Inquiry
+
+EN>
+
+BLOG
+Importing an Ice Cream Vending Machine from China: Documents, Incoterms and Customs Checklist
+Importing an Ice Cream Vending Machine from China: Documents, Incoterms and Customs Checklist
+Date：2026-10-26 Author：Huaxin
+
+Planning to import an ice cream vending machine from China? Check the documents, who pays what under FOB, CIF and DDP, and the refrigerant and customs steps.
+
+If you plan to import an ice cream vending machine from China for the first time, most of the risk sits in paperwork and handovers. The sea crossing itself is routine. In Huaxin's 2026 export orders, the delays and extra rounds of messages came from three places: names on the payment, invoice and bill of lading that did not match the company clearing customs; a trade term with no written scope, so nobody clearly owned the steps between the port and the door; and forwarders that would not accept a machine with refrigerant in its cooling circuit. All three can be settled before you pay the deposit.
+
+This guide is for first-time importers and regional distributors. It covers the order sequence, the documents and what to check on each, who pays for what under the common trade terms, and the points that are specific to refrigerated machines shipped in wooden crates. Huaxin manufactures the machines discussed here, and the examples come from our own orders, with buyers anonymised. Freight amounts and landed-cost budgeting are in our guide to ice cream vending machine shipping cost and total import expenses. HS codes and duty rates are decided in your country, so this article explains what to give your customs broker instead of quoting a number.
+
+1 The import sequence, from configuration to delivery
+
+An order moves through seven stages. Each one ends with something you should hold in writing before the next begins.
+
+Stage
+
+	
+
+What gets settled
+
+	
+
+What you should hold at the end
+
+
+
+
+1 Configuration
+
+	
+
+Model, voltage and frequency, interface language, payment hardware, refrigerant type, exterior artwork
+
+	
+
+A pro forma invoice that lists the configuration
+
+
+
+
+2 Contract and deposit
+
+	
+
+Trade term and named place, what the price covers, paying company, consignee
+
+	
+
+Signed contract; payment slip in the contracting company's name
+
+
+
+
+3 Production
+
+	
+
+Machines are built to order; production typically takes about 30 days from order confirmation, and the contract sets the date
+
+	
+
+Production updates
+
+
+
+
+4 Factory checks
+
+	
+
+Complete-machine inspection, function checks and finished-product inspection, plus any test you asked for
+
+	
+
+Test photos or video; balance payment
+
+
+
+
+5 Shipment
+
+	
+
+Booking, crating, shipping instructions for the bill of lading before the carrier's cut-off
+
+	
+
+Approved bill of lading draft, commercial invoice, packing list
+
+
+
+
+6 Import clearance
+
+	
+
+Licences or permits, entry filed by your broker, duty and taxes paid
+
+	
+
+Customs release
+
+
+
+
+7 Delivery and start-up
+
+	
+
+Trucking, unloading, positioning, standing time, first start with our after-sales team
+
+	
+
+Machine in place and running
+
+Several later problems start at stage 1. Before production we ask each buyer to confirm the voltage and frequency, the interface language, the refrigerant type, and whether the stickers will use their artwork or ours. The refrigerant answer comes back at stage 5, because it decides how the forwarder treats the cargo (see section 4).
+
+Stages 5 and 6 overlap. The carrier sets a cut-off for the shipping instructions behind the bill of lading, and the consignee details must be final by then. A buyer in Trinidad and Tobago was still checking with his customs office whether the machine could be cleared under a personal name on the day of that cut-off; missing it would have meant waiting for the next sailing. The export declaration and the final bill of lading are issued after the vessel sails, so your broker receives the complete set while the machine is at sea.
+
+2 Documents for customs clearance and what to check on each
+
+Customs authorities typically ask for a commercial invoice, proof of origin and any certificate or licence that applies to the goods, with the packing list serving as an inventory of the cargo [4]. The commercial invoice and packing list for vending machines follow the same rules as for other goods. A refrigerated machine adds product documents and, in some countries, licences.
+
+Document
+
+	
+
+Issued by
+
+	
+
+Check before it is final
+
+
+
+
+Commercial invoice
+
+	
+
+Huaxin
+
+	
+
+Importing company's legal name and address; model, configuration and quantity; unit and total price in the contract currency; trade term with named place; freight and insurance as separate lines when the term includes them; country of origin
+
+
+
+
+Packing list
+
+	
+
+Huaxin
+
+	
+
+Number of crates; crate dimensions; gross and net weight per crate; which crate holds accessories, spare parts or cups; shipping marks
+
+
+
+
+Bill of lading or sea waybill
+
+	
+
+The carrier, through the forwarder
+
+	
+
+Shipper, consignee and notify party; original bill, telex release or waybill; container and seal numbers
+
+
+
+
+Product documents
+
+	
+
+Huaxin
+
+	
+
+Specification sheet, user manual, certificates or test reports covering the exact model and configuration, refrigerant information
+
+
+
+
+Certificate of origin
+
+	
+
+Issued in China on request
+
+	
+
+Needed only if you claim a lower duty under a trade agreement; ask for it before shipment
+
+
+
+
+Import licences and approvals
+
+	
+
+Importer or broker
+
+	
+
+Depends on the country: refrigeration equipment, radio parts such as card readers, food-contact parts
+
+Customs systems generally want the price actually paid and the other charges itemised. US regulations, for example, require the invoice to state the purchase price and to list charges such as freight and insurance by name and amount [3]. If your broker asks for a revised invoice, find out exactly what is missing. We correct genuine errors and can show the machine, freight and insurance as separate lines, but the value always matches the sale.
+
+Use one company name from payment to release
+
+A buyer's name appears on five records: the payment slip, the signed contract, the commercial invoice, the bill of lading and the import entry. Our finance team requires the name on the payment to match the name signed on the contract. The invoice buyer and the consignee on the bill of lading should be the company that will clear customs. If those are different companies, tell us before the bill of lading is issued.
+
+Three 2026 shipments show what happens when the names drift apart. A Canadian buyer paid two instalments from accounts in different names, so before shipping we confirmed with him that his broker could clear the machine under the first payer's company, and put that company on the documents. An Israeli buyer paid and signed under one business name and had the bill of lading made out to another company; after the machine was collected, its release was queried because of the mismatch. In Trinidad and Tobago, the broker asked for the bill of lading to be amended to show the company alone, without the buyer's personal name, because the licence for importing refrigeration equipment was being applied for in the company's name.
+
+Agree how the original bill of lading travels
+
+For the Trinidad and Tobago shipment, the port handlers would release the machine only against the original bill of lading, which had to be couriered to the buyer. At booking, ask your forwarder whether your port accepts a telex release or a sea waybill, or whether a paper original must reach you before the cargo does, and allow time for the courier.
+
+3 Who pays for what under EXW, FOB, CIF and DDP
+
+We quote ex-factory prices for buyers whose own forwarder collects from our factory, CIF to the buyer's port, and DDP to a delivery address on routes our logistics partners cover. The table shows how the main tasks fall under Incoterms 2020 [1].
+
+Task
+
+	
+
+EXW (our factory)
+
+	
+
+FOB (China port)
+
+	
+
+CIF (your port)
+
+	
+
+DDP (your address)
+
+
+
+
+Export clearance in China
+
+	
+
+Buyer
+
+	
+
+Seller
+
+	
+
+Seller
+
+	
+
+Seller
+
+
+
+
+Sea freight
+
+	
+
+Buyer
+
+	
+
+Buyer
+
+	
+
+Seller
+
+	
+
+Seller
+
+
+
+
+Cargo insurance
+
+	
+
+Buyer's choice
+
+	
+
+Buyer's choice
+
+	
+
+Seller, at least minimum cover for 110% of the value
+
+	
+
+Seller's choice; the seller carries the risk
+
+
+
+
+Risk passes to the buyer
+
+	
+
+At the factory
+
+	
+
+On board at the China port
+
+	
+
+On board at the China port
+
+	
+
+At your address, before unloading
+
+
+
+
+Destination port charges
+
+	
+
+Buyer
+
+	
+
+Buyer
+
+	
+
+Buyer, unless the seller's freight contract includes them
+
+	
+
+Seller
+
+
+
+
+Import clearance, duty and import VAT or GST
+
+	
+
+Buyer
+
+	
+
+Buyer
+
+	
+
+Buyer
+
+	
+
+Seller
+
+
+
+
+Transport from the port to your address
+
+	
+
+Buyer
+
+	
+
+Buyer
+
+	
+
+Buyer
+
+	
+
+Seller
+
+
+
+
+Unloading at your address
+
+	
+
+Buyer
+
+	
+
+Buyer
+
+	
+
+Buyer
+
+	
+
+Buyer, unless the contract adds it
+
+Summary of Incoterms 2020 [1][2]. A contract can move any of these items to the other party, but only if it says so. DAP works like DDP except that the buyer handles import clearance and pays duty and taxes.
+
+CIF stops at your port
+
+Under CIF we pay the freight, but the transit risk is yours once the crate is on board in China, so damage at sea is claimed under the cargo insurance. Incoterms 2020 requires only minimum cover under CIF [1]. If you want broader cover, ask for it when you confirm the order. One buyer asked whether insurance was compulsory after his machine had already been handed to the forwarder, and by then the cover could not be changed. Destination port charges, customs clearance, duty and the delivery from the port also stay with you, so get a local estimate for them before you compare a CIF quote with a DDP quote.
+
+What a DDP contract should say
+
+DDP gives you one delivered price, and that price is only as useful as its written scope. Some countries require a local importer to handle import clearance, in which case DDP cannot be used and DAP is the usual alternative [2]. For ice cream vending machine DDP shipping, write the following into the contract, not only into the quotation or the invoice.
+
+The named place: the full delivery address, not a city or a port.
+
+The delivered price, with the same figure and the same scope in the contract as on the invoice. If the invoice includes door delivery and the draft contract does not mention it, correct the contract before you sign.
+
+What the price includes: export clearance, sea freight, insurance, destination port charges, import clearance, duty, import VAT or GST, and transport to the address.
+
+What it excludes unless stated: unloading from the truck, moving the machine inside the building, storage if you cannot receive on the agreed day, and permits you need as the operator.
+
+The importer of record: which company appears on the import entry and whose tax number is used. This decides who can reclaim import VAT or GST and whose name is on the release documents.
+
+What happens if customs asks for more documents or selects the shipment for inspection, and who pays for the inspection.
+
+Which documents you receive afterwards, such as a copy of the import entry and the tax receipt.
+
+We confirm DDP route by route, because it depends on what our logistics partners cover in the destination country. Where we cannot offer it, a CIF quote plus your own broker covers the same journey, with the costs split across two quotations.
+
+4 Refrigerant, radio parts and crates
+Refrigerant in the cooling circuit
+
+Every machine leaves the factory with its refrigeration circuit charged and sealed, and the refrigeration system goes through a 48-hour pressure-hold test at the factory. Easy7 uses R290 and Power7 uses R404A. For B Series orders, the refrigerant is one of the items confirmed in writing before production.
+
+The refrigerant affects how the cargo is classified. R290 is propane, a flammable refrigerant in ASHRAE safety group A3 [5]. Dangerous goods lists have a separate entry for refrigerating machines containing flammable, non-toxic liquefied gas, UN 3358 in Class 2.1, while machines with non-flammable refrigerants come under UN 2857 in Class 2.2 [6][7]. Exceptions depend on the quantity of gas and the transport mode; under US rules, for example, the exception for refrigerating machines holding a limited quantity of flammable gas does not apply to air transport [8]. In practice, the forwarder, or the consolidator on a shared-container booking, decides whether to accept the machine and on what terms.
+
+Two buyers ran into this in 2026. An Israeli buyer booked his machine, charged with R290, as less-than-container-load cargo. The consolidator would not load it without a safety data sheet, because one hazardous item can hold up a container shared with other importers' goods. We supplied the hazardous-materials identification report we hold for the machine, and in the end the buyer moved the booking to a forwarder that accepted the cargo. In the Maldives, the buyer's forwarder would take the machine only with its refrigerant vented, which meant the buyer signing a release and arranging a technician to recharge it after arrival.
+
+We do not recommend venting. Recharging at the destination opens a circuit that was sealed and pressure-tested at the factory, needs a technician qualified for that refrigerant under local rules, and adds a step before the machine can run. When you ask a forwarder for a quote, send the refrigerant type and quantity for your configuration together with the safety documents, and get a written answer on whether they accept the machine charged, for both shared-container and full-container bookings. If they will not, try a forwarder that ships refrigeration equipment regularly before you agree to venting.
+
+Import controls can apply as well. Countries that have ratified the Kigali Amendment to the Montreal Protocol must license the import and export of the hydrofluorocarbons listed in the Protocol's Annex F [9], and some countries extend licensing to equipment that contains controlled refrigerants. In Trinidad and Tobago, the buyer's broker had to apply for a licence before the vessel landed because the machine was classed as refrigeration equipment. Ask your broker whether this applies before you book.
+
+Radio parts and card readers
+
+Network-enabled machines and contactless card readers contain radio parts, and some countries approve those separately from customs. In Israel, the buyer's customs agent first had the machine classified, then asked for an application to the communications ministry covering the card reader, with an EU declaration of conformity, a data sheet showing the frequency range, a full test report and a power of attorney. Ask your broker early whether a telecom approval applies, and get those documents from the terminal supplier, which holds them for its own device. Choosing the terminal and provider is covered in our guide to ice cream vending machine payment systems.
+
+Wooden crates, weight and the last mile
+
+Each floor-standing machine ships upright in a wooden export crate, fixed inside and protected against moisture and shock. Wood packaging in international trade is regulated under ISPM 15, which excludes packaging made from wood processed so that it is free from pests, such as plywood [10]; solid wood packaging must be treated and marked. Ask us which applies to your crate and pallet, and check whether your country adds its own rules.
+
+Give the trucking company the gross weight and crate dimensions from the packing list, not the machine's own weight. A B Series machine stands about 1.95 m tall and weighs several hundred kilograms before it is crated, and the crate adds to both. A Canadian buyer was still looking for a local carrier willing to move a crate of that weight in the week his machine was due, and when it arrived he had it held in the warehouse's long-term storage. Our handling instruction is to keep the crate upright from the container to the site. Plan for a forklift or a tail-lift truck, and measure doors and lifts along the route. After unpacking, our after-sales team asks for the machine to stand for 24 hours before it is switched on, then walks you through the first start, refilling and cleaning. Unloading equipment and delivery charges are covered in the shipping cost guide.
+
+5 Ice cream vending machine customs clearance: HS code, duty and tax checks
+
+Classification is decided under the tariff of the country you import into. The Harmonized System is standardised internationally to six digits, and countries add further digits for their own tariff lines [11]. Vending machines fall in heading 8476, which separates automatic beverage-vending machines with heating or refrigerating devices (8476.21) from other automatic goods-vending machines with heating or refrigerating devices (8476.81) [12]. Which subheading fits a machine that freezes liquid mix into soft serve and dispenses it into a cup is a decision for your broker and, if needed, your customs authority. The HS code on our export documents reflects the Chinese export declaration; treat it as a starting point for your broker, not as your import classification.
+
+If the classification is uncertain or the order is large, ask whether your customs authority issues advance or binding rulings. In the EU, binding tariff information is a legal decision on a product's classification, binding on all EU customs administrations and generally valid for three years [13].
+
+Duty and import VAT or GST depend on the classification, the customs value, the origin and any additional measures your country applies to goods from China, so we do not quote rates. Give your broker the specification sheet, photos, a short description of what the machine does (it freezes liquid mix into soft serve, dispenses it into a cup, keeps the mix refrigerated and takes payment), the commercial invoice and the trade term. The same set answers most of the questions customs raises later.
+
+6 Checklist before the deposit, before shipment and on arrival
+Before the deposit
+
+Configuration confirmed in writing: voltage, frequency, interface language, payment hardware and refrigerant.
+
+Trade term written with a named place, and its scope listed in the contract.
+
+One company named as payer, contract signatory, invoice buyer, consignee and importer, or any exception agreed in writing.
+
+Customs broker appointed and asked about refrigeration equipment licences, radio approvals and the HS classification.
+
+Forwarder's written acceptance of a machine charged with your refrigerant.
+
+Before shipment
+
+Factory test photos or video reviewed, and any test you asked for completed.
+
+Bill of lading draft checked against the importer's registered name and address before the cut-off.
+
+Commercial invoice and packing list checked line by line, including accessory cartons.
+
+Insurance cover decided.
+
+Original bill, telex release or sea waybill agreed with the forwarder.
+
+On arrival
+
+Documents with your broker before the vessel arrives.
+
+Trucking booked using the gross weight and crate size; unloading equipment and site access arranged.
+
+Crate inspected and photographed before opening; machine kept upright; 24-hour standing time planned before the first start.
+
+7 What to send for a document check
+
+To check your import before you order, send us the destination port or full delivery address, the trade term you prefer, the models and quantity, the importing company's legal name and address, and your customs broker's contact if you already have one. We will reply with the document list for your shipment and a breakdown of which arrival-side costs our quotation includes and which stay with you. Use our inquiry form.
+
+References / Sources
+
+1. International Chamber of Commerce. Incoterms 2020 rules, summary of seller and buyer obligations (ICC text reproduced by University of Cambridge Procurement Services).
+
+2. ICC Academy. DAP & DDP Incoterms 2020 explained: Key differences. 25 February 2025.
+
+3. 19 CFR 141.86: Contents of invoices and general requirements (Legal Information Institute, Cornell Law School).
+
+4. European Commission, Access2Markets. Additional customs clearance documents.
+
+5. U.S. Environmental Protection Agency, GreenChill. Deconstructing Flammable Refrigerants: The Who, What, Why, and How of Flammable Refrigerants. Webinar slides, 3 May 2022.
+
+6. NOAA CAMEO Chemicals. UN/NA 3358: Refrigerating machines, containing flammable, non-toxic, liquefied gas.
+
+7. NOAA CAMEO Chemicals. UN/NA 2857: Refrigerating machines, containing non-flammable, non-poisonous gases.
+
+8. Pipeline and Hazardous Materials Safety Administration. Interpretation letter Ref. No. 25-0133 on exceptions for compressed gases, 49 CFR 173.307(a)(4). 27 January 2026.
+
+9. UNEP Ozone Secretariat. Decision XXXVI/15: Status of the establishment of licensing systems under Article 4B, paragraph 2 bis, of the Montreal Protocol. 10. International Plant Protection Convention. ISPM 15: Regulation of wood packaging material in international trade.
+
+11. International Trade Administration. An Overview of Harmonized System Codes. 11 June 2025.
+
+12. HM Revenue and Customs, UK Trade Info. Commodity code 8476: Automatic goods-vending machines.
+
+13. European Commission. European Binding Tariff Information (EBTI).
+
+Author's Introduction: Huaxin Co., Ltd. has manufactured commercial automated ice cream vending machines in Dezhou, China, since 2013, with machines shipped to more than 50 countries and regions. Each unit completes a 72-hour stress test before shipment, and certifications such as CE, IECEE CB, NSF/ANSI 6 and ETL vary by model.
+
+PREVIOUS ARTICLE
+
+Huaxin at GASTRO SWEET FEST: Supporting Our Czech Partner
+
+NEXT ARTICLE
+
+How Many Ice Cream Vending Machines Do You Need to Make $100K a Year?
+BLOG
+
+Why Ice Cream Vending Machines Don&#039;t Make Money: It&#039;s Not the Machine, It&#039;s the Operation
+
+>>
+
+Frozen Yogurt Vending Machines: A Profitable Investment for Retail Operators
+
+>>
+
+Soft Serve Ice Cream Vending vs. Frozen Yogurt: Which Has Better Margins?
+
+>>
+
+Protein Powder Vending Machines: Tapping into the Fitness Nutrition Market
+
+>>
+
+New vs Used vs Rental Ice Cream Vending Machine: Which Is Best for Your Operation?
+
+>>
+
+How Do Ice Cream Vending Machines Cope with High-Temperature Environments
+
+>>
+
+Smart Ice Cream Vending Machines Make Unmanned Operation Easier Via Mulple Payments
+
+>>
+
+Does an Ice Cream Vending Machine Use Electricity?
+
+>>
+
+How to Choose a Small Commercial Soft-Serve Ice Cream Machine
+
+>>
+
+Ice Cream Vending Machine Payment Systems: Cashless, Coins and Local Integration
+
+>>
+PRODUCT
+
+Commercial Ice Cream Vending Machine Dealer for European Distributors, Vending Operators, Shopping Malls, Airports, and High-Traffic Retail Locations
+
+Robotic Ice Cream Machine B83 | Is It Profitable? ROI Guide
+
+Robot Ice Cream Vending Machine - Fully Automatic | Huaxin
+
+Ice Cream Vending Machine for Theme Parks and Amusement Venues
+
+High Expansion Rate Ice Cream Automatic Selling Machine
+
+Best Automatic Soft Serve Ice Cream Vending Machine: High-ROI 2026 Smart Retail Solution
+
+Talk to a Huaxin Sales Manager
+
+Get machine recommendations, location operation advice, payment options, and a quotation for your market.
+
+Request Quote
+
+Huaxin Technology is a global leader in intelligent ice cream vending machines, providing high-return automated solutions and aiming to lead the unmanned retail sector through innovation.
+
+MORE ABOUT US ➣
+
+QUICK ENTRY
+PRODUCTS
+ABOUT
+SYSTEM
+BLOG
+SOLUTIONS
+FAQ
+CONTACT
+VENDING MACHINES
+Vending Machine Catalog
+Desktop Mini Ice Cream Machines
+B83Max Ice Cream Vending Machines
+Frozen Yogurt Vending Machine
+How to start an ice cream vending business?
+B83 High-Traffic Ice Cream Vending Machine
+SYSTEMS
+Remote Control System
+Expansion System
+Refrigeration System
+INFORMATION
+Cookie Policy
+Refund Policy
+Privacy Policy
+Feed
+SiteMap
+CERTIFIED PATENT
+CONTACT US
+
+No.268, Dexing North Road, Tianqu Sub-district Office, Decheng District, Dezhou City, Shandong Province, China
+
++86 19953410321
+
+Copyright © 2013-Today Huaxin All rights reserved
+
+Hi, Thank you very much for your interest in our ice cream vending machine. I am your project consultant and welcome to contact me.
+
+Messages
+
+Whatsapp

@@ -1,0 +1,473 @@
+Huaxin
+
+HOME
+PRODUCTS
+ABOUT
+SYSTEM
+BLOG
+SOLUTIONS
+FAQ
+CONTACT
+
+Send Inquiry
+
+EN>
+
+BLOG
+How to Avoid Ice Cream Vending Machine Scams When Buying From an Overseas Supplier
+How to Avoid Ice Cream Vending Machine Scams When Buying From an Overseas Supplier
+Date：2026-11-07 Author：Huaxin
+
+How to avoid vending machine scams when buying overseas: red flags, company and factory checks, certificate numbers, payee accounts and a pre-order checklist
+
+When you buy an ice cream vending machine from an overseas supplier, the fear is usually the same: the money goes out and no machine arrives, or the machine that arrives is not the one you agreed on. The scams behind this follow a familiar pattern. The price is unusually low, there are no real photos of the factory, the certificates do not match the model, the bank account does not match the company name, and questions about spare parts get vague answers. The way to avoid vending machine scams is to ask, before you pay, for the things any genuine manufacturer can show you, and to check each one: the company name, the factory, the certificates, the payee account and the machine you are buying.
+
+First, who is writing. Huaxin is an ice cream vending machine factory in Dezhou, Shandong, and the examples below come from how we handle factory tours, pre-shipment inspection and certificates. This guide is for operators, distributors and chain brands buying from an overseas supplier for the first time, and it covers only the warning signs and the checks. For comparing suppliers and writing configuration and delivery terms into the contract, see our guide on how to choose an ice cream vending machine supplier for overseas projects.
+
+Payment is usually where buyers lose the most. The FBI’s Internet Crime Complaint Center recorded 24,768 business email compromise (BEC) complaints in 2025, with reported losses of about $3.05 billion, and describes BEC as a scam aimed at businesses and individuals working with suppliers [1]. In Australia, the National Anti-Scam Centre reported A$166.8 million in losses to payment redirection scams in 2025 [2]. Both figures cover payment fraud across all industries. There is no separate count for vending machine purchases.
+
+Red Flags When Buying From an Overseas Supplier
+
+None of the ice cream vending machine supplier red flags below proves a scam on its own. If you see any of them, stop and verify before you discuss payment.
+
+A Price Far Below the Market
+
+When a quote for the same model and configuration comes in well below other suppliers, there are usually three explanations. Something is missing from the quote, such as the payment module, remote management, export packaging or the accessories supplied with the machine. The machine being quoted is not the one you think it is. Or the seller never intends to ship. Ask for an itemized quotation, line it up against the others on the same configuration, and go further only when the price gap has a clear explanation.
+
+No Real Photos or Live Video of the Factory
+
+The seller sends only product renderings, factory photos you can find elsewhere online or edited promotional videos, and always has a reason to put off a video call. A commercial ice cream vending machine is a large piece of equipment. The factory that builds it can switch on a camera at any time and walk you from the gate to the workshop.
+
+Certificates That Don't Match the Model
+
+Ask questions when the model on the certificate is not the one you are buying, when the certificate holder is not the company signing your contract, or when one certificate claims to cover “all models.” Be careful, too, with talk of a “CE certificate issued by the EU.” These certificates are issued by testing bodies and cover only the models and standards listed on them. Get a clear answer on each point before you go further.
+
+A Payee Account That Doesn't Match the Company Name
+
+The proforma invoice names one company, but the bank account belongs to another company, a private individual or a company in a third country. Or, halfway through the deal, an email or chat message says the bank details have changed and asks you to pay quickly. This is how payment redirection scams usually work. The FBI advises verifying every change to payment details in person or through a known telephone number, and being wary of last-minute changes to wire instructions or recipient account details [3].
+
+Promises of Locations and Guaranteed Income
+
+“We find the locations,” “guaranteed monthly income” and “payback in a few months” are the promises behind the most common vending machine business scams. In the United States, a seller that offers equipment together with help finding locations, or that quotes earnings figures, may fall under the Federal Trade Commission’s Business Opportunity Rule. The seller must give you a one-page disclosure document at least seven days before you sign or pay, and any earnings claim must come with a separate written statement. The FTC also lists untrue claims of help finding locations or of an exclusive territory among the signs of this kind of scam [4]. As far back as 1998, the FTC and 10 states ran a joint sweep against vending business opportunity scams that produced 40 enforcement actions [5].
+
+We are a factory that sells equipment. We don’t find locations for buyers, and we don’t promise sales volumes or payback periods. Locations and results depend on your own project.
+
+No Spare-Parts Plan
+
+You ask which parts wear out, how parts are numbered and where replacements ship from, and the only answer is “contact us if there is a problem.” When a machine fails overseas, what gets it running again is a manufacturer that can identify the right part and ship it quickly. Buying through a trading company can work, but ask who is ultimately responsible for after-sales support and spare parts. We explain how to tell a factory from a trader on our page about how we work with overseas operators as a manufacturer.
+
+How to Verify an Ice Cream Vending Machine Supplier Before You Pay
+
+You can run every check below yourself, before any money changes hands.
+
+Check the Company Registration
+
+Registration records for companies in mainland China can be searched free of charge on the National Enterprise Credit Information Publicity System, using the full Chinese company name or the 18-character Unified Social Credit Code [6]. Search the code shown on the supplier’s business license, check the name, registered address and registration status, and compare the name with the one on the contract, the proforma invoice and the bank account. Huaxin’s registered Chinese name is 华芯（德州）智能科技有限公司, its Unified Social Credit Code is 91371400344666420T, and its address is No. 268, Dexing North Road, Dezhou, Shandong.
+
+Take a Live Video Factory Tour
+
+If you can’t visit, book a live video factory tour and look for these points:
+
+• Start at the gate. You should see the company name and the gate sign, then a continuous walk into the workshop with no cuts or switching between recordings.
+
+• See the model you are buying. Ask for the machine to be switched on to make one cup, and check that the screen, viewing window and pickup port are where the product documents show them.
+
+• See the production steps. Sheet metal, powder coating, refrigeration assembly, final assembly and final inspection. Staff on the floor should be able to explain what each step does.
+
+• Make one unplanned request. For example, ask someone to stand next to the machine holding a sheet of paper with your company name and today’s date.
+
+Our factory has machining, sheet-metal and powder-coating workshops, a refrigeration production line and a final assembly line. The showroom holds every B Series model as well as Easy7 and Power7, so on a video tour we can show you the model you plan to buy.
+
+Visit the Factory
+
+For a volume order or a distribution partnership, a factory visit is worth the trip. Huaxin is in Dezhou, Shandong. By high-speed rail, come to Dezhou East Station; by air, to Jinan Yaoqiang International Airport. We pick you up at the station or airport, with our own staff or a professional driver we arrange. The factory covers 15,000 square meters and has an annual capacity of 6,000 units, and our company profile has more background. Before you come, tell your account manager which models you want to see and what you want to discuss, and we will plan the machine viewing and technical meetings around your project.
+
+Match Certificate Numbers to the Model
+
+Ask for the certificates together with the matching test reports, and check:
+
+• that the holder or manufacturer named on the certificate is the company on your contract;
+
+• that the listed models include the one you are buying, and that the rated voltage and frequency match your order;
+
+• that the certificate number and issuing body can be confirmed. For an IECEE CB Test Certificate, the public area of the IECEE online database shows extracted details of issued certificates [7]. For other certificates, check with the body that issued them;
+
+• for ISO 9001, that you are looking at a quality management system certification. It covers how the company is run, not a particular machine, so look at the scope and the validity dates.
+
+Start With a Trial Order
+
+On a first order, you can buy one machine, run it at a real location and confirm that the machine, the payment setup and the refill routine all work before you order at full scale. For full operation, we usually suggest planning in batches of about 10 units. Our guide to a single-unit pilot or 10-unit rollout explains when each makes sense.
+
+According to our sales records, one German customer watched our machines run at a trade show over several days and talked with our technicians before ordering a single pilot unit. After testing it in Germany for more than three months, the customer ordered a full container.
+
+What We Do at Huaxin: Inspection Records and Certificate Lists
+
+Here is how we support each of these checks.
+
+72-Hour Stress Test and Five-Area Final Inspection
+
+Before shipment, every machine completes a 72-hour stress test, followed by an item-by-item inspection across the five areas in our inspection standard: electrical cabinet, refrigeration system, front door, cleaning and labeling. The refrigeration checks include a first-freeze time of no more than 15 minutes, a 60-cup continuous dispensing test, leak detection, and a comparison of measured mix temperature with the displayed pre-cooling temperature at full cooling. The refrigeration system also goes through a 48-hour pressure-hold test. Any issue found is fixed by the responsible team and inspected again.
+
+Each machine has its own inspection sheet, which records the order number and the machine’s MAC address, so the record belongs to the unit you ordered. Once you have placed an order, you can arrange with your account manager to watch your machine being inspected. In September 2026, a customer in Denmark placing a first order checked the price and our bank details before paying. After the payment arrived, the customer and a business partner joined the inspection of their B84 order and then completed the pre-shipment paperwork.
+
+ 
+
+A Certificate List for the Models You Plan to Buy
+
+Our certificates are held model by model, and the scope differs from one model to the next. Tell us which models you plan to buy and in what quantity, and your account manager will send the certificate list and copies for those models.
+
+Model
+
+	
+
+Certificates and test documents
+
+
+
+
+B Series: B83, B83 Max, B84, B85, B86, B86 Max
+
+	
+
+CE certificates of compliance (LVD, EMC, RED), RoHS certificate of compliance, IECEE CB Test Certificate; third-party migration test report for food-contact parts
+
+
+
+
+B83, B83 Max, B86 Max (110 V/60 Hz configuration)
+
+	
+
+Also certified to NSF/ANSI 6 (commercial, indoor use)
+
+
+
+
+Easy7
+
+	
+
+CE certificates of compliance (LVD, EMC), RoHS certificate of compliance
+
+
+
+
+Power7
+
+	
+
+CE LVD certificate of compliance
+
+ 
+
+At company level, Huaxin’s quality management system is certified to ISO 9001:2015, with a scope covering the R&D and production of commercial food equipment and vending machines, and Huaxin also holds an ETL certificate. If your market requires other certifications, we confirm them by country and model before you order.
+
+Spare Parts From Our Own Workshops
+
+Core mechanical parts such as mixing shafts, lifting rods, dispensing nozzles, freezing cylinders and mix hoppers are made in our own machining workshop. Sheet-metal structures such as the cabinet are built in-house too, and so is the powder coating on the cabinet and front door. We control the dimensions and materials of these parts, and spare parts come from the same workshops. Each machine ships with a set of accessories.
+
+Overseas after-sales support usually starts with remote diagnosis from photos, videos, fault codes and back-office data, followed by online guidance, repair videos, parameter checks and spare-parts replacement. Whether on-site service can be arranged depends on the market and the project. Our article on after-sales support, warranty and spare parts covers the process in more detail.
+
+Payment and Contract Points
+
+Payment methods, payment split and each party’s responsibilities are set by the signed contract. The points below apply whichever supplier you buy from:
+
+• One name in three places. The company name on the contract, the proforma invoice and the bank account should be the same, and it should match the company registration record. Our contracts, quotations and proforma invoices all use our registered English name, Huaxin Co., Ltd.
+
+• Confirm the account again before you pay. Check the bank details by calling the number published on the supplier’s official website or on a video call, not through a number given in an email or chat message. If a notice of “new bank details” arrives during negotiation, verify it by phone before paying [3].
+
+• Define the machine. List the model, configuration (voltage and frequency, payment method, interface language, exterior), quantity and accessories in the contract.
+
+• Define delivery. State the Incoterms rule and the named place. For DDP, state the delivery address and which costs are included. If you order through a platform, the platform order and the contract terms should match. Our checklist for importing an ice cream vending machine from China covers documents and Incoterms in detail.
+
+• Define inspection and shipping milestones. Set out when the inspection takes place, what counts as a pass, and which photos and documents you receive before shipment.
+
+If You Think You've Already Paid a Scammer
+
+Call your bank immediately, explain that the transfer was fraudulent and ask for it to be recalled or frozen. The sooner you call, the better. Then report it through the official channel where you are: in the United States, file a complaint with the FBI’s Internet Crime Complaint Center (IC3); in Australia, report it through Scamwatch and ReportCyber.
+
+Pre-Order Checklist
+
+Go through this table before you place an order. If any line fails, hold the payment.
+
+Check
+
+	
+
+What to ask for
+
+	
+
+What a pass looks like
+
+
+
+
+Company registration
+
+	
+
+Business license and Unified Social Credit Code
+
+	
+
+The record shows in the registration system; name and address match the contract
+
+
+
+
+Factory
+
+	
+
+Live video factory tour or factory visit
+
+	
+
+Continuous footage from the gate to the workshop; the model you are buying switched on and making a cup
+
+
+
+
+Model and configuration
+
+	
+
+Written configuration sheet
+
+	
+
+Model, voltage and frequency, payment method, interface language and exterior each listed
+
+
+
+
+Certificates
+
+	
+
+Copies of certificates and test reports
+
+	
+
+Holder matches the contracting company; your model is listed; numbers confirmed with the issuing body
+
+
+
+
+Quotation
+
+	
+
+Itemized quotation
+
+	
+
+Lined up against other quotes on the same configuration, with any price gap explained
+
+
+
+
+Payee account
+
+	
+
+Bank details on the proforma invoice
+
+	
+
+Account name matches the contracting company; confirmed by phone through the official website or on video
+
+
+
+
+Income promises
+
+	
+
+—
+
+	
+
+No guaranteed income, payback period or “we find the locations” promise
+
+
+
+
+Spare parts and support
+
+	
+
+Wear parts list and fault-handling process
+
+	
+
+Clear answers on part numbers, diagnosis and shipping of replacements
+
+
+
+
+Inspection
+
+	
+
+Inspection record for your machine
+
+	
+
+Record tied to the order number and machine ID; issues fixed and re-inspected
+
+
+
+
+First order size
+
+	
+
+Pilot plan
+
+	
+
+One machine tested at a real location before the full quantity is set
+
+ 
+
+To check Huaxin, book a video factory tour or request our certificate list and tell us the models and quantities you plan to buy, whether you would like a video tour or a factory visit, and your target country. We will schedule the tour and send the certificate list for those models.
+
+References / Sources
+
+[1] Federal Bureau of Investigation, Internet Crime Complaint Center. “2025 IC3 Annual Report.” April 2026. https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf
+
+[2] National Anti-Scam Centre (ACCC). “Targeting scams: report of the National Anti-Scam Centre on scams data and activity 2025.” 30 March 2026.
+
+https://www.scamwatch.gov.au/research-and-resources/targeting-scams-report
+
+[3] Federal Bureau of Investigation. Private Industry Notification 20210317-001, “Business Email Compromise Actors Targeting State, Local, Tribal, and Territorial Governments, Straining Resources.” 17 March 2021. https://www.ic3.gov/CSA/2021/210318.pdf
+
+[4] Federal Trade Commission. “Bogus Business Opportunities.”
+
+https://www.ftc.gov/business-guidance/resources/bogus-business-opportunities
+
+[5] Federal Trade Commission. “FTC Announces ‘Operation Vend Up Broke’: States and Feds Stop Business Opportunity Scams.” 3 September 1998.
+
+https://www.ftc.gov/node/39939
+
+[6] State Administration for Market Regulation (China). National Enterprise Credit Information Publicity System. https://www.gsxt.gov.cn
+
+[7] IECEE. “Online Certificates.”
+
+https://www.iecee.org/certification/certificates/
+
+Author's Introduction: Huaxin Co., Ltd. has manufactured commercial automated ice cream vending machines in Dezhou, China, since 2013, with machines shipped to more than 50 countries and regions. Each unit completes a 72-hour stress test before shipment, and certifications such as CE, IECEE CB, NSF/ANSI 6 and ETL vary by model.
+
+PREVIOUS ARTICLE
+
+Ice Cream Vending Machine Franchise vs Owning Your Machines: Fees, Royalties and Control
+
+NEXT ARTICLE
+
+Ice Cream Vending Machine Certifications by Market: CE, CB, NSF and What to Ask a Supplier
+BLOG
+
+In-depth Analysis of Core Technologies for Ice Cream Vending Machines
+
+>>
+
+How Much Does an Ice Cream Vending Machine Cost? A Commercial Buyer’s Guide
+
+>>
+
+Key Technologies Behind Robot Ice Cream Machines: Refrigeration, Automation, and Remote Control
+
+>>
+
+Durability & Maintenance: What to Know About Long-Term Operation of Ice Cream Robot Machines
+
+>>
+
+From China to Global Markets: Why Buyers Choose Chinese Ice Cream Vending Machines
+
+>>
+
+High-Quality Ice Cream Vending Machines: From Product Strength to Commercial Scene Implementation Solutions
+
+>>
+
+Soft Ice Cream Machine Entrepreneurship: A Fully Automatic Money-Making Solution Even for Beginners
+
+>>
+
+Profit from the Bar Corner: How Can a Fully Automatic Ice Cream Machine Increase Customer Unit Price by 30%?
+
+>>
+
+Ice cream vending machines never miss out on every customer
+
+>>
+
+Customizable Exteriors of Ice Cream Vending Machines: A Practical Solution to Enhance Scene Adaptability and Operational Value
+
+>>
+PRODUCT
+
+Ice Cream Vending Machine for Sports Facilities and Stadiums
+
+How to Scale an Ice Cream Vending Fleet? | Reliability Guide
+
+Ice Cream Vending Machine Supplier and Manufacturer for Global Operators
+
+Professional Fully Automated Smart Soft Serve Ice Cream Vending Machine - High-Profit Self-Service Kiosk
+
+Durable Reliable User Friendly Yogurt Ice Cream Machines | With 32 Inch Big Touch | Smart Technology
+
+Best Automatic Soft Serve Ice Cream Vending Machine: 2026 High-ROI Smart Retail Solution
+
+Talk to a Huaxin Sales Manager
+
+Get machine recommendations, location operation advice, payment options, and a quotation for your market.
+
+Request Quote
+
+Huaxin Technology is a global leader in intelligent ice cream vending machines, providing high-return automated solutions and aiming to lead the unmanned retail sector through innovation.
+
+MORE ABOUT US ➣
+
+QUICK ENTRY
+PRODUCTS
+ABOUT
+SYSTEM
+BLOG
+SOLUTIONS
+FAQ
+CONTACT
+VENDING MACHINES
+Vending Machine Catalog
+Desktop Mini Ice Cream Machines
+B83Max Ice Cream Vending Machines
+Frozen Yogurt Vending Machine
+How to start an ice cream vending business?
+B83 High-Traffic Ice Cream Vending Machine
+SYSTEMS
+Remote Control System
+Expansion System
+Refrigeration System
+INFORMATION
+Cookie Policy
+Refund Policy
+Privacy Policy
+Feed
+SiteMap
+CERTIFIED PATENT
+CONTACT US
+
+No.268, Dexing North Road, Tianqu Sub-district Office, Decheng District, Dezhou City, Shandong Province, China
+
++86 19953410321
+
+Copyright © 2013-Today Huaxin All rights reserved
+
+Hi, Thank you very much for your interest in our ice cream vending machine. I am your project consultant and welcome to contact me.
+
+Messages
+
+Whatsapp

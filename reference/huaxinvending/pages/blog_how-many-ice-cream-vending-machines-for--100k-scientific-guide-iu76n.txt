@@ -1,0 +1,683 @@
+Huaxin
+
+HOME
+PRODUCTS
+ABOUT
+SYSTEM
+BLOG
+SOLUTIONS
+FAQ
+CONTACT
+
+Send Inquiry
+
+EN>
+
+BLOG
+How Many Ice Cream Vending Machines Do You Need to Make $100K a Year?
+How Many Ice Cream Vending Machines Do You Need to Make $100K a Year?
+Date：2026-10-27 Author：Huaxin
+
+Machines needed = $100K ÷ (daily cups × contribution per cup × operating days − fixed cost per machine). Three worked cases and how many sites you need
+
+To work out how many vending machines you need to make $100K a year, divide the target by what one machine earns after its own costs:
+
+Machines needed = $100,000 ÷ [(average daily cups × contribution per cup × operating days) − annual fixed cost per machine]
+
+With the mid-range assumptions used later in this guide, the answer is six ice cream vending machines. With weaker sites the same formula gives 13, and with strong sites, three. The machine is identical in all three cases. What moves the count is how many cups each location sells and what it costs to occupy, so in practice the question becomes how many locations you can secure that reach a minimum daily sales figure. Section 4 shows how to set that minimum.
+
+This guide is for first-time operators and investors asking how many ice cream vending machines they need for an income target. It explains each input, works through three illustrative cases, and shows how many cups a day each site must average for a given fleet size. Payback on the purchase and a full profit model are covered in our ROI calculation guide. Huaxin manufactures fully automatic ice cream vending machines. Every figure below is an assumption chosen to demonstrate the method, not a customer result or a forecast.
+
+1 The formula and what goes into each input
+
+The bracket in the formula is the yearly income per machine: what one machine earns at its site after the costs that come with that site. The method works for any vending machine income target. What is specific to ice cream is the cost per cup and the number of service visits.
+
+Input
+
+	
+
+What it includes
+
+	
+
+Where the number comes from
+
+
+
+
+Annual target
+
+	
+
+What you want the machines to leave you each year, before income tax and before recovering their purchase price. Add business-level costs that no single machine causes, such as a van, a storage room, insurance and bookkeeping.
+
+	
+
+Your own plan
+
+
+
+
+Average daily cups
+
+	
+
+Paid cups per machine per operating day, averaged over the whole year
+
+	
+
+Venue visitor figures, comparable sites, then a pilot machine
+
+
+
+
+Contribution per cup
+
+	
+
+Selling price minus mix, cup, spoon, toppings, waste and payment fees. If the venue takes a share of sales, deduct it here.
+
+	
+
+Local supplier quotes, your payment provider's rates, the venue agreement
+
+
+
+
+Operating days
+
+	
+
+Days the venue is open and the machine is selling, after closures, cleaning and downtime
+
+	
+
+The venue's opening calendar
+
+
+
+
+Annual fixed cost per machine
+
+	
+
+Fixed rent, service visits including travel time, electricity, data connection and a maintenance reserve
+
+	
+
+The venue agreement, your route plan, local utility rates
+
+Three points decide whether the result can be used. Put rent in the right line: a fixed monthly rent belongs in fixed cost, while a percentage of sales reduces the contribution per cup, and the two behave differently in a slow month. Round up: 5.1 machines means six machines, or five sites that sell more. Check the sign of the bracket: if one machine's yearly income is zero or negative, adding more machines of that kind moves you further from the target.
+
+Average daily cups has to be a full-year figure. In the United States, factory production of regular hard ice cream in July 2025 was around 15 percent above that year's monthly average, and December's was around 18 percent below it [1]. Factory output is not vending sales, but it shows how far demand for the product moves through the year. A daily figure from a July week, multiplied across the year, inflates the result. Either model the slow months separately or use the annual average.
+
+Machine capacity is a separate question. B Series machines are rated at up to 120 cups an hour under standard conditions. That rating tells you whether a machine can keep up with a busy hour. It does not tell you how many cups a site will sell in a day, which is the figure the formula needs.
+
+2 Ice cream vending machine income per machine: three illustrative cases
+
+The table applies the formula to three kinds of site. The low case is a quiet location with low rent, for example an office building or a hotel lobby. The mid case is a steady mall corridor or family entertainment center on a fixed rent. The high case is a busy, seasonal venue such as a tourist attraction, where the venue takes 20 percent of sales instead of rent.
+
+Illustrative assumptions (USD)
+
+	
+
+Low case
+
+	
+
+Mid case
+
+	
+
+High case
+
+
+
+
+Average daily cups
+
+	
+
+25
+
+	
+
+45
+
+	
+
+80
+
+
+
+
+Selling price per cup
+
+	
+
+$4.00
+
+	
+
+$4.50
+
+	
+
+$5.00
+
+
+
+
+Variable cost per cup
+
+	
+
+$1.60
+
+	
+
+$1.80
+
+	
+
+$1.90
+
+
+
+
+Venue's share of sales
+
+	
+
+None
+
+	
+
+None
+
+	
+
+20% ($1.00 per cup)
+
+
+
+
+Contribution per cup
+
+	
+
+$2.40
+
+	
+
+$2.70
+
+	
+
+$2.10
+
+
+
+
+Operating days per year
+
+	
+
+330
+
+	
+
+340
+
+	
+
+300
+
+
+
+
+Annual fixed cost per machine
+
+	
+
+$12,000
+
+	
+
+$21,600
+
+	
+
+$10,800
+
+
+
+
+Yearly income per machine
+
+	
+
+$7,800
+
+	
+
+$19,710
+
+	
+
+$39,600
+
+
+
+
+Machines for $100,000
+
+	
+
+12.8, so 13
+
+	
+
+5.07, so 6
+
+	
+
+2.53, so 3
+
+Illustrative assumptions, not recommended prices or customer results. Monthly fixed costs: low case $1,000 (rent $400, service visits $400, electricity, data and maintenance $200); mid case $1,800 (rent $1,100, service visits $450, electricity, data and maintenance $250); high case $900 with no fixed rent (service visits $650, electricity, data and maintenance $250). Yearly income is before income tax and before recovering the machine purchase.
+
+The high case needs only three machines, but it assumes three sites that each average 80 paid cups a day over 300 days. Sites like that are scarce, and the venues that offer them usually want a share of sales, which is why this case has the lowest contribution per cup. The share has one advantage: when sales drop in a slow month, the venue's cut drops with them, while a fixed rent stays the same.
+
+The mid case shows why rounding up matters. Five machines would earn $98,550 a year, just under the target, so the plan needs a sixth machine or five sites that each sell a few more cups.
+
+Service cost grows with sales. A B83 Max, B84, B85, B86 or B86 Max holds about 160 cups, so a machine selling 80 a day needs its cups restocked at least every second day, and mix, toppings and cleaning are usually handled on the same visits. Cost those visits at a real hourly rate even if you make them yourself. Otherwise part of your $100K is your own wage.
+
+None of the three cases recovers the cost of the machines. If you want $100K a year after paying for the fleet, take each machine's landed cost (price, freight, import charges and installation), spread it over the years you expect to run the machine, and add the yearly amount to the fixed cost line.
+
+3 Same machine, different site: how daily sales set the count
+
+Keep the mid-case price, costs and operating days, and change only the number of cups each site sells:
+
+Average daily cups per machine
+
+	
+
+Yearly income per machine
+
+	
+
+Machines for $100,000
+
+
+
+
+23 or fewer
+
+	
+
+Zero or less
+
+	
+
+No number of machines reaches it
+
+
+
+
+25
+
+	
+
+$1,350
+
+	
+
+75
+
+
+
+
+35
+
+	
+
+$10,530
+
+	
+
+10
+
+
+
+
+45
+
+	
+
+$19,710
+
+	
+
+6
+
+
+
+
+55
+
+	
+
+$28,890
+
+	
+
+4
+
+
+
+
+65
+
+	
+
+$38,070
+
+	
+
+3
+
+Mid-case illustrative assumptions: $2.70 contribution per cup, 340 operating days, $21,600 fixed cost per machine per year.
+
+Between 35 and 55 cups a day, the requirement falls from ten machines to four. Below about 24 cups a day under these costs, each machine loses money at its site, so adding machines of that kind takes the plan further from the target. Daily cups and site cost are both properties of the location, which is why the location decides the count.
+
+A fleet count also assumes that every machine has an open site. An operator in Italy started two B84 machines in early 2026. In late February he told us one of them was switched off because the shopping center it stood in had closed, and the machine needed a new location. In the same exchange he said this was probably not the best time of year and that he expected sales to rise in summer. For that stretch, his two-machine plan was selling from one site, in the slow season.
+
+4 How many good locations you need
+
+Turn the formula around and it tells you what each site must sell for a given fleet size:
+
+Required daily cups per site = (annual target ÷ number of machines + annual fixed cost per machine) ÷ (contribution per cup × operating days)
+
+Machines in the plan
+
+	
+
+Each site must earn per year
+
+	
+
+Each site must average
+
+
+
+
+4
+
+	
+
+$25,000
+
+	
+
+51 cups a day
+
+
+
+
+6
+
+	
+
+$16,667
+
+	
+
+42 cups a day
+
+
+
+
+10
+
+	
+
+$10,000
+
+	
+
+35 cups a day
+
+
+
+
+15
+
+	
+
+$6,667
+
+	
+
+31 cups a day
+
+Mid-case illustrative assumptions as above. Each site must also cover its own $21,600 fixed cost, so the required cups fall slowly as the fleet grows.
+
+A larger fleet lowers the bar for each site only a little, because every new site brings its own rent and service cost. What it changes more is risk. With four machines, one site that closes or fails takes away a quarter of the plan's income. With ten, it takes away a tenth, and the machine can move to the next site on your list while the other nine keep selling.
+
+We do not publish a typical daily figure for each type of location, because results depend on the market and on the exact spot inside the venue. The table lists high-traffic location types that operators commonly consider, and for each one the input most likely to be wrong.
+
+Location type
+
+	
+
+Why it can reach the minimum
+
+	
+
+Input most likely to be wrong
+
+
+
+
+Mall food court, cinema entrance or children's play area
+
+	
+
+Shoppers slow down, wait or sit nearby
+
+	
+
+Rent or revenue share, and the exact position inside the mall
+
+
+
+
+Family entertainment center or indoor playground
+
+	
+
+Families stay for hours and children pass the machine repeatedly
+
+	
+
+Weekday cups, because sales cluster at weekends
+
+
+
+
+Tourist attraction, zoo or theme park
+
+	
+
+High visitor numbers in season
+
+	
+
+Operating days and off-season cups
+
+
+
+
+Sports venue or stadium
+
+	
+
+Large crowds on event days
+
+	
+
+The number of event days in a year
+
+
+
+
+Transport hub
+
+	
+
+Very high footfall
+
+	
+
+How many people in a hurry stop to buy
+
+
+
+
+University campus
+
+	
+
+Repeat customers through the term
+
+	
+
+Term dates and holidays
+
+How a strong spot differs from a weak one inside the same venue is covered in our soft serve vending machine location lessons.
+
+Agree terms with the sites before you fix the size of the order. Until a venue has agreed, the rent and the daily cups in your formula are estimates. A buyer in Chile asked us in June 2026 for the operating costs because he needed them to calculate the project's return, and in August he was still negotiating the lease for his shopping-mall site. He was renting floor space by the square meter, so before signing he asked how much clearance the machine needs at the sides and back, since that space would be added to his rent. Count the locations that have agreed, or are close to agreeing, and size the first order to that number.
+
+5 From a machine count to a first order
+
+Once the formula gives you a number, the purchase usually goes in stages. A single machine is the right first order when a site, the payment setup or your refill routine still has to be proven, and it replaces the assumed daily cups in this guide with a measured figure. For formal operation, Huaxin recommends planning around ten units: the machines ship together, share spare parts and written procedures, can be serviced on planned routes, and spread the risk of any one site, as section 4 shows. Our guide to choosing between a single-unit pilot and a 10-unit rollout explains what to measure during a pilot and how to move from one machine to ten.
+
+For a phased purchasing suggestion, send us the number and types of locations you have lined up through our inquiry form, for example three mall sites and two family entertainment centers, with your country and when each site can open. We will suggest how to split the order into batches: which sites to start with, the configuration for each, and when to place the next order.
+
+References / Sources
+
+1. U.S. Department of Agriculture, National Agricultural Statistics Service. Dairy Products 2025 Summary, April 2026. Table: Ice Cream Production by Product and Month, United States: 2025.
+
+Author's Introduction: Huaxin Co., Ltd. has manufactured commercial automated ice cream vending machines in Dezhou, China, since 2013, with machines shipped to more than 50 countries and regions. Each unit completes a 72-hour stress test before shipment, and certifications such as CE, IECEE CB, NSF/ANSI 6 and ETL vary by model.
+
+PREVIOUS ARTICLE
+
+Importing an Ice Cream Vending Machine from China: Documents, Incoterms and Customs Checklist
+
+NEXT ARTICLE
+
+Ice Cream Vending Machine After-Sales Support: Warranty, Spare Parts and Fault Reporting
+BLOG
+
+Single Hopper vs. Dual Hopper: Which Is Better for Ice Cream Vending Machines?
+
+>>
+
+The Future of Retail: Why Smart Vending Machines Are Replacing Traditional Kiosks
+
+>>
+
+Common Mistakes New Ice Cream Vending Machine Operators Must Avoid
+
+>>
+
+Ice Cream Robot Vending Machine ROI: 5 Realistic Scenarios Based on Location & Traffic Volume
+
+>>
+
+From Single Machine Profit to Global Brand: The Systematic Guide for Ice Cream Vending Operators
+
+>>
+
+Why pick an ice-cream vending machine over a traditional one?
+
+>>
+
+How Automated Ice Cream Vending Machines Work: Where Technology Meets Convenience
+
+>>
+
+Ice Cream Vending Machine Shipping Cost and Total Import Expenses: What Overseas Buyers Should Know
+
+>>
+
+Ice Cream Vending Machine Payment Systems: Cashless, Coins and Local Integration
+
+>>
+
+Common Troubleshooting for Ice Cream Vending Machines
+
+>>
+PRODUCT
+
+Robotic Ice Cream Machine B83 | Is It Profitable? ROI Guide
+
+Ice Cream Vending Machine for Family Entertainment Centers
+
+Huaxin Icecream Vending Machine | 15s Fresh-Made, 800 Cups Non-Stop, Smart Unmanned Retail
+
+Ice Cream Vending Machine Distributor for Smart Soft Serve Business Expansion
+
+Best Automatic Soft Serve Ice Cream Vending Machine: 2026 High-ROI Smart Retail Solution
+
+Smart Ice Cream Vending Machine for Shopping Malls & High-Traffic Commercial Locations
+
+Talk to a Huaxin Sales Manager
+
+Get machine recommendations, location operation advice, payment options, and a quotation for your market.
+
+Request Quote
+
+Huaxin Technology is a global leader in intelligent ice cream vending machines, providing high-return automated solutions and aiming to lead the unmanned retail sector through innovation.
+
+MORE ABOUT US ➣
+
+QUICK ENTRY
+PRODUCTS
+ABOUT
+SYSTEM
+BLOG
+SOLUTIONS
+FAQ
+CONTACT
+VENDING MACHINES
+Vending Machine Catalog
+Desktop Mini Ice Cream Machines
+B83Max Ice Cream Vending Machines
+Frozen Yogurt Vending Machine
+How to start an ice cream vending business?
+B83 High-Traffic Ice Cream Vending Machine
+SYSTEMS
+Remote Control System
+Expansion System
+Refrigeration System
+INFORMATION
+Cookie Policy
+Refund Policy
+Privacy Policy
+Feed
+SiteMap
+CERTIFIED PATENT
+CONTACT US
+
+No.268, Dexing North Road, Tianqu Sub-district Office, Decheng District, Dezhou City, Shandong Province, China
+
++86 19953410321
+
+Copyright © 2013-Today Huaxin All rights reserved
+
+Hi, Thank you very much for your interest in our ice cream vending machine. I am your project consultant and welcome to contact me.
+
+Messages
+
+Whatsapp

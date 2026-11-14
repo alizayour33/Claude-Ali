@@ -1,0 +1,318 @@
+Huaxin
+
+HOME
+PRODUCTS
+ABOUT
+SYSTEM
+BLOG
+SOLUTIONS
+FAQ
+CONTACT
+
+Send Inquiry
+
+EN>
+
+BLOG
+Açaí Vending Machine Business: Mix, Menu and Location Lessons for Operators
+Açaí Vending Machine Business: Mix, Menu and Location Lessons for Operators
+Date：2026-11-02 Author：Huaxin
+
+Planning an açaí vending machine business? See what the machine really serves, how to test your mix, label toppings and claims, and pilot your first sites.
+
+An açaí vending machine business sells a frozen açaí dessert that a soft serve machine makes from a prepared liquid mix. The machine does not blend frozen pulp, slice fruit or build an açaí bowl. Three things decide whether the business works: a mix that freezes and dispenses well in the machine you buy, a short menu with correctly labeled toppings, and a site where shoppers already know açaí or can understand it from the machine wrap in a few seconds.
+
+This guide is for dessert brands and vending operators in Europe, North America and Latin America who are planning açaí soft serve vending. Huaxin manufactures the machines discussed here, and the lessons come from three açaí projects we supplied in 2026, in Germany, Portugal and Canada. All three are in their first season, so what they show is mainly how to prepare. We compare machine models and the common mix formats on our açaí vending machine solution page; this article covers the business decisions around them and does not estimate sales or payback.
+
+What the machine serves, and what it does not
+
+Açaí fruit is highly perishable, and the harvest has to reach processing plants in good condition [1]. Brazil produced about 1.99 million tonnes of açaí in 2024, according to IBGE data reported by Conab, which follows the export trade as açaí pulp and purée [2]. By the time açaí reaches an operator in Europe or North America, it comes as frozen pulp, frozen concentrate, powder or a ready-to-use mix. One of our Canadian customers also sells açaí ingredients; its product is a frozen concentrate.
+
+Inside our B Series machines, one liquid base is kept chilled in the mix tank, frozen in the cylinder and dispensed into a cup, and the selected sauces or dry toppings go on top. It is the same hardware that runs soft serve or frozen yogurt. The mix, the freezing settings, the wrap and the menu screen are what make it an açaí machine. When we say a machine runs an açaí-style frozen dessert, we mean a formula that has been tested on that machine; until a mix has been tested, we do not call it that.
+
+Name the product for what it is. The phrase “açaí bowl vending machine” suggests granola, banana and a thick blended base in a bowl. The machine delivers açaí soft serve in a cup with dry toppings and sauces, and a wrap and screen that say so set the right expectation from the first sale.
+
+Texture is often the first technical question we get. Before ordering, our Canadian customer wrote: “The acai sorbet is kind of different… The machine needs to be kind of ‘slush machine’,” and described the açaí itself as strong. We answer that question by running that exact product on the machine.
+
+Test the mix before the machine is built
+
+We do not sell açaí mix outside China. Most operators buy from a local supplier or use their own recipe, and we can test that mix on the machine before you order. The best time is while your machine is still in production, when a different dilution, a setting change or another supplier can still be arranged without delaying the opening.
+
+Flow, sweetness and freezing
+
+Three properties decide whether an açaí base runs well in the machine.
+
+Property
+
+	
+
+Why it matters for açaí
+
+	
+
+What to record in the test
+
+
+
+
+Flow
+
+	
+
+The base has to move from the mix tank into the freezing cylinder. Pulp-rich bases and concentrates can be thicker than a standard soft serve mix, and powder that has not fully dissolved changes both flow and mouthfeel.
+
+	
+
+Dilution ratio, mix temperature at loading, and any slow or uneven dispensing.
+
+
+
+
+Sweetness (Brix)
+
+	
+
+Sugars lower the freezing point and keep part of the water unfrozen, so the balance of sweetness, total solids and freezing point sets how soft the cup is [3]. A low-sugar açaí base tends to freeze harder and icier.
+
+	
+
+Sugar content or Brix from the supplier's sheet, taste, and whether the swirl holds its shape.
+
+
+
+
+Freezing and cleaning
+
+	
+
+Freezing settings can be adjusted for compatible sorbet-type formulas, within limits. The dark color also has to rinse out of the product path.
+
+	
+
+Time to the first sellable cup from a fresh fill, texture through a long run, and residue after the cleaning cycle and manual cleaning.
+
+Our factory checks give a yardstick for the last row. Before shipment, the refrigeration check on each machine includes a first freeze in no more than 15 minutes and a 60-cup continuous dispensing run. Those are factory test limits, not a promise for every recipe or room, but they are good questions to put to your açaí base: how long until the first cup is sellable, and does the texture hold through a long run?
+
+Our German customer's first technical question, asked before ordering, was the recommended Brix range for the liquid mix; the plan was to buy a ready-to-use mix made for soft serve machines. No single range covers every açaí formula, which is why we test the actual product.
+
+Send the mix and cups while the machine is being built
+
+In two of these projects, the machine left our factory before it had run the buyer's açaí. We checked both buyers' cups before shipment, but no açaí base had reached us. Our final video inspection for the Canadian order in July ran on ice cream mix, and in Germany, where the machine was unpacked at the end of July, the operator told us in mid-September that the mix would be tested “this week.” So when the machines shipped, neither we nor the buyers knew how the açaí would run in them. That is why we suggest sending the mix sample together with the cup samples, so we can test both while the machine is still in production.
+
+Cups need the same early attention, and there is a quick route and a slower one. The quick route is a cup that already runs on our machines: the German buyer's cup supplier turned out to be one we already work with, so no further samples were needed. Ask us which cups are already in use before you choose. The slower route is a new cup, usually because a brand wants its own printed design. Cups from different makers vary slightly, so we test about 50 samples on the machine before shipment. Our Canadian customer chose a new supplier whose samples arrived late, some in the wrong size, and our cup test finished almost three weeks after the machines were otherwise ready. If you want your own cup, send the samples when you place the order.
+
+Build the menu around one base
+One base, with toppings for variety
+
+Each B Series machine runs one base mix at a time. Variety comes from sauces and dry toppings, and how many of each depends on the configuration ordered. Among the countertop models, Power7 can be configured with two toppings and two sauces, and Easy7 has no automatic topping system. Our comparison of countertop and floor-standing ice cream machines explains where each format fits.
+
+Topping dispensers take dry toppings with a suitable particle size, such as granola-type cereals, nuts and dried fruit, and sauces with the right flow. They do not add fresh fruit. Test each topping and sauce on the machine, as you test the base. Our German customer planned a peanut butter sauce and asked us for the temperature of the sauce compartment so the sauce's thickness could be adjusted to it.
+
+Keep the opening menu short. Plain açaí, açaí with one cereal topping and açaí with one sauce give you three items to learn from, and one serving size keeps the numbers comparable. Our German customer chose a 100 g serving.
+
+Açaí and ice cream on two machines
+
+Changing the base means emptying the tank, running the cleaning procedure and refilling, so switching between açaí and vanilla during the day is not practical. Operators who want both run two machines. A buyer in Portugal ordered two B83 Max units from us for that purpose, one for ice cream and one for açaí.
+
+That order also shows when the decision has to be made. After production had started, the buyer asked us whether the ice cream unit could become a second açaí unit, whether both could share one color and whether both could take card payments only. The machines were already on the line, and we had to tell the buyer that the appearance could no longer be changed. Settle which base each machine runs, the wrap and the payment setup before production starts, because that is when we lock the configuration.
+
+Two machines side by side also give a fair comparison: same footfall, same hours, two products. If açaí outsells vanilla there, that is a reason to try an açaí-only machine at the next site.
+
+Wrap, window and screen
+
+Some decisions are specific to a dark product. Our German customer chose a purple tinted viewing window instead of clear glass, out of concern that açaí splashes inside would look dirty to shoppers. At the operator's request, our designers also localized the wrap, with “Ausgabe” on the pickup point and a German note that the spoon is at the bottom of the cup.
+
+Settle these details while our designers are working on the wrap. Our Canadian customer sent an updated logo after we had scheduled sticker production, and we could only offer to use it on a future order.
+
+Allergens and claims
+
+Every topping and sauce adds to the allergen list. A peanut sauce adds peanuts, cereal toppings often contain gluten, and a base made from açaí jam and a milk-based soft serve mix contains milk. Build an allergen table from each supplier's specification sheet and show it where buyers can read it before they pay.
+
+EU food information rules make allergen information mandatory for food sold without prepackaging [4]. Ireland's food safety authority, for example, requires the 14 regulated allergens to be declared and states that for vending machines the information must still be available at the point of delivery, for instance on signage near the machine [5]. In the US, the nine major food allergens are milk, eggs, fish, crustacean shellfish, tree nuts, peanuts, wheat, soybeans and sesame [6], and operators who own or operate 20 or more vending machines must disclose calories for foods whose Nutrition Facts label buyers cannot see before purchase [7]. Local health authorities may add their own requirements.
+
+Claims on the wrap need the same care. We produce the wrap from your artwork and wording, so check every claim before you approve the design. Our Canadian customer's side panel listed “No Artificial Ingredients,” “Plant-Based,” “Gluten-Free” and “Energy & Performance.” Each one has to hold for every cup the machine sells, toppings included. Health Canada's position is that a gluten-free claim fits foods made under good manufacturing practices with no more than 20 ppm gluten, and is misleading on foods with added gluten sources [8], so a single cereal topping can undo it. In the EU, health claims, including wording that promises energy or performance, may only be used if they are authorized in the EU Register [9]. Write wrap claims from the supplier documents and leave out anything you cannot support.
+
+Treat locations as hypotheses, then pilot
+Where we expect açaí to sell
+
+We do not yet have enough açaí sales data across site types to rank them. Treat the following as working assumptions for a pilot to confirm or reject:
+
+Gyms, sports clubs and wellness retail, where many customers already know açaí and need no explanation.
+
+Shopping malls with young weekend crowds, where an açaí wrap stands apart from standard ice cream.
+
+Campuses, if the price and serving size match student budgets.
+
+Where açaí is less familiar, the wrap and the first screen have to explain it in one line, and the first weeks are likely to be slower. Installation, access and lease checks are the same as for any frozen dessert machine, and our site scoring checklist covers them.
+
+Getting a site to say yes
+
+Expect to make the case to landlords. Before signing a shopping mall position in early June, our German customer heard two common objections. Many malls did not want a vending machine at all, and the train stations, which belong to one company, already had a snack vending operator and cited fire safety rules when they said there was no space. Go to a landlord ready for both: a visual of the machine in your açaí wrap, so it reads as a branded dessert point rather than a snack machine; the footprint and power rating for the facilities and fire safety check; and a direct question about any existing vending contract on the site.
+
+Plan backward from the season. The operator wanted to sell through the summer, but the custom purple glass and freight brought the machine to Germany at the end of July, and the operator scheduled it into the mall for 1 October. Once it was in place, the operator reported 110 cups sold by 4 p.m. on one Saturday and expected about 180 for the day, as described in the German mall case. One weekend day at one site is not a forecast, but it shows mall shoppers buying açaí soft serve from one of our machines.
+
+Run the pilot with a decision rule
+
+Our Canadian customer set a rule before ordering: start with two machines in Canada and, if they reach the team's targets within two months, add five or more. Write your own targets down before the machines arrive. For açaí, useful measures are cups per day on weekdays and weekends, the share of cups sold with a topping, opened mix discarded at its use-by limit, failed or refunded sales, and refill visits per week. Our network-connected machines report sales and machine status remotely; waste and visits you log yourself. Our guide to planning a pilot order covers how to size the first order.
+
+Two setup items decide whether the pilot starts on time. Plan an internet connection for the machine itself, by Wi-Fi or SIM, separate from the card reader's connection; our after-sales team could only complete the Portuguese buyer's setup once the location had internet. And register the card reader's merchant account to the operating company. For our Canadian customer the account was opened in one partner's name; when the partnership changed, we followed it up with the payment provider, but the transfer had to go through its Canadian team. Our ice cream vending machine payment systems guide lists what to confirm before ordering.
+
+Price from the cost of a sold cup
+
+Café prices for açaí bowls tell you what buyers in your area are used to paying. Your cost per sold cup tells you whether that price works in a machine.
+
+Contribution per cup = selling price − (mix per serving + cup and spoon + toppings and sauces + payment fee + waste per sold cup)
+
+The mix cost per serving depends on the serving weight and on how much of each batch you can sell at the texture you accepted in the test, which is one more reason to test first. Price toppings separately if they add real cost, and let the pilot show how many buyers take them. A positive contribution still has to cover the site's rent, power and service visits before the site makes sense.
+
+Send your açaí mix for a test
+
+If you already have an açaí supplier or recipe, send us the product specification sheet with ingredients and allergens, sugar content or Brix, total solids, dilution ratio and storage conditions, plus the supplier's name and whether a sample can be shipped. Add your target country, the model and number of machines you are considering, your cup specification, and the sauces and toppings you plan to offer. We will explain how the test works for your mix and run it on the machine before you order.
+
+Request an açaí mix test and include the specification sheet with your message.
+
+References / Sources
+
+[1] Quaresma, A. P. and Euler, A. M. C. “Açaí, mais que um fruto, símbolo da cultura alimentar e bioeconomia da Amazônia.” Embrapa Amapá, 2023.
+
+https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1155560/1/CPAF-AP-2023-Acai-mais-que-um-fruto-simbolo-da-cultura-alimentar-e-bioeconomia.pdf
+
+[2] Conab. Boletim Trimestral Sociobiomais: Açaí (Euterpe oleracea), Edição 1/2026, January–March 2026. https://www.gov.br/conab/pt-br/atuacao/sociobiodiversidade/boletins/boletins-1o-trimestre/boletim_acai.pdf
+
+[3] Goff, H. D. “Sweeteners.” Ice Cream Technology e-Book, University of Guelph. https://books.lib.uoguelph.ca/icecreamtechnologyebook/chapter/sweeteners/
+
+[4] Regulation (EU) No 1169/2011 on the provision of food information to consumers, Article 44.
+
+https://eur-lex.europa.eu/eli/reg/2011/1169/oj
+
+[5] Food Safety Authority of Ireland. “Allergen Information for Non-prepacked Food.”
+
+https://www.fsai.ie/Business-Advice/Running-a-Food-Business/Allergens/Allergen-Information-for-Non-prepacked-Food
+
+[6] U.S. Food and Drug Administration. “The FASTER Act: Sesame Is the Ninth Major Food Allergen.” Content current as of April 12, 2024.
+
+https://www.fda.gov/food/food-allergies/faster-act-sesame-ninth-major-food-allergen
+
+[7] U.S. Food and Drug Administration. “Small Entity Compliance Guide: Calorie Labeling of Articles of Food in Vending Machines.” August 2016.
+
+https://www.fda.gov/regulatory-information/search-fda-guidance-documents/small-entity-compliance-guide-calorie-labeling-articles-food-vending-machines
+
+[8] Health Canada. “Health Canada's Position on Gluten-Free Claims.”
+
+https://www.canada.ca/en/health-canada/services/food-nutrition/food-safety/food-allergies-intolerances/celiac-disease/health-canada-position-gluten-free-claims.html
+
+[9] European Union, Your Europe. “Nutrition and health claims – EU labelling rules.” Last checked April 27, 2026. https://europa.eu/youreurope/business/product-requirements/food-labelling/health-nutrition-claims/index_en.htm
+
+Author's Introduction: Huaxin Co., Ltd. has manufactured commercial automated ice cream vending machines in Dezhou, China, since 2013, with machines shipped to more than 50 countries and regions. Each unit completes a 72-hour stress test before shipment, and certifications such as CE, IECEE CB, NSF/ANSI 6 and ETL vary by model.
+
+PREVIOUS ARTICLE
+
+Ice Cream Vending in Convenience Stores and Fuel Stations: Adding Soft Serve Without Extra Staff
+
+NEXT ARTICLE
+
+Ice Cream Vending Machine Franchise vs Owning Your Machines: Fees, Royalties and Control
+BLOG
+
+How to Choose the Right Ice Cream Vending Machine for Rent
+
+>>
+
+The Psychology Behind Impulse Buys: Why Ice Cream Vending Machines Succeed
+
+>>
+
+Are Ice Cream Vending Machines Profitable? A Real-World ROI Analysis
+
+>>
+
+2026 Ice Cream Vending Machine Price Guide: What Are You Actually Paying For?
+
+>>
+
+Automated Ice Cream Vending Machines: A Scalable Growth Model for Chain Brands
+
+>>
+
+How Automated Ice Cream Vending Machines Work: Where Technology Meets Convenience
+
+>>
+
+Ice Cream Vending Machine Operating, Maintenance and Ingredient Costs: Full Budget Guide
+
+>>
+
+Importing an Ice Cream Vending Machine from China: Documents, Incoterms and Customs Checklist
+
+>>
+
+Frozen Yogurt Vending Machine Business: A Profitable Niche or a Risky Bet?
+
+>>
+
+Soft Serve Ice Cream Vending Machine vs Traditional Ice Cream Shop: Profit & Cost Comparison
+
+>>
+PRODUCT
+
+HUAXIN B83 Series Ice Cream Vending Machine – High-Speed, Multi-Flavor Soft Serve Solution
+
+Compact Ice Cream Vending Machine – Automatic, Energy-Efficient Design for Small Businesses
+
+Automatic Ice Cream Vending Machine for 24/7 Self-Service Dessert Operation
+
+Professional Fully Automated Smart Soft Serve Ice Cream Vending Machine - High-Profit Self-Service Kiosk
+
+Smart Ice Cream Vending Machine for Shopping Malls & High-Traffic Commercial Locations
+
+Ice Cream Vending Machine for Schools and Campuses
+
+Talk to a Huaxin Sales Manager
+
+Get machine recommendations, location operation advice, payment options, and a quotation for your market.
+
+Request Quote
+
+Huaxin Technology is a global leader in intelligent ice cream vending machines, providing high-return automated solutions and aiming to lead the unmanned retail sector through innovation.
+
+MORE ABOUT US ➣
+
+QUICK ENTRY
+PRODUCTS
+ABOUT
+SYSTEM
+BLOG
+SOLUTIONS
+FAQ
+CONTACT
+VENDING MACHINES
+Vending Machine Catalog
+Desktop Mini Ice Cream Machines
+B83Max Ice Cream Vending Machines
+Frozen Yogurt Vending Machine
+How to start an ice cream vending business?
+B83 High-Traffic Ice Cream Vending Machine
+SYSTEMS
+Remote Control System
+Expansion System
+Refrigeration System
+INFORMATION
+Cookie Policy
+Refund Policy
+Privacy Policy
+Feed
+SiteMap
+CERTIFIED PATENT
+CONTACT US
+
+No.268, Dexing North Road, Tianqu Sub-district Office, Decheng District, Dezhou City, Shandong Province, China
+
++86 19953410321
+
+Copyright © 2013-Today Huaxin All rights reserved
+
+Hi, Thank you very much for your interest in our ice cream vending machine. I am your project consultant and welcome to contact me.
+
+Messages
+
+Whatsapp

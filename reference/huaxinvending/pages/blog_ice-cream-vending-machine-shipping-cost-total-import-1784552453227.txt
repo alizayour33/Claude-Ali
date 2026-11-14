@@ -1,0 +1,760 @@
+Huaxin
+
+HOME
+PRODUCTS
+ABOUT
+SYSTEM
+BLOG
+SOLUTIONS
+FAQ
+CONTACT
+
+Send Inquiry
+
+EN>
+
+BLOG
+Ice Cream Vending Machine Shipping Cost and Total Import Expenses: What Overseas Buyers Should Know
+Ice Cream Vending Machine Shipping Cost and Total Import Expenses: What Overseas Buyers Should Know
+Date：2026-07-20 Author：Huaxin
+
+Understand ice cream vending machine shipping cost, LCL vs FCL, FOB, CIF and DDP terms, customs clearance, duties, taxes, port charges and total landed cost before importing
+
+
+The ice cream vending machine shipping cost shown in an initial quotation is rarely the complete amount an overseas buyer will pay before the machine reaches its final location. Ocean freight may be only one line in a longer import-cost chain that includes export packaging, inland transport, cargo insurance, destination handling, customs clearance, duties, VAT or GST, local delivery and unloading.
+
+This is why a machine that appears affordable at factory level can exceed the original budget after arrival. The problem is not necessarily that the supplier or forwarder has charged incorrectly. More often, the buyer compared quotations with different boundaries.
+
+One quotation may be FOB China port. Another may be CIF destination port. A third may be described as door delivery but exclude import taxes, unloading or remote-area surcharges. Unless every inclusion and exclusion is listed, the three numbers cannot be compared directly.
+
+Overseas buyers should therefore calculate the total landed cost rather than looking only at the machine price or headline ocean freight.
+
+A practical import calculation should answer three questions:
+
+What must be paid before the machine leaves China?
+What must be paid while it is moving internationally?
+What must be paid after it reaches the destination country?
+What Does Total Landed Cost Include?
+
+For an imported vending machine, total landed cost generally means the full cost required to bring the equipment from the supplier to a defined destination.
+
+The destination must be stated clearly. “Landed cost to port” is different from “landed cost to warehouse,” and both are different from “installed cost at the shopping mall.”
+
+A useful formula is:
+
+Total landed cost = Purchase-ready machine + Export packaging + Origin charges + International freight + Insurance + Destination charges + Customs clearance + Duty and import tax + Local delivery
+
+Site preparation, installation, payment activation and opening consumables may be added later, but they should not be confused with the import calculation itself.
+
+Import Cost Breakdown
+Cost Stage	Typical Charges	Usually Confirmed By
+Machine preparation	Machine configuration, export packaging, spare parts packed with the unit	Supplier
+Origin logistics	Factory pickup, inland transport, export declaration, warehouse or port handling	Supplier or origin forwarder
+International transport	LCL or FCL ocean freight, surcharges and insurance	Freight forwarder
+Destination port	Terminal handling, document fee, deconsolidation, storage or inspection	Destination agent
+Customs	Broker fee, classification, customs value, duty and import tax	Importer and customs broker
+Final delivery	Port-to-warehouse or port-to-site transport, appointment and unloading	Local carrier
+Site-related costs	Positioning, power, internet, payment activation and commissioning	Buyer and site owner
+
+The table should be completed with a named party and a dated quotation for every line. A blank line is not automatically a zero-cost line.
+
+1. How Machine Configuration Affects Shipping Cost
+
+This article is not intended to compare machine performance in depth. However, configuration can change shipping cost because it affects dimensions, weight, packaging and the number of machines that fit in a container.
+
+Screen and Cabinet Size
+
+A larger screen or full-size commercial cabinet can increase:
+
+Packed dimensions
+Wooden-case dimensions
+Total shipment volume
+Handling requirements
+Container space used
+
+For LCL shipping, volume is especially important because the shipment shares container space with other cargo.
+
+Refrigeration System
+
+Compressors, cooling assemblies, insulated structures and ingredient-storage systems add weight. They may also require stronger internal fixing to prevent movement during transport.
+
+A commercial machine should not be quoted using only its net machine dimensions. Freight planning should use the final packed dimensions and gross weight.
+
+Payment Hardware and Accessories
+
+Payment terminals, spare parts, cups or accessory boxes may be packed:
+
+Inside the main wooden case
+In separate cartons
+On a separate pallet
+In the same container as the machine
+
+Separate cartons can create additional chargeable volume, handling or customs-document complexity. Buyers should ask whether the quotation includes accessory packaging.
+
+Huaxin Full-Size Shipping Reference
+
+For preliminary planning, a typical full-size Huaxin ice cream vending machine uses the following reference data:
+
+Approximate dimensions: 1180 × 1100 × 2130 mm
+Approximate weight: 500 kg
+Approximate volume: 2.76 CBM
+20-foot container reference: approximately 10 machines
+40-foot high-cube reference: approximately 22 machines
+
+These are planning references rather than a final freight booking basis. Final packed dimensions, gross weight and loading quantities should be confirmed after the production configuration and packaging method are finalized.
+
+2. Export Packaging and China-Side Charges
+
+International machinery should not be shipped as if it were moving between two local warehouses.
+
+The export package needs to protect the machine against:
+
+Forklift handling
+Container vibration
+Tilting
+Long-distance road transport
+Moisture
+Repeated loading and unloading
+Contact with other LCL cargo
+What Good Export Packaging Should Cover
+
+A suitable packaging plan may include:
+
+Export wooden case
+Pallet or forklift base
+Internal fixing
+Corner and screen protection
+Moisture-resistant wrapping
+Protection for the payment terminal
+Separate accessory cartons
+External handling marks
+
+Buyers should confirm whether the machine is packed upright and whether it can safely tolerate normal container movement.
+
+Common Origin-Side Cost Lines
+
+Before the machine reaches the vessel, charges may include:
+
+Factory-to-port transport
+Export customs declaration
+Origin terminal handling
+Warehouse receiving
+LCL consolidation
+Documentation
+Container loading
+Security or port-related fees
+
+Under some quotations, these charges are included in the supplier’s FOB price. Under others, they are listed separately.
+
+The buyer should request a line-by-line explanation instead of assuming that “FOB price” means the same cost package from every supplier.
+
+3. LCL vs FCL: Which Shipping Method Fits the Order?
+
+Most first-time buyers do not order enough machines to fill an entire container. Their shipment is therefore often handled as LCL.
+
+Maersk defines LCL as cargo that is not large enough to fill a standard container and is consolidated with other shipments. FCL refers to the use of a full container for one shipment.
+
+LCL Shipping
+
+LCL is normally considered when the buyer orders one or a small number of machines.
+
+Advantages
+No need to pay for an entire container
+Suitable for pilot orders
+Useful when shipment volume is limited
+Lower initial freight commitment
+Risks and Additional Costs
+Cargo is handled during consolidation and deconsolidation
+Destination deconsolidation charges may be significant
+The machine shares space with other cargo
+Transit may be less direct
+Storage exposure may increase if documents are delayed
+Cost is affected by chargeable volume and local minimum charges
+
+For a large, heavy machine, the lowest-looking LCL ocean rate may not produce the lowest total destination cost.
+
+FCL Shipping
+
+FCL becomes relevant when order quantity justifies a dedicated container.
+
+Advantages
+Less consolidation handling
+More control over loading
+Easier consolidation of machines, spare parts and accessory cartons
+Lower handling exposure per machine
+Potentially better cost efficiency for larger quantities
+Limitations
+The buyer pays for the container even if space is unused
+Container loading must be planned carefully
+Destination detention and demurrage exposure may be higher if clearance is delayed
+Local trucking and unloading arrangements may be more demanding
+LCL vs FCL Comparison
+Factor	LCL	FCL
+Best suited to	One or several machines	Larger or container-scale orders
+Container use	Shared	Dedicated
+Cargo handling	More consolidation handling	Less shared-cargo handling
+Cost basis	Volume, weight and local minimums	Container and route rate
+Destination fees	Can be high relative to shipment size	Usually more predictable but still substantial
+Damage exposure	More handling stages	Fewer shared handling stages
+Loading flexibility	Limited	Better for machines, parts and accessories
+Typical Huaxin use	Pilot or small order	Approximately 10-unit or larger planning
+
+The decision should be based on the complete origin-to-destination cost, not ocean freight alone.
+
+4. Current Ocean Freight Conditions in 2026
+
+Ocean freight changes quickly. A rate used for budgeting several months ago may no longer be valid when the machine is ready to ship.
+
+On July 16, 2026, Drewry reported that its World Container Index fell 2% to USD 4,547 per 40-foot container after a period of stronger peak-season momentum. The WCI is a composite market indicator, not a direct China-to-buyer quotation, but it shows why current freight estimates need a validity period.
+
+A route-specific quotation can differ significantly because of:
+
+Origin and destination ports
+Direct or transshipment service
+Container availability
+Peak-season surcharges
+Fuel adjustments
+Port congestion
+Blank sailings
+Carrier capacity
+Special destination conditions
+
+A useful freight quote should state:
+
+Port of loading
+Port of discharge
+LCL or FCL
+Equipment type
+Estimated transit time
+Freight validity date
+Included surcharges
+Excluded origin charges
+Excluded destination charges
+Free-time conditions where relevant
+
+Do not publish or rely on one global container index as if it were the actual cost of shipping one machine.
+
+5. FOB, CIF and DDP: What Do They Actually Mean?
+
+Incoterms define the tasks, costs and risks allocated between seller and buyer. They do not determine the machine specifications, payment terms or transfer of ownership unless the contract addresses those matters separately.
+
+FOB — Free on Board
+
+Under FOB, the seller generally handles export clearance and delivers the goods on board the nominated vessel at the origin port. Risk transfers when the goods are on board.
+
+The buyer generally controls:
+
+Main ocean freight
+Insurance if required
+Destination handling
+Customs clearance
+Duty and tax
+Local delivery
+
+FOB is used for sea or inland-waterway transport. ICC guidance also notes that FCA is often more appropriate than FOB for containerized shipments because a seller commonly hands the container to a terminal before it is loaded on the vessel.
+
+For a vending-machine buyer, FOB can be suitable when the buyer has a trusted freight forwarder and wants control over the international shipment.
+
+CIF — Cost, Insurance and Freight
+
+Under CIF, the seller arranges and pays for freight and required insurance to the named destination port.
+
+However, an important distinction is often misunderstood:
+
+The seller pays freight to the destination port, but the transport risk transfers at the origin when the cargo is loaded on board.
+
+CIF normally does not mean that the seller handles destination customs clearance, duty, VAT, port charges or local delivery. The contract and quotation must list these exclusions clearly. ICC’s Incoterms 2020 rules also distinguish the insurance requirements under CIF from those under CIP.
+
+CIF can be convenient when the supplier has access to a competitive ocean rate, but buyers still need a destination-cost estimate from a local agent.
+
+DDP — Delivered Duty Paid
+
+DDP places the highest level of delivery responsibility on the seller among the commonly used terms. The seller is responsible for delivery to the named destination, including import clearance and applicable duties.
+
+In practice, buyers should still verify:
+
+Who is the importer of record
+Whether the seller can legally clear goods in the destination country
+Whether import VAT is included
+Whether VAT can be recovered
+Whether unloading is included
+Whether remote-area or appointment fees are included
+Whether local certification or inspection is included
+
+DDP can provide budget simplicity, but a one-line DDP number is not enough. The buyer still needs a written scope.
+
+FOB vs CIF vs DDP
+Term	Seller Commonly Arranges	Buyer Must Pay Particular Attention To
+FOB	Export clearance and delivery on board at origin	Freight, insurance, destination charges, import and delivery
+CIF	Export, ocean freight and required insurance to destination port	Risk transfer at origin, port charges, clearance, tax and delivery
+DDP	Delivery and import formalities to named destination	Importer-of-record structure, VAT, unloading and exact exclusions
+
+Always name the location after the term, for example:
+
+FOB Qingdao Port
+CIF Rotterdam Port
+DDP buyer’s warehouse address
+
+A trade term without a named place is incomplete.
+
+6. HS Code and Customs Classification
+
+Huaxin commonly uses 8476810000 as an export reference for full-size automatic vending machines incorporating refrigeration.
+
+The first six digits—847681—represent the international HS subheading commonly associated with other automatic goods-vending machines incorporating heating or refrigerating devices. Countries may then add further digits for their national tariff systems.
+
+The code on the supplier’s invoice is an important starting point, but it does not remove the importer’s responsibility to confirm classification.
+
+Customs treatment may depend on:
+
+The machine’s primary function
+Whether it is considered beverage vending or other goods vending
+Heating or refrigeration functions
+Product description
+Country of origin
+National tariff extensions
+Additional trade measures
+
+The European Commission explains that classification, customs value and origin all affect the tariff treatment of imported goods.
+
+Before shipping, provide the broker with:
+
+Product name
+Function description
+Product photos
+Specification sheet
+Refrigeration information
+Payment and vending process
+Invoice value
+Country of origin
+Proposed HS Code
+
+For a large order or uncertain classification, a buyer may consider obtaining an advance or binding classification decision where available.
+
+7. Customs Value, Duty, VAT and GST
+
+Duty and import tax are not always calculated from the supplier’s machine price alone.
+
+The customs value may include or exclude different items depending on the importing jurisdiction and its valuation rules.
+
+For example, the European Commission states that customs valuation, together with classification and origin, forms the basis for calculating customs duty. It also explains that the taxable amount for EU import VAT includes customs value, import duties and certain incidental expenses such as packing, transport and insurance up to the relevant destination.
+
+In Australia, GST rules for taxable imports similarly use a value that includes customs value and specified transport-related amounts.
+
+The exact calculation varies by country, but the general lesson is consistent:
+
+Do not estimate import tax by multiplying the factory price by the local tax rate without confirming the taxable base.
+
+Factors That May Affect Duty and Tax
+HS Code
+Customs value
+Country of origin
+Trade agreements
+Freight and insurance treatment
+Additional tariffs
+VAT or GST rules
+Importer registration
+Tax-recovery eligibility
+
+In some markets, import VAT or GST may later be recoverable by a properly registered business. That does not necessarily remove the initial cash-flow requirement at import.
+
+A local customs broker or tax adviser should confirm the final treatment.
+
+8. Destination Port Charges: The Most Common Surprise
+
+Destination charges are often where an apparently low CIF quote becomes more expensive.
+
+Possible destination charges include:
+
+Terminal handling
+Documentation
+Delivery order
+LCL deconsolidation
+Port service
+Customs broker fee
+Inspection
+Storage
+Demurrage
+Detention
+Container cleaning
+Security fee
+Local tax on services
+
+For LCL cargo, destination charges may be calculated per shipment, per CBM, per tonne or under local minimum-charge rules.
+
+The buyer should obtain a destination estimate from the receiving agent before confirming the order.
+
+Ask:
+
+Who is the destination agent?
+Which port charges are expected?
+Is deconsolidation included?
+How many free storage days are available?
+What documents must be submitted before arrival?
+Who pays inspection if customs selects the shipment?
+Does the quotation include delivery order fees?
+
+Do not wait until the arrival notice is issued to ask these questions.
+
+9. Local Delivery and Unloading
+
+Port-to-site delivery can be more complex than normal parcel delivery.
+
+A full-size machine may require:
+
+Truck with tail lift
+Forklift
+Crane or lifting equipment
+Pallet jack
+Delivery appointment
+Shopping-mall loading access
+Height and door-clearance confirmation
+Removal of wooden packaging
+Movement through corridors or lifts
+
+The buyer should check the complete path from truck to final machine position.
+
+Important measurements include:
+
+Door width
+Lift dimensions
+Ceiling height
+Turning space
+Floor loading
+Ramp access
+Final electrical position
+
+“Door delivery” may mean delivery to the outside entrance, not positioning inside a shopping mall or hotel. This must be clarified in writing.
+
+10. How Order Quantity Changes Import Economics
+One Machine
+
+A one-machine pilot usually involves:
+
+LCL ocean freight
+Higher destination cost per unit
+One set of documentation charges
+One customs entry
+Port or warehouse handling minimums
+Individual local delivery
+
+The freight may still be commercially reasonable, but the cost per machine is normally higher than in a consolidated order.
+
+Three to Five Machines
+
+Several machines can improve cost efficiency because:
+
+Origin transport is shared
+Documentation charges are spread
+LCL or partial-container planning may improve
+Spare parts can travel with the machines
+Local delivery may be consolidated
+
+However, destination unloading and warehouse requirements also become more demanding.
+
+Approximately Ten Machines
+
+Huaxin’s reference loading plan allows approximately 10 full-size units in a 20-foot container, subject to final packing confirmation.
+
+At this scale, FCL may offer:
+
+Better cargo control
+Less shared handling
+More predictable per-unit logistics
+Easier consolidation of parts and accessories
+Larger Distributor Orders
+
+Approximately 22 full-size machines may be considered for a 40-foot high-cube container under Huaxin’s preliminary loading reference.
+
+A distributor should also budget for:
+
+Local warehouse handling
+Spare-parts stock
+Multiple site deliveries
+Import working capital
+Technician or installer training
+Payment-module activation
+
+The container freight rate is only one part of the rollout cost.
+
+Total Landed Cost Worksheet
+
+Use this structure before approving a purchase.
+
+Cost Line	Quoted Amount	Currency	Included By	Confirmed?
+Purchase-ready machine	 	 	Supplier	 
+Payment hardware	 	 	 	 
+Spare-parts package	 	 	 	 
+Export packaging	 	 	 	 
+China inland transport	 	 	 	 
+Export declaration	 	 	 	 
+Ocean freight	 	 	 	 
+Cargo insurance	 	 	 	 
+Destination handling	 	 	 	 
+Deconsolidation if LCL	 	 	 	 
+Customs broker	 	 	 	 
+Import duty	 	 	 	 
+VAT or GST	 	 	 	 
+Inspection reserve	 	 	 	 
+Port storage reserve	 	 	 	 
+Local delivery	 	 	 	 
+Unloading and positioning	 	 	 	 
+Estimated landed total	 	 	 	 
+
+Add a contingency reserve rather than assuming that every port and inspection cost can be predicted exactly.
+
+Overseas Import Checklist
+Before Requesting a Quote
+Confirm destination country
+Confirm destination port or complete delivery address
+Confirm machine quantity
+Confirm full-size or compact model
+Confirm product type
+Confirm payment requirements
+Confirm voltage and language
+Confirm required trade term
+Confirm planned launch date
+Before Placing the Order
+Obtain packed dimensions and gross weight
+Confirm export packaging
+Confirm HS Code reference
+Ask for a line-by-line quotation
+Confirm freight validity
+Appoint a customs broker
+Check import eligibility
+Estimate duty and VAT/GST
+Obtain destination-charge estimate
+Confirm local delivery method
+Before Shipment
+Review commercial invoice
+Review packing list
+Confirm bill of lading instructions
+Confirm consignee and notify party
+Arrange insurance
+Check machine photos and packaging photos
+Confirm spare parts and accessories are listed
+Confirm original or electronic document requirements
+Send documents to the broker before arrival
+
+Commercial invoices, packing lists and shipping documents such as bills of lading are commonly required for customs entry and shipment release. U.S. CBP guidance, for example, identifies invoices, packing lists and shipping documents among the materials used for formal entry.
+
+Quote Request Template
+
+Buyer / Company Name:
+Country:
+Destination City:
+Destination Port:
+Complete Delivery Address, if DDP or DAP is required:
+Purchase Quantity:
+Preferred Machine Type: Full-Size / Compact / Not Yet Decided
+Product Type: Soft Serve / Frozen Yogurt / Sorbet / Açaí-Style
+Target Location: Mall / Hotel / FEC / Campus / Tourist Site / Other
+Payment Requirements: Card / NFC / QR / Coin / Bill / Local Wallet
+Local Payment Provider, if known:
+Required Voltage and Frequency:
+Required Language:
+Preferred Trade Term: FOB / CIF / DAP / DDP / Need Advice
+Preferred Port of Loading, if any:
+Need Cargo Insurance: Yes / No
+Need Destination Customs Support: Yes / No
+Need Port Delivery or Door Delivery:
+Unloading Equipment Available: Yes / No / Not Sure
+Need Spare-Parts Package:
+Need Cups or Accessories Shipped Together:
+Target Daily Sales:
+Planned Launch Date:
+Future Purchase Plan:
+Other Requirements:
+
+A supplier and forwarder can only calculate a useful landed-cost estimate when the destination, quantity, configuration and delivery scope are clear.
+
+FAQ
+Does the machine price normally include ocean shipping?
+
+Not unless the quotation explicitly includes it. A factory or FOB price usually excludes the main freight, while a CIF quotation includes freight and insurance to the named destination port. Always check the exact trade term and inclusions.
+
+Is CIF the same as a complete landed price?
+
+No. CIF usually excludes destination port charges, customs clearance, duty, VAT or GST, local delivery and unloading. It also does not mean that transport risk remains with the seller until arrival.
+
+Is LCL or FCL better for one ice cream vending machine?
+
+One full-size machine is normally more suitable for LCL because it does not fill an entire container. However, the buyer should compare total origin and destination charges, not only the LCL ocean rate.
+
+What HS Code is used for an ice cream vending machine?
+
+Huaxin commonly uses 8476810000 as a reference for automatic goods-vending machines incorporating refrigeration. The importer should confirm the final national classification with a local customs broker.
+
+How much does it cost to import one machine?
+
+There is no reliable universal figure. The total depends on the machine value, packed volume, route, trade term, destination charges, duty, import tax, delivery address and unloading conditions.
+
+Which import costs are most often overlooked?
+
+Destination handling, LCL deconsolidation, customs brokerage, VAT or GST, local delivery, unloading, storage and payment activation are frequently omitted from initial budgets.
+
+What documents are normally needed?
+
+Common documents include a commercial invoice, packing list and bill of lading or other transport document. A broker may also request certificates, product specifications, origin documents or market-specific compliance records.
+
+Does buying more machines reduce the shipping cost per unit?
+
+It often improves logistics efficiency because origin charges, documentation and container space can be shared. The precise benefit depends on packed dimensions, route, container utilization and destination handling.
+
+Conclusion: Ask for the Full Import Scope, Not Just Freight
+
+A realistic ice cream vending machine shipping cost calculation must cover more than ocean freight.
+
+Overseas buyers should budget for:
+
+Export packaging
+China inland transport
+Export declaration
+LCL or FCL freight
+Insurance
+Destination port charges
+Customs brokerage
+Duty
+VAT or GST
+Local transport
+Unloading and positioning
+
+The trade term also matters. FOB gives the buyer more control over freight. CIF can simplify the main ocean leg but does not cover the entire destination process. DDP may offer a more complete delivery price, but the importer-of-record, tax and unloading arrangements must still be verified.
+
+The most accurate landed-cost estimate begins with complete project information.
+
+Provide the supplier with your country, destination city or port, complete delivery address where relevant, machine quantity, model type, payment requirements, preferred trade term and planned launch date.
+
+A detailed request allows the supplier, freight forwarder and customs broker to calculate the same project scope—and helps the buyer avoid discovering major costs only after the machine has reached the destination port.
+
+References / Sources
+
+Drewry, World Container Index, July 16, 2026.
+
+International Chamber of Commerce, Incoterms® 2020 Rules and Guidance.
+
+ICC Academy, Incoterms 2020: DAP or DDP? and CIP or CIF?
+
+Maersk, FCL vs LCL Shipping: How to Choose the Right One.
+
+European Commission, Customs Valuation, Common Customs Tariff and Import VAT.
+
+Australian Taxation Office, GST and Taxable Importation Value.
+
+U.S. Customs and Border Protection, Import Documentation and Formal Entry Guidance.
+
+References / Sources
+
+Author's Introduction: Huaxin Co., Ltd. has manufactured commercial automated ice cream vending machines in Dezhou, China, since 2013, with machines shipped to more than 50 countries and regions. Each unit completes a 72-hour stress test before shipment, and certifications such as CE, IECEE CB, NSF/ANSI 6 and ETL vary by model.
+
+PREVIOUS ARTICLE
+
+Ice Cream Vending Machine Cost Breakdown for Commercial Buyers
+
+NEXT ARTICLE
+
+Ice Cream Vending Machine Operating, Maintenance and Ingredient Costs: Full Budget Guide
+BLOG
+
+Ice Cream Vending Machines for Family Entertainment Centers and Indoor Playgrounds
+
+>>
+
+A 0.85㎡ Smart Ice Cream Vending Machines Beats High-cost Traditional Stores
+
+>>
+
+Why pick an ice-cream vending machine over a traditional one?
+
+>>
+
+Huaxin at GASTRO SWEET FEST: Supporting Our Czech Partner
+
+>>
+
+Frozen Yogurt Vending Machine Business: A Profitable Niche or a Risky Bet?
+
+>>
+
+5 Must-Have Features in a Commercial Soft Serve Vending Machine
+
+>>
+
+Anti-condensation technology addresses the pain points of ice cream vending machines operating in high-temperature environments
+
+>>
+
+The Path of &quot;Hidden Champions&quot;: Differentiated Survival Strategies for Ice Cream Vending Machines in Niche Sector
+
+>>
+
+Huaxin Intelligent Ice Cream Vending Machine Operation Video
+
+>>
+
+How to Choose an Ice Cream Vending Machine Supplier for Overseas Projects
+
+>>
+PRODUCT
+
+Self-Service Robotic Ice Cream Kiosk | 24/7 Automated Soft Serve Station for Commercial Profit
+
+Açaí-Style Soft Serve Vending Machine for Modern Healthy Dessert Venues
+
+Huaxin Commercial Automatic Ice Cream Sundae Vending Machine - 59 DIY Flavors, 15s Fast Dispense, CE/ETL Certified
+
+Intelligent Ice Cream Vending Machine - 24/7 Automated Soft Serve & Frozen Yogurt Dispenser
+
+Ice Cream Vending Machine for Sports Facilities and Stadiums
+
+Automatic Frozen Yogurt Vending Machine for Operators Who Want to Sell Healthy Desserts 24/7
+
+Talk to a Huaxin Sales Manager
+
+Get machine recommendations, location operation advice, payment options, and a quotation for your market.
+
+Request Quote
+
+Huaxin Technology is a global leader in intelligent ice cream vending machines, providing high-return automated solutions and aiming to lead the unmanned retail sector through innovation.
+
+MORE ABOUT US ➣
+
+QUICK ENTRY
+PRODUCTS
+ABOUT
+SYSTEM
+BLOG
+SOLUTIONS
+FAQ
+CONTACT
+VENDING MACHINES
+Vending Machine Catalog
+Desktop Mini Ice Cream Machines
+B83Max Ice Cream Vending Machines
+Frozen Yogurt Vending Machine
+How to start an ice cream vending business?
+B83 High-Traffic Ice Cream Vending Machine
+SYSTEMS
+Remote Control System
+Expansion System
+Refrigeration System
+INFORMATION
+Cookie Policy
+Refund Policy
+Privacy Policy
+Feed
+SiteMap
+CERTIFIED PATENT
+CONTACT US
+
+No.268, Dexing North Road, Tianqu Sub-district Office, Decheng District, Dezhou City, Shandong Province, China
+
++86 19953410321
+
+Copyright © 2013-Today Huaxin All rights reserved
+
+Hi, Thank you very much for your interest in our ice cream vending machine. I am your project consultant and welcome to contact me.
+
+Messages
+
+Whatsapp

@@ -1,0 +1,405 @@
+Huaxin
+
+HOME
+PRODUCTS
+ABOUT
+SYSTEM
+BLOG
+SOLUTIONS
+FAQ
+CONTACT
+
+Send Inquiry
+
+EN>
+
+BLOG
+Countertop vs Floor-Standing Ice Cream Machines: Choosing Between B Series, Easy7 and Power7
+Countertop vs Floor-Standing Ice Cream Machines: Choosing Between B Series, Easy7 and Power7
+Date：2026-10-22 Author：Huaxin
+
+Countertop or floor-standing ice cream vending machine? Choose by how you sell: unattended site, staffed counter or in-store self-service. B Series, Easy7, Power7
+
+A countertop ice cream vending machine and a floor-standing one are built for different ways of selling, and the amount of space you have is the smaller part of the decision. What decides it is who will be near the machine while it sells: nobody, a member of staff who already takes payment, or staff who are on the premises but busy with other work.
+
+Huaxin makes a machine for each of those situations. The floor-standing B Series (B83 Max, B84, B85, B86 and B86 Max, plus the smaller-capacity B83) is designed to sell on its own in public spaces. Easy7 is an automatic countertop soft serve machine for a staffed bar or front counter. Power7 is a countertop vending machine that lets customers order and pay at the machine inside a store or venue.
+
+This guide settles the format first and the model second. Full specifications, configurations and prices are on each product page.
+
+1 Start with how each sale will happen
+
+Picture one order at your site, from the moment a customer decides to buy until they walk away with a cup. Three questions sort most sites quickly: who takes the money, who handles the cup or cone, and how long the machine must keep selling before anyone attends to it. The answers usually point to one of three operating situations.
+
+Unattended public sites
+
+Shopping mall corridors, transport hubs, attractions, campuses and waiting areas often have no staff assigned to the machine. Here the machine has to take payment, dispense the cup, make and top the serving and hand it over without help, then keep doing so until the next service visit. That is the job of a floor-standing ice cream vending machine such as the B Series. Its size is what lets it carry enough mix and cups to sell for long stretches on its own.
+
+A staffed bar or front counter
+
+Cafés, dessert shops, bakeries, restaurants and hotel breakfast bars already have someone at the counter taking orders and payment. What they need is consistent soft serve without training a person to pull and shape every portion. Easy7 does that from a small counter footprint. It is not a vending machine in the B Series sense: it has no automatic cup dispenser, and payment normally stays at the till.
+
+Self-service inside a store or venue
+
+Convenience stores, cinema and entertainment-centre lobbies, hotel lobbies and similar venues have staff on the premises who are not free to serve every order. A countertop ice cream vending machine such as Power7 fits this gap. Customers order and pay at the machine, which handles the cup and toppings itself, while staff reload cups and mix and keep the area tidy. It needs counter or stand space rather than floor space, but it carries far less stock than a B Series machine, so it suits places where someone can check it during the day.
+
+Buyers looking for a mini ice cream vending machine often expect a scaled-down B Series that can be left anywhere. Neither countertop model works that way. Easy7 relies on staff for payment and the cup, and Power7 relies on someone nearby to restock it during the day. That is why the format decision comes before the model decision.
+
+2 What happens at the machine
+
+The three formats divide the work of a sale differently. The differences below are the ones that change staffing, payment setup and site choice.
+
+B Series: from order to pickup without staff
+
+The customer chooses a product on the 32-inch touchscreen and pays at the machine. Payment can be by card, QR code or mobile wallet, or cash and coins, depending on the country, the payment provider and the terminal configured for the project. On configurations with automatic cup dispensing, the machine separates a cup, makes the soft serve, adds compatible toppings and sauces where the configuration includes them, and delivers the cup to the pickup opening. A viewing window lets customers watch the process; it is not where they collect the cup. Each machine runs one base mix at a time, and menu variety comes from toppings and sauces.
+
+Easy7: a person places the cup, the machine makes the serving
+
+Easy7 has no cup dispenser and, in its standard form, no payment system. In a typical store the customer pays at the till, receives a cup or a flat-bottomed cone, sets it in the holder and taps Make on the 11.6-inch screen. Staff can do the same steps themselves if the store prefers. The machine checks that a compatible container is in place, then its programmable dispensing arm fills and shapes the serving. There is no automatic topping or sauce system, so any toppings are added by hand at the counter.
+
+Two practical points follow. The holders are set up for specific cup and cone sizes, so cups have to be decided before the machine is finished. In one order from Spain for three Easy7 units, the holders were made to the buyer's own 4 oz and 6 oz cups, and those sizes had to be confirmed before the order could be completed. Payment is the second point. A buyer in Cambodia that already supplies coffee machines ordered Easy7 without a payment system, because paying at a machine is uncommon in its market and customers pay at the counter. If you do want customers to pay at the machine, ask at quotation stage whether a payment module can be added to your configuration, or look at Power7.
+
+Power7: self-service from a counter
+
+Of the two countertop models, Power7 is the one that works as a countertop ice cream vending machine. The customer chooses on an approximately 13-inch touchscreen and pays at the machine. Card and QR payment are available on compatible configurations, subject to the local payment provider. Power7 holds about 32 cups inside. A lifting mechanism positions each cup while the machine makes the soft serve and, where configured, adds up to two toppings and two sauces. The finished cup is delivered to an enclosed cup port, and a window lets customers watch it being made. Like the B Series, it runs one base mix at a time.
+
+Because Power7 handles the whole order, its menu and cups need the same testing as a floor-standing machine. One operator in the Czech Republic who began with a single Power7 had it running soon after delivery and used that period to trial crushed-biscuit toppings on the machine.
+
+3 Space, installation and power
+Floor-standing B Series
+
+B83 Max, B84, B85 and B86 are listed at 1950 (H) × 1080 (L) × 940 (W) mm. B86 Max measures 1950 (H) × 1080 (L) × 954 (W) mm, and B83 is 1950 (H) × 960 (L) × 880 (W) mm. The models differ in their front doors and exterior design and share the same internal configuration, apart from B83, which is smaller and carries less mix and fewer cups. Each weighs several hundred kilograms.
+
+Plan the delivery route as carefully as the site. Doorways, lifts and corners on the way in must take a machine almost two metres tall, and the floor at the site must be level and able to carry the weight. Leave room for the service door to open for refilling and cleaning, and place the machine near a suitable power supply. The standard configuration is 220 V / 50 Hz, with 110 V and 60 Hz available as options that must be confirmed before ordering. Remote monitoring of machine status and sales data needs a network connection. Outdoor placement is possible only in limited cases, with shelter and an assessment of heat, rain, sun, dust and electrical conditions at the site.
+
+Easy7 on a bar or front counter
+
+Easy7 is listed at L660 × W334 × H622 mm and weighs just over 80 kg, so check that the counter can carry it. The narrow 334 mm side faces the customer, which is why it fits beside a coffee machine or till, but the 660 mm length runs back across the worktop. Many standard worktops are only about 600 mm deep, so measure yours first. Hot air leaves through the top of the machine, which makes it easier to fit between other equipment on a bar or front desk than a side-vented unit. It still needs clear space above, so avoid placing it under a low shelf or overhead cabinet. The standard electrical configuration is 220 V / 50 Hz with 1200 W rated power; 110 V and 60 Hz are options to confirm for your market.
+
+Power7 on a counter or stand
+
+Power7 is listed at L560 × W826 × H812 mm. It is far heavier than Easy7, well over 100 kg, so it needs a stable stand or a counter built for that load rather than an ordinary display shelf. The standard configuration is 220 V / 50 Hz with 1700 W rated power, and 110 V / 60 Hz can be specified when ordering. Allow standing room at the front for customers using the screen and payment terminal, and access for the staff who reload cups and mix.
+
+4 Capacity: how long each format can sell between refills
+
+	
+
+B Series (floor-standing)
+
+	
+
+Easy7 (countertop)
+
+	
+
+Power7 (countertop)
+
+
+
+
+Mix capacity
+
+	
+
+Approx. 20 L (B83: 10 L)
+
+	
+
+3.8 L
+
+	
+
+6 L
+
+
+
+
+Cups stored in the machine
+
+	
+
+Approx. 160 (B83: approx. 80)
+
+	
+
+None; a cup or cone is placed for each serving
+
+	
+
+Approx. 32
+
+
+
+
+Rated speed, standard conditions
+
+	
+
+Approx. 15–20 seconds per serving (B83 Max, B84, B85, B86, B86 Max)
+
+	
+
+60 cups per hour; approx. 20 seconds per serving
+
+	
+
+Up to 120 cups per hour
+
+
+
+
+Toppings and sauces
+
+	
+
+Added automatically on compatible configurations
+
+	
+
+Added by hand at the counter, if offered
+
+	
+
+Up to two toppings and two sauces on compatible configurations
+
+Rated figures apply under standard conditions. Actual output varies with serving size, recipe, mix temperature and ambient conditions.
+
+Storage and speed answer different questions. Mix and cup storage decide how long a machine can sell before someone has to attend to it; the rated speed decides how quickly it can work through a queue. Neither should be turned into a daily sales forecast. Serving size, recipe, mix temperature and room conditions all move the real figures, and a per-serving time is a different measure from an hourly rating.
+
+For an unattended site, storage matters most. A B Series machine's approx. 20 L of mix and approx. 160 cups are what let it sell between service visits with no staff on hand. B83, with 10 L and about 80 cups, suits regular commercial sites where visits can be more frequent. Power7's 32 cups would be a constraint at a busy mall entrance with nobody nearby; inside a staffed store, the same limit simply means someone reloads cups during the day.
+
+For Easy7, storage hardly matters, because staff are present and cups come from the counter. The peak does. A rating of 60 cups per hour under standard conditions suits steady café trade. If your sales arrive in sharp bursts, such as a cinema interval or the end of the school day, compare the size of that burst with the hourly rating before you choose.
+
+5 Matching your site to a format and model
+
+Your site
+
+	
+
+Format
+
+	
+
+Model to start with
+
+	
+
+Main reason
+
+
+
+
+Mall corridor, transport hub, attraction or campus area with no staff at the machine
+
+	
+
+Floor-standing vending
+
+	
+
+B83 Max, B84, B85, B86 or B86 Max
+
+	
+
+Sells without staff and carries approx. 20 L of mix and approx. 160 cups between visits
+
+
+
+
+Supermarket, community retail or indoor venue with moderate traffic and frequent service visits
+
+	
+
+Floor-standing vending
+
+	
+
+B83
+
+	
+
+Same self-service process, with 10 L of mix and approx. 80 cups
+
+
+
+
+Café, dessert shop, bakery or restaurant with staff at the counter
+
+	
+
+Countertop, staff-assisted
+
+	
+
+Easy7
+
+	
+
+Payment stays at the till; the machine makes and shapes each serving
+
+
+
+
+Convenience store, cinema or entertainment-centre lobby, hotel lobby
+
+	
+
+Countertop self-service
+
+	
+
+Power7
+
+	
+
+Customers order and pay at the machine; staff restock it during the day
+
+
+
+
+Equipment dealer supplying cafés and restaurants
+
+	
+
+Countertop, staff-assisted
+
+	
+
+Easy7
+
+	
+
+Suits customers who already sell across a counter
+
+Among B83 Max, B84, B85, B86 and B86 Max, choose by front door and exterior design, since the internal configuration is the same. Product pages such as B86 and B86 Max list the full specifications for each design.
+
+Two choices come up often. Between Easy7 and Power7, decide by who handles each order. If counter staff already hand over coffee and cakes, Easy7 adds soft serve without a new payment setup. If staff are busy and you want the machine to take orders and payment itself, Power7 does that, with the payment integration your market requires.
+
+Between Power7 and the B Series, decide by how long the machine will be left alone. A machine that someone checks several times a day can work from 32 cups and 6 L of mix. One that may go most of a busy day without a visit needs the storage of a floor-standing machine.
+
+6 What to send for a model recommendation
+
+Huaxin can suggest a format and model once it knows three things about your site:
+
+Site type and country, for example a café in Madrid or a cinema lobby in Bangkok.
+
+Whether staff will be present during selling hours, and whether they will take payment.
+
+The space available: counter width and depth, or floor area, ideally with a photo of the spot.
+
+If you already know your cup sizes or the payment methods your customers use, include them.
+
+References / Sources
+
+Author's Introduction: Huaxin Co., Ltd. has manufactured commercial automated ice cream vending machines in Dezhou, China, since 2013, with machines shipped to more than 50 countries and regions. Each unit completes a 72-hour stress test before shipment, and certifications such as CE, IECEE CB, NSF/ANSI 6 and ETL vary by model.
+
+PREVIOUS ARTICLE
+
+Most Profitable Vending Machine Business: How Fresh Soft Serve Compares with Snacks, Drinks and Coffee
+
+NEXT ARTICLE
+
+Ice Cream Vending Machines for Family Entertainment Centers and Indoor Playgrounds
+BLOG
+
+Frozen Yogurt Vending Machine Cost: Locations and Break-Even Planning
+
+>>
+
+Case Study: Scaling an Automatic Ice Cream Vending Business in the US Market
+
+>>
+
+Soft Ice Cream Machine Entrepreneurship: A Fully Automatic Money-Making Solution Even for Beginners
+
+>>
+
+Is an Intelligent Ice-Cream Vending Machine Reliable?
+
+>>
+
+Automated Ice Cream Vending Machines: A Scalable Growth Model for Chain Brands
+
+>>
+
+Technical Decoding: How Smart Ice Cream Vending Machines Reconstruct Commercial Returns Through 5-Second Rapid Cooling and Cloud-Based OS
+
+>>
+
+Ice Cream Vending Machine Payment Systems: Cashless, Coins and Local Integration
+
+>>
+
+A 0.85㎡ Smart Ice Cream Vending Machines Beats High-cost Traditional Stores
+
+>>
+
+Food-Grade Materials Ensure The Safety Of Ice Cream Vending Machines
+
+>>
+
+Ice Cream Vending Machines for Family Entertainment Centers and Indoor Playgrounds
+
+>>
+PRODUCT
+
+Automatic Ice Cream Vending Machine for European Vending Machine Distributors Expanding into High-Value Dessert Automation
+
+Ice Cream Vending Machine for Sports Facilities and Stadiums
+
+Ice Cream Vending Machine for Family Entertainment Centers
+
+Ice Cream Vending Machine Business Opportunity for European Location Partners, Vending Operators, Distributors, and Automated Retail Investors
+
+Ice Cream Machine Vending – Low Power 10-15kWh/Day: Marathon Freezing Tech & 24/7 Unmanned Run
+
+HUAXIN B83 Max: The Future of Fully Automated Robotic Ice Cream Retail
+
+Talk to a Huaxin Sales Manager
+
+Get machine recommendations, location operation advice, payment options, and a quotation for your market.
+
+Request Quote
+
+Huaxin Technology is a global leader in intelligent ice cream vending machines, providing high-return automated solutions and aiming to lead the unmanned retail sector through innovation.
+
+MORE ABOUT US ➣
+
+QUICK ENTRY
+PRODUCTS
+ABOUT
+SYSTEM
+BLOG
+SOLUTIONS
+FAQ
+CONTACT
+VENDING MACHINES
+Vending Machine Catalog
+Desktop Mini Ice Cream Machines
+B83Max Ice Cream Vending Machines
+Frozen Yogurt Vending Machine
+How to start an ice cream vending business?
+B83 High-Traffic Ice Cream Vending Machine
+SYSTEMS
+Remote Control System
+Expansion System
+Refrigeration System
+INFORMATION
+Cookie Policy
+Refund Policy
+Privacy Policy
+Feed
+SiteMap
+CERTIFIED PATENT
+CONTACT US
+
+No.268, Dexing North Road, Tianqu Sub-district Office, Decheng District, Dezhou City, Shandong Province, China
+
++86 19953410321
+
+Copyright © 2013-Today Huaxin All rights reserved
+
+Hi, Thank you very much for your interest in our ice cream vending machine. I am your project consultant and welcome to contact me.
+
+Messages
+
+Whatsapp

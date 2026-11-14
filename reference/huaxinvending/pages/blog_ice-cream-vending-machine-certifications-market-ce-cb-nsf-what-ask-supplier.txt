@@ -1,0 +1,353 @@
+Huaxin
+
+HOME
+PRODUCTS
+ABOUT
+SYSTEM
+BLOG
+SOLUTIONS
+FAQ
+CONTACT
+
+Send Inquiry
+
+EN>
+
+BLOG
+Ice Cream Vending Machine Certifications by Market: CE, CB, NSF and What to Ask a Supplier
+Ice Cream Vending Machine Certifications by Market: CE, CB, NSF and What to Ask a Supplier
+Date：2026-11-09 Author：Huaxin
+
+Ice cream vending machine certifications by market: what CE, CB and NSF cover, how to check a certificate, and what to ask a supplier before you order
+
+What certifications does an ice cream vending machine need? That depends on where the machine is going. In the EU and the UK, buyers look for CE marking, which brings together requirements for electrical safety, electromagnetic compatibility, radio functions and hazardous substances. In the US and Canada, health departments look for food equipment sanitation certification. The standard for soft serve machines is NSF/ANSI 6, and electrical safety has separate requirements. In Australia and the Gulf states, the local importer registers the product or obtains a certificate of conformity under the national scheme, and an IECEE CB Test Certificate and report are commonly used as the technical documentation.
+
+First, who we are. Huaxin manufactures ice cream vending machines, and certification comes up often in the inquiries we receive. This guide is for importers, distributors and chain-store buyers. It covers the ice cream vending machine certifications each market usually asks for, what each certificate covers, which certificates we hold, and how to check a certificate once you have it. The business licenses and health permits needed to operate a machine are issued locally and are outside the scope of this article.
+
+What Each Certification Covers
+
+You will hear a lot of certification names during a purchase. Each one covers something different, and one certificate cannot stand in for another. The table lists the ones that come up most often for ice cream vending machines.
+
+Certificate or document
+
+	
+
+What it covers
+
+	
+
+What it does not mean
+
+
+
+
+CE marking (EU)
+
+	
+
+The manufacturer's declaration that the product meets the EU laws that apply to it. For an ice cream vending machine these usually cover electrical safety, electromagnetic compatibility, radio equipment (for machines with Wi-Fi or other wireless functions) and RoHS
+
+	
+
+It is not a certificate issued by an EU authority
+
+
+
+
+RoHS
+
+	
+
+Limits on 10 hazardous substances, including lead, mercury and cadmium, in electrical and electronic equipment [1]
+
+	
+
+It does not cover electrical safety or food hygiene
+
+
+
+
+IECEE CB Test Certificate
+
+	
+
+Electrical safety testing to IEC international standards (the IEC 60335 series for ice cream vending machines), with results mutually recognized by certification bodies in member countries [2]
+
+	
+
+It is not a mandatory national certification or market access mark in itself
+
+
+
+
+NSF/ANSI 6
+
+	
+
+Materials, design and construction of dispensing freezers such as soft serve machines, for food safety and sanitation [3]
+
+	
+
+It is not an electrical safety certification
+
+
+
+
+Food-contact migration test report
+
+	
+
+How much food-contact parts release into food under specified test conditions
+
+	
+
+It is a test report, not a “food-grade certification”
+
+
+
+
+ISO 9001:2015
+
+	
+
+A company's quality management system
+
+	
+
+It is not a product certification for any machine
+
+Certification Requirements by Market
+
+This section covers certification only. For differences in voltage, frequency, plugs and payment methods between countries, see our guide to voltage and compliance requirements by country.
+
+European Union and United Kingdom
+
+In the EU, the manufacturer carries out the conformity assessment, draws up the technical documentation, issues the EU declaration of conformity and affixes the CE marking before the product can be sold in the European Economic Area [4]. When buyers ask for a “CE certified ice cream vending machine,” what suppliers usually send is a CE certificate of compliance issued by a third-party testing body. It shows that the tested sample meets the directives and standards listed on it, and it is the technical basis for the manufacturer's declaration.
+
+An ice cream vending machine entering the EU usually has to meet these requirements:
+
+Electrical safety and EMC. Machines without wireless functions fall under the Low Voltage Directive (2014/35/EU) and the EMC Directive (2014/30/EU). Machines with Wi-Fi, Bluetooth or a mobile network module fall under the Radio Equipment Directive (2014/53/EU), which itself includes requirements for safety and health, electromagnetic compatibility and efficient use of the radio spectrum [5].
+
+Cybersecurity. Since August 2025, internet-connected radio equipment has also had to meet cybersecurity requirements under the Radio Equipment Directive. From 11 December 2027, these requirements move to the EU Cyber Resilience Act [5].
+
+Hazardous substances. The RoHS Directive (2011/65/EU) limits 10 substances [1].
+
+Food contact materials. Parts that touch the ice cream must comply with the EU framework regulation on food contact materials, Regulation (EC) No 1935/2004. Materials must not release substances into food at levels harmful to health or change the food's composition, taste or odor in an unacceptable way [6].
+
+Great Britain continues to recognize CE marking alongside or in place of UKCA marking, and businesses can choose which conformity route to follow [7]. CE-marked radio equipment placed on the market in Great Britain from 1 August 2025 must meet the same cybersecurity requirements [8].
+
+United States and Canada
+
+In the US, food equipment sanitation rules are enforced by state and local health departments, and the FDA publishes the Food Code for them to adopt [9]. Washington State is one example. Its food rule follows Food Code section 4-205.10: food equipment certified for sanitation under an ANSI-accredited certification program is deemed to meet the requirements for equipment materials, design and construction [10]. The FDA kept this section in the 2026 Food Code and extended it to multiuse utensils and tableware [11].
+
+The sanitation standard for soft serve machines is NSF/ANSI 6, Dispensing Freezers. It sets requirements for materials, design and construction to protect food safety and sanitation [3]. When people search for an “NSF certified soft serve machine,” what they usually mean is a machine certified to an NSF/ANSI standard. NSF/ANSI 6 is an American National Standard, and certification is issued by accredited certification bodies, not by a single organization.
+
+NSF/ANSI 6 covers sanitation, not electrical safety, which has its own requirements. In the US, the Occupational Safety and Health Administration (OSHA) requires many kinds of electrical equipment used in the workplace to be approved by a Nationally Recognized Testing Laboratory (NRTL) [12]. In Canada, taking British Columbia and Québec as examples, electrical equipment must carry the mark of a certification body accredited by the Standards Council of Canada (SCC) or an approval label issued after an evaluation, and unapproved electrical equipment may not be sold or installed [13][14]. For a machine placed in a mall or venue, what the electrical inspector, the venue and its insurer ask for varies by state, province and site. We review the electrical safety certification requirements for North American projects with you before you order.
+
+Australia
+
+Australia and New Zealand regulate the sale of electrical products through the Electrical Equipment Safety System (EESS). It covers low-voltage electrical equipment designed or marketed as suitable for household, personal or similar use, even if the equipment is also designed or marketed for commercial use [15]. Medium- and high-risk equipment must be registered on the national database [16] and marked with the Regulatory Compliance Mark (RCM) by a registered Responsible Supplier. The Responsible Supplier must be a legal entity with a business presence in Australia or New Zealand, and an overseas company cannot register directly. When goods are imported on FOB terms, the Australian buyer that imports them is the Responsible Supplier [17]. Equipment used only for commercial purposes is outside the scheme but may still need to meet requirements set by the Australian Communications and Media Authority (ACMA) [18].
+
+Whether an ice cream vending machine in a mall, school or other public place counts as “similar use” is something the Australian importer should confirm with the local regulator or a certification body. For the B Series, we provide the IECEE CB Test Certificate and report as technical documentation for the importer's local application. Whether any differences between the local and IEC standards call for additional testing is decided project by project.
+
+Middle East
+
+In Saudi Arabia, imports go through SABER, the online platform of the Saudi Standards, Metrology and Quality Organization (SASO). According to the US International Trade Administration, the importer registers a regulated product on the platform and receives a certificate of conformity after assessment by a SASO-approved certification body. The importer then applies for a shipment certificate for each consignment, and customs clears only shipments logged in SABER [19]. In the UAE, the Ministry of Industry and Advanced Technology (MoIAT) issues conformity certificates under the Emirates Conformity Assessment Scheme (ECAS). Applicants need a valid UAE trade license and a test report from an accredited laboratory [20], so the application is made by the local importer or trading company. Other Gulf states have their own import conformity procedures, which the importer's local clearing agent can confirm.
+
+Both countries' procedures rely on test reports. IECEE members recognize each other's CB test results through their national certification bodies, and countries without a national certification body also accept CB test reports and certificates [2]. The B Series CB Test Certificate and report can serve as technical documentation when the importer applies for a local certificate of conformity.
+
+Huaxin Certifications
+
+Huaxin currently holds a range of product certificates, including CE certificates of compliance under the LVD, EMC and RED directives, RoHS, CB, NSF/ANSI 6 and ETL. At company level, Huaxin's quality management system is ISO 9001:2015 certified.
+
+How to Check a Certificate Before You Order
+
+Once you have copies of the certificates, check them together with the test reports:
+
+Holder name. The holder or manufacturer on the certificate should match the company signing your contract and issuing the proforma invoice. The holder on our certificates is Huaxin Co., Ltd.
+
+Model. The model you are buying should be among the models listed on the certificate. Watch for differences in how model names are written. A certificate covers only the models it lists and cannot be extended from one model to a whole series.
+
+Voltage and frequency. The rated voltage and frequency on the certificate or report should match your order. When the machine arrives, check the model, voltage and frequency on the nameplate again.
+
+Standard. Check which directive or standard, and which edition, the certificate refers to. A CB certificate, for example, cites the IEC 60335 series, and an NSF certificate cites NSF/ANSI 6. A certificate may need updating after a standard is revised or the product changes.
+
+Certificate and report together. A CB Test Certificate is valid only with its test report attached [21], and a RoHS certificate of compliance is also meant to be used with its test report. If a supplier sends only the first page of a certificate and no report, ask for the rest.
+
+Verification with the issuer. The public area of the IECEE online database shows extracts of CB certificates [22]. NSF/ANSI 6 certification is valid while the product is listed in the issuing body's certification directory, so you can check the directory or contact the issuer. A CE certificate of compliance can be verified with the testing body that issued it.
+
+What to Ask a Supplier
+
+You can send these questions straight to a supplier (examples only; adjust them to your market and model):
+
+1. Which certificates and test reports cover the model and configuration I am buying (voltage, frequency, connectivity)? Please send the certificates and the full reports.
+
+2. For the EU: which directives is the CE marking based on? Can you provide an EU declaration of conformity signed by the manufacturer?
+
+3. If my order configuration differs, do the certificates still apply?
+
+For how we work with overseas buyers on purchasing and delivery as a factory, see how we supply overseas operators as a manufacturer.
+
+Request the Certificate List for Your Model
+
+Tell us your target country and the model you plan to buy, and your account manager will send the certificate list, certificate numbers and copies for that model. If your market has other certification requirements, we confirm them by country and model before you order. Start here: request the certificate list for your model.
+
+References / Sources
+
+[1] Environmental Protection Agency (Ireland). “Restriction of the use of certain hazardous substances in electrical and electronic equipment (RoHS) directive.” https://www.epa.ie/our-services/monitoring--assessment/waste/chemicals/rohs/
+
+[2] IECEE. “What is IECEE.” https://www.iecee.org/who-we-are/about-us
+
+[3] American National Standards Institute (ANSI) Blog. “NSF/ANSI 6-2023: Dispensing Freezers.” https://blog.ansi.org/ansi/nsf-ansi-6-2023-dispensing-freezers/
+
+[4] European Commission. “Manufacturers” (CE marking). https://single-market-economy.ec.europa.eu/single-market/goods/ce-marking/manufacturers_en
+
+[5] European Commission. “Radio Equipment Directive (RED).” https://single-market-economy.ec.europa.eu/sectors/electrical-and-electronic-engineering-industries-eei/radio-equipment-directive-red_en
+
+[6] European Commission, Food Safety. “Food contact materials – Legislation.” https://food.ec.europa.eu/food-safety/chemical-safety/food-contact-materials/legislation_en
+
+[7] GOV.UK. “Using the UKCA marking.” Last updated 21 August 2026. https://www.gov.uk/guidance/prepare-to-use-the-ukca-mark-after-brexit
+
+[8] GOV.UK. “Regulation (EU) 2022/30: factsheet.” Updated 16 December 2025. https://www.gov.uk/government/publications/radio-equipment-regulations-2017/regulation-eu-202230-factsheet
+
+[9] U.S. Food and Drug Administration. “Food Code 2022.” https://www.fda.gov/food/fda-food-code/food-code-2022
+
+[10] Washington State Legislature. WAC 246-215-04272, “Acceptability—Food equipment, certification and classification (FDA Food Code 4-205.10).” https://lawfilesext.leg.wa.gov/Law/WACArchive/2024/htm/WAC%20246%20-215%20%20CHAPTER/WAC%20246%20-215%20-04272.htm
+
+[11] U.S. Food and Drug Administration. “Summary of Changes in the 2026 FDA Food Code.” 17 September 2026. https://www.fda.gov/food/fda-food-code/summary-changes-2026-fda-food-code
+
+[12] Occupational Safety and Health Administration. “Nationally Recognized Testing Laboratory Program – Frequently Asked Questions.” https://www.osha.gov/nationally-recognized-testing-laboratory-program/frequently-asked-questions
+
+[13] Technical Safety BC. “Approved certification marks for electrical products.” https://www.safetyauthority.ca/regulatory-resources/regulatory-notices/approved-certification-marks-electrical-products
+
+[14] Régie du bâtiment du Québec. “Approval of electrical equipment: bodies, seals and labels.” https://www.rbq.gouv.qc.ca/en/areas-of-intervention/electricity-1/your-obligations-toward-the-rbq/approval-of-electrical-equipment/
+
+[15] Electrical Equipment Safety System. “In-scope Equipment Definitions and Risk Levels, v4.1.” July 2021. https://www.eess.gov.au/wp-content/uploads/2021/08/EESS-Inscope-Equipment-Definitions-and-Risk-Levels-v4.1.pdf
+
+[16] Electrical Equipment Safety System. “Registration – In-scope electrical equipment.” https://www.eess.gov.au/registration/registration-in-scope-electrical-equipment/
+
+[17] Electrical Equipment Safety System. “Manufacturers and Importers – Responsible Suppliers.” https://www.eess.gov.au/responsible-supplier/manufacturers-and-importers-responsible-suppliers/
+
+[18] Electrical Equipment Safety System. “Not In-scope Electrical Equipment.” https://www.eess.gov.au/equipment/not-in-scope/
+
+[19] International Trade Administration. “Saudi Arabia – Testing, Inspection and Certification.” https://www.trade.gov/market-intelligence/saudi-arabia-testing-inspection-certification
+
+[20] UAE Ministry of Industry and Advanced Technology. “Issuing conformity certificates for products according to health and safety requirements.” https://www.moiat.gov.ae/en/services/issue-conformity-certificates-for-regulated-products
+
+[21] OVE Austrian Electrotechnical Association. “CB Scheme.” https://old.ove.at/ove-certification/internationale-zertifizierung/cb-scheme
+
+[22] IECEE. “Online Certificates.” https://www.iecee.org/certification/certificates/
+
+Author's Introduction: Huaxin Co., Ltd. has manufactured commercial automated ice cream vending machines in Dezhou, China, since 2013, with machines shipped to more than 50 countries and regions. Each unit completes a 72-hour stress test before shipment, and certifications such as CE, IECEE CB, NSF/ANSI 6 and ETL vary by model.
+
+PREVIOUS ARTICLE
+
+How to Avoid Ice Cream Vending Machine Scams When Buying From an Overseas Supplier
+
+NEXT ARTICLE
+
+Soft Serve Overrun: What It Is, How to Calculate It, and How It Changes Texture and Cost per Cup
+BLOG
+
+5 Must-Have Features in a Commercial Soft Serve Vending Machine
+
+>>
+
+Can Ice Cream Vending Machines make money?
+
+>>
+
+Scaling with Ice Cream Vending Machines: From One Machine to a Profitable Network
+
+>>
+
+Ice Cream Vending Machines for Family Entertainment Centers and Indoor Playgrounds
+
+>>
+
+How the Exterior Design of Ice Cream Vending Machines Meets Needs
+
+>>
+
+Why Consumers Increasingly Prefer Ice Cream Vending Machines Over Traditional Options
+
+>>
+
+Why are soft serve ice cream machine so expensive?
+
+>>
+
+Ice Cream Vending Machines：Your FAQs Answered
+
+>>
+
+The Data-Driven Channel Revolution: How Can Vending Machines Become Brands&#039; &quot;Market Insight Officers&quot;?
+
+>>
+
+Ice Cream Vending Machine Cost: Machine, Shipping, Ingredients and Operation
+
+>>
+PRODUCT
+
+Commercial Automatic Ice Cream Vending Machine for Sale | Space-Saving & High-Profit
+
+Intelligent Ice Cream Machine with Cloud Control | 32&quot; Touch, Self-Cleaning​
+
+Commercial Soft Serve Ice Cream Vending Machine with Remote Monitoring for Sale | Fully Automatic 15-Second Dispensing, 160-Cup Capacity & App Control
+
+Commercial Multi-Flavor Ice Cream Vending Machine for Outdoor & Indoor Use | High-Capacity Self-Service Dessert Vending Machine
+
+Compact Corner Ice Cream Vending Machine | 15s Serving, Intelligent App Control​
+
+ETL Certified Ice Cream Vending Machine - 24/7 Automated Yogurt & Soft Serve​
+
+Talk to a Huaxin Sales Manager
+
+Get machine recommendations, location operation advice, payment options, and a quotation for your market.
+
+Request Quote
+
+Huaxin Technology is a global leader in intelligent ice cream vending machines, providing high-return automated solutions and aiming to lead the unmanned retail sector through innovation.
+
+MORE ABOUT US ➣
+
+QUICK ENTRY
+PRODUCTS
+ABOUT
+SYSTEM
+BLOG
+SOLUTIONS
+FAQ
+CONTACT
+VENDING MACHINES
+Vending Machine Catalog
+Desktop Mini Ice Cream Machines
+B83Max Ice Cream Vending Machines
+Frozen Yogurt Vending Machine
+How to start an ice cream vending business?
+B83 High-Traffic Ice Cream Vending Machine
+SYSTEMS
+Remote Control System
+Expansion System
+Refrigeration System
+INFORMATION
+Cookie Policy
+Refund Policy
+Privacy Policy
+Feed
+SiteMap
+CERTIFIED PATENT
+CONTACT US
+
+No.268, Dexing North Road, Tianqu Sub-district Office, Decheng District, Dezhou City, Shandong Province, China
+
++86 19953410321
+
+Copyright © 2013-Today Huaxin All rights reserved
+
+Hi, Thank you very much for your interest in our ice cream vending machine. I am your project consultant and welcome to contact me.
+
+Messages
+
+Whatsapp

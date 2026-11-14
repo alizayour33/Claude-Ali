@@ -1,0 +1,391 @@
+Huaxin
+
+HOME
+PRODUCTS
+ABOUT
+SYSTEM
+BLOG
+SOLUTIONS
+FAQ
+CONTACT
+
+Send Inquiry
+
+EN>
+
+BLOG
+Ice Cream Vending Machine Payment Systems: Cashless, Coins and Local Integration
+Ice Cream Vending Machine Payment Systems: Cashless, Coins and Local Integration
+Date：2026-10-19 Author：Huaxin
+
+Compare cash, card, NFC and QR payments for ice cream vending machines, check each country, and test failed or refunded transactions before you ship.
+
+An ice cream vending machine does not have a single payment system. It has four things that must line up in the country where it will operate: what the customer pays with, the terminal that accepts it, the provider that authorises and settles the money, and the interface that tells the machine to start a vend. When one of the four is assumed instead of confirmed, the gap surfaces after the machine has shipped.
+
+This guide is for importers, operators and distributors who need to confirm payment for a specific country before they order. It compares the common payment methods, separates the layers that get mixed up, lists what to check for each market, and sets out a joint test for the cases where payment and delivery disagree. Huaxin manufactures these machines, so product details below describe Huaxin configurations only. Whether a given payment method works in your market depends on the terminal and provider you choose.
+
+Cash, bank cards, contactless and QR codes: where each one fits
+
+No method wins everywhere. The right mix depends on what customers in that market actually carry, how reliable the data connection is at the site, who will handle cash, and what the operator can reconcile afterwards.
+
+Method
+
+	
+
+Fits best when
+
+	
+
+What must be in place
+
+	
+
+What to confirm
+
+
+
+
+Cash (coins and notes)
+
+	
+
+Customers expect to pay in cash, or the site has a weak or no data connection
+
+	
+
+Coin mechanism and/or bill validator set up for the local currency; a plan for change, if the machine gives it, and for collecting cash
+
+	
+
+Which coins and notes the hardware recognises; whether change is given and how the float is refilled; how often cash is collected
+
+
+
+
+Bank card (inserted or swiped)
+
+	
+
+Card use is routine locally
+
+	
+
+A payment terminal the machine can work with; a merchant account with a provider; a data connection or a provider-confirmed offline mode
+
+	
+
+Card networks accepted in the country; settlement currency; fees; who holds the merchant account
+
+
+
+
+Contactless (NFC cards and phones)
+
+	
+
+Customers want a quick tap for small purchases
+
+	
+
+A terminal with a contactless reader; the same provider arrangement as for cards
+
+	
+
+Local contactless transaction limits and what happens above them; which phone wallets the terminal reads
+
+
+
+
+QR code
+
+	
+
+A local wallet or banking-app QR scheme is widely used
+
+	
+
+Integration with that scheme, directly or through a provider; a merchant registration in the scheme; a connection that can return payment confirmation
+
+	
+
+Which schemes local customers use; whether a foreign or newly formed business can register; settlement time and currency; what the screen shows if confirmation arrives late
+
+Two things follow from the table. Cash and cashless solve different problems, so a machine that takes both has two sets of conditions to verify, not one. And “accepts cards” says little about contactless, phone wallets or QR codes. Each can depend on a different component or a different provider, so each needs its own confirmation.
+
+How this maps to Huaxin configurations
+
+On the B Series, card payment, QR and mobile payment, and cash-and-coin payment are each integrated according to the market and the payment solution chosen. Cash modules are configured for a specific currency, not for currencies in general. Easy7 takes payment through an external module on compatible projects, so payment should not be assumed to come as standard. On Power7, card and QR options are available on compatible configurations and are confirmed project by project. The full Huaxin ice cream vending machine range shows which model each of these applies to.
+
+Four layers that are easy to mix up
+
+The words “payment system”, “terminal” and “MDB” are often used as if they meant the same thing. They are different layers, and different parties are responsible for each.
+
+• Payment method: what the customer holds or does, such as cash, a card, a phone, a wallet app or a QR scan.
+
+• Payment terminal: the hardware, or in some cases software, that reads or receives the payment and communicates with the provider. It can be integrated into the machine or supplied by a third party.
+
+• Provider: the company or scheme that authorises the payment, settles funds to the operator, sets fees, and decides whether a given business can open a merchant account in a given country.
+
+• Machine interface: the link through which the terminal tells the machine that credit is available, and the machine reports back whether the vend completed.
+
+Multi-Drop Bus (MDB) belongs to the last layer. The MDB/ICP specification, an open standard from the National Automatic Merchandising Association (NAMA), defines a serial communication bus between a vending machine's controller and payment peripherals such as coin changers, bill validators and cashless devices. An MDB port therefore tells you how a compatible terminal and the machine can exchange credit and vend status. It does not tell you whether the provider operates in the destination country, whether a merchant account will be approved, which wallets work, or what the fees are.
+
+Two points need a direct question to the terminal supplier. The specification exists in several versions, for example 4.2 and 4.3, and it defines more than one level of cashless device, so ask which version and level the terminal implements and which the machine's controller supports. And ask for the interface documentation of the exact terminal model, not a general statement that it is “MDB compatible”.
+
+For Huaxin machines, an interface on the spec sheet is where the check starts, not where it ends. Power7 lists RS232, MDB and RS485 communication interfaces. An interface alone does not make every third-party device plug-and-play, because the protocol and software still have to match. Across the range, Huaxin can evaluate payment integration for a project against the terminal's interface, MDB compatibility, communication method, electrical requirements and local provider support. Depending on the project, that can involve buying a third-party terminal, software joint debugging, testing and additional lead time.
+
+Checking a country before you order
+
+A payment plan is feasible for a country only if each check below has been confirmed for your business entity, your terminal model and unattended ice cream sales. A list of countries on a provider's website is a starting point, not confirmation. Ask for written, dated answers, and keep them with the rest of the specifications you check before buying.
+
+Currency and cash hardware
+
+Decide which currency or currencies the machine will sell in. For cash, the coin mechanism and bill validator must be set for that currency, and the same applies to change-giving if it is used. For cashless, find out the provider's settlement currency and whether any conversion happens before the money reaches your account.
+
+Merchant account and provider coverage
+
+Confirm that the provider operates in the country, will onboard your legal entity, and approves unattended retail. Ask which documents onboarding needs and how long it takes, because the machine cannot take cashless payments until the account exists.
+
+Networks, wallets and schemes
+
+Find out which card networks, phone wallets and QR schemes your target customers actually use, then check each one against the terminal and the provider separately. “Supports mobile payments” is not one answer; it is several questions.
+
+Terminal model and interface
+
+Name the exact terminal model and firmware. Request its interface documentation, its power requirements, and any approvals it needs to operate in the country. Check that the card reader and any QR display can physically sit where the machine configuration allows.
+
+Connectivity
+
+Check signal or network access at the actual site. Basement units, shopping-centre interiors and outdoor positions can differ from the street outside. Ask the provider what the terminal does when the connection drops, and whether that behaviour can be configured.
+
+Fees, settlement and refunds
+
+Compare providers on the same list: per-transaction fees, terminal purchase or rental, settlement schedule, refund and chargeback rules, and who can issue a refund. A headline percentage rate alone is not a basis for comparison.
+
+Local rules
+
+Check with local advisers whether cash acceptance is required or restricted at unattended points of sale, whether sales records or fiscal receipts are needed, and what refund obligations apply to consumers.
+
+Testing the full transaction, including the failures
+
+A test that only shows “pay, receive ice cream” proves the best case. The cases that cost money are those where payment and delivery disagree: the customer is charged and gets nothing, or receives the product and the payment never settles. Run the tests below on the exact machine configuration, terminal and provider account the project will use, before shipment where possible and again at the destination. Record what happens, not what was expected.
+
+Scenario
+
+	
+
+How to trigger it
+
+	
+
+What to check and record
+
+
+
+
+Successful sale
+
+	
+
+Pay with each enabled method: each coin and note type, card, contactless, QR
+
+	
+
+The vend starts once, the product is delivered, and the provider shows one matching transaction. Amount, currency and time agree across machine, terminal and provider.
+
+
+
+
+Declined or cancelled payment
+
+	
+
+Use a declined card, cancel at the terminal, abandon a QR code
+
+	
+
+No vend starts, nothing is charged, the machine returns to its ready state, and the customer sees a clear message in the local language.
+
+
+
+
+Timeout
+
+	
+
+Start a purchase, then do nothing
+
+	
+
+The session ends after a set time. Any held authorisation is released, not captured. Note the timeout value.
+
+
+
+
+Paid but not delivered
+
+	
+
+Create a fault after payment, such as no cup available or an unavailable item
+
+	
+
+A refund or reversal follows a defined route. Record whether it is automatic or manual, who acts, how long it takes and how the customer is told. Do not assume an automatic refund exists.
+
+
+
+
+Interrupted connection or power
+
+	
+
+Drop the connection, and where safe the power, after authorisation and again during making
+
+	
+
+After recovery, check whether the charge is captured or voided, whether the machine logs the event, and whether any transaction is left unresolved.
+
+
+
+
+Cash edge cases
+
+	
+
+Insert a rejected note, overpay, run the change float down
+
+	
+
+Rejected notes are returned, overpayment is handled as configured, and the behaviour when change runs out matches what was agreed.
+
+At the end of the test, compare the machine's sales log, the terminal's record and the provider's settlement report for the same period. Every mismatch needs an owner and an explanation before the machine goes on site.
+
+Before shipment, also write down who can issue a refund, where it is done (the terminal, the provider's dashboard or the operator's back office), and how a customer who was charged without receiving a product can reach the operator. These decisions sit between the machine supplier, the terminal supplier and the provider, so none of them will make them for you.
+
+Anonymised Huaxin project records show payment questions arising at different stages. After delivery, one customer asked about bill acceptance and change settings. In another project, a payment terminal was reported not working at one point in early use. In a third, ownership of the terminal account was still being settled after the balance payment had been confirmed. These records do not show how often such issues occur. They suggest that configuration and account ownership are worth settling before shipment, not after.
+
+What to prepare before asking for a payment configuration
+
+Send the following with your inquiry, so the configuration is assessed against your market instead of in general: the destination country, and the city if known; the payment methods you need, including the cash currency; the provider and the terminal brand and model if already chosen, with interface or API documentation; the machine model and planned quantity; the site type and planned installation date. If you have not chosen a terminal or provider yet, say so. The first question then becomes which combinations are workable in your country.
+
+A payment plan is ready to commit to when all four layers are confirmed for the country in writing and the failure cases have been tested on the real configuration.
+
+References / Sources
+
+National Automatic Merchandising Association (NAMA)；
+
+Multi-Drop Bus / Internal Communication Protocol (MDB/ICP) specification
+
+Author's Introduction: Huaxin Co., Ltd. has manufactured commercial automated ice cream vending machines in Dezhou, China, since 2013, with machines shipped to more than 50 countries and regions. Each unit completes a 72-hour stress test before shipment, and certifications such as CE, IECEE CB, NSF/ANSI 6 and ETL vary by model.
+
+PREVIOUS ARTICLE
+
+Ice Cream Vending Machine vs Traditional Soft Serve Machine: Which Fits Your Operation?
+
+NEXT ARTICLE
+
+Remote Monitoring for Ice Cream Vending Machines: Data, Alerts and On-Site Tasks
+BLOG
+
+Ice Cream Vending Machine Startup Cost and Investment Planning for New Operators
+
+>>
+
+Does an Ice Cream Vending Machine Use Electricity?
+
+>>
+
+Intelligent raw material management system for tested ice cream vending machines
+
+>>
+
+Why must the core of an ice cream vending machine be made of food-grade materials?
+
+>>
+
+Ice Cream Vending Machine Certifications by Market: CE, CB, NSF and What to Ask a Supplier
+
+>>
+
+Ice Cream Vending Machine Buying Guide for Commercial Operators and Dealers
+
+>>
+
+Technical Decoding: How Smart Ice Cream Vending Machines Reconstruct Commercial Returns Through 5-Second Rapid Cooling and Cloud-Based OS
+
+>>
+
+Vending Machine Innovation Reshape Ice Cream Retail（3）
+
+>>
+
+How Ice-cream Vending Machines Are Boosting Revenue
+
+>>
+
+Ice Cream Vending Machine Business Start-Up Cost: What You Really Need to Budget
+
+>>
+PRODUCT
+
+CE-Certified Smart Ice Cream Vending Machine for European Distributors, Vending Operators, and High-Traffic Retail Locations
+
+Smart Unmanned Commercial Ice Cream Vending Machine 24/7 Operation 15s Fast Production
+
+Smart Automated Soft Serve Ice Cream Vending Machine - High-ROI Self-Service Kiosk for Business
+
+Fully Automatic Ice Cream Vending Machine for Shopping Mall with 15s Fast Serve & Remote Monitoring High ROI Business Solution
+
+Shopping Mall Ice Cream Vending Machine for Operators and Distributors
+
+Commercial Soft Serve Ice Cream Vending Machine with Remote Monitoring for Sale | Fully Automatic 15-Second Dispensing, 160-Cup Capacity & App Control
+
+Talk to a Huaxin Sales Manager
+
+Get machine recommendations, location operation advice, payment options, and a quotation for your market.
+
+Request Quote
+
+Huaxin Technology is a global leader in intelligent ice cream vending machines, providing high-return automated solutions and aiming to lead the unmanned retail sector through innovation.
+
+MORE ABOUT US ➣
+
+QUICK ENTRY
+PRODUCTS
+ABOUT
+SYSTEM
+BLOG
+SOLUTIONS
+FAQ
+CONTACT
+VENDING MACHINES
+Vending Machine Catalog
+Desktop Mini Ice Cream Machines
+B83Max Ice Cream Vending Machines
+Frozen Yogurt Vending Machine
+How to start an ice cream vending business?
+B83 High-Traffic Ice Cream Vending Machine
+SYSTEMS
+Remote Control System
+Expansion System
+Refrigeration System
+INFORMATION
+Cookie Policy
+Refund Policy
+Privacy Policy
+Feed
+SiteMap
+CERTIFIED PATENT
+CONTACT US
+
+No.268, Dexing North Road, Tianqu Sub-district Office, Decheng District, Dezhou City, Shandong Province, China
+
++86 19953410321
+
+Copyright © 2013-Today Huaxin All rights reserved
+
+Hi, Thank you very much for your interest in our ice cream vending machine. I am your project consultant and welcome to contact me.
+
+Messages
+
+Whatsapp

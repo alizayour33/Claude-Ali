@@ -1,0 +1,361 @@
+Huaxin
+
+HOME
+PRODUCTS
+ABOUT
+SYSTEM
+BLOG
+SOLUTIONS
+FAQ
+CONTACT
+
+Send Inquiry
+
+EN>
+
+B85
+Brand-Forward Retail
+Ice Cream Vending Machine
+
+Created for operators who want the machine itself to become part of the retail identity, combining automated dessert service with a strong customer-facing design and remote management.
+
+GET A QUOTE
+WATCH VIDEO
+
+BRAND-LED APPEARANCE
+CUSTOMER-FACING EXPERIENCE
+REMOTE MANAGEMENT
+Designed for Brand-Led Dessert Retail
+
+B85 is positioned for projects where visual identity and customer presentation matter as much as unattended service. It suits branded operators, retail venues, and partners building a recognizable dessert vending concept.
+
+Branded Operators
+
+For businesses that want each vending point to present a consistent visual identity and menu experience.
+
+Retail & Lifestyle Venues
+
+Supports a polished self-service dessert presentation in malls and customer-facing commercial spaces.
+
+Entertainment & Leisure
+
+A visually engaging automated dessert point for cinemas, family entertainment centers, and leisure venues.
+
+Distributors & Local Partners
+
+Useful for partners combining equipment with local branding, payment integration, and deployment services.
+
+A Screen-Led
+Ordering Experience
+
+B85 keeps the touchscreen at the center of the purchase journey: browse the menu, complete payment, wait for automatic preparation, and collect the finished cup.
+
+Commercial Hardware Behind the Brand Experience
+
+The customer-facing design is supported by the core systems required for unattended vending: touchscreen control, refrigeration, thermal management, payment integration, cup delivery, and product consistency.
+
+32-Inch BOE Touchscreen
+
+The large display supports clear branded menus, ordering guidance, promotional content, and customer interaction.
+
+Stable Refrigeration Control
+
+Cooling performance supports consistent frozen dessert output during commercial self-service operation.
+
+Thermal Management
+
+A 5.4㎡ condenser and airflow design help manage heat during repeated daily operation.
+
+Market Payment Integration
+
+Supports cash, card, QR code, and customized payment integration according to local market requirements.
+
+Sensor-Controlled Cup Delivery
+
+Omron sensors help detect cups and support stable automatic cup dispensing during the serving process.
+
+43% Puffing Control
+
+Configured overrun helps support a smoother texture and consistent product presentation.
+
+Brand-Focused Highlights
+Strong Brand Presence
+
+The machine exterior and customer interface can become part of a recognizable dessert retail identity.
+
+Consistent Customer Experience
+
+A screen-led self-service flow keeps menu selection, payment, production, and pickup easy to understand.
+
+Staff-Light Dessert Service
+
+Automated ordering and production reduce the need for permanent counter staff beside the machine.
+
+Screen-Led Merchandising
+
+Use the large display for menu presentation, ordering guidance, and customer-facing promotional content.
+
+Remote Fleet Visibility
+
+Monitor machine status, sales information, inventory reminders, and alerts across deployed locations.
+
+Market Localization
+
+Adapt branding, language, menu display, payment integration, and software functions for the target market.
+
+See Business Launch Solution
+Build the Menu Around Your Brand
+
+B85 can support several frozen dessert concepts with the appropriate ingredient and recipe configuration, allowing the retail brand to focus on classic, lifestyle, fruit-based, or seasonal menu positioning.
+
+Soft Serve Ice Cream
+
+Familiar core dessert menu
+
+Frozen Yogurt
+
+Lifestyle-focused frozen option
+
+Açaí-Style Frozen Dessert
+
+Fruit-led premium concept
+
+Sorbet
+
+Light and refreshing alternative
+
+Frozen Dessert Mix
+
+Seasonal or market-specific concept
+
+Final menu compatibility depends on ingredient formulation, recipe design, and machine setup. Confirm the intended product with Huaxin before production planning.
+
+Best-Fit Brand Environments
+Shopping Malls
+
+Strong customer-facing visibility for branded self-service dessert concepts.
+
+Lifestyle Centers
+
+A natural fit for retail and leisure environments where presentation matters.
+
+Family Entertainment Centers
+
+Combines convenient self-service with a visually engaging dessert stop.
+
+Cinemas & Leisure Venues
+
+Adds a branded dessert option to entertainment-focused customer journeys.
+
+Campuses
+
+Creates a recognizable self-service dessert point for student and staff traffic.
+
+Tourist Attractions
+
+Provides visitors with an easy-to-recognize, automated dessert purchase point.
+
+Keep Locations Aligned with Master OS
+
+Master OS helps teams running multiple B85 machines compare performance, see operating status, plan replenishment, and respond to alerts from one remote management layer.
+
+Fleet Status
+
+Check whether deployed machines are online and operating normally.
+
+Location Performance
+
+Compare sales information between sites to understand location activity.
+
+Replenishment Planning
+
+Use inventory reminders to coordinate ingredients, cups, and other consumables.
+
+Support Coordination
+
+Provide remote system information when Huaxin technical support needs to review an issue.
+
+Make B85 Look and Feel Like Your Brand
+
+B85 customization is centered on what customers see and use: exterior graphics, logo, touchscreen experience, language, menu presentation, payment integration, and software functions.
+
+Payment Experience
+
+Integrate supported local payment options based on country and payment-provider requirements.
+
+Menu & Promotions
+
+Adapt menu presentation and customer-facing content to the retail concept.
+
+Language Localization
+
+Configure the user interface for the languages required in the target market.
+
+Logo & Brand Identity
+
+Apply brand marks and visual identity to strengthen recognition at the point of sale.
+
+Touchscreen UI
+
+Customize customer-facing interface visuals and software functions within the supported platform.
+
+Exterior Branding
+
+Apply branded exterior graphics and themes without changing the internal machine architecture.
+
+B85 customization is limited to exterior branding, interface, payment integration, and software functions.
+
+Get My Business Launch Plan
+B85 Technical Specifications
+
+Use these specifications to evaluate the B85 installation area, electrical setup, shipment planning, and baseline operating requirements.
+
+TECHNICAL SPECIFICATIONS
+System	Android 7.1 + Proprietary Control System
+Heat treatment（optional）	Optional
+Machine Size	L1080 × W940 × H1950 mm
+Machine Weight	368 kg
+Touchscreen	32-inch display
+Capacity of material cylinder	19 L
+Forming cylinder capacity	2 L
+PRODUCTION CAPACITY
+Hourly production capacity	120 cups
+POWER SPECIFICATIONS
+Voltage	110V/220V (Optional)
+Hertz	50Hz/60Hz (Optional)
+Power	Rated power 1800W
+Compressor	Embraco compressor
+
+The above data was measured experimentally by the R&D department. If there is any discrepancy, please refer to the actual product.
+
+Support Behind Every Retail Location
+
+Huaxin supports B85 deployment with delivery testing, operating guidance, spare-parts planning, and remote technical assistance for ongoing commercial use.
+
+Delivery Testing · Checked Before Shipment
+
+Each machine is inspected and tested before shipment to support a more predictable installation process.
+
+Operation Guidance · Consistent Daily Use
+
+Receive practical guidance for start-up, refill routines, cleaning, and regular operating checks.
+
+After-Sales Support · Ongoing Assistance
+
+Get professional help with operation questions, maintenance needs, and troubleshooting after purchase.
+
+Spare Parts Support · Plan Ahead
+
+Prepare recommended spare parts to support maintenance across one or multiple branded locations.
+
+Remote Technical Service · Faster Coordination
+
+Use remote support to review system information and machine conditions when technical help is required.
+
+Related Machines
+Ice Cream Vending Machine for Airports and Transit Stations
+
+Airport ice cream vending machine for terminals and rail stations: quick self-service soft serve, configurable cashless payment and remote monitoring.
+
+Visible Ice Cream Production
+Configurable Cashless Payment
+Self-Service Ordering
+DETAILS
+Automatic Commercial Ice Cream Vending Machine 15s Fast Output 59 Flavors Self-Service Smart Freezer
+
+This automatic commercial ice cream vending machine adopts Embraco compressor with 5s ultra-fast cooling, 15s fast cup output, supports 59 flavors combination, covers only 0.91㎡, plug-and-play. It has intelligent remote control, one-key self-cleaning, UV and pasteurization systems. With 65%+ gross profit, 3-4 months payback, suitable for malls, scenic spots, schools and other crowded places, providing stable 24/7 unmanned operation and professional after-sales service.
+
+Unmanned
+Commercial
+220V
+DETAILS
+Custom Ice Cream Vending Machine: Branding, OEM and Private Label
+
+Get a custom ice cream vending machine with your wrap, logo, screen menu, languages and payment setup, built to order and inspected at the Huaxin factory
+
+Custom Screen Menu and Brand Video
+Multi-Language Interface
+Exterior Branding (Wrap)
+DETAILS
+Durable Reliable User Friendly Yogurt Ice Cream Machines | With 32 Inch Big Touch | Smart Technology
+
+Deployed in 30+ countries with corporate clients (e.g., Fuhua Group) and global chains (like Pinkberry), this machine delivers consistent daily sales. ETL/RoHS/ETL/CE certified and backed by 17 patents, it guarantees safety from dispensing to payment, with seamless access to EU and North American markets. Its 0.8㎡ footprint fits high-traffic venues, making it the top choice for unmanned healthy dessert retail.
+
+iyogurt ice cream machines
+Outdoor 、 indoor
+Network 、 mains power
+DETAILS
+B85 FAQ
+How much of the B85 can be customized for my brand?
+
+B85 can support exterior branding, logo application, touchscreen interface, menu presentation, language, payment integration, and software functions within the existing machine platform.
+
+Can the B85 touchscreen experience match my retail concept?
+
+Yes. Customer-facing interface visuals, menu content, language, and supported software functions can be adapted to create a more consistent branded experience.
+
+Can B85 integrate payment methods used in my country?
+
+Payment integration depends on the target market and payment provider. Huaxin can evaluate supported card, NFC, QR code, and other local payment solutions.
+
+Does Huaxin offer ODM or internal structure changes for B85?
+
+No. Huaxin does not provide ODM and does not change the internal mechanical structure or electronic layout. Customization is limited to customer-facing branding, interface, payment integration, and software functions.
+
+Can I manage a network of branded B85 machines remotely?
+
+Yes. Master OS can provide machine status, sales information, inventory reminders, and operational alerts across multiple deployed locations.
+
+Which locations are most suitable for B85?
+
+B85 is positioned for customer-facing retail environments such as shopping malls, lifestyle centers, family entertainment venues, campuses, and tourist attractions where visual identity and self-service convenience both matter.
+
+Talk to a Huaxin Sales Manager
+
+Get machine recommendations, location operation advice, payment options, and a quotation for your market.
+
+Request Quote
+
+Huaxin Technology is a global leader in intelligent ice cream vending machines, providing high-return automated solutions and aiming to lead the unmanned retail sector through innovation.
+
+MORE ABOUT US ➣
+
+QUICK ENTRY
+PRODUCTS
+ABOUT
+SYSTEM
+BLOG
+SOLUTIONS
+FAQ
+CONTACT
+VENDING MACHINES
+Vending Machine Catalog
+Desktop Mini Ice Cream Machines
+B83Max Ice Cream Vending Machines
+Frozen Yogurt Vending Machine
+How to start an ice cream vending business?
+B83 High-Traffic Ice Cream Vending Machine
+SYSTEMS
+Remote Control System
+Expansion System
+Refrigeration System
+INFORMATION
+Cookie Policy
+Refund Policy
+Privacy Policy
+Feed
+SiteMap
+CERTIFIED PATENT
+CONTACT US
+
+No.268, Dexing North Road, Tianqu Sub-district Office, Decheng District, Dezhou City, Shandong Province, China
+
++86 19953410321
+
+Copyright © 2013-Today Huaxin All rights reserved
+
+Hi, Thank you very much for your interest in our ice cream vending machine. I am your project consultant and welcome to contact me.
+
+Messages
+
+Whatsapp

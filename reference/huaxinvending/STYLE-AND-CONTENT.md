@@ -47,3 +47,14 @@ Look and feel: a clean white page with a bold red accent, very heavy (900) headl
 - Numbered step sequences (growth path, onboarding)
 - Repeated "Request Quote" CTA (it appears 3 times)
 - Sticky inquiry button and floating chat
+
+## Full-site crawl (2026-11-14)
+- `pages/`: 520 English pages from `sitemap.xml` plus internal links. Each page is saved as `.html` (rendered DOM) and `.txt` (visible text only).
+- `pages-index.json`: URL, HTTP status, title and saved filename for every page.
+  - 5 links returned 404 on the live site: Cookie-Policy, refund_returns, Privacy-Policy, /84/, /contact-us/.
+  - The working contact page is `pages/contact.html`. Products are in `all-ice-cream-vending-machines*.html` and `multi-category-vending-machines*`; About is `about.html`.
+- `images/`: 1,017 images (176 MB), stored under the same paths they have on the site (`images/assets/huaxin/...`).
+  - `images-index.json` maps each original URL to its local file.
+  - 67 image references were malformed URLs and were skipped.
+- `css/`: the site's 4 stylesheets (index, header, footer, swiper).
+- Not captured: the language subdomains (it/ru/ar/es).
