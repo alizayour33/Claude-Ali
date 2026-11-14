@@ -81,14 +81,15 @@ export function HeroSlider({ lang, t }: { lang: Lang; t: Dict["hero"] }) {
               inert={!active}
               data-slide
             >
-              <Container className="grid min-h-[620px] items-center gap-10 pb-24 pt-12 lg:grid-cols-[1.05fr_.95fr]">
-                <div className={`transition duration-700 ${active ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`} data-slide-text>
+              <Container className="grid items-center gap-4 pb-20 pt-3 sm:gap-8 sm:pt-8 lg:min-h-[620px] lg:grid-cols-[1.05fr_.95fr] lg:gap-10 lg:pb-24 lg:pt-12">
+                {/* Text: below the picture on phones, beside it on desktop */}
+                <div className={`order-2 transition duration-700 lg:order-1 ${active ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`} data-slide-text>
                   <Eyebrow>{s.eyebrow}</Eyebrow>
-                  <Heading className="text-[clamp(38px,5.4vw,66px)] font-extrabold leading-[1.08]">
+                  <Heading className="text-[clamp(30px,5.4vw,66px)] font-extrabold leading-[1.1]">
                     {s.title} <span className="text-grad">{s.highlight}</span>
                   </Heading>
-                  <p className="mb-9 mt-6 max-w-xl text-lg text-muted">{s.text}</p>
-                  <div className="flex flex-wrap gap-3.5">
+                  <p className="mb-6 mt-3 max-w-xl text-base text-muted sm:mb-9 sm:mt-6 sm:text-lg">{s.text}</p>
+                  <div className="flex flex-wrap gap-3">
                     <ButtonLink href={href(lang, s.primary[1])} arrow>
                       {s.primary[0]}
                     </ButtonLink>
@@ -97,7 +98,7 @@ export function HeroSlider({ lang, t }: { lang: Lang; t: Dict["hero"] }) {
                     </ButtonLink>
                   </div>
                   {i === 0 && (
-                    <div className="mt-10 flex flex-wrap gap-6 text-sm font-semibold text-muted">
+                    <div className="mt-10 hidden flex-wrap gap-6 text-sm font-semibold text-muted sm:flex">
                       {t.badges.map((b) => (
                         <span key={b} className="flex items-center gap-2">
                           <span className="grid size-5 place-items-center rounded-full bg-mint text-xs font-black text-leaf-deep">✓</span>
@@ -107,7 +108,8 @@ export function HeroSlider({ lang, t }: { lang: Lang; t: Dict["hero"] }) {
                     </div>
                   )}
                 </div>
-                <div className="relative">
+                {/* Picture: first on phones */}
+                <div className="relative order-1 lg:order-2">
                   <div className="absolute inset-[6%_4%_10%_8%] rounded-[40%_60%_55%_45%/50%_45%_55%_50%] bg-grad opacity-15" />
                   <Image
                     src={s.image}
@@ -117,7 +119,7 @@ export function HeroSlider({ lang, t }: { lang: Lang; t: Dict["hero"] }) {
                     priority={i === 0}
                     sizes="(max-width: 1024px) 100vw, 560px"
                     draggable={false}
-                    className={`relative max-h-[480px] w-full object-contain drop-shadow-[0_40px_50px_rgba(26,11,69,.25)] transition duration-1000 ${active ? "scale-100" : "scale-95"}`}
+                    className={`relative max-h-[220px] w-full object-contain sm:max-h-[380px] lg:max-h-[480px] drop-shadow-[0_40px_50px_rgba(26,11,69,.25)] transition duration-1000 ${active ? "scale-100" : "scale-95"}`}
                   />
                   {i === 0 && (
                     <>
