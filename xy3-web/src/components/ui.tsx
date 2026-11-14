@@ -10,6 +10,15 @@ const variants: Record<Variant, string> = {
   "outline-white": "border-2 border-white/50 text-white hover:bg-white hover:text-night",
 };
 
+/** A direction-aware arrow: points right in LTR, left in RTL. */
+export function Arrow() {
+  return (
+    <span aria-hidden="true" className="inline-block transition group-hover:translate-x-1 rtl:-scale-x-100 rtl:group-hover:-translate-x-1">
+      →
+    </span>
+  );
+}
+
 export function ButtonLink({
   variant = "primary",
   arrow = false,
@@ -23,7 +32,7 @@ export function ButtonLink({
       {...props}
     >
       {children}
-      {arrow && <span className="transition group-hover:translate-x-1">→</span>}
+      {arrow && <Arrow />}
     </Link>
   );
 }
@@ -31,7 +40,7 @@ export function ButtonLink({
 export function Eyebrow({ children, light = false }: { children: ReactNode; light?: boolean }) {
   return (
     <span
-      className={`mb-4 inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-[.12em] ${light ? "text-[#9ff0cb]" : "text-brand"}`}
+      className={`mb-4 inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-[.12em] rtl:text-sm rtl:tracking-normal ${light ? "text-[#9ff0cb]" : "text-brand"}`}
     >
       <span className="size-2 rounded-full bg-leaf" />
       {children}
@@ -55,11 +64,20 @@ export function SectionHead({
   return (
     <div className={`mb-14 ${center ? "text-center" : ""}`}>
       <Eyebrow light={light}>{eyebrow}</Eyebrow>
-      <h2 className={`text-[clamp(30px,3.6vw,44px)] font-extrabold leading-[1.1] ${light ? "text-white" : ""}`}>{title}</h2>
+      <h2 className={`text-[clamp(30px,3.6vw,44px)] font-extrabold leading-[1.15] ${light ? "text-white" : ""}`}>{title}</h2>
       {lead && (
         <p className={`mt-4 max-w-2xl text-lg ${center ? "mx-auto" : ""} ${light ? "text-white/70" : "text-muted"}`}>{lead}</p>
       )}
     </div>
+  );
+}
+
+/** "Plain title <gradient>highlight</gradient>" helper. */
+export function Hl({ title, highlight }: { title: string; highlight: string }) {
+  return (
+    <>
+      {title} <span className="text-grad">{highlight}</span>
+    </>
   );
 }
 

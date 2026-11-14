@@ -1,8 +1,6 @@
 export const site = {
   name: "X&Y3",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://xy3.vercel.app",
-  description:
-    "White-label smart soft serve, frozen yogurt and açaí vending machines, delivered in your client's brand, with remote fleet management.",
   // TODO: replace placeholders with real contact details
   email: "sales@yourdomain.com",
   phone: "+00 000 000 0000",
@@ -15,13 +13,6 @@ export const site = {
     { label: "YouTube", short: "▶", href: "#" },
   ],
 };
-
-export const nav = [
-  { href: "/", label: "Home" },
-  { href: "/machines", label: "Machines" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
-];
 
 export function whatsappLink(text?: string) {
   const base = `https://wa.me/${site.whatsapp}`;

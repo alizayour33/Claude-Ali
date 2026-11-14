@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { machines } from "@/lib/machines";
+import { getMachine } from "@/lib/machines";
 
 export const runtime = "nodejs";
 
@@ -12,6 +12,24 @@ const LIMITS: Record<string, number> = {
   quantity: 20,
   machine: 40,
   message: 3000,
+  lang: 2,
+};
+
+const MSG = {
+  en: {
+    invalid: "Invalid request.",
+    required: "Please fill in your name, country and a short message.",
+    email: "Please enter a valid email address.",
+    off: "Online quotes aren't switched on yet. Please send your request on WhatsApp.",
+    failed: "We couldn't send your request right now.",
+  },
+  ar: {
+    invalid: "طلب غير صالح.",
+    required: "يرجى إدخال الاسم والدولة ورسالة قصيرة.",
+    email: "يرجى إدخال بريد إلكتروني صحيح.",
+    off: "طلبات الأسعار عبر الموقع غير مفعّلة بعد. يرجى إرسال طلبك عبر واتساب.",
+    failed: "تعذّر إرسال طلبك حالياً.",
+  },
 };
 
 const escape = (s: string) =>
@@ -22,7 +40,7 @@ export async function POST(req: Request) {
   try {
     raw = await req.json();
   } catch {
-    return NextResponse.json({ error: "Invalid request." }, { status: 400 });
+    return NextResponse.json({ error: MSG.en.invalid }, { status: 400 });
   }
 
   // Honeypot: bots fill hidden fields. Pretend success.
@@ -34,22 +52,18 @@ export async function POST(req: Request) {
     data[key] = typeof v === "string" ? v.trim().slice(0, max) : "";
   }
 
-  if (!data.name || !data.country || data.message.length < 10)
-    return NextResponse.json({ error: "Please fill in your name, country and a short message." }, { status: 400 });
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email))
-    return NextResponse.json({ error: "Please enter a valid email address." }, { status: 400 });
+  const m = data.lang === "ar" ? MSG.ar : MSG.en;
+  if (!data.name || !data.country || data.message.length < 10) return NextResponse.json({ error: m.required }, { status: 400 });
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) return NextResponse.json({ error: m.email }, { status: 400 });
 
   const apiKey = process.env.RESEND_API_KEY;
   const to = process.env.QUOTE_TO_EMAIL;
   if (!apiKey || !to) {
     console.warn("[quote] RESEND_API_KEY or QUOTE_TO_EMAIL not set; inquiry not emailed.");
-    return NextResponse.json(
-      { error: "Online quotes aren't switched on yet. Please send your request on WhatsApp." },
-      { status: 503 },
-    );
+    return NextResponse.json({ error: m.off }, { status: 503 });
   }
 
-  const machine = machines.find((m) => m.slug === data.machine)?.name ?? "Not sure yet";
+  const machine = getMachine("en", data.machine)?.name ?? "Not sure yet";
   const rows: [string, string][] = [
     ["Name", data.name],
     ["Company", data.company || "-"],
@@ -58,6 +72,7 @@ export async function POST(req: Request) {
     ["Country", data.country],
     ["Machine", machine],
     ["Quantity", data.quantity || "-"],
+    ["Site language", data.lang === "ar" ? "Arabic" : "English"],
   ];
   const html = `
     <h2 style="font-family:sans-serif;color:#1A0B45">New quote request</h2>
@@ -80,7 +95,7 @@ export async function POST(req: Request) {
 
   if (!res.ok) {
     console.error("[quote] Resend error", res.status, await res.text().catch(() => ""));
-    return NextResponse.json({ error: "We couldn't send your request right now." }, { status: 502 });
+    return NextResponse.json({ error: m.failed }, { status: 502 });
   }
 
   return NextResponse.json({ ok: true });
