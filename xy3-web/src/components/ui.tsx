@@ -1,34 +1,36 @@
 import Link from "next/link";
 import type { ComponentProps, ReactNode } from "react";
 
-type Variant = "primary" | "green" | "ghost" | "outline-white";
+type Variant = "primary" | "dark" | "outline" | "outline-light";
 
 const variants: Record<Variant, string> = {
-  primary: "bg-brand text-white shadow-[0_10px_24px_rgba(109,58,240,.28)] hover:bg-brand-deep",
-  green: "bg-leaf text-night hover:bg-[#3be39c]",
-  ghost: "border-2 border-line bg-white text-ink hover:border-brand hover:text-brand",
-  "outline-white": "border-2 border-white/50 text-white hover:bg-white hover:text-night",
+  primary: "bg-flame text-white hover:bg-flame-deep",
+  dark: "bg-ink text-white hover:bg-espresso-2",
+  outline: "border border-ink/25 text-ink hover:border-ink hover:bg-ink hover:text-white",
+  "outline-light": "border border-white/35 text-white hover:bg-white hover:text-ink",
 };
 
-/** A direction-aware arrow: points right in LTR, left in RTL. */
 export function Arrow() {
   return (
-    <span aria-hidden="true" className="inline-block transition group-hover:translate-x-1 rtl:-scale-x-100 rtl:group-hover:-translate-x-1">
-      →
-    </span>
+    <svg aria-hidden="true" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:translate-x-0.5 rtl:-scale-x-100">
+      <path d="M4 10h12M11 5l5 5-5 5" />
+    </svg>
   );
 }
 
+/** Uppercase CTA button. `track` names the analytics event sent on click. */
 export function ButtonLink({
   variant = "primary",
   arrow = false,
+  track,
   className = "",
   children,
   ...props
-}: ComponentProps<typeof Link> & { variant?: Variant; arrow?: boolean }) {
+}: ComponentProps<typeof Link> & { variant?: Variant; arrow?: boolean; track?: string }) {
   return (
     <Link
-      className={`group inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-[15px] font-bold transition hover:-translate-y-0.5 ${variants[variant]} ${className}`}
+      data-track={track}
+      className={`group inline-flex min-h-11 items-center justify-center gap-2 rounded-lg px-6 py-3 text-[13px] font-bold uppercase tracking-[.08em] transition-colors ${variants[variant]} ${className}`}
       {...props}
     >
       {children}
@@ -39,52 +41,57 @@ export function ButtonLink({
 
 export function Eyebrow({ children, light = false }: { children: ReactNode; light?: boolean }) {
   return (
-    <span
-      className={`mb-4 inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-[.12em] rtl:text-sm rtl:tracking-normal ${light ? "text-[#9ff0cb]" : "text-brand"}`}
-    >
-      <span className="size-2 rounded-full bg-leaf" />
-      {children}
-    </span>
+    <p className={`mb-4 text-xs font-bold uppercase tracking-[.16em] ${light ? "text-[#f0a878]" : "text-flame"}`}>{children}</p>
+  );
+}
+
+export function Container({ className = "", children }: { className?: string; children: ReactNode }) {
+  return <div className={`mx-auto w-full max-w-[1280px] px-5 sm:px-8 ${className}`}>{children}</div>;
+}
+
+export function Section({
+  tone = "ivory",
+  className = "",
+  id,
+  children,
+}: {
+  tone?: "ivory" | "white" | "stone" | "dark";
+  className?: string;
+  id?: string;
+  children: ReactNode;
+}) {
+  const tones = { ivory: "bg-ivory", white: "bg-white", stone: "bg-stone", dark: "bg-espresso text-white" };
+  return (
+    <section id={id} className={`scroll-mt-24 py-16 sm:py-20 lg:py-28 ${tones[tone]} ${className}`}>
+      <Container>{children}</Container>
+    </section>
   );
 }
 
 export function SectionHead({
   eyebrow,
   title,
-  lead,
-  center = false,
+  text,
   light = false,
+  center = false,
+  as: Tag = "h2",
 }: {
-  eyebrow: string;
-  title: ReactNode;
-  lead?: ReactNode;
-  center?: boolean;
+  eyebrow?: string;
+  title: string;
+  text?: string;
   light?: boolean;
+  center?: boolean;
+  as?: "h1" | "h2";
 }) {
   return (
-    <div className={`mb-14 ${center ? "text-center" : ""}`}>
-      <Eyebrow light={light}>{eyebrow}</Eyebrow>
-      <h2 className={`text-[clamp(30px,3.6vw,44px)] font-extrabold leading-[1.15] ${light ? "text-white" : ""}`}>{title}</h2>
-      {lead && (
-        <p className={`mt-4 max-w-2xl text-lg ${center ? "mx-auto" : ""} ${light ? "text-white/70" : "text-muted"}`}>{lead}</p>
-      )}
+    <div className={`mb-10 max-w-3xl lg:mb-14 ${center ? "mx-auto text-center" : ""}`}>
+      {eyebrow && <Eyebrow light={light}>{eyebrow}</Eyebrow>}
+      <Tag className={`text-[clamp(28px,3.6vw,46px)] font-extrabold leading-[1.1] ${light ? "text-white" : ""}`}>{title}</Tag>
+      {text && <p className={`mt-5 text-lg leading-relaxed ${light ? "text-white/70" : "text-muted"}`}>{text}</p>}
     </div>
   );
 }
 
-/** "Plain title <gradient>highlight</gradient>" helper. */
-export function Hl({ title, highlight }: { title: string; highlight: string }) {
-  return (
-    <>
-      {title} <span className="text-grad">{highlight}</span>
-    </>
-  );
-}
-
-export function Container({ className = "", children }: { className?: string; children: ReactNode }) {
-  return <div className={`mx-auto max-w-[1200px] px-4 sm:px-6 ${className}`}>{children}</div>;
-}
-
-export function Chip({ children }: { children: ReactNode }) {
-  return <span className="rounded-full bg-lav px-3 py-1 text-xs font-bold text-brand-deep">{children}</span>;
+export function Card({ className = "", children }: { className?: string; children: ReactNode }) {
+  return <div className={`rounded-xl border border-line bg-white p-6 ${className}`}>{children}</div>;
 }

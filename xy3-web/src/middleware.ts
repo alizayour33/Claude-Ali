@@ -1,17 +1,20 @@
 import { NextResponse, type NextRequest } from "next/server";
+import { defaultLang, locales } from "@/i18n/config";
 
-// English is served at the root (/machines), Arabic under /ar (/ar/machines).
-// Internally every page lives under app/[lang], so root URLs are rewritten to /en.
+// The default language is served at the root (/services). Internally every page
+// lives under app/[lang], so root URLs are rewritten to /en/... Other locales keep their prefix.
 export function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
-  if (pathname === "/ar" || pathname.startsWith("/ar/")) return NextResponse.next();
-
+  const first = pathname.split("/")[1];
   const url = req.nextUrl.clone();
-  if (pathname === "/en" || pathname.startsWith("/en/")) {
-    url.pathname = pathname.slice(3) || "/";
+
+  if (first === defaultLang) {
+    url.pathname = pathname.slice(defaultLang.length + 1) || "/";
     return NextResponse.redirect(url);
   }
-  url.pathname = `/en${pathname === "/" ? "" : pathname}`;
+  if ((locales as readonly string[]).includes(first)) return NextResponse.next();
+
+  url.pathname = `/${defaultLang}${pathname === "/" ? "" : pathname}`;
   return NextResponse.rewrite(url);
 }
 

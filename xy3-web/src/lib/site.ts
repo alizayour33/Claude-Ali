@@ -1,20 +1,9 @@
 export const site = {
   name: "X&Y3",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://xy3.vercel.app",
-  // TODO: replace placeholders with real contact details
-  email: "sales@yourdomain.com",
-  phone: "+00 000 000 0000",
-  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP ?? "000000000000",
-  address: "Your business address, City, Country",
-  social: [
-    { label: "Instagram", short: "IG", href: "#" },
-    { label: "Facebook", short: "f", href: "#" },
-    { label: "X", short: "X", href: "#" },
-    { label: "YouTube", short: "▶", href: "#" },
-  ],
+  // Planned addresses from the spec. Shown only when NEXT_PUBLIC_EMAILS_LIVE=true (after domain email is set up).
+  emails: { info: "info@xandy3.com", sales: "sales@xandy3.com", support: "support@xandy3.com" },
+  emailsLive: process.env.NEXT_PUBLIC_EMAILS_LIVE === "true",
+  // Add verified social profiles here; the footer shows them only when present.
+  social: [] as { label: string; href: string }[],
 };
-
-export function whatsappLink(text?: string) {
-  const base = `https://wa.me/${site.whatsapp}`;
-  return text ? `${base}?text=${encodeURIComponent(text)}` : base;
-}
