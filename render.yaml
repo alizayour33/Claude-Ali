@@ -1,0 +1,28 @@
+# Render Blueprint for the BrightPath K-12 LMS (k12-lms/).
+# Deploy: render.com → New → Blueprint → pick this repo and branch.
+# Docs: https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: brightpath-k12-lms
+    runtime: node
+    rootDir: k12-lms
+    # "starter" is required for the persistent disk below (keeps uploads and learner results).
+    # For a free demo, change to "free" and delete the disk block (data then resets on every restart).
+    plan: starter
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /api/config
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: DATA_DIR
+        value: /var/data
+      - key: ADMIN_KEY          # teacher key for uploading/removing courses (see Environment tab)
+        generateValue: true
+      - key: MAX_UPLOAD_MB
+        value: "500"
+    disk:
+      name: lms-data
+      mountPath: /var/data
+      sizeGB: 1

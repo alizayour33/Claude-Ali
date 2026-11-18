@@ -25,6 +25,19 @@ Requires Node.js 18 or newer. Data is stored in `k12-lms/data/` (`db.json` plus 
 | `ADMIN_KEY` | *(unset)* | If set, uploading or removing courses needs this teacher key |
 | `MAX_UPLOAD_MB` | `500` | Largest SCORM zip accepted |
 
+## Deploy online (Render)
+
+`render.yaml` at the repository root sets everything up.
+
+1. Sign in at https://render.com with GitHub.
+2. Choose **New → Blueprint**, select this repository and the branch that holds `k12-lms/`, then click **Apply**.
+3. When the build finishes, open the `https://<name>.onrender.com` link Render shows.
+4. To upload courses, find the generated **teacher key** under the service's **Environment → `ADMIN_KEY`**. The app asks for it the first time you upload.
+
+The Blueprint uses the **Starter** plan with a 1 GB disk at `/var/data`, so uploaded packages and learner results
+survive restarts and redeploys. For a free demo, set `plan: free` and remove the `disk` block. Data then resets
+whenever the service restarts or redeploys, and the free service sleeps after 15 minutes without traffic.
+
 ## Attach a SCORM package to Grade 9 (or any grade)
 
 1. Open **Grades → Grade 9 → Science**, or open the **Teacher** page.
