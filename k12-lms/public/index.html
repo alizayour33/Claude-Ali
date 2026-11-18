@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BrightPath K-12 LMS</title>
+  <meta name="description" content="K-12 school curriculum learning management system with SCORM 1.2 and 2004 support.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230e9f6e'/%3E%3Cpath d='M8 22 16 8l8 14z' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  <header class="appbar">
+    <a class="logo" href="#/"><span class="mark" aria-hidden="true">▲</span> BrightPath <small>K-12 LMS</small></a>
+    <nav class="links">
+      <a href="#/" data-nav="home">Grades</a>
+      <a href="#/teacher" data-nav="teacher">Teacher</a>
+    </nav>
+    <button class="learner" id="learnerBtn" type="button" title="Change learner"></button>
+  </header>
+  <main id="view" tabindex="-1"></main>
+
+  <dialog id="learnerDialog">
+    <form method="dialog" id="learnerForm">
+      <h2>Who is learning?</h2>
+      <p class="muted">Your name is used to save SCORM progress and scores on this LMS.</p>
+      <label>Learner name <input name="name" required maxlength="80" autocomplete="name" placeholder="e.g. Sara Ahmed"></label>
+      <div class="row end">
+        <button value="cancel" formnovalidate class="ghost">Cancel</button>
+        <button value="ok" class="primary">Continue</button>
+      </div>
+    </form>
+  </dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>

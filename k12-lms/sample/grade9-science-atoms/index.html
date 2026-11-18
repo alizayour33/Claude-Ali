@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grade 9 Science — Atoms, Elements &amp; the Periodic Table</title>
+  <link rel="stylesheet" href="css/lesson.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand"><span class="dot"></span> Grade 9 Science · Unit 2</div>
+    <div class="progress" aria-hidden="true"><div class="bar" id="bar"></div></div>
+    <div class="count" id="count">1 / 8</div>
+  </header>
+
+  <main id="slides">
+    <!-- 1 -->
+    <section class="slide" data-title="Welcome">
+      <p class="kicker">Lesson</p>
+      <h1>Atoms, Elements &amp; the Periodic Table</h1>
+      <p class="lead">Everything around you — the air, water, your own body — is made of tiny particles called <b>atoms</b>. In this lesson you will look inside an atom and learn how scientists organise every known element.</p>
+      <div class="card">
+        <h3>By the end you will be able to</h3>
+        <ol>
+          <li>Describe the three subatomic particles and their charges.</li>
+          <li>Use atomic number and mass number to count protons, neutrons and electrons.</li>
+          <li>Explain what isotopes are.</li>
+          <li>Draw the electron shell arrangement for the first 20 elements.</li>
+          <li>Read groups and periods on the periodic table.</li>
+        </ol>
+      </div>
+      <p class="muted small">About 20 minutes · Check for understanding at the end (pass mark 70%).</p>
+    </section>
+
+    <!-- 2 -->
+    <section class="slide" data-title="Inside the atom">
+      <p class="kicker">Part 1</p>
+      <h2>Inside the atom</h2>
+      <div class="two">
+        <div>
+          <p>An atom has a tiny, dense <b>nucleus</b> at its centre, surrounded by mostly empty space where <b>electrons</b> move.</p>
+          <table class="data">
+            <thead><tr><th>Particle</th><th>Charge</th><th>Relative mass</th><th>Location</th></tr></thead>
+            <tbody>
+              <tr><td><span class="chip p">Proton</span></td><td>+1</td><td>1</td><td>Nucleus</td></tr>
+              <tr><td><span class="chip n">Neutron</span></td><td>0</td><td>1</td><td>Nucleus</td></tr>
+              <tr><td><span class="chip e">Electron</span></td><td>−1</td><td>≈ 1/1836</td><td>Shells around nucleus</td></tr>
+            </tbody>
+          </table>
+          <p class="note">In a <b>neutral</b> atom the number of electrons equals the number of protons, so the charges cancel out.</p>
+        </div>
+        <figure class="figure">
+          <svg viewBox="0 0 220 220" role="img" aria-label="Diagram of a lithium atom: 3 protons and 4 neutrons in the nucleus, 3 electrons in two shells">
+            <circle cx="110" cy="110" r="50" class="shell"/>
+            <circle cx="110" cy="110" r="90" class="shell"/>
+            <circle cx="102" cy="104" r="9" class="pp"/><circle cx="118" cy="104" r="9" class="nn"/>
+            <circle cx="110" cy="117" r="9" class="pp"/><circle cx="96" cy="118" r="9" class="nn"/>
+            <circle cx="124" cy="118" r="9" class="nn"/><circle cx="110" cy="96" r="9" class="pp"/>
+            <circle cx="110" cy="128" r="9" class="nn"/>
+            <circle cx="60" cy="110" r="6" class="ee"/><circle cx="160" cy="110" r="6" class="ee"/>
+            <circle cx="110" cy="20" r="6" class="ee"/>
+          </svg>
+          <figcaption>Lithium (Li): 3 protons, 4 neutrons, 3 electrons</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 3 -->
+    <section class="slide" data-title="Counting particles">
+      <p class="kicker">Part 2</p>
+      <h2>Atomic number &amp; mass number</h2>
+      <div class="two">
+        <div>
+          <p><b>Atomic number (Z)</b> = number of protons. It identifies the element — every carbon atom has 6 protons.</p>
+          <p><b>Mass number (A)</b> = protons + neutrons.</p>
+          <p class="formula">neutrons = A − Z</p>
+          <div class="card">
+            <h3>Worked example: chlorine-35</h3>
+            <p>Z = 17, A = 35 → protons 17, neutrons 35 − 17 = <b>18</b>, electrons (neutral) <b>17</b>.</p>
+          </div>
+        </div>
+        <figure class="figure nuclide">
+          <div class="nuc"><span class="a">12</span><span class="z">6</span><span class="sym">C</span></div>
+          <figcaption>Nuclide notation: mass number on top, atomic number below.</figcaption>
+        </figure>
+      </div>
+      <h3>Isotopes</h3>
+      <p><b>Isotopes</b> are atoms of the same element with different numbers of neutrons. Carbon-12 (6 neutrons) and carbon-14 (8 neutrons) are both carbon because both have 6 protons. Carbon-14 is radioactive and is used to date ancient remains.</p>
+    </section>
+
+    <!-- 4 -->
+    <section class="slide" data-title="Build an atom">
+      <p class="kicker">Try it</p>
+      <h2>Build an atom</h2>
+      <p>Change the particles and watch what you make. Try to build a <b>neutral oxygen-16</b> atom.</p>
+      <div class="builder">
+        <div class="controls">
+          <label>Protons <output id="pOut">6</output><input type="range" id="pIn" min="1" max="20" value="6"></label>
+          <label>Neutrons <output id="nOut">6</output><input type="range" id="nIn" min="0" max="24" value="6"></label>
+          <label>Electrons <output id="eOut">6</output><input type="range" id="eIn" min="0" max="20" value="6"></label>
+          <dl class="readout">
+            <div><dt>Element</dt><dd id="rEl">Carbon (C)</dd></div>
+            <div><dt>Mass number</dt><dd id="rA">12</dd></div>
+            <div><dt>Charge</dt><dd id="rQ">0 (neutral)</dd></div>
+            <div><dt>Shells</dt><dd id="rS">2, 4</dd></div>
+          </dl>
+          <p id="goal" class="goal" role="status"></p>
+        </div>
+        <svg id="atomSvg" viewBox="0 0 240 240" role="img" aria-label="Your atom"></svg>
+      </div>
+    </section>
+
+    <!-- 5 -->
+    <section class="slide" data-title="Electron shells">
+      <p class="kicker">Part 3</p>
+      <h2>Electron shells</h2>
+      <p>Electrons fill shells from the inside out. For the first 20 elements the shells hold up to <b>2, 8, 8</b> and then the next electrons start a 4th shell.</p>
+      <table class="data">
+        <thead><tr><th>Element</th><th>Electrons</th><th>Arrangement</th><th>Valence electrons</th></tr></thead>
+        <tbody>
+          <tr><td>Hydrogen (H)</td><td>1</td><td>1</td><td>1</td></tr>
+          <tr><td>Carbon (C)</td><td>6</td><td>2, 4</td><td>4</td></tr>
+          <tr><td>Oxygen (O)</td><td>8</td><td>2, 6</td><td>6</td></tr>
+          <tr><td>Sodium (Na)</td><td>11</td><td>2, 8, 1</td><td>1</td></tr>
+          <tr><td>Chlorine (Cl)</td><td>17</td><td>2, 8, 7</td><td>7</td></tr>
+          <tr><td>Calcium (Ca)</td><td>20</td><td>2, 8, 8, 2</td><td>2</td></tr>
+        </tbody>
+      </table>
+      <p class="note">The electrons in the outermost shell are called <b>valence electrons</b>. They decide how an element reacts.</p>
+    </section>
+
+    <!-- 6 -->
+    <section class="slide" data-title="The periodic table">
+      <p class="kicker">Part 4</p>
+      <h2>The periodic table</h2>
+      <p>Elements are arranged in order of atomic number. <b>Rows are periods</b> (the number of shells). <b>Columns are groups</b> — elements in a group have the same number of valence electrons, so they behave alike. Tap an element.</p>
+      <div class="pt-wrap">
+        <div class="pt" id="pt"></div>
+        <aside class="pt-info" id="ptInfo" aria-live="polite"><p class="muted">Select an element to see its details.</p></aside>
+      </div>
+      <ul class="legend">
+        <li><i class="c-alkali"></i>Alkali metal</li><li><i class="c-alkaline"></i>Alkaline earth metal</li>
+        <li><i class="c-metal"></i>Other metal</li><li><i class="c-metalloid"></i>Metalloid</li>
+        <li><i class="c-nonmetal"></i>Nonmetal</li><li><i class="c-halogen"></i>Halogen</li><li><i class="c-noble"></i>Noble gas</li>
+      </ul>
+    </section>
+
+    <!-- 7 -->
+    <section class="slide" data-title="Check for understanding">
+      <p class="kicker">Quiz</p>
+      <h2>Check for understanding</h2>
+      <p class="muted">Answer all 6 questions, then submit. You need 70% to pass. You can retry.</p>
+      <form id="quiz" novalidate></form>
+      <div id="result" class="result" hidden role="status"></div>
+    </section>
+
+    <!-- 8 -->
+    <section class="slide" data-title="Summary">
+      <p class="kicker">Wrap-up</p>
+      <h2>Summary</h2>
+      <ul class="summary">
+        <li>Atoms contain protons (+), neutrons (0) and electrons (−).</li>
+        <li>Atomic number = protons; mass number = protons + neutrons.</li>
+        <li>Isotopes have the same protons but different neutrons.</li>
+        <li>Electrons fill shells 2, 8, 8…; valence electrons control reactivity.</li>
+        <li>Periods = rows (number of shells); groups = columns (same valence electrons).</li>
+      </ul>
+      <div class="card">
+        <h3>References</h3>
+        <ul class="refs small">
+          <li>Flowers, P. et al. <i>Chemistry 2e</i>, OpenStax, Rice University (2019), Ch. 2 “Atoms, Molecules, and Ions”. openstax.org/books/chemistry-2e</li>
+          <li>NGSS Lead States. <i>Next Generation Science Standards</i>, HS-PS1-1 (patterns of the periodic table). nextgenscience.org</li>
+          <li>IUPAC. <i>Periodic Table of the Elements</i> (standard atomic weights). iupac.org/what-we-do/periodic-table-of-elements</li>
+        </ul>
+      </div>
+      <p id="finalStatus" class="goal"></p>
+    </section>
+  </main>
+
+  <nav class="nav">
+    <button id="prev" type="button">← Back</button>
+    <span id="slideTitle" class="muted"></span>
+    <button id="next" type="button" class="primary">Next →</button>
+  </nav>
+
+  <script src="js/scorm12.js"></script>
+  <script src="js/lesson.js"></script>
+</body>
+</html>
