@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>X&amp;Y3 Brand Guide</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--violet:#6D3AF0;--violet-deep:#4B1FC9;--violet-900:#1A0B45;--violet-50:#F5F1FF;--green:#22D38A;--green-deep:#0FA968;--green-50:#E7FBF2;--ink:#140F2A;--muted:#6E6A85;--line:#E9E6F2;--grad:linear-gradient(135deg,#6D3AF0 0%,#4B1FC9 45%,#22D38A 130%)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:Sora,Inter,sans-serif;letter-spacing:-.025em;line-height:1.1}
+.top{background:var(--violet-900);color:#fff;padding:90px 0 70px;position:relative;overflow:hidden}
+.top::after{content:"";position:absolute;right:-120px;top:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(34,211,138,.3),transparent 65%)}
+.top img{height:72px;margin-bottom:36px}
+.top h1{font-size:clamp(36px,5vw,56px)}
+.top p{color:rgba(255,255,255,.7);max-width:560px;margin-top:14px;font-size:18px}
+section{padding:72px 0;border-bottom:1px solid var(--line)}
+.label{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--violet);margin-bottom:10px}
+h2{font-size:32px;margin-bottom:12px}
+.intro{color:var(--muted);max-width:640px;margin-bottom:36px}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.tile{border-radius:20px;padding:40px;display:grid;place-items:center;min-height:200px;border:1px solid var(--line)}
+.tile img{max-height:72px}
+.cap{font-size:13px;color:var(--muted);margin-top:10px;font-weight:600}
+.sw{border-radius:18px;overflow:hidden;border:1px solid var(--line)}
+.sw div{height:120px}
+.sw p{padding:14px 16px;font-size:14px}.sw b{display:block;font-size:15px}
+.sw code{color:var(--muted);font-size:13px}
+.type{border:1px solid var(--line);border-radius:20px;padding:32px}
+.type .big{font-family:Sora;font-weight:800;font-size:64px;letter-spacing:-.04em;line-height:1}
+.type .body{font-size:56px;font-weight:600;line-height:1}
+.scale p{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line);padding:14px 0}
+.scale span:last-child{color:var(--muted);font-size:13px}
+.do,.dont{border-radius:20px;padding:28px}
+.do{background:var(--green-50)}.dont{background:#FFF0F1}
+.do h3,.dont h3{font-size:18px;margin-bottom:12px}
+.do li,.dont li{margin:0 0 8px 18px;color:#38345A}
+.anat{display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap}
+.anat ul{list-style:none;display:grid;gap:14px}
+.anat li{display:flex;gap:12px;align-items:center}
+.anat i{width:28px;height:28px;border-radius:50%;background:var(--violet);color:#fff;display:grid;place-items:center;font-style:normal;font-weight:800;font-size:13px;flex:none}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;padding:14px 26px;border-radius:999px;font-weight:700;font-size:15px}
+footer{padding:40px 0;color:var(--muted);font-size:14px}
+a{color:var(--violet)}
+@media (max-width:760px){.g2,.g3,.g4{grid-template-columns:1fr 1fr}.type .big{font-size:44px}.type .body{font-size:40px}}
+@media (max-width:480px){.g2,.g3{grid-template-columns:1fr}.container{padding:0 16px}}
+</style>
+</head>
+<body>
+
+<div class="top"><div class="container">
+  <img src="brand/logo-dark.svg" alt="X&amp;Y3 logo">
+  <h1>Brand guide</h1>
+  <p>How X&amp;Y3 looks and sounds. Use these rules on the website, proposals, social posts and trade-show materials.</p>
+</div></div>
+
+<section><div class="container">
+  <div class="label">01 · Logo</div>
+  <h2>The mark</h2>
+  <p class="intro">Three stacked layers make a soft-serve swirl. The three layers also stand for the "3" in X&amp;Y3, and the green dot on top is the cherry.</p>
+  <div class="anat">
+    <img src="brand/logo-mark.svg" alt="X&amp;Y3 mark" style="width:200px">
+    <ul>
+      <li><i>1</i>Violet tile: the platform, solid and premium</li>
+      <li><i>2</i>Three white layers: the soft-serve swirl, and the "3"</li>
+      <li><i>3</i>Translucent cone: the product</li>
+      <li><i>4</i>Green cherry: growth and freshness</li>
+    </ul>
+  </div>
+  <div class="grid g3" style="margin-top:40px">
+    <div><div class="tile"><img src="brand/logo-light.svg" alt=""></div><div class="cap">Primary · on light backgrounds</div></div>
+    <div><div class="tile" style="background:var(--violet-900)"><img src="brand/logo-dark.svg" alt=""></div><div class="cap">Reversed · on dark backgrounds</div></div>
+    <div><div class="tile" style="background:var(--green-50)"><img src="brand/logo-mark.svg" alt="" style="max-height:96px"></div><div class="cap">Mark only · favicon, app icon, social avatar</div></div>
+  </div>
+  <p class="cap" style="margin-top:18px">Clear space: keep empty space around the logo at least the width of the cherry dot × 2. Minimum size: mark 24px, full logo 110px wide.</p>
+</div></section>
+
+<section><div class="container">
+  <div class="label">02 · Color</div>
+  <h2>Modern violet + fresh green</h2>
+  <p class="intro">Violet leads and green accents. Use them roughly 60% white/neutral, 30% violet and 10% green, so the green stays special.</p>
+  <div class="grid g4">
+    <div class="sw"><div style="background:#6D3AF0"></div><p><b>XY Violet</b><code>#6D3AF0</code><br><code>Primary · buttons, links</code></p></div>
+    <div class="sw"><div style="background:#4B1FC9"></div><p><b>Deep Violet</b><code>#4B1FC9</code><br><code>Hover, gradients</code></p></div>
+    <div class="sw"><div style="background:#1A0B45"></div><p><b>Night</b><code>#1A0B45</code><br><code>Dark sections</code></p></div>
+    <div class="sw"><div style="background:#F5F1FF"></div><p><b>Lavender</b><code>#F5F1FF</code><br><code>Soft backgrounds</code></p></div>
+    <div class="sw"><div style="background:#22D38A"></div><p><b>XY Green</b><code>#22D38A</code><br><code>Accent · highlights, CTAs on dark</code></p></div>
+    <div class="sw"><div style="background:#0FA968"></div><p><b>Deep Green</b><code>#0FA968</code><br><code>Green text on white</code></p></div>
+    <div class="sw"><div style="background:#E7FBF2"></div><p><b>Mint</b><code>#E7FBF2</code><br><code>Success, tints</code></p></div>
+    <div class="sw"><div style="background:#140F2A"></div><p><b>Ink</b><code>#140F2A</code><br><code>Headlines, body text</code></p></div>
+  </div>
+  <div class="sw" style="margin-top:18px"><div style="background:var(--grad);height:110px"></div><p><b>Signature gradient</b><code>135° · #6D3AF0 → #4B1FC9 → #22D38A</code>. Use it for hero accents, CTA bands and highlighted headline words only.</p></div>
+</div></section>
+
+<section><div class="container">
+  <div class="label">03 · Typography</div>
+  <h2>Two typefaces</h2>
+  <p class="intro">Both are free on Google Fonts. Sora gives headlines a geometric, tech-forward feel, and Inter keeps body text clear at small sizes.</p>
+  <div class="grid g2">
+    <div class="type"><div class="big">Aa Sora</div><p class="cap">Headlines · ExtraBold 800 / Bold 700 · tracking −2.5%</p></div>
+    <div class="type"><div class="body">Aa Inter</div><p class="cap">Body &amp; UI · Regular 400 / Semibold 600 / Bold 700</p></div>
+  </div>
+  <div class="scale" style="margin-top:24px">
+    <p><span style="font-family:Sora;font-weight:800;font-size:44px">Display</span><span>Sora 800 · 56–68px</span></p>
+    <p><span style="font-family:Sora;font-weight:800;font-size:32px">Section heading</span><span>Sora 800 · 32–44px</span></p>
+    <p><span style="font-family:Sora;font-weight:700;font-size:20px">Card title</span><span>Sora 700 · 20px</span></p>
+    <p><span style="font-size:16px">Body text for paragraphs and descriptions.</span><span>Inter 400 · 16–18px</span></p>
+    <p><span style="font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--violet)">Eyebrow label</span><span>Inter 700 · 13px · caps</span></p>
+  </div>
+</div></section>
+
+<section><div class="container">
+  <div class="label">04 · Components</div>
+  <h2>Buttons &amp; accents</h2>
+  <p class="intro">Fully rounded buttons. Use violet on light backgrounds and green on dark ones.</p>
+  <div class="btns">
+    <span class="btn" style="background:var(--violet);color:#fff">Primary</span>
+    <span class="btn" style="background:var(--green);color:var(--violet-900)">Accent</span>
+    <span class="btn" style="border:2px solid var(--line)">Secondary</span>
+    <span class="btn" style="background:var(--violet-900);color:#fff;border:2px solid rgba(255,255,255,.4)">On dark</span>
+  </div>
+</div></section>
+
+<section><div class="container">
+  <div class="label">05 · Voice &amp; usage</div>
+  <h2>How we sound</h2>
+  <p class="intro">Confident, practical and partner-first. We sell the client's success, not our own name: the X&amp;Y3 brand stays in the background and the client's brand is the star.</p>
+  <div class="grid g2">
+    <div class="do"><h3>✓ Do</h3><ul><li>Lead with outcomes: revenue, no staff needed, open 24/7</li><li>Say "your brand" and "your client's brand" often</li><li>Use real machine photos on white or lavender backgrounds</li><li>Keep green for highlights and key actions</li></ul></div>
+    <div class="dont"><h3>✗ Don't</h3><ul><li>Show supplier logos or model codes on public materials</li><li>Stretch, recolor or rotate the logo</li><li>Put the gradient behind long body text</li><li>Use more than one green element per small area</li></ul></div>
+  </div>
+</div></section>
+
+<footer><div class="container">X&amp;Y3 brand guide · v1 · 2026 · Logo files: <a href="brand/logo-light.svg">logo-light.svg</a> · <a href="brand/logo-dark.svg">logo-dark.svg</a> · <a href="brand/logo-mark.svg">logo-mark.svg</a> · <a href="index.html">Back to site</a></div></footer>
+</body>
+</html>

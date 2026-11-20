@@ -1,0 +1,627 @@
+Huaxin
+
+HOME
+PRODUCTS
+ABOUT
+SYSTEM
+BLOG
+SOLUTIONS
+FAQ
+CONTACT
+
+Send Inquiry
+
+EN>
+
+BLOG
+How Does an Ice Cream Vending Machine Work? From Ordering to Pickup
+How Does an Ice Cream Vending Machine Work? From Ordering to Pickup
+Date：2026-10-16 Author：Huaxin
+
+How an automatic ice cream vending machine takes an order, serves a cup and what operators still do each day, plus three failure cases to test in a demo.
+
+An automatic ice cream vending machine is a soft-serve freezer with an ordering screen, a payment module, a cup-handling system and a pickup port built around it. The customer chooses, pays and collects. In between, the machine drops a cup, makes the soft serve and adds sauces or toppings. It does not restock itself, it does not clean itself completely, and it does not repair its own mechanical faults.
+
+This guide follows one order from screen to pickup, explains how the parts behind that sequence relate to each other, lists three failure cases to trigger in a demonstration before you buy, and sets out the work that stays with the operator. It is written by Huaxin, a manufacturer of commercial ice cream vending machines, and uses the floor-standing B Series as its main example. The countertop Easy 7 and Power 7 differ in places and have their own section near the end. Features vary by model and configuration, so check each point against the machine you plan to buy.
+
+One order, step by step
+
+The table follows a single order on a B Series machine fitted with an automatic cup dispenser.
+
+Step
+
+	
+
+The customer
+
+	
+
+The machine
+
+	
+
+What varies by configuration
+
+
+
+
+1. Select
+
+	
+
+Chooses a product on the 32-inch touchscreen
+
+	
+
+Shows the menu and can display branded content supplied by the operator
+
+	
+
+Menu content and interface language are set per project
+
+
+
+
+2. Pay
+
+	
+
+Pays by card, QR or mobile wallet, or with cash or coins
+
+	
+
+Runs the automatic production process after selection and payment
+
+	
+
+Payment methods depend on the country, provider and terminal; cash modules are set up for specific currencies
+
+
+
+
+3. Cup drop
+
+	
+
+Waits
+
+	
+
+Separates a single cup and checks its position with photoelectric detection
+
+	
+
+Automatic cup dispensing is available on configurations fitted with a cup dispenser and works with matching cup specifications only
+
+
+
+
+4. Make
+
+	
+
+Waits, or watches through the viewing window
+
+	
+
+Freezes and dispenses soft serve from the base mix loaded in the machine
+
+	
+
+One base mix runs at a time; frozen yogurt and sorbet need suitable formulations
+
+
+
+
+5. Add sauce and toppings
+
+	
+
+Waits
+
+	
+
+Sauce pumps and topping bins add the selected extras during the serving cycle
+
+	
+
+The number of sauces and toppings depends on the configuration
+
+
+
+
+6. Deliver
+
+	
+
+Collects the cup at the pickup port
+
+	
+
+Makes the finished cup available at the pickup port
+
+	
+
+The viewing window is for watching, not for collecting
+
+The sequence applies to the B Series with a cup dispenser; other models and configurations differ.
+
+Two limits sit behind the table. The machine runs one base mix at a time, so menu variety comes from the sauces and toppings added to that base, and a different base means changing the mix. The cup dispenser works with matching cup specifications, which makes cup size and type part of the purchase specification.
+
+What sits behind the sequence
+Ingredient preparation and feeding
+
+The operator loads base mix into the machine, and on the B Series it reaches the freezing cylinder by gravity-fed side feeding. The freezing cylinder holds 2 litres. Sauces and toppings go into their own containers and must meet the equipment's feeding requirements.
+
+Three stock limits apply at once: the volume of mix the machine holds, the number of cups it stores, and the freezing cylinder. On the B83 spec sheet the mix volume is 10 L and cup storage is approximately 80 cups; the other B Series models list larger figures for both, and cup capacity depends on the cup type and configuration. The machine can run out of cups while mix remains, or the other way round. None of these figures converts into a daily sales number, because serving size, recipe and operating conditions change how far each one goes.
+
+Refrigeration
+
+The B Series spec sheet lists an Embraco compressor, which cools the freezing cylinder. Initial freezing takes approximately 15 minutes and depends on the starting mix temperature and the room temperature, so the machine needs its start-up time before the first sale. Selected B Series configurations add pasteurization and low-temperature mix holding. Pasteurization is an option on compatible configurations, not a standard feature of every model.
+
+Cup detection and control
+
+On configurations with a cup dispenser, the cup-drop mechanism and photoelectric detection separate a single cup and check its position. The B Series lists an Android 7.1 control system with Huaxin's proprietary control software, and the system also runs preset programs such as one-touch cleaning.
+
+Viewing window and pickup port
+
+Customers can watch the automated production through the viewing window on the B Series. The window is not where the cup is collected. Collection happens at a separate pickup port, so a photo or sales sheet that labels the window as the pickup point misdescribes the machine.
+
+This matters for branding projects. Exterior wraps, logos and colours can be customised, but the positions of the pickup port and the viewing window, the door arrangement and the internal layout are part of the machine structure and do not change with an exterior wrap. If your venue has a layout constraint, check both positions on a demonstration unit before you approve artwork.
+
+Three failure cases to trigger in a demonstration
+
+A spec sheet describes a machine that is working. The cases below describe one that is not, and their answers rarely appear in a brochure. Ask any supplier, Huaxin included, to run them on the configuration you plan to buy, to film each run, and to supply the handling steps in writing from the current manual or service records. This guide deliberately does not describe how a machine responds to these cases, because the answer belongs on your demonstration unit.
+
+Case
+
+	
+
+How to set it up
+
+	
+
+What to watch and record
+
+	
+
+Why it matters
+
+
+
+
+Missing cup
+
+	
+
+Empty the cup dispenser, then place an order
+
+	
+
+Whether the screen stops the sale before payment or after it; how a paid order without a cup is resolved; whether a status alert reaches the remote dashboard on a connected unit
+
+	
+
+Decides whether a customer can pay for a cup that never arrives, and who deals with that customer
+
+
+
+
+Payment failure
+
+	
+
+Decline a card, cancel a QR payment half-way and let a payment time out
+
+	
+
+Whether the screen returns to the menu; whether anything starts in production; where the order appears in the records; who handles a refund, the payment provider, the operator or the machine software
+
+	
+
+Payment is a third-party service connected to the machine's interface, so part of the handling sits outside the machine
+
+
+
+
+Delivery abnormality
+
+	
+
+Leave a finished cup uncollected; disconnect the network during an order
+
+	
+
+What happens to the cup, to the next order and to the screen; what the operator sees remotely; whether the machine keeps selling offline
+
+	
+
+Real-time remote functions are unavailable offline, so offline behaviour has to be confirmed rather than assumed
+
+Anything the supplier cannot demonstrate or document stays an open question to settle before you pay.
+
+Who does what: the work that stays with the operator
+
+"Unattended" means no staff stand at the machine during a sale. The machine automates soft-serve production for self-service operation, yet stocking, cleaning and checks still need people. The table lists task types; intervals, quantities and cleaning steps come from the model's current operating manual and local food-safety rules.
+
+Phase
+
+	
+
+Task
+
+	
+
+Why it stays with a person
+
+
+
+
+Before opening
+
+	
+
+Check power and, on connected machines, the network link
+
+	
+
+Remote monitoring and alerts need a connection; real-time remote functions are unavailable offline
+
+
+
+
+Before opening
+
+	
+
+Load base mix, matching cups, and compatible sauces and toppings
+
+	
+
+One base mix runs at a time, the cup dispenser takes matching cups only, and toppings must meet the equipment's feeding requirements
+
+
+
+
+Before opening
+
+	
+
+Allow the initial freezing time and check a test cup
+
+	
+
+Initial freezing takes approximately 15 minutes on the B Series spec sheet and varies with mix and room temperature
+
+
+
+
+Before opening
+
+	
+
+Test the payment method on the local terminal
+
+	
+
+Compatibility depends on the provider and terminal
+
+
+
+
+During trading
+
+	
+
+Watch status and fault alerts; refill before stock runs out
+
+	
+
+Alerts help identify missing stock or faults earlier; they do not repair anything
+
+
+
+
+During trading
+
+	
+
+Handle declined or disputed payments
+
+	
+
+These involve the payment provider and the operator's own refund policy
+
+
+
+
+During trading
+
+	
+
+Arrange mechanical repair
+
+	
+
+Remote functions cover selected settings and basic operations, not mechanical repairs
+
+
+
+
+After closing
+
+	
+
+Run the one-touch cleaning program
+
+	
+
+It helps simplify routine cleaning
+
+
+
+
+After closing
+
+	
+
+Complete manual cleaning and maintenance as the manual requires
+
+	
+
+One-touch cleaning does not replace hygiene procedures or periodic manual maintenance
+
+
+
+
+After closing
+
+	
+
+Review stock, sales and machine data
+
+	
+
+Prepares the next refill; the available data fields depend on the system version
+
+On configurations that include pasteurization, the cleaning tasks above remain.
+
+How Easy 7 and Power 7 differ
+
+The B Series description above does not carry over to the countertop machines.
+
+Feature
+
+	
+
+B Series (floor-standing)
+
+	
+
+Easy 7 (countertop)
+
+	
+
+Power 7 (countertop)
+
+
+
+
+Positioning
+
+	
+
+Floor-standing machine for unattended self-service
+
+	
+
+Compact machine; not a complete unattended vending machine by default
+
+	
+
+Compact tabletop self-service platform
+
+
+
+
+Cup handling
+
+	
+
+Automatic cup dispenser on compatible configurations
+
+	
+
+Cup or cone placed by hand; container detection verifies a compatible container before dispensing; no automatic cup dispensing
+
+	
+
+Lifting arm supports automated cup positioning and serving
+
+
+
+
+Collection
+
+	
+
+Pickup port, separate from the viewing window
+
+	
+
+At the machine, where the cup was placed
+
+	
+
+Enclosed cup port
+
+
+
+
+Payment
+
+	
+
+Integrated by country, provider and terminal
+
+	
+
+External module on compatible projects
+
+	
+
+Card and QR on compatible configurations, confirmed per project
+
+
+
+
+Sauces and toppings
+
+	
+
+Added by sauce pumps and topping bins; number depends on configuration
+
+	
+
+Not part of the standard Easy 7
+
+	
+
+Two sauce and two topping canisters on corresponding configurations
+
+
+
+
+Pasteurization
+
+	
+
+Optional on compatible configurations
+
+	
+
+Not included
+
+	
+
+Not included
+
+Request a demonstration of your configuration
+
+The fastest way to test any supplier's claims is a full demonstration of the exact configuration you intend to buy: the same machine, the same payment method and the same cups. To request one for a Huaxin machine, send your target model and operating scenario, meaning the country, the type of venue and the payment methods you plan to accept. To shortlist a model first, browse the range of automatic ice cream vending machines.
+
+References / Sources
+
+Author's Introduction: Huaxin Co., Ltd. has manufactured commercial automated ice cream vending machines in Dezhou, China, since 2013, with machines shipped to more than 50 countries and regions. Each unit completes a 72-hour stress test before shipment, and certifications such as CE, IECEE CB, NSF/ANSI 6 and ETL vary by model.
+
+PREVIOUS ARTICLE
+
+Robot Ice Cream Vending Machine Business and ROI Evaluation
+
+NEXT ARTICLE
+
+Ice Cream Vending Machine vs Traditional Soft Serve Machine: Which Fits Your Operation?
+BLOG
+
+Ice Cream Vending Machine Operating, Maintenance and Ingredient Costs: Full Budget Guide
+
+>>
+
+Ice Cream Vending Machine After-Sales Support: Warranty, Spare Parts and Fault Reporting
+
+>>
+
+Ice Cream Vending Machine Buying Guide for Commercial Operators and Dealers
+
+>>
+
+2026 Ice Cream Vending Machine Price Guide: What Are You Actually Paying For?
+
+>>
+
+Automatic Ice Cream Vending Machine Price: Key Factors Behind the Quote
+
+>>
+
+Why pick an ice-cream vending machine over a traditional one?
+
+>>
+
+A 0.85㎡ Smart Ice Cream Vending Machines Beats High-cost Traditional Stores
+
+>>
+
+Key Technologies Behind Robot Ice Cream Machines: Refrigeration, Automation, and Remote Control
+
+>>
+
+How Ice Cream Vending Machines Work: A Guide to Technology & Profitability
+
+>>
+
+Why Your Ice Cream Vending Machines Fail?
+
+>>
+PRODUCT
+
+Turn 0.91㎡ into a 24/7 Profit Center: HUAXIN B83 Max Robotic Ice Cream Station
+
+Premium Yogurt Vending Machine with Fruit Topping, Automatic Cleaning & Remote Management – HUAXIN B83/B86max Series
+
+Smart Commercial Ice Cream Vending Machine | 24/7 Unattended Operation & High ROI
+
+Ice Cream Machine Vending – Low Power 10-15kWh/Day: Marathon Freezing Tech & 24/7 Unmanned Run
+
+Commercial Automatic Ice Cream Machine Maker for High-Traffic Vending Business
+
+Best Automatic Soft Serve Ice Cream Vending Machine: 2026 High-ROI Smart Retail Solution
+
+Talk to a Huaxin Sales Manager
+
+Get machine recommendations, location operation advice, payment options, and a quotation for your market.
+
+Request Quote
+
+Huaxin Technology is a global leader in intelligent ice cream vending machines, providing high-return automated solutions and aiming to lead the unmanned retail sector through innovation.
+
+MORE ABOUT US ➣
+
+QUICK ENTRY
+PRODUCTS
+ABOUT
+SYSTEM
+BLOG
+SOLUTIONS
+FAQ
+CONTACT
+VENDING MACHINES
+Vending Machine Catalog
+Desktop Mini Ice Cream Machines
+B83Max Ice Cream Vending Machines
+Frozen Yogurt Vending Machine
+How to start an ice cream vending business?
+B83 High-Traffic Ice Cream Vending Machine
+SYSTEMS
+Remote Control System
+Expansion System
+Refrigeration System
+INFORMATION
+Cookie Policy
+Refund Policy
+Privacy Policy
+Feed
+SiteMap
+CERTIFIED PATENT
+CONTACT US
+
+No.268, Dexing North Road, Tianqu Sub-district Office, Decheng District, Dezhou City, Shandong Province, China
+
++86 19953410321
+
+Copyright © 2013-Today Huaxin All rights reserved
+
+Hi, Thank you very much for your interest in our ice cream vending machine. I am your project consultant and welcome to contact me.
+
+Messages
+
+Whatsapp

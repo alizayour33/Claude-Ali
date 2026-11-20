@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>X&amp;Y3 · White-Label Smart Ice Cream Vending</title>
+<meta name="description" content="X&Y3 supplies white-label smart soft serve, frozen yogurt and açaí vending machines, delivered in your client's brand, with remote fleet management.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --violet:#6D3AF0; --violet-deep:#4B1FC9; --violet-900:#1A0B45; --violet-50:#F5F1FF; --violet-100:#EBE3FF;
+  --green:#22D38A; --green-deep:#0FA968; --green-50:#E7FBF2;
+  --grad:linear-gradient(135deg,#6D3AF0 0%,#4B1FC9 45%,#22D38A 130%);
+  --ink:#140F2A; --muted:#6E6A85; --line:#E9E6F2;
+  --bg:#FFFFFF; --bg-alt:#F7F5FC;
+  --radius:20px; --max:1200px;
+  --display:Sora,Inter,system-ui,sans-serif;
+  font-family:Inter,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.container{max-width:var(--max);margin:0 auto;padding:0 24px}
+section{padding:100px 0}
+.alt{background:var(--bg-alt)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--violet);margin-bottom:16px}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green)}
+h1,h2,h3{font-family:var(--display);color:var(--ink);line-height:1.1;letter-spacing:-.025em}
+h1{font-size:clamp(40px,5.6vw,68px);font-weight:800}
+h2{font-size:clamp(30px,3.6vw,44px);font-weight:800}
+h3{font-size:20px;font-weight:700}
+.hl{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:18px;color:var(--muted);max-width:620px}
+.head{margin-bottom:56px}.head .lead{margin-top:16px}
+.head.center{text-align:center}.head.center .lead{margin:16px auto 0}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:999px;font-weight:700;font-size:15px;transition:.2s;cursor:pointer;border:2px solid transparent;font-family:Inter,sans-serif}
+.btn-primary{background:var(--violet);color:#fff;box-shadow:0 10px 24px rgba(109,58,240,.28)}
+.btn-primary:hover{background:var(--violet-deep);transform:translateY(-2px)}
+.btn-green{background:var(--green);color:var(--violet-900)}
+.btn-green:hover{background:#3BE39C;transform:translateY(-2px)}
+.btn-ghost{border-color:var(--line);color:var(--ink);background:#fff}
+.btn-ghost:hover{border-color:var(--violet);color:var(--violet)}
+.btn-outline-w{border-color:rgba(255,255,255,.5);color:#fff}
+.btn-outline-w:hover{background:#fff;color:var(--violet-900)}
+.arrow::after{content:"→";transition:.2s}.arrow:hover::after{transform:translateX(4px)}
+.placeholder{outline:2px dashed #F5A524;outline-offset:3px;border-radius:6px}
+.photo{width:100%;height:100%;object-fit:cover}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:78px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:25px;letter-spacing:-.04em;color:var(--ink)}
+.logo img{width:40px;height:40px}
+.logo b{color:var(--green)}
+.menu{display:flex;gap:30px;font-weight:600;font-size:15px}
+.menu a{position:relative}.menu a:hover{color:var(--violet)}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.lang{font:600 14px Inter,sans-serif;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:9px 14px;background:#fff}
+.burger{display:none;background:none;border:0;font-size:26px;cursor:pointer}
+
+/* hero */
+.hero{padding:64px 0 100px;position:relative;overflow:hidden;background:
+  radial-gradient(700px 420px at 88% 18%,rgba(109,58,240,.16),transparent 70%),
+  radial-gradient(520px 380px at 70% 92%,rgba(34,211,138,.16),transparent 70%)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.hero p.lead{margin:24px 0 36px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.trust{display:flex;gap:26px;margin-top:44px;flex-wrap:wrap;color:var(--muted);font-size:14px;font-weight:600}
+.trust span::before{content:"✓";display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--green-50);color:var(--green-deep);font-size:12px;font-weight:900;margin-right:8px}
+.hero-visual{position:relative}
+.hero-visual .blob{position:absolute;inset:6% 4% 10% 8%;border-radius:40% 60% 55% 45%/50% 45% 55% 50%;background:var(--grad);opacity:.14;filter:blur(2px)}
+.hero-visual img.main{position:relative;width:100%;filter:drop-shadow(0 40px 50px rgba(26,11,69,.25))}
+.float-card{position:absolute;background:#fff;border-radius:16px;box-shadow:0 18px 50px rgba(26,11,69,.16);padding:14px 16px;display:flex;align-items:center;gap:12px;font-size:14px;font-weight:700}
+.float-card small{display:block;color:var(--muted);font-weight:600;font-size:12px}
+.float-card .ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font-size:20px}
+.fc-1{left:-10px;top:14%}.fc-1 .ic{background:var(--violet-50)}
+.fc-2{right:0;bottom:8%}.fc-2 .ic{background:var(--green-50)}
+
+/* brands marquee */
+.wraps{padding:80px 0;background:var(--violet-900);color:#fff;overflow:hidden}
+.wraps h2{color:#fff}.wraps .lead{color:rgba(255,255,255,.7)}
+.wrap-row{display:flex;gap:18px;margin-top:48px;animation:scroll 40s linear infinite;width:max-content}
+.wrap-row:hover{animation-play-state:paused}
+.wrap-card{width:200px;height:260px;border-radius:18px;background:linear-gradient(180deg,#fff,#EFEAFB);display:grid;place-items:center;padding:10px;flex:none}
+.wrap-card img{height:100%;object-fit:contain}
+@keyframes scroll{to{transform:translateX(-50%)}}
+.wrap-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
+
+/* platform */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.checks{list-style:none;margin:28px 0 34px;display:grid;gap:18px}
+.checks li{display:flex;gap:14px;align-items:flex-start}
+.checks i{flex:none;width:32px;height:32px;border-radius:10px;background:var(--violet);color:#fff;display:grid;place-items:center;font-style:normal;font-weight:800;font-family:var(--display)}
+.checks b{display:block;color:var(--ink)}
+.checks span{color:var(--muted);font-size:15px}
+.media-card{border-radius:28px;overflow:hidden;background:linear-gradient(180deg,var(--violet-50),#fff);padding:30px;position:relative}
+.media-card .pill{position:absolute;top:20px;left:20px;background:var(--green);color:var(--violet-900);font-weight:800;font-size:12px;padding:6px 12px;border-radius:999px}
+
+/* promo */
+.promo-card{background:var(--grad);border-radius:32px;color:#fff;display:grid;grid-template-columns:1.1fr .9fr;overflow:hidden;align-items:center}
+.promo-body{padding:60px}
+.promo-body h2{color:#fff}
+.promo-body p{color:rgba(255,255,255,.85);margin:16px 0 30px;max-width:520px}
+.promo-body .eyebrow{color:#C9F7E2}.promo-body .eyebrow::before{background:#fff}
+.promo-img{background:rgba(255,255,255,.95);height:100%;display:grid;place-items:center;padding:20px}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.stat{text-align:center;padding:28px 10px;border-radius:20px;background:var(--bg-alt)}
+.stat b{display:block;font-family:var(--display);font-size:40px;font-weight:800;color:var(--violet);letter-spacing:-.03em}
+.stat span{color:var(--muted);font-weight:600;font-size:14px}
+
+/* cards */
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.25s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(26,11,69,.12);border-color:transparent}
+.card .img{height:190px;overflow:hidden;background:var(--violet-50)}
+.card .img img{transition:.4s}.card:hover .img img{transform:scale(1.05)}
+.card .body{padding:24px;flex:1;display:flex;flex-direction:column}
+.card p{color:var(--muted);font-size:15px;margin:8px 0 16px;flex:1}
+.more{font-weight:700;color:var(--violet);font-size:14px}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.step .img{height:200px;border-radius:18px;overflow:hidden;margin-bottom:20px;position:relative}
+.step .num{position:absolute;top:12px;left:12px;width:40px;height:40px;border-radius:12px;background:#fff;color:var(--violet);font-family:var(--display);font-weight:800;display:grid;place-items:center;box-shadow:0 6px 16px rgba(0,0,0,.12)}
+.step p{color:var(--muted);font-size:15px;margin-top:6px}
+.center-cta{text-align:center;margin-top:52px}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:14px}
+.tile{border-radius:18px;overflow:hidden;position:relative}
+.tile.big{grid-row:span 2;grid-column:span 2}
+.tile.tall{grid-row:span 2}
+.tile span{position:absolute;left:14px;bottom:14px;background:rgba(255,255,255,.92);color:var(--ink);font-weight:700;font-size:13px;padding:6px 12px;border-radius:999px}
+
+/* products */
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.product{background:#fff;border-radius:24px;overflow:hidden;border:1px solid var(--line);transition:.25s;display:flex;flex-direction:column}
+.product:hover{box-shadow:0 26px 60px rgba(26,11,69,.13);transform:translateY(-6px)}
+.product-img{background:radial-gradient(circle at 50% 60%,var(--violet-50),#fff 70%);height:320px;display:grid;place-items:center;position:relative;padding:20px}
+.product-img img{max-height:100%;object-fit:contain;transition:.4s}
+.product:hover .product-img img{transform:scale(1.04)}
+.tag{position:absolute;top:16px;left:16px;background:var(--violet-900);color:#fff;font-size:12px;font-weight:700;padding:5px 12px;border-radius:999px}
+.tag.g{background:var(--green);color:var(--violet-900)}
+.product-body{padding:24px 26px 26px;display:flex;flex-direction:column;flex:1}
+.product-body p{color:var(--muted);font-size:15px;margin:8px 0 16px;flex:1}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px}
+.chip{font-size:12px;font-weight:700;padding:5px 11px;border-radius:999px;background:var(--violet-50);color:var(--violet-deep)}
+.product-foot{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:18px}
+.product-foot .q{font-weight:700;color:var(--ink);font-size:14px}
+
+/* why */
+.why .card .img{height:170px}
+
+/* cloud */
+.cloud{background:var(--violet-900);color:#fff;position:relative;overflow:hidden}
+.cloud::before{content:"";position:absolute;width:600px;height:600px;right:-200px;top:-200px;border-radius:50%;background:radial-gradient(circle,rgba(34,211,138,.25),transparent 65%)}
+.cloud h2{color:#fff}.cloud .lead{color:rgba(255,255,255,.7)}
+.cloud .eyebrow{color:#9FF0CB}
+.dash{position:relative;background:#241257;border:1px solid rgba(255,255,255,.1);border-radius:24px;padding:24px}
+.dash-top{display:flex;gap:6px;margin-bottom:18px}.dash-top i{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.2)}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+.kpi{background:rgba(255,255,255,.06);border-radius:14px;padding:14px}
+.kpi small{color:rgba(255,255,255,.55);font-size:12px;font-weight:600}
+.kpi b{display:block;font-family:var(--display);font-size:22px}
+.bars{display:flex;align-items:flex-end;gap:8px;height:120px;background:rgba(255,255,255,.04);border-radius:14px;padding:14px}
+.bars div{flex:1;background:linear-gradient(var(--green),var(--violet));border-radius:6px 6px 2px 2px}
+.machine-list{margin-top:14px;display:grid;gap:8px}
+.ml{display:flex;justify-content:space-between;font-size:13px;background:rgba(255,255,255,.05);padding:10px 14px;border-radius:10px}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:8px;background:var(--green)}.dot.warn{background:#F5A524}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:30px 0 36px}
+.feat b{display:block;font-size:16px;margin-bottom:4px}.feat span{color:rgba(255,255,255,.65);font-size:14px}
+
+/* start */
+.steps5{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;counter-reset:s}
+.s5{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px}
+.s5::before{counter-increment:s;content:"0" counter(s);display:block;font-family:var(--display);font-size:38px;font-weight:800;margin-bottom:10px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.s5 p{color:var(--muted);font-size:14px;margin-top:6px}
+
+/* cta */
+.cta-band{background:var(--grad);color:#fff;border-radius:32px;padding:64px;display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap}
+.cta-band h2{color:#fff}.cta-band p{color:rgba(255,255,255,.88);margin-top:10px}
+
+/* footer */
+footer{background:#0E0628;color:rgba(255,255,255,.68);padding:80px 0 30px;font-size:15px}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.3fr;gap:40px}
+footer h4{color:#fff;font-size:15px;margin-bottom:18px;font-family:var(--display)}
+footer ul{list-style:none;display:grid;gap:10px}
+footer a:hover{color:var(--green)}
+footer .logo{color:#fff;margin-bottom:16px}
+.social{display:flex;gap:10px;margin-top:20px}
+.social a{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.08);display:grid;place-items:center;font-size:13px;font-weight:800}
+.social a:hover{background:var(--green);color:var(--violet-900)}
+.copy{border-top:1px solid rgba(255,255,255,.08);margin-top:56px;padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px}
+
+.wa{position:fixed;right:22px;bottom:22px;z-index:60;background:var(--green);color:var(--violet-900);border-radius:999px;padding:14px 20px;font-weight:800;box-shadow:0 12px 30px rgba(34,211,138,.45);display:flex;gap:8px;align-items:center}
+.draft-note{background:#FFF8E6;border-bottom:1px solid #F5D58A;color:#6B4E00;font-size:13px;text-align:center;padding:8px 16px}
+
+@media (max-width:1024px){
+  .menu{display:none}.burger{display:block}
+  .hero-grid,.split,.promo-card{grid-template-columns:1fr}
+  .grid-4,.steps{grid-template-columns:repeat(2,1fr)}
+  .steps5{grid-template-columns:repeat(3,1fr)}
+  .stats{grid-template-columns:repeat(3,1fr)}
+  .products,.grid-3{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  section{padding:68px 0}.container{padding:0 16px}
+  .nav-cta .btn,.lang{display:none}
+  .grid-4,.steps,.steps5,.products,.grid-3,.feat,.foot-grid{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:150px}
+  .tile.big{grid-column:span 2}
+  .float-card{display:none}
+  .promo-body,.cta-band{padding:36px 24px}
+  .kpis{grid-template-columns:1fr 1fr}
+  .wrap-card{width:150px;height:200px}
+  .wa span{display:none}
+}
+@media (prefers-reduced-motion:reduce){.wrap-row{animation:none}}
+</style>
+</head>
+<body>
+
+<div class="draft-note">Design draft. Items with a dashed orange outline are placeholders: replace them with X&amp;Y3's real figures.</div>
+
+<header>
+  <div class="container nav">
+    <a href="#" class="logo"><img src="brand/logo-mark.svg" alt=""><span>X&amp;Y<b>3</b></span></a>
+    <nav class="menu">
+      <a href="#">Home</a><a href="#products">Machines</a><a href="#solutions">Solutions</a><a href="#software">Software</a><a href="#why">About</a><a href="#blog">Resources</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <select class="lang" aria-label="Language"><option>English</option><option>Español</option><option>العربية</option><option>Italiano</option><option>Русский</option></select>
+      <a href="#contact" class="btn btn-primary">Get a Quote</a>
+      <button class="burger" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">White-label smart vending</span>
+      <h1>Smart ice cream machines, <span class="hl">built for your brand.</span></h1>
+      <p class="lead">X&amp;Y3 supplies fully automatic soft serve, frozen yogurt and açaí vending machines. They arrive unbranded and are customized for your client, from the exterior wrap and screen to the menu and payments, and you run them all from one cloud dashboard.</p>
+      <div class="hero-actions">
+        <a href="#products" class="btn btn-primary arrow">Explore Machines</a>
+        <a href="#contact" class="btn btn-ghost">Talk to Sales</a>
+      </div>
+      <div class="trust"><span>Factory-direct supply</span><span>100% white-label</span><span>Worldwide shipping</span></div>
+    </div>
+    <div class="hero-visual">
+      <div class="blob"></div>
+      <img class="main" src="images/hero-machines.webp" alt="Two custom-wrapped soft serve vending machines" width="1200" height="900">
+      <div class="float-card fc-1"><div class="ic">🎨</div><div>Your client's brand<small>Wrap · Screen · Menu</small></div></div>
+      <div class="float-card fc-2"><div class="ic">📡</div><div>Remote managed<small>Sales &amp; stock in real time</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WRAPS -->
+<section class="wraps">
+  <div class="container wrap-head">
+    <div><span class="eyebrow" style="color:#9FF0CB">One machine · endless brands</span><h2>Same proven machine.<br>Every client's identity.</h2></div>
+    <p class="lead">Every unit ships unbranded and is finished in your client's colors, characters and flavors. Here are a few of the looks we've delivered.</p>
+  </div>
+  <div class="wrap-row" aria-label="Examples of custom machine wraps">
+    <div class="wrap-card"><img src="images/wrap-1.webp" alt="Pistachio-themed machine" loading="lazy"></div>
+    <div class="wrap-card"><img src="images/wrap-3.webp" alt="Yogurt-themed machine" loading="lazy"></div>
+    <div class="wrap-card"><img src="images/wrap-4.webp" alt="Açaí character-themed machine" loading="lazy"></div>
+    <div class="wrap-card"><img src="images/wrap-5.webp" alt="Strawberry ice cream machine" loading="lazy"></div>
+    <div class="wrap-card"><img src="images/wrap-6.webp" alt="Green ice cream machine" loading="lazy"></div>
+    <div class="wrap-card"><img src="images/wrap-7.webp" alt="Pink ice cream machine" loading="lazy"></div>
+    <div class="wrap-card"><img src="images/wrap-9.webp" alt="Strawberry flavor machine" loading="lazy"></div>
+    <div class="wrap-card"><img src="images/wrap-10.webp" alt="Matcha flavor machine" loading="lazy"></div>
+    <div class="wrap-card"><img src="images/wrap-11.webp" alt="Pink star-themed machine" loading="lazy"></div>
+    <div class="wrap-card"><img src="images/wrap-16.webp" alt="Frozen yogurt machine" loading="lazy"></div>
+    <!-- duplicate for seamless loop -->
+    <div class="wrap-card" aria-hidden="true"><img src="images/wrap-1.webp" alt="" loading="lazy"></div>
+    <div class="wrap-card" aria-hidden="true"><img src="images/wrap-3.webp" alt="" loading="lazy"></div>
+    <div class="wrap-card" aria-hidden="true"><img src="images/wrap-4.webp" alt="" loading="lazy"></div>
+    <div class="wrap-card" aria-hidden="true"><img src="images/wrap-5.webp" alt="" loading="lazy"></div>
+    <div class="wrap-card" aria-hidden="true"><img src="images/wrap-6.webp" alt="" loading="lazy"></div>
+    <div class="wrap-card" aria-hidden="true"><img src="images/wrap-7.webp" alt="" loading="lazy"></div>
+    <div class="wrap-card" aria-hidden="true"><img src="images/wrap-9.webp" alt="" loading="lazy"></div>
+    <div class="wrap-card" aria-hidden="true"><img src="images/wrap-10.webp" alt="" loading="lazy"></div>
+    <div class="wrap-card" aria-hidden="true"><img src="images/wrap-11.webp" alt="" loading="lazy"></div>
+    <div class="wrap-card" aria-hidden="true"><img src="images/wrap-16.webp" alt="" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- PLATFORM -->
+<section>
+  <div class="container split">
+    <div>
+      <span class="eyebrow">One platform, any brand</span>
+      <h2>We supply the machine. <span class="hl">Your client owns the brand.</span></h2>
+      <p class="lead">Every X&amp;Y3 machine is configured before it ships, so it arrives ready to sell under your client's name.</p>
+      <ul class="checks">
+        <li><i>1</i><div><b>Choose a model</b><span>Floor-standing or countertop, matched to the site's traffic, space and menu.</span></div></li>
+        <li><i>2</i><div><b>Apply the brand</b><span>Exterior wrap, touchscreen UI, menu and cups in the client's identity, with no supplier logos.</span></div></li>
+        <li><i>3</i><div><b>Set up payments</b><span>Card, NFC, QR wallets, coins and notes, configured per market and language.</span></div></li>
+      </ul>
+      <a href="#contact" class="btn btn-primary arrow">Start a Custom Build</a>
+    </div>
+    <div class="media-card"><span class="pill">Fully customizable</span><img src="images/machine-family.webp" alt="A lineup of machines in different custom brand wraps" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- PROMO -->
+<section style="padding-top:0">
+  <div class="container">
+    <div class="promo-card">
+      <div class="promo-body">
+        <span class="eyebrow">Trending menu</span>
+        <h2>Açaí &amp; frozen yogurt, served automatically.</h2>
+        <p>A healthy-dessert menu for gyms, campuses, offices and wellness venues. Customers build their own bowl, the machine serves it in seconds, and nobody needs to staff the counter.</p>
+        <div class="hero-actions"><a href="#products" class="btn btn-green arrow">See the Açaí Solution</a><a href="#contact" class="btn btn-outline-w">Request Quote</a></div>
+      </div>
+      <div class="promo-img"><img src="images/acai-promo.webp" alt="Customers using açaí vending machines" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section style="padding-top:0">
+  <div class="container">
+    <div class="head center"><span class="eyebrow">Proven at scale</span><h2>Built for real <span class="hl">commercial use</span></h2></div>
+    <div class="stats">
+      <div class="stat"><b class="placeholder">00+</b><span>Years in vending</span></div>
+      <div class="stat"><b class="placeholder">0,000+</b><span>Machines running</span></div>
+      <div class="stat"><b class="placeholder">00+</b><span>Countries served</span></div>
+      <div class="stat"><b class="placeholder">0,000</b><span>Annual capacity</span></div>
+      <div class="stat"><b>24/7</b><span>Remote monitoring</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTIONS -->
+<section class="alt" id="solutions">
+  <div class="container">
+    <div class="head"><span class="eyebrow">Business solutions</span><h2>A program for <span class="hl">every partner</span></h2><p class="lead">Whether you're placing your first machine or rolling out a national network, there's a path that fits.</p></div>
+    <div class="grid-4">
+      <a class="card" href="#contact"><div class="img"><img class="photo" src="images/sol-operators.webp" alt="Vending operators reviewing plans" loading="lazy"></div><div class="body"><h3>Operators</h3><p>Start with one machine, prove the location, then grow your route using real sales data.</p><span class="more arrow">Learn more </span></div></a>
+      <a class="card" href="#contact"><div class="img"><img class="photo" src="images/sol-dealers.webp" alt="Distributor meeting" loading="lazy"></div><div class="body"><h3>Dealers &amp; Distributors</h3><p>Resell under your own brand, with tiered pricing, marketing kits and regional support.</p><span class="more arrow">Learn more </span></div></a>
+      <a class="card" href="#contact"><div class="img"><img class="photo" src="images/sol-venues.webp" alt="Shoppers in a mall" loading="lazy"></div><div class="body"><h3>Venues &amp; Malls</h3><p>Add dessert revenue in malls, cinemas, parks and transit hubs, without hiring staff.</p><span class="more arrow">Learn more </span></div></a>
+      <a class="card" href="#contact"><div class="img"><img class="photo" src="images/sol-brands.webp" alt="Family enjoying ice cream" loading="lazy"></div><div class="body"><h3>Dessert Brands</h3><p>Take your brand self-service: your recipes and your look, open 24/7 in many more places.</p><span class="more arrow">Learn more </span></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- GROWTH -->
+<section>
+  <div class="container">
+    <div class="head center"><span class="eyebrow">Growth path</span><h2>From one machine to <span class="hl">a network</span></h2></div>
+    <div class="steps">
+      <div class="step"><div class="img"><img class="photo" src="images/step-test.webp" alt="Customers at a pilot machine" loading="lazy"><span class="num">01</span></div><h3>Test the market</h3><p>Place a pilot unit and confirm demand, price and menu.</p></div>
+      <div class="step"><div class="img"><img class="photo" src="images/step-expand.webp" alt="Machine serving several customers" loading="lazy"><span class="num">02</span></div><h3>Expand locations</h3><p>Roll out to more sites, with each one picked using data from the last.</p></div>
+      <div class="step"><div class="img"><img class="photo" src="images/step-brand.webp" alt="Branded touchscreen ordering" loading="lazy"><span class="num">03</span></div><h3>Build the brand</h3><p>Use a consistent wrap, UI and menu so every machine is recognizable.</p></div>
+      <div class="step"><div class="img"><img class="photo" src="images/step-scale.webp" alt="Crowd around vending machines" loading="lazy"><span class="num">04</span></div><h3>Scale with data</h3><p>Track sales, stock and uptime across the whole fleet.</p></div>
+    </div>
+    <div class="center-cta"><a href="#contact" class="btn btn-primary arrow">Find My Business Solution</a></div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="alt">
+  <div class="container">
+    <div class="head"><span class="eyebrow">In the field</span><h2>Wherever people <span class="hl">stop and smile</span></h2></div>
+    <div class="gallery">
+      <div class="tile big"><img class="photo" src="images/place-mall.webp" alt="Machine in a shopping mall" loading="lazy"><span>Shopping centers</span></div>
+      <div class="tile tall"><img class="photo" src="images/place-5.webp" alt="Customers ordering at a machine" loading="lazy"><span>Indoor venues</span></div>
+      <div class="tile"><img class="photo" src="images/place-11.webp" alt="Visitors tasting ice cream" loading="lazy"><span>Trade shows</span></div>
+      <div class="tile"><img class="photo" src="images/place-7.webp" alt="Machine in a transit concourse" loading="lazy"><span>Transit hubs</span></div>
+      <div class="tile"><img class="photo" src="images/place-10.webp" alt="Machine at a restaurant entrance" loading="lazy"><span>Restaurants</span></div>
+      <div class="tile"><img class="photo" src="images/place-park.webp" alt="Family at a theme park" loading="lazy"><span>Theme parks</span></div>
+      <div class="tile"><img class="photo" src="images/place-9.webp" alt="Worker enjoying ice cream" loading="lazy"><span>Workplaces</span></div>
+      <div class="tile"><img class="photo" src="images/place-12.webp" alt="Couple with ice cream" loading="lazy"><span>Events</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="container">
+    <div class="head"><span class="eyebrow">The lineup</span><h2>Explore all <span class="hl">machine styles</span></h2><p class="lead">Every model ships unbranded and ready for your client's wrap. Pricing depends on configuration and volume.</p></div>
+    <div class="products">
+      <div class="product"><div class="product-img"><span class="tag">Flagship</span><img src="images/xy-max.webp" alt="XY-Max machine" loading="lazy"></div>
+        <div class="product-body"><h3>XY-Max</h3><p>Premium, high-capacity machine for malls, airports and stadiums, with a topper sign for maximum visibility.</p><div class="chips"><span class="chip">Soft serve</span><span class="chip">Açaí</span><span class="chip">High traffic</span></div><div class="product-foot"><span class="q">Request quote</span><a class="more arrow" href="#contact">View details </a></div></div></div>
+      <div class="product"><div class="product-img"><span class="tag g">Best seller</span><img src="images/xy-classic.webp" alt="XY-Classic machine" loading="lazy"></div>
+        <div class="product-body"><h3>XY-Classic</h3><p>Full-size commercial unit that balances footprint and output, and suits most indoor venues.</p><div class="chips"><span class="chip">Soft serve</span><span class="chip">Toppings</span><span class="chip">All-rounder</span></div><div class="product-foot"><span class="q">Request quote</span><a class="more arrow" href="#contact">View details </a></div></div></div>
+      <div class="product"><div class="product-img"><span class="tag">Dessert</span><img src="images/xy-swirl.webp" alt="XY-Swirl machine" loading="lazy"></div>
+        <div class="product-body"><h3>XY-Swirl</h3><p>Soft-serve dessert specialist with sauce and dry toppings and a premium on-screen menu.</p><div class="chips"><span class="chip">Sundaes</span><span class="chip">Premium UI</span></div><div class="product-foot"><span class="q">Request quote</span><a class="more arrow" href="#contact">View details </a></div></div></div>
+      <div class="product"><div class="product-img"><span class="tag g">Healthy menu</span><img src="images/xy-bowl.webp" alt="XY-Bowl machine" loading="lazy"></div>
+        <div class="product-body"><h3>XY-Bowl</h3><p>Frozen yogurt and açaí bowls, built for gyms, campuses and wellness locations.</p><div class="chips"><span class="chip">Froyo</span><span class="chip">Açaí</span><span class="chip">Fruit toppings</span></div><div class="product-foot"><span class="q">Request quote</span><a class="more arrow" href="#contact">View details </a></div></div></div>
+      <div class="product"><div class="product-img"><span class="tag">Compact</span><img src="images/xy-compact.webp" alt="XY-Compact countertop machine" loading="lazy"></div>
+        <div class="product-body"><h3>XY-Compact</h3><p>Fully automatic countertop machine for cafés, hotels, offices and convenience stores.</p><div class="chips"><span class="chip">Countertop</span><span class="chip">Low power</span></div><div class="product-foot"><span class="q">Request quote</span><a class="more arrow" href="#contact">View details </a></div></div></div>
+      <div class="product"><div class="product-img"><span class="tag">Scan-to-order</span><img src="images/xy-desk.webp" alt="XY-Desk countertop machine" loading="lazy"></div>
+        <div class="product-body"><h3>XY-Desk</h3><p>Desktop unit with scan-to-order for kiosks, dessert counters and small venues.</p><div class="chips"><span class="chip">Tabletop</span><span class="chip">QR ordering</span></div><div class="product-foot"><span class="q">Request quote</span><a class="more arrow" href="#contact">View details </a></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="alt why" id="why">
+  <div class="container">
+    <div class="head center"><span class="eyebrow">Why X&amp;Y3</span><h2>Everything you need to <span class="hl">launch &amp; scale</span></h2></div>
+    <div class="grid-3">
+      <div class="card"><div class="img"><img class="photo" src="images/why-factory.webp" alt="Production line" loading="lazy"></div><div class="body"><h3>Factory-direct supply</h3><p>Capacity for single units and fleet orders, at factory pricing.</p></div></div>
+      <div class="card"><div class="img"><img class="photo" src="images/why-qc.webp" alt="Quality inspection" loading="lazy"></div><div class="body"><h3>Strict quality control</h3><p>Every machine is run-tested and inspected before shipping.</p></div></div>
+      <div class="card"><div class="img" style="background:#fff"><img class="photo" style="object-fit:contain" src="images/machine-family.webp" alt="Custom-branded machines" loading="lazy"></div><div class="body"><h3>Complete white-label</h3><p>The client's brand goes on the wrap, the screen and the cups, with no supplier logos anywhere.</p></div></div>
+      <div class="card"><div class="img"><img class="photo" src="images/why-shipping.webp" alt="Container loading" loading="lazy"></div><div class="body"><h3>Global logistics</h3><p>Export packing, shipping documents and door-to-door delivery options.</p></div></div>
+      <div class="card"><div class="img"><img class="photo" src="images/why-parts.webp" alt="Spare parts warehouse" loading="lazy"></div><div class="body"><h3>Spare parts &amp; support</h3><p>Parts kept in stock, remote diagnostics and technician training.</p></div></div>
+      <div class="card"><div class="img" style="background:#fff"><img class="photo" style="object-fit:contain" src="images/why-cert.webp" alt="Certificates" loading="lazy"></div><div class="body"><h3>Certified for export</h3><p class="placeholder">Confirm the certifications to list: CE · CB · ETL · RoHS · SGS.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOFTWARE -->
+<section class="cloud" id="software">
+  <div class="container split">
+    <div>
+      <span class="eyebrow">X&amp;Y3 Cloud</span>
+      <h2>Run the whole fleet with remote management</h2>
+      <p class="lead">See every machine's status, sales and stock in real time, on your phone or desktop.</p>
+      <div class="feat">
+        <div><b>📡 Live status</b><span>Temperature, uptime and faults for every unit.</span></div>
+        <div><b>📈 Sales reports</b><span>Revenue by machine, location, product and hour.</span></div>
+        <div><b>🔔 Stock alerts</b><span>Restock reminders before a machine runs out.</span></div>
+        <div><b>🧩 Remote control</b><span>Change prices, menus and promos from anywhere.</span></div>
+      </div>
+      <a href="#contact" class="btn btn-green arrow">Book a Demo</a>
+    </div>
+    <div class="dash">
+      <div class="dash-top"><i></i><i></i><i></i></div>
+      <div class="kpis"><div class="kpi"><small>Today's sales</small><b>$4,286</b></div><div class="kpi"><small>Cups served</small><b>1,142</b></div><div class="kpi"><small>Online</small><b>38/40</b></div></div>
+      <div class="bars"><div style="height:35%"></div><div style="height:52%"></div><div style="height:44%"></div><div style="height:70%"></div><div style="height:62%"></div><div style="height:88%"></div><div style="height:100%"></div></div>
+      <div class="machine-list">
+        <div class="ml"><span><i class="dot"></i>Mall · Level 2</span><span>$612 today</span></div>
+        <div class="ml"><span><i class="dot"></i>Airport · Gate B</span><span>$540 today</span></div>
+        <div class="ml"><span><i class="dot warn"></i>Gym · Downtown</span><span>Restock cups</span></div>
+      </div>
+      <p style="color:rgba(255,255,255,.4);font-size:12px;margin-top:12px">Illustrative dashboard, sample data.</p>
+    </div>
+  </div>
+</section>
+
+<!-- START -->
+<section class="alt">
+  <div class="container">
+    <div class="head center"><span class="eyebrow">Getting started</span><h2>Launch in <span class="hl">five steps</span></h2></div>
+    <div class="steps5">
+      <div class="s5"><h3>Consult</h3><p>Tell us about the sites, the brand and your goals.</p></div>
+      <div class="s5"><h3>Configure</h3><p>Choose the model, wrap, menu and payments.</p></div>
+      <div class="s5"><h3>Approve</h3><p>Sign off the design proof and the quote.</p></div>
+      <div class="s5"><h3>Produce &amp; ship</h3><p>The machines are built, tested and delivered.</p></div>
+      <div class="s5"><h3>Go live</h3><p>Install, train your team and start selling.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+  <div class="container">
+    <div class="head"><span class="eyebrow">Resources</span><h2>Guides for <span class="hl">vending operators</span></h2></div>
+    <div class="grid-3">
+      <a class="card" href="#"><div class="img" style="background:var(--violet-50)"><img class="photo" style="object-fit:contain;padding:14px" src="images/post-1.webp" alt="" loading="lazy"></div><div class="body"><small style="color:var(--violet);font-weight:700">Location strategy</small><h3 style="margin-top:6px">How to score a location before placing a machine</h3></div></a>
+      <a class="card" href="#"><div class="img" style="background:var(--green-50)"><img class="photo" style="object-fit:contain;padding:14px" src="images/post-2.webp" alt="" loading="lazy"></div><div class="body"><small style="color:var(--violet);font-weight:700">Business</small><h3 style="margin-top:6px">Owning your machines vs. joining a franchise</h3></div></a>
+      <a class="card" href="#"><div class="img" style="background:var(--violet-50)"><img class="photo" style="object-fit:contain;padding:14px" src="images/post-3.webp" alt="" loading="lazy"></div><div class="body"><small style="color:var(--violet);font-weight:700">Menu</small><h3 style="margin-top:6px">Building a profitable açaí and froyo menu</h3></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="contact" style="padding-top:0">
+  <div class="container">
+    <div class="cta-band">
+      <div><h2>Talk to an X&amp;Y3 sales manager</h2><p>Get pricing, a branding mock-up and a launch plan for your client within 24 hours.</p></div>
+      <div class="hero-actions"><a href="mailto:sales@example.com" class="btn btn-green arrow">Request Quote</a><a href="#" class="btn btn-outline-w">WhatsApp Us</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div><a class="logo" href="#"><img src="brand/logo-mark.svg" alt=""><span>X&amp;Y<b>3</b></span></a><p>White-label smart ice cream vending machines and fleet software for operators, distributors and brands worldwide.</p>
+        <div class="social"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="X">X</a><a href="#" aria-label="YouTube">▶</a></div></div>
+      <div><h4>Machines</h4><ul><li><a href="#products">XY-Max</a></li><li><a href="#products">XY-Classic</a></li><li><a href="#products">XY-Bowl</a></li><li><a href="#products">XY-Compact</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="#why">About</a></li><li><a href="#solutions">Solutions</a></li><li><a href="#software">Software</a></li><li><a href="#blog">Resources</a></li><li><a href="brand.html">Brand guide</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li class="placeholder">Address: your address here</li><li class="placeholder">Phone / WhatsApp: +00 000 000 0000</li><li class="placeholder">sales@yourdomain.com</li></ul></div>
+    </div>
+    <div class="copy"><span>© 2026 X&amp;Y3. All rights reserved.</span><span><a href="#">Privacy</a> · <a href="#">Cookies</a> · <a href="#">Returns</a></span></div>
+  </div>
+</footer>
+
+<a class="wa" href="#contact">💬 <span>Chat with us</span></a>
+</body>
+</html>

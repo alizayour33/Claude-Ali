@@ -1,0 +1,361 @@
+Huaxin
+
+HOME
+PRODUCTS
+ABOUT
+SYSTEM
+BLOG
+SOLUTIONS
+FAQ
+CONTACT
+
+Send Inquiry
+
+EN>
+
+B84
+Modern Retail
+Ice Cream Vending Machine
+
+Designed for commercial sites that need a clean self-service dessert point, straightforward customer ordering, and practical remote oversight for day-to-day operation.
+
+GET A QUOTE
+WATCH VIDEO
+
+RETAIL-READY LAYOUT
+SIMPLE SELF-SERVICE
+REMOTE OVERSIGHT
+Built for Flexible Retail Deployment
+
+B84 is positioned for operators and partners building unattended dessert points across malls, lifestyle retail, campuses, and other commercial spaces where easy customer flow and practical daily management matter.
+
+Independent Operators
+
+A practical platform for launching or adding self-service dessert points without a staffed counter.
+
+Shopping & Retail Centers
+
+Designed for customer-facing areas where clear ordering and efficient pickup keep the purchase process simple.
+
+Lifestyle Venues
+
+Fits leisure, community, and mixed-use commercial spaces that want a modern automated dessert option.
+
+Dealers & Project Partners
+
+Suitable for partners combining equipment supply with local payment, installation, and operating support.
+
+From Selection to
+Pickup
+
+The customer journey stays focused: choose a dessert on the touchscreen, complete payment, wait for automatic production, then collect the finished cup.
+
+Core Systems for Consistent Operation
+
+B84 combines touchscreen control, refrigeration, heat dissipation, payment integration, cup delivery, and texture control in one commercial self-service platform.
+
+32-Inch BOE Interface
+
+A large touchscreen keeps menu choices, ordering prompts, and promotional content clear for customers.
+
+Refrigeration Control
+
+Cooling control is designed to support stable frozen dessert output during normal commercial operation.
+
+Heat Dissipation
+
+A 5.4㎡ condenser area and airflow design support consistent thermal management during daily use.
+
+Flexible Payment Integration
+
+Supports cash, card, QR code, and market-specific payment integration based on local requirements.
+
+Automatic Cup Delivery
+
+Omron sensors support cup detection and controlled automatic dispensing before product filling.
+
+43% Puffing System
+
+Configured overrun helps support a smoother texture and repeatable serving consistency.
+
+Practical Retail Highlights
+Clear Retail Presentation
+
+A clean customer-facing layout helps the machine sit naturally in modern commercial environments.
+
+Straightforward Customer Flow
+
+Touchscreen ordering, payment, production, and pickup follow a simple self-service sequence.
+
+Unattended Operation
+
+Routine sales can continue without a permanent service counter beside the machine.
+
+Flexible Site Deployment
+
+Suitable for malls, lifestyle venues, campuses, and other commercial self-service locations.
+
+Remote Daily Oversight
+
+Review status, sales, inventory reminders, and alerts without visiting every deployed site.
+
+Local Market Adaptation
+
+Branding, interface, language, payment integration, and software functions can be adapted for the market.
+
+See Business Launch Solution
+Multiple Frozen Dessert Concepts
+
+B84 can be configured for different frozen dessert menus through the appropriate ingredient and recipe setup. The final configuration should be confirmed for the selected product concept.
+
+Soft Serve Ice Cream
+
+Classic smooth soft-serve menu
+
+Frozen Yogurt
+
+Tangy frozen yogurt concept
+
+Açaí-Style Frozen Dessert
+
+Fruit-forward premium positioning
+
+Sorbet
+
+Lighter fruit-based frozen option
+
+Frozen Dessert Mix
+
+Recipe-based seasonal menu
+
+Ingredient compatibility and final serving results depend on formulation and machine setup. Confirm the intended mix and recipe with Huaxin before deployment.
+
+Where B84 Fits Best
+Shopping Centers
+
+A clean self-service dessert point for customer circulation areas.
+
+Lifestyle Retail
+
+Suitable for mixed retail, leisure, and community commercial spaces.
+
+Campuses
+
+Convenient self-service dessert access for student and staff traffic.
+
+Family Entertainment
+
+Adds an automated dessert option to cinemas, arcades, and family entertainment centers.
+
+Tourist Retail
+
+Useful for visitor-oriented locations that need quick self-service dessert access.
+
+Office & Mixed-Use Buildings
+
+Supports convenient dessert service in shared commercial environments.
+
+Remote Oversight with Master OS
+
+For operators running one or more B84 units, Master OS brings essential operating information into one interface so routine checks can be handled before a site visit.
+
+Online Status
+
+See whether each machine is online and reporting normally.
+
+Sales Overview
+
+Review sales data by machine to compare activity across locations.
+
+Refill Reminders
+
+Use inventory reminders to plan ingredient, cup, and consumable replenishment.
+
+Remote Diagnostics
+
+Share system information with Huaxin support when troubleshooting is required.
+
+Adapt B84 to Your Retail Concept
+
+B84 customization focuses on customer-facing branding and software. The internal mechanical structure and electronic layout remain unchanged.
+
+Local Payment Setup
+
+Integrate supported payment methods according to the target country and payment provider.
+
+Menu Presentation
+
+Configure product names, menu content, and customer-facing ordering information.
+
+Interface Language
+
+Localize the user interface for the languages required by the target market.
+
+Brand Identity
+
+Apply your logo and brand elements to create a recognizable retail presence.
+
+Screen Experience
+
+Adapt the touchscreen interface, visual content, and customer-facing software experience.
+
+Exterior Graphics
+
+Use branded exterior graphics and visual themes for the operating concept.
+
+Share your target country, payment requirements, language, and brand assets for available customer-facing options.
+
+Get My Business Launch Plan
+B84 Technical Specifications
+
+Use the table below to check installation space, electrical requirements, shipment planning, and basic operating needs before site deployment.
+
+TECHNICAL SPECIFICATIONS
+System	Android 7.1 + Proprietary Control System
+Heat treatment（optional）	Optional
+Machine Size	L1080 × W940 × H1950 mm
+Machine Weight	368 kg
+Touchscreen	32-inch display
+Capacity of material cylinder	19 L
+Forming cylinder capacity	2 L
+PRODUCTION CAPACITY
+Hourly production capacity	120 cups
+POWER SPECIFICATIONS
+Voltage	110V/220V (Optional)
+Hertz	50Hz/60Hz (Optional)
+Power	Rated power 1800W
+Compressor	Embraco compressor
+
+The above data was measured experimentally by the R&D department. If there is any discrepancy, please refer to the actual product.
+
+Support for Deployment & Daily Use
+
+Huaxin supports the B84 project from pre-shipment inspection through operator onboarding, spare-parts planning, and remote troubleshooting.
+
+Pre-Shipment Inspection · Checked Before Delivery
+
+Each machine is inspected and tested before shipment to support smoother installation at the destination.
+
+Operator Onboarding · Practical Start-Up Guidance
+
+Get guidance for start-up, daily operation, refilling, cleaning, and routine checks.
+
+Technical Assistance · Support After Purchase
+
+Receive help with operation questions, maintenance issues, and troubleshooting after installation.
+
+Spare Parts Planning · Prepare for Maintenance
+
+Plan key spare parts in advance to support long-term operation and faster maintenance response.
+
+Remote Troubleshooting · Faster Issue Review
+
+Use remote technical support when system or machine conditions need to be checked.
+
+Related Machines
+HUAXIN Commercial Intelligent Ice Cream Vending Machine Robot - 15s Fast Serving & High Profit
+
+HUAXIN, a pioneer with 13 years of experience, presents the commercial intelligent ice cream vending machine robot. Boasting 15s fast serving, 0.91㎡ compact design, and 59 customizable flavors, it solves space and labor pain points. Equipped with Embraco compressor and Master OS, it offers >65% profit margin, 3-4 months ROI. Certified CE/ETL/RoHS/CB, it’s trusted in 33+ countries, ideal for high-traffic commercial venues
+
+Commercial
+Indoor/Outdoor
+Power Supply
+DETAILS
+Fully Automated Robotic Soft Serve Station | High-Yield 24/7 Unattended Business Solution
+
+Launching a successful automated retail venture requires a machine that delivers both industrial-grade reliability and premium product quality. The Huaxin B83/B83max series is a fully automated robotic soft-serve station engineered for high-traffic commercial environments. Commanding a 70% market share with 13 years of technical evolution, Huaxin eliminates the "labor trap" by providing a 100% unattended business solution. Delivering DQ-quality ice cream in just 15 seconds, the B83 series utilizes proprietary 43% overrun air-pump technology to maximize product volume and profit per cup. Equipped with Embraco frequency-conversion cooling and a master RK control system, these CE/ETL-certified kiosks offer a touchless, self-cleaning platform for malls and airports, ensuring a proven 3-to-4 month ROI payback period for global operators.
+
+Automatic
+Indoor/Outdoor
+Commercial
+DETAILS
+Turn 0.91㎡ into a 24/7 Profit Center: HUAXIN B83 Max Robotic Ice Cream Station
+
+HUAXIN B83 Max is an unattended smart ice cream station that breaks the boundaries of traditional retail. With 13 years of technological accumulation, we integrate industrial precision collaborative robots and efficient cooling systems into a body of less than 1 square meter. The machine offers 59 personalized flavor combinations from a single base material and completes the whole process from payment to dispensing in just 15 seconds. Equipped with pasteurization and full-process automation systems, it solves pain points such as high labor dependence and complicated cleaning. With the Master OS remote management system, investors can monitor real-time sales data of machines worldwide and achieve digital passive income growth.
+
+Automatic
+Indoor/Outdoor
+Commercial
+DETAILS
+How Much Profit Can an Automatic Soft Serve Ice Cream Machine Make? | Huaxin B83 Series
+
+Looking to start a high-profit vending business? The Huaxin B83 Series is the industry’s most reliable automatic soft-serve station, designed for 24/7 unmanned operation. With 13 years of expertise and a 70% market share, we solve the three biggest hurdles: labor costs, hygiene, and consistency. This machine delivers premium DQ-quality ice cream in just 15 seconds, using 43% overrun air-pump technology to maximize your margins. Whether you are placing it in a mall, airport, or campus, our CE/ETL-certified robotic kiosk provides a touchless, high-yield retail solution. This guide covers the ROI, technical specs, and why 3,000+ global operators choose Huaxin to generate passive income with a proven 3-to-4 month payback period.
+
+Automatic
+Indoor/Outdoor
+Commercial
+DETAILS
+B84 FAQ
+Is B84 intended for unattended self-service retail?
+
+Yes. B84 is designed around touchscreen ordering, payment integration, automatic production, cup delivery, and remote management for self-service commercial operation.
+
+Can B84 integrate local cashless payment methods?
+
+Payment integration depends on the target country and payment provider. Card, NFC, QR code, and other supported solutions can be evaluated for the local market.
+
+What should I confirm before choosing a B84 location?
+
+Confirm the installation space, power supply, network connection, payment setup, ingredient supply, replenishment access, and operating environment before deployment.
+
+Can the internal mechanical structure of B84 be customized?
+
+No. Huaxin does not customize the internal mechanical structure or electronic layout and does not offer ODM. Customization is limited to exterior branding, interface, payment integration, and software functions.
+
+Can multiple B84 machines be managed remotely?
+
+Yes. Master OS can provide machine status, sales information, inventory reminders, and operational alerts across multiple deployed units.
+
+Which frozen dessert concepts can be evaluated for B84?
+
+B84 can be configured for soft serve, frozen yogurt, sorbet, açaí-style frozen desserts, and other suitable frozen dessert mixes. Ingredient and recipe compatibility should be confirmed before deployment.
+
+Talk to a Huaxin Sales Manager
+
+Get machine recommendations, location operation advice, payment options, and a quotation for your market.
+
+Request Quote
+
+Huaxin Technology is a global leader in intelligent ice cream vending machines, providing high-return automated solutions and aiming to lead the unmanned retail sector through innovation.
+
+MORE ABOUT US ➣
+
+QUICK ENTRY
+PRODUCTS
+ABOUT
+SYSTEM
+BLOG
+SOLUTIONS
+FAQ
+CONTACT
+VENDING MACHINES
+Vending Machine Catalog
+Desktop Mini Ice Cream Machines
+B83Max Ice Cream Vending Machines
+Frozen Yogurt Vending Machine
+How to start an ice cream vending business?
+B83 High-Traffic Ice Cream Vending Machine
+SYSTEMS
+Remote Control System
+Expansion System
+Refrigeration System
+INFORMATION
+Cookie Policy
+Refund Policy
+Privacy Policy
+Feed
+SiteMap
+CERTIFIED PATENT
+CONTACT US
+
+No.268, Dexing North Road, Tianqu Sub-district Office, Decheng District, Dezhou City, Shandong Province, China
+
++86 19953410321
+
+Copyright © 2013-Today Huaxin All rights reserved
+
+Hi, Thank you very much for your interest in our ice cream vending machine. I am your project consultant and welcome to contact me.
+
+Messages
+
+Whatsapp

@@ -1,0 +1,381 @@
+Huaxin
+
+HOME
+PRODUCTS
+ABOUT
+SYSTEM
+BLOG
+SOLUTIONS
+FAQ
+CONTACT
+
+Send Inquiry
+
+EN>
+
+BLOG
+Soft Serve Overrun: What It Is, How to Calculate It, and How It Changes Texture and Cost per Cup
+Soft Serve Overrun: What It Is, How to Calculate It, and How It Changes Texture and Cost per Cup
+Date：2026-11-11 Author：Huaxin
+
+What soft serve overrun is, how to measure it with a cup and a scale, how it changes texture and mix cost per cup, and how Huaxin machines control it
+
+Soft serve overrun is the percentage by which a mix grows in volume as air is whipped into it during freezing. If 1 liter of mix becomes 1.4 liters of soft serve, the overrun is 40%. Published figures for soft serve run from about 25% to 80%, depending on the recipe and the machine [4]. That one number decides two things: how the product eats, and how many cups a liter of mix will fill.
+
+Huaxin manufactures fully automatic ice cream vending machines. This article is for operators, chain brands and dessert businesses with their own recipes who care about product quality and ingredient cost. It explains how to calculate soft serve overrun percentage, how overrun changes texture and the amount of mix in each cup, and how our machines control it. It does not cover recipe design or choosing a mix; for that, see our soft serve mix and ingredient guide.
+
+What Is Soft Serve Overrun
+
+In the freezing cylinder, the mix is frozen and whipped at the same time. Air is beaten in, so the finished product takes up more space than the mix it came from. That extra volume, expressed as a percentage of the mix volume, is the overrun [1]. At 100% overrun, 1 liter of mix makes 2 liters of ice cream, and half the finished volume is air [2].
+
+Overrun has a practical ceiling. In the US, a product sold as ice cream must weigh at least 4.5 pounds per gallon [3], or about 540 grams per liter, which caps overrun at roughly 100% [2]. Soft ice cream overrun normally sits below that line.
+
+How to Calculate Overrun
+
+By volume, the formula is [1]:
+
+Overrun (%) = (volume of soft serve − volume of mix used) ÷ volume of mix used × 100
+
+A vending machine serves one cup at a time, so the finished volume is hard to measure. Weighing is easier on site: fill the same cup with mix and then with soft serve, and weigh each [1].
+
+Overrun (%) = (weight of a cup of mix − weight of the same cup of soft serve) ÷ weight of the same cup of soft serve × 100
+
+Here is how to do it:
+
+Use a cup with a fixed volume and a flat rim, such as a stainless steel measuring cup. Put it on a digital scale and tare it.
+
+Fill it with chilled liquid mix, level it off at the rim and weigh it. If you use a powder mix, reconstitute it to the recipe ratio first.
+
+Wash and dry the cup. Fill it with soft serve straight from the machine and level it off. Avoid air pockets, but do not press the soft serve down. Weigh it right away.
+
+Apply the formula. Weigh before adding sauce or toppings. They hold none of the whipped-in air and will skew the result [1].
+
+Example (illustrative): a cup filled with mix weighs 220 g, and the same cup filled with soft serve weighs 150 g. Overrun = (220 − 150) ÷ 150 × 100 ≈ 47%.
+
+A single weighing describes a single cup. Weigh one after start-up, one after a run of peak-hour sales and one just after a refill, then average them. That shows what this machine actually does with this mix.
+
+What Makes Soft Serve Soft
+
+Inside the freezing cylinder, soft serve and hard ice cream are in much the same state. The difference comes afterward. Hard ice cream is packed and sent for hardening, while soft serve goes straight into the cup with roughly half its water frozen [5]. That is why soft serve is served warmer, at about −6°C, compared with about −12°C for hard ice cream [6]. The recipes differ too: soft serve usually contains 3% to 10% milk fat [6].
+
+Overrun plays a part, since ice cream with too little air is compact and hard [7]. But soft serve is soft mainly because of its serving temperature and its recipe. On our B Series machines, the firmness of the product is controlled by the hardness setting on the parameter screen.
+
+How Overrun Changes Texture and Cost per Cup
+Texture and Consistency
+
+With too little overrun, soft serve is dense, hard and heavy. With too much, it has a weak body, feels foamy in the mouth and melts quickly [7]. No single number suits every mix. Change the recipe and the same overrun can eat quite differently. So when we assess a mix, we look at what it produces on the machine instead of starting from a target percentage.
+
+For a vending machine, steady overrun matters more than a few points higher or lower. In our user manual, the first cause listed for uneven portion sizes is inconsistent aeration: when overrun drifts, the same dispense time gives cups of different sizes. The manual also covers mix that stays in the machine too long and is frozen again and again. Its overrun drops, the fat and water separate, and the soft serve turns icy.
+
+Mix Cost per Cup
+
+The machine dispenses for a set time, so each cup is roughly the same size. With cup size fixed:
+
+Mix per cup = soft serve volume per cup ÷ (1 + overrun)
+
+The table below uses illustrative assumptions: 150 ml of soft serve per cup, and mix counted as ready-to-use liquid at 3.00 per liter in any currency. It leaves out the first cups after start-up, mix left in the cylinder and cleaning losses.
+
+Overrun
+
+	
+
+Soft serve from 1 liter of mix
+
+	
+
+Mix per cup
+
+	
+
+Cups per liter of mix
+
+	
+
+Mix cost per cup
+
+
+
+
+20%
+
+	
+
+1.20 liters
+
+	
+
+125 ml
+
+	
+
+8.0
+
+	
+
+0.38
+
+
+
+
+30%
+
+	
+
+1.30 liters
+
+	
+
+115 ml
+
+	
+
+8.7
+
+	
+
+0.35
+
+
+
+
+40%
+
+	
+
+1.40 liters
+
+	
+
+107 ml
+
+	
+
+9.3
+
+	
+
+0.32
+
+
+
+
+50%
+
+	
+
+1.50 liters
+
+	
+
+100 ml
+
+	
+
+10.0
+
+	
+
+0.30
+
+
+
+
+60%
+
+	
+
+1.60 liters
+
+	
+
+94 ml
+
+	
+
+10.7
+
+	
+
+0.28
+
+Illustrative assumptions: 150 ml per cup, mix at 3.00 per liter, no start-up, leftover or cleaning losses.
+
+Raising overrun from 30% to 40% cuts the mix in each cup by about 7%. The same arithmetic decides how many cups a full hopper makes. The B83 Max to B86 Max hold about 20 liters of mix, and the number of servings from one refill depends on serving weight, overrun, recipe and losses.
+
+The table counts only the mix, though. Push overrun beyond what a mix can hold to save on ingredients, and the soft serve turns foamy and melts fast. Customers notice. The right target is the overrun at which your mix still tastes and holds up the way you want, and you only find it by running the mix on the machine.
+
+Mix is only part of what each cup costs. To allocate cups, spoons, toppings, waste, payment fees, electricity and refill labor, see our ice cream vending machine cost per serving guide.
+
+How Huaxin Machines Control Overrun
+
+A customer in Chile read our manual and asked: the parameter screen has no overrun setting, so can overrun be set to 30% to 35%, and how?
+
+He was right about the screen. On our machines, overrun results from the feed system, the freezing settings and the mix itself. It is not a number you type in.
+
+Gravity Feed
+
+Our machines use gravity feed. On the B Series, mix flows from the refrigerated hopper into the 2-liter freezing cylinder under its own weight. Gravity-fed machines typically draw in air through an air tube. They make a denser soft serve, usually at about 25% to 40% overrun, and have fewer parts, which makes them easier to clean and maintain [4]. For more on the system, see our Cloud Puffing system.
+
+Settings That Change What Lands in the Cup
+
+The manual lists three settings that directly affect what goes into the cup:
+
+Hardness: set in the main settings on the parameter screen. If it is set too high, the freezing cylinder cannot keep up, portions get smaller, and the mixing motor may trip its overload protection.
+
+Dispense time: sets the size of each cup.
+
+Hopper temperature: the temperature at which mix is held before it enters the freezing cylinder.
+
+A new mix usually means adjusting these settings again. Send us details of your mix, and we will recommend settings based on a test on the machine.
+
+Daily Conditions That Keep Overrun Stable
+
+Freezing and aeration are automatic. What operators need to keep in place are a few daily conditions, all covered in the user manual:
+
+Do not leave mix in the hopper too long. Mix that sits and is frozen repeatedly loses overrun and turns icy.
+
+Keep foreign objects out of the hopper. They can block the feed line.
+
+Leave clearance around the machine so heat can escape. Poor heat dissipation or low voltage keeps the cylinder from freezing properly, and the product changes with it.
+
+Send Us Your Mix for a Machine Test
+
+You can run our machines on mix from a local supplier. If you already use a mix, or have a recipe you want to try, we can test it on the machine, and your account manager will go through the results and recommended settings with you. Beyond soft serve, recipes for frozen yogurt, sorbet and açaí-style frozen desserts are also tested on the B Series before you commit. Please send us:
+
+Your mix type: liquid or powder, dairy or plant-based, with the product sheet or ingredient list
+
+The texture you are aiming for, or your current overrun if you have weighed it as described above
+
+Your target country, the model you plan to use and your cup size
+
+Start here: request a machine test for your mix.
+
+References / Sources
+
+[1] Goff, H. D. Ice Cream Technology e-Book, University of Guelph. "Overrun calculations." https://books.lib.uoguelph.ca/icecreamtechnologyebook/chapter/overrun-calculations
+
+[2] Marshall, R. and Goff, D. "Formulating and Manufacturing Ice Cream and Other Frozen Desserts." Food Technology, Institute of Food Technologists, 1 May 2003. https://www.ift.org/food-technology-magazine/formulating-and-manufacturing-ice-cream-and-other-frozen-desserts
+
+[3] Electronic Code of Federal Regulations. 21 CFR 135.110, "Ice cream and frozen custard." Up to date as of 20 July 2026. https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-135/subpart-B/section-135.110
+
+[4] Panitz, B. "How Sweet It Is: The Scoop on Soft Serve Machines." Foodservice Equipment Reports, 3 June 2022. https://www.fermag.com/articles/how-sweet-it-is-sizing-up-soft-serve-machines/
+
+[5] Goff, H. D. Ice Cream Technology e-Book, University of Guelph. "Freezing/Whipping of Ice Cream." https://books.lib.uoguelph.ca/icecreamtechnologyebook/chapter/freezing-whipping-of-ice-cream
+
+[6] Schrader, S. "The scoop on ice cream." ASBMB Today, American Society for Biochemistry and Molecular Biology, 18 July 2021. https://asbmb.org/asbmb-today/science/071821/the-scoop-on-ice-cream
+
+[7] Virtual Labs, IIT Kanpur, Dairy Technology Lab. "Determination of Overrun in Icecream – Theory." https://dt-iitk.vlabs.ac.in/exp/overrun-icecream/theory.html
+
+Author's Introduction: Huaxin Co., Ltd. has manufactured commercial automated ice cream vending machines in Dezhou, China, since 2013, with machines shipped to more than 50 countries and regions. Each unit completes a 72-hour stress test before shipment, and certifications such as CE, IECEE CB, NSF/ANSI 6 and ETL vary by model.
+
+PREVIOUS ARTICLE
+
+Ice Cream Vending Machine Certifications by Market: CE, CB, NSF and What to Ask a Supplier
+
+NEXT ARTICLE
+
+AI Ice Cream Machine: Automation vs Smart Features vs AI
+BLOG
+
+Why must the core of an ice cream vending machine be made of food-grade materials?
+
+>>
+
+Are Automatic Ice Cream Vending Machines Profitable? A Real 2025 Data-Driven Analysis
+
+>>
+
+How Does an Ice Cream Vending Machine Work? From Ordering to Pickup
+
+>>
+
+How to Maximize Ice Cream Vending Machine Profitability in 2024
+
+>>
+
+How Much Does an Ice Cream Vending Machine Cost? (2025 Pricing)​​
+
+>>
+
+Key Technologies Behind Robot Ice Cream Machines: Refrigeration, Automation, and Remote Control
+
+>>
+
+Frozen Yogurt Vending Machine Business: A Profitable Niche or a Risky Bet?
+
+>>
+
+Ice Cream Vending Machines: The Quiet Expansion in Western Markets
+
+>>
+
+Ice Cream Vending Machine Cost Breakdown for Commercial Buyers
+
+>>
+
+How Profitable Is an Ice Cream Vending Machine? Sales & Payback Guide
+
+>>
+PRODUCT
+
+Smart Ice Cream Vending Machine - Fresh & 24/7
+
+HUAXIN Commercial Intelligent Ice Cream Automatic Vending Machine - 59 Flavors, 15s Dispense, CE/ETL Certified
+
+Compact Corner Ice Cream Vending Machine | 15s Serving, Intelligent App Control​
+
+Ice Cream Vending Machine Malaysia for Retail Operators and Dealers
+
+Shopping Mall Ice Cream Vending Machine for Operators and Distributors
+
+Huaxin New Ice Cream Vending Machine - 59 Flavors, 15s Fast Serving, Smart Remote Control | CE/ETL Certified
+
+Talk to a Huaxin Sales Manager
+
+Get machine recommendations, location operation advice, payment options, and a quotation for your market.
+
+Request Quote
+
+Huaxin Technology is a global leader in intelligent ice cream vending machines, providing high-return automated solutions and aiming to lead the unmanned retail sector through innovation.
+
+MORE ABOUT US ➣
+
+QUICK ENTRY
+PRODUCTS
+ABOUT
+SYSTEM
+BLOG
+SOLUTIONS
+FAQ
+CONTACT
+VENDING MACHINES
+Vending Machine Catalog
+Desktop Mini Ice Cream Machines
+B83Max Ice Cream Vending Machines
+Frozen Yogurt Vending Machine
+How to start an ice cream vending business?
+B83 High-Traffic Ice Cream Vending Machine
+SYSTEMS
+Remote Control System
+Expansion System
+Refrigeration System
+INFORMATION
+Cookie Policy
+Refund Policy
+Privacy Policy
+Feed
+SiteMap
+CERTIFIED PATENT
+CONTACT US
+
+No.268, Dexing North Road, Tianqu Sub-district Office, Decheng District, Dezhou City, Shandong Province, China
+
++86 19953410321
+
+Copyright © 2013-Today Huaxin All rights reserved
+
+Hi, Thank you very much for your interest in our ice cream vending machine. I am your project consultant and welcome to contact me.
+
+Messages
+
+Whatsapp

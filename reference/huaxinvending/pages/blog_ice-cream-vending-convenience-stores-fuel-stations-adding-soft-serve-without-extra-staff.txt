@@ -1,0 +1,289 @@
+Huaxin
+
+HOME
+PRODUCTS
+ABOUT
+SYSTEM
+BLOG
+SOLUTIONS
+FAQ
+CONTACT
+
+Send Inquiry
+
+EN>
+
+BLOG
+Ice Cream Vending in Convenience Stores and Fuel Stations: Adding Soft Serve Without Extra Staff
+Ice Cream Vending in Convenience Stores and Fuel Stations: Adding Soft Serve Without Extra Staff
+Date：2026-10-31 Author：Huaxin
+
+How convenience stores and fuel station shops add a self-service ice cream machine without new hires: placement, staff tasks, payment and chain pilots
+
+Huaxin manufactures the machines discussed here. This guide is for convenience store chains, fuel station retailers and neighborhood stores that want to sell soft serve without hiring anyone to make it. It covers where the machine goes, which tasks your current team takes on, how the machine relates to your till, and how to run a pilot across several stores. It does not estimate sales. Those depend on your stores, and a pilot is the way to measure them.
+
+A convenience store ice cream machine adds no headcount when three conditions hold. Customers pay either at the machine or at the till you already run. The machine makes every serving on its own. And one person on each shift owns a short refill and cleaning routine. When nobody owns that routine, empty cup storage and skipped cleaning are what usually stop the machine from selling.
+
+Why convenience stores and fuel station shops suit automatic soft serve
+
+Food is already a core category for many stores. In the US, foodservice accounted for 28.5% of convenience store in-store sales in 2025 and 38.9% of in-store gross profit dollars, according to the National Association of Convenience Stores (NACS).[1] The share differs by market, but food is a category store chains already know how to manage. An automatic soft serve machine adds a food item without adding a food station. Three features of convenience retail fit the way these machines work.
+
+Long opening hours. Many stores and forecourt shops open early, close late or trade around the clock. A machine that takes the order, makes the serving and hands it over keeps the offer available in quiet hours without anyone stopping to pull a cone. Huaxin machines are built for extended commercial operation. They still need the routine described below, and heat matters: a warm shop or a position in direct sun adds cooling load, so leave ventilation space around the machine.
+
+Impulse purchases. In a NACS survey of more than 6,500 US convenience customers, about one in five (20.1%) said they left the store with an impulse purchase, and late-night shoppers were slightly more likely to (25.2%).[2] Packaged drinks, candy and salty snacks led the list; the published results do not break out ice cream. A machine on the route to the checkout, where customers see it before they pay, fits that behavior. Whether it turns into steady sales at your sites is the question a pilot answers.
+
+Staff already on site. This is what separates a store from an unattended mall corridor. Unattended soft serve in retail stores still needs a person for refills and cleaning, and in a store that person is already there for most trading hours. Your team does not make the ice cream. They top up cups and mix, wipe the dispensing area and help a customer whose payment did not go through. The work fits into existing shifts once it is written down and assigned.
+
+Floor-standing or countertop: matching the machine to the store
+
+Choose by who handles the sale in your store, then check the space.
+
+In-store self-service with B83 Max and the B Series
+
+For a self-service ice cream machine in a convenience store, where customers buy without involving the cashier, a floor-standing B Series machine handles the whole transaction. On B83 Max the customer orders on the 32-inch touchscreen, pays at the machine and collects a cup that the machine has dispensed, filled and topped. B84, B85, B86 and B86 Max have the same internal configuration and differ in front door and exterior design, so choosing among them is about how the machine looks in your store. Each holds approximately 20 L of mix and about 160 cups, enough to sell for long stretches between top-ups.
+
+Plan for more than the footprint of about 0.91 m². Customers need standing room in front, the service door needs room to open for refilling, and the machine needs ventilation clearance. It is about 1,950 mm tall and weighs several hundred kilograms, so measure the delivery route as well as the final position. A customer in Malaysia placing a B84 at a shop entrance raised the entrance height and a top sign for brand recognition while the exterior was still being designed. Questions like that are easier to settle before production than on delivery day.
+
+At the counter with Easy7 or Power7
+
+Where the cashier is a few steps away, a countertop machine can be the better fit. Easy7 has no cup dispenser and, in its standard form, no payment system. The customer pays at the till, places a cup or cone in the holder, and the machine detects it and makes the serving. It holds 3.8 L of mix and is rated at 60 cups per hour under standard conditions. Power7 also sits on a counter or stand, but it works as a vending machine: customers order and pay at the machine, and it stores about 32 cups, so staff reload it during the day.
+
+Our comparison of countertop and floor-standing ice cream machines covers dimensions, capacity and model choice in more detail.
+
+Fuel stations and gas station shops
+
+Treat the shop as the site, not the forecourt. A gas station soft serve machine belongs indoors, in the retail or seating area where customers already stop, and well away from any vehicle movement area. B Series machines can be placed outdoors only in limited cases, with shelter and an assessment of heat, rain, sun, dust and electrical conditions; an open pump island is unlikely to meet them. Large glass frontages bring strong sun into many forecourt shops, so check where the light falls at different times of day before you fix the position.
+
+Power is the other check. B Series machines are rated at 1,800 W on the standard 220 V / 50 Hz supply, Easy7 at 1,200 W and Power7 at 1,700 W. 110 V and 60 Hz configurations are available and must be confirmed before ordering. Give the machine a suitable outlet of its own rather than one shared with hot-food equipment, and test mobile or Wi-Fi coverage at the exact position if you want to monitor it remotely.
+
+How the machine relates to your till
+
+Settle this before ordering. It decides the payment configuration and part of the staff routine.
+
+Customers pay at the machine (B Series, Power7). The machine takes its own payment. Card, QR or mobile payment, or cash and coins, can be configured depending on the country, the payment provider and the terminal, and we check that project by project. These sales are recorded by the machine and, on network-enabled units, can be reviewed remotely in Master OS. They do not pass through your POS. Decide who reconciles machine sales with the store's daily takings, who empties and counts the cash box if a cash module is fitted, and what the cashier does when a customer says they were charged and no cup came out.
+
+Customers pay at the till (Easy7). Soft serve becomes a line in your POS, like coffee or hot food. Set up the item and price, decide whether the cashier or the customer places the cup, and keep cups and cones at the counter. Toppings, if you offer them, are added by hand.
+
+If your chain needs machine sales to appear in the store POS or ERP, raise it at quotation stage. A connection to a third-party system is not a standard feature. Our software team assesses it against the existing platform and the interface documents your POS provider supplies.
+
+These questions come up early. A supplier to around 150 convenience stores in Kuwait ordered one B83 Max to test in its channel. Before the order, the discussion centered on an Arabic and English interface, local payment and training for the people who would run the machine. The machine shipped in August and cleared customs in September; results from the store trial had not been reported when this article was written. For checking payment providers, terminals and failed-transaction handling in your country, see our guide to ice cream vending machine payment systems.
+
+Daily tasks for store staff
+
+Write the routine down and assign it by shift. The table below is a starting template. Adjust it to your recipe, opening hours, local food rules and the operating manual for your model.
+
+When
+
+	
+
+Task
+
+	
+
+Notes
+
+
+
+
+At opening
+
+	
+
+Check the screen and any alerts. Confirm mix level, cups and toppings. Wipe the pickup area.
+
+	
+
+Network-enabled machines with monitoring turned on can send low-supply and fault alerts.
+
+
+
+
+During trading
+
+	
+
+Add mix through the refill area and reload cups when the alerts or the checks call for it. Wipe spills. Handle customer questions about the machine.
+
+	
+
+Name one person per shift. Payment complaints go to the cashier or shift lead.
+
+
+
+
+Closing, or the agreed cleaning time
+
+	
+
+Clean the dispensing outlet, drip area and any visible residue. Add clean water and run the one-touch cleaning program. Sign the cleaning log.
+
+	
+
+Pick a quiet period of the day for this.
+
+
+
+
+Scheduled
+
+	
+
+Product-path cleaning and disassembly cleaning as set out in the operating manual and local food rules.
+
+	
+
+The interval depends on the recipe, opening hours, room temperature, local regulations and whether a B Series pasteurization option is fitted.
+
+Local rules set the minimum. In the EU, for example, Regulation (EC) No 852/2004 on the hygiene of foodstuffs requires equipment that comes into contact with food to be effectively cleaned and, where necessary, disinfected, at a frequency sufficient to avoid any risk of contamination. It also requires food handlers to be supervised and instructed or trained in food hygiene in line with their work.[3] A written routine with a named person on each shift and a signed cleaning log covers both points in practice. Check the equivalent requirements in your country before the pilot starts.
+
+The one-touch cleaning program simplifies routine cleaning; it does not replace manual cleaning or scheduled disassembly. Remote alerts need the machine to be online with monitoring switched on, and an alert tells staff about a problem rather than fixing it. Our article on remote monitoring, alerts and on-site tasks separates what a manager can do from an office and what still needs someone at the machine.
+
+Storage is part of the routine. Keep mix in a fridge at the temperature and within the shelf life your mix supplier specifies, and keep spare cups and toppings close to the machine so a refill is not a trip to a distant stockroom. Huaxin does not sell mix outside China, so stores source it locally. If you already have a mix, we can test it on the machine.
+
+Training can be done remotely. Huaxin provides operating manuals, video tutorials and remote training covering start-up, refilling, menu setup, cleaning, routine maintenance and basic troubleshooting. Confirm the training language early. A store owner in Seville had an Easy7 installed in the shop in September, but mix and cups had not yet been sourced and the team was still waiting for Spanish-language instruction videos, so normal sales had not started. Line up mix, cups and training in your staff's language before the machine arrives.
+
+Running a chain pilot
+
+A chain decision rests on comparing stores, so set the pilot up to make comparison possible. Pick a few stores that differ in the ways your network differs, for example a highway fuel station, a city-center store and a residential neighborhood store. The Kuwaiti supplier planned to start with higher-traffic stores in its existing network. That is a reasonable first step, provided at least one ordinary store is tested before a wider rollout.
+
+Keep the model, menu, price and payment setup the same across pilot stores where you can, so that differences in results point to the store rather than to the setup. For each store, record:
+
+the machine's position and whether customers see it before they reach the checkout
+
+store opening hours against the hours the machine was actually available, after stock-outs, cleaning and faults
+
+completed sales by time of day, taken from the machine's own records
+
+payment failures and refunds
+
+whether the staff routine was done on every shift, and how long it took
+
+questions customers asked that staff could not answer
+
+Confirm the interface language and local payment before the order is placed. Voltage, language and payment are configured for the market at the order stage; they are not switched on site. The site scoring checklist helps you compare candidate positions and agree in writing when the pilot will be reviewed. A single unit suits testing. For moving to formal operation across stores, our article on single-unit pilots and 10-unit rollouts covers how to plan the order.
+
+Get a pilot configuration for your stores
+
+Send us the number of stores you plan to test and the number you might equip later, the space available at each proposed position (photos with floor or counter measurements help), the opening hours, and your country. We will suggest a model and configuration for the pilot stores, including the interface language and payment options to check for your market. Request a store pilot configuration.
+
+References / Sources
+
+[1] National Association of Convenience Stores (NACS), "U.S. Convenience In-Store Sales Top $340 Billion," April 15, 2026. （https://www.convenience.org/stay-current/news/2026/april/15/u-s-convenience-in-store-sales-top-%24340-billion）
+
+[2] NACS Magazine, "Understanding Impulse Buys," May 2023, reporting results from the NACS Convenience Voices survey of more than 6,500 convenience customers. （https://www.nacsmagazine.com/Issues/May-2023/Understanding-Impulse-Buys）
+
+[3] Regulation (EC) No 852/2004 of the European Parliament and of the Council of 29 April 2004 on the hygiene of foodstuffs, Annex II, Chapter V point 1 and Chapter XII point 1. （https://eur-lex.europa.eu/eli/reg/2004/852/oj/eng）
+
+Author's Introduction: Huaxin Co., Ltd. has manufactured commercial automated ice cream vending machines in Dezhou, China, since 2013, with machines shipped to more than 50 countries and regions. Each unit completes a 72-hour stress test before shipment, and certifications such as CE, IECEE CB, NSF/ANSI 6 and ETL vary by model.
+
+PREVIOUS ARTICLE
+
+Best Locations for Ice Cream Vending Machines: A Site Scoring Checklist
+
+NEXT ARTICLE
+
+Açaí Vending Machine Business: Mix, Menu and Location Lessons for Operators
+BLOG
+
+In-depth Analysis of Core Technologies for Ice Cream Vending Machines
+
+>>
+
+Modern New Retail Solution Ice Cream Vending Machine Consumer Experience
+
+>>
+
+Countertop vs Floor-Standing Ice Cream Machines: Choosing Between B Series, Easy7 and Power7
+
+>>
+
+Açaí Vending Machine Business: Mix, Menu and Location Lessons for Operators
+
+>>
+
+Ice Cream Vending Machine Suppliers: Where to Buy Reliable Machines in 2025
+
+>>
+
+Ice Cream Vending Machine vs Traditional Soft Serve Machine: Which Is Better?
+
+>>
+
+How Fully Automatic Ice Cream Machines Are Revolutionizing Retail and Food Service
+
+>>
+
+Is it worth buying an ice cream vending machine?
+
+>>
+
+Frozen Yogurt Vending Machine Cost: Locations and Break-Even Planning
+
+>>
+
+From Soft Serve to Gelato: How Vending Machines Are Expanding Premium Offerings
+
+>>
+PRODUCT
+
+HUAXIN B83 Series Automatic Ice Cream Vending Machine – High-Efficiency Soft Serve Solution
+
+Fully Automatic Commercial Ice Cream Machine
+
+Soft Serve Ice Cream Vending Machine Supplier for Smart Unattended Dessert Retail
+
+15s Fresh Serve: The High-Yield Fully Automated Robotic Soft Serve Machine for Smart Retail
+
+Huaxin B85Max: Compact Automatic Ice Cream Vending Machine | 15-Second Serve, 59 Flavors
+
+How to Scale an Ice Cream Vending Fleet? | Reliability Guide
+
+Talk to a Huaxin Sales Manager
+
+Get machine recommendations, location operation advice, payment options, and a quotation for your market.
+
+Request Quote
+
+Huaxin Technology is a global leader in intelligent ice cream vending machines, providing high-return automated solutions and aiming to lead the unmanned retail sector through innovation.
+
+MORE ABOUT US ➣
+
+QUICK ENTRY
+PRODUCTS
+ABOUT
+SYSTEM
+BLOG
+SOLUTIONS
+FAQ
+CONTACT
+VENDING MACHINES
+Vending Machine Catalog
+Desktop Mini Ice Cream Machines
+B83Max Ice Cream Vending Machines
+Frozen Yogurt Vending Machine
+How to start an ice cream vending business?
+B83 High-Traffic Ice Cream Vending Machine
+SYSTEMS
+Remote Control System
+Expansion System
+Refrigeration System
+INFORMATION
+Cookie Policy
+Refund Policy
+Privacy Policy
+Feed
+SiteMap
+CERTIFIED PATENT
+CONTACT US
+
+No.268, Dexing North Road, Tianqu Sub-district Office, Decheng District, Dezhou City, Shandong Province, China
+
++86 19953410321
+
+Copyright © 2013-Today Huaxin All rights reserved
+
+Hi, Thank you very much for your interest in our ice cream vending machine. I am your project consultant and welcome to contact me.
+
+Messages
+
+Whatsapp

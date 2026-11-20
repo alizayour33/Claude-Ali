@@ -1,0 +1,628 @@
+<title>Project Discovery Questionnaire</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+<style>
+/* Layout: step list on the left, one step of questions in the middle, live recommendation on the right; stacks to one column on phones. */
+:root{
+  --bg:#f5f7f5; --surface:#ffffff; --fg:#17201c; --muted:#5b6862; --line:#dde3df;
+  --accent:#0f6b57; --accent-fg:#ffffff; --soft:#e4f0ec; --warn:#8a5200; --warn-soft:#fbf1dd;
+  --display:"Space Grotesk",Inter,system-ui,sans-serif; --body:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --r:10px;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#101513; --surface:#19201d; --fg:#e8eeeb; --muted:#9aa8a1; --line:#2a342f;
+  --accent:#55c7a8; --accent-fg:#0b1512; --soft:#1e2d28; --warn:#f0c070; --warn-soft:#33290f; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#101513; --surface:#19201d; --fg:#e8eeeb; --muted:#9aa8a1; --line:#2a342f;
+  --accent:#55c7a8; --accent-fg:#0b1512; --soft:#1e2d28; --warn:#f0c070; --warn-soft:#33290f; color-scheme:dark }
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:16px/1.55 var(--body);margin:0}
+.wrap{max-width:1240px;margin:0 auto;padding-block:28px 60px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);line-height:1.15;margin:0;text-wrap:balance}
+h1{font-size:clamp(26px,3.4vw,36px);font-weight:700}
+.sub{color:var(--muted);max-width:62ch;margin:8px 0 0}
+.top{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:flex-end;margin-bottom:22px}
+.top .actions{display:flex;gap:8px;flex-wrap:wrap}
+button{font:inherit;cursor:pointer}
+.btn{min-height:44px;padding:0 18px;border-radius:var(--r);border:1px solid var(--line);background:var(--surface);color:var(--fg);font-weight:600}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-fg)}
+.btn.ghost{background:transparent}
+.btn.small{min-height:36px;padding:0 12px;font-size:14px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.bar{height:6px;background:var(--line);border-radius:99px;overflow:hidden;margin-bottom:22px}
+.bar i{display:block;height:100%;background:var(--accent);width:0;transition:width .3s}
+@media (prefers-reduced-motion:reduce){.bar i{transition:none}}
+
+.grid{display:grid;gap:20px;grid-template-columns:210px minmax(0,1fr) 340px;align-items:start}
+.steps{display:grid;gap:4px;position:sticky;top:16px}
+.steps button{display:flex;gap:10px;align-items:center;text-align:left;min-height:44px;padding:6px 10px;border-radius:var(--r);border:1px solid transparent;background:transparent;color:var(--muted);font-weight:600;font-size:14px}
+.steps button .n{flex:none;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);font-size:12px;font-variant-numeric:tabular-nums}
+.steps button[aria-current="step"]{background:var(--surface);border-color:var(--line);color:var(--fg)}
+.steps button[aria-current="step"] .n{background:var(--accent);border-color:var(--accent);color:var(--accent-fg)}
+.steps button.done .n{background:var(--soft);border-color:var(--soft);color:var(--accent)}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;min-width:0}
+.card h2{font-size:24px}
+.card .lead{color:var(--muted);margin:6px 0 20px}
+.q{padding:18px 0;border-top:1px solid var(--line)}
+.q:first-of-type{border-top:0;padding-top:4px}
+.q>label,.q>.label,.q legend{font-weight:600;display:block;margin-bottom:4px;padding:0}
+.hint{color:var(--muted);font-size:14px;margin:0 0 10px}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+input[type=text],input[type=url],textarea,select{width:100%;min-height:44px;padding:10px 12px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg);color:var(--fg);font:inherit}
+textarea{min-height:92px;resize:vertical}
+.opts{display:grid;gap:8px}
+.opts.two{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border:1px solid var(--line);border-radius:var(--r);cursor:pointer;min-height:44px}
+.opt:hover{border-color:var(--accent)}
+.opt input{margin-top:3px;accent-color:var(--accent);width:18px;height:18px;flex:none}
+.opt:has(input:checked){border-color:var(--accent);background:var(--soft)}
+.opt b{font-weight:600}.opt small{display:block;color:var(--muted);font-size:13.5px}
+.suggest{display:flex;flex-wrap:wrap;gap:10px;align-items:center;background:var(--soft);border-radius:var(--r);padding:10px 12px;margin-bottom:12px;font-size:14px}
+.suggest span{flex:1;min-width:180px}
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:430px}
+th,td{padding:8px 6px;border-bottom:1px solid var(--line);text-align:left;font-size:14.5px}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600}
+td.c,th.c{text-align:center;width:74px}
+td input{width:18px;height:18px;accent-color:var(--accent)}
+.nav{display:flex;justify-content:space-between;gap:10px;margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
+
+.side{position:sticky;top:16px;display:grid;gap:14px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;min-width:0}
+.panel h3{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-family:var(--body);font-weight:700;margin-bottom:10px}
+.tier{font-family:var(--display);font-size:26px;font-weight:700;color:var(--accent)}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin:10px 0 12px}
+.tiers i{height:6px;border-radius:99px;background:var(--line)}
+.tiers i.on{background:var(--accent)}
+.panel p{margin:0 0 8px;font-size:14.5px}
+.panel ul{margin:0;padding-left:18px;font-size:14.5px;display:grid;gap:4px}
+.empty{color:var(--muted);font-size:14.5px}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:2px 8px;border-radius:99px;background:var(--warn-soft);color:var(--warn);margin-left:6px}
+details{font-size:14px}details summary{cursor:pointer;font-weight:600;min-height:32px}
+.out{width:100%;min-height:220px;font:13px/1.5 ui-monospace,Menlo,Consolas,monospace;margin-top:10px}
+.toast{font-size:14px;color:var(--accent);font-weight:600;min-height:22px;margin-top:6px}
+
+.colors{display:flex;flex-wrap:wrap;gap:10px}
+.colors .c1{display:flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:var(--r);padding:6px;background:var(--bg)}
+.colors input[type=color]{width:36px;height:36px;border:0;padding:0;background:none;cursor:pointer}
+.colors input[type=text]{width:96px;min-height:36px;padding:4px 8px;border:0;background:transparent;font-family:ui-monospace,Menlo,monospace;font-size:14px}
+.money{display:flex;gap:8px}.money select{width:auto;flex:none}
+.drop{display:block;border:1.5px dashed var(--line);border-radius:var(--r);padding:16px;text-align:center;color:var(--muted);cursor:pointer;font-size:14.5px}
+.q>label.drop{padding:18px 16px;font-weight:400;margin:0}
+.drop:hover,.drop.over{border-color:var(--accent);color:var(--fg)}
+.drop b{color:var(--accent)}
+.thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:8px;margin-top:10px}
+.thumb{position:relative;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--bg);font-size:11.5px}
+.thumb img{display:block;width:100%;height:78px;object-fit:cover}
+.thumb .ico{height:78px;display:grid;place-items:center;font-weight:700;color:var(--muted);font-size:13px}
+.thumb span{display:block;padding:4px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.thumb button{position:absolute;top:4px;right:4px;width:26px;height:26px;border-radius:50%;border:0;background:rgba(0,0,0,.65);color:#fff;font-size:14px;line-height:1}
+.fileerr{color:var(--warn);font-size:14px;margin-top:6px}
+.steps{max-height:calc(100vh - 32px);overflow-y:auto}
+@media (max-width:1080px){ .grid{grid-template-columns:minmax(0,1fr) 320px} .steps{display:none} }
+@media (max-width:760px){ .grid{grid-template-columns:minmax(0,1fr)} .side{position:static} .card{padding:18px} }
+</style>
+
+<div class="wrap">
+  <div class="top">
+    <div>
+      <h1>Project Discovery Questionnaire</h1>
+      <p class="sub">Tell us about your business and what you need. If you are unsure about any answer, choose "Not sure" or use "Suggest for me" and we will recommend an option. Skip any step that does not apply. It takes 20 to 30 minutes, and your typed answers are saved on this device as you go.</p>
+    </div>
+    <div class="actions">
+      <button class="btn small ghost" id="loadExample" type="button">Load example answers</button>
+      <button class="btn small ghost" id="reset" type="button">Clear all</button>
+    </div>
+  </div>
+  <div class="bar" role="progressbar" aria-label="Progress" aria-valuemin="0" aria-valuemax="100"><i id="barFill"></i></div>
+
+  <div class="grid">
+    <nav class="steps" id="steps" aria-label="Steps"></nav>
+    <form class="card" id="form" novalidate></form>
+    <aside class="side" aria-label="Recommendation">
+      <div class="panel" id="recPanel"></div>
+      <div class="panel" id="needPanel"></div>
+      <div class="panel">
+        <h3>Send your answers</h3>
+        <p>When you finish, save the answer file and send it to us by email or WhatsApp. It contains your answers and every attachment in one file.</p>
+        <button class="btn primary" id="saveFile" type="button" style="width:100%">Save answer file</button>
+        <p class="empty" id="fileInfo" style="margin:8px 0"></p>
+        <button class="btn" id="copy" type="button" style="width:100%">Copy text summary only</button>
+        <div class="toast" id="toast" role="status"></div>
+        <details><summary>Show the summary text</summary><textarea class="out" id="out" readonly aria-label="Summary text"></textarea></details>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<script>
+(function(){
+const U = "Not sure, please advise";
+/* ------------------------------------------------------------------ questions */
+const NA = "Not applicable";
+const STEPS = [
+ { id:"business", title:"Your business", lead:"A short picture of who you are.", qs:[
+   { id:"company", type:"text", label:"Company or brand name", hint:"Example: Cedar Dental Clinic" },
+   { id:"contact", type:"text", label:"Your name, role, email and phone", hint:"The person we should contact about this project." },
+   { id:"what", type:"textarea", label:"What do you offer, and to whom?", hint:"Two or three sentences. Example: We supply and install commercial coffee machines for hotels and offices in the Gulf." },
+   { id:"different", type:"textarea", label:"What makes you different from competitors?", hint:"Example: 24-hour maintenance, the only authorized dealer, lowest running cost." },
+   { id:"industry", type:"select", label:"Industry", options:["Retail & e-commerce","Food & hospitality","Healthcare","Education","Professional services","Finance & insurance","Manufacturing & industrial","Technology & software","Real estate & construction","Logistics & transport","Government & public sector","Non-profit","Other"] },
+   { id:"markets", type:"text", label:"Countries or regions you serve", hint:"Example: Lebanon and UAE now, Saudi Arabia next year" },
+   { id:"size", type:"radio", label:"Size of the organization", options:[
+      ["Just starting","A new business or new brand"],["Small","Up to about 20 people"],["Medium","About 20 to 250 people, or several branches"],["Large","More than 250 people, or a group of companies"]] },
+ ]},
+ { id:"goals", title:"Goals", lead:"What the project must achieve. This decides almost everything else.", qs:[
+   { id:"goal", type:"radio", label:"What is the main job of this project?", hint:"Pick the closest one.", options:[
+      ["Get enquiries","Visitors contact us, request a quote or book a call"],
+      ["Sell online","Visitors buy and pay on the site"],
+      ["Build credibility","Present the company professionally; a brochure site"],
+      ["Serve customers","Customers log in to see orders, tickets, documents or reports"],
+      ["Run internal work","A tool for our own staff"],
+      [U,"We will suggest one after reading your answers"]] },
+   { id:"action", type:"text", label:"The single most important action a visitor should take", hint:"Examples: request a quote, book an appointment, buy a product, call us" },
+   { id:"success", type:"text", label:"How will you measure success?", hint:"Examples: 20 quote requests a month; 15% fewer support calls; first online sales within 3 months" },
+   { id:"problems", type:"textarea", label:"What problem are you solving, or what is wrong today?", hint:"Example: our current site is slow, not on mobile, and we cannot update it ourselves." },
+ ]},
+ { id:"audience", title:"Audience", lead:"Who will use it.", qs:[
+   { id:"audience", type:"textarea", label:"Who are your typical visitors or users?", hint:"Example: hotel purchasing managers aged 30 to 50, mostly on mobile, Arabic and English speakers" },
+   { id:"devices", type:"radio", label:"How will most people open it?", options:[["Mostly phones"],["Mostly computers"],["Both equally"],[U]] },
+   { id:"competitors", type:"textarea", label:"Main competitors", hint:"Names or links, and what they do well or badly." },
+ ]},
+ { id:"scope", title:"Project type", lead:"What kind of project this is.", qs:[
+   { id:"kind", type:"checks", label:"What are we building?", two:true, options:[
+      ["Company website","Pages that present the business"],["Online store","Products, cart and payments"],["Web application","Software in the browser with logins and data"],["Customer portal","Customers log in to their own area"],["Internal system","For staff only"],["Mobile app","Later phase or alongside the site"],["Landing page","One page for a campaign"]] },
+   { id:"state", type:"radio", label:"Starting point", options:[
+      ["Brand new","Nothing exists yet"],["Redesign","Replace an existing site, keep the content"],["Rebuild","Replace an existing system and move its data"],["Add to existing","New features on a site that stays"]] },
+   { id:"existing", type:"text", label:"Existing website or system, if any", hint:"A link, and what it is built with if you know (WordPress, Shopify, custom)." },
+   { id:"keep", type:"textarea", label:"What must be kept from the existing one?", hint:"Examples: all product pages, customer accounts, search ranking, the blog. Optional." },
+ ]},
+ { id:"pages", title:"Pages & content", lead:"Tick what you expect. Use \"Suggest for me\" if unsure.", qs:[
+   { id:"pages", type:"checks", label:"Pages", suggest:"pages", two:true, options:[
+      ["Home"],["About us"],["Services"],["Products / catalog"],["Industries or sectors we serve"],["Our work / case studies"],["Testimonials"],["Pricing"],["Team"],["News / blog"],["FAQ"],["Careers"],["Contact"],["Branches / locations"],["Shop, cart & checkout"],["Customer login & dashboard"],["Help center / support"],["Privacy & terms"]] },
+   { id:"languages", type:"checks", label:"Languages", hint:"Arabic needs a right-to-left layout, which we plan from the start.", two:true, options:[["English"],["Arabic"],["French"],["Other"]] },
+   { id:"copy", type:"radio", label:"Who will write the text?", options:[["We have the text ready"],["We will write it, with your guidance"],["We need you to write it"],[U]] },
+   { id:"translate", type:"radio", label:"Who will translate?", options:[["We will"],["We need you to"],["One language only"],[U]] },
+   { id:"media", type:"radio", label:"Photos and videos", options:[["We have professional photos"],["We have phone photos"],["We need a photo shoot"],["Use stock photos"],[U]] },
+ ]},
+ { id:"features", title:"Features", lead:"What the site should be able to do. Each option explains itself.", qs:[
+   { id:"features", type:"checks", label:"Features", suggest:"features", options:[
+      ["Contact form","Visitors send a message that reaches your inbox"],
+      ["Quote or project request form","A longer form with questions about the customer's need"],
+      ["WhatsApp or live chat button","Visitors start a chat in one tap"],
+      ["Newsletter sign-up","Collect emails for updates and offers"],
+      ["News or blog","You publish articles and announcements"],
+      ["Online store and payments","Products, cart, checkout, card payments"],
+      ["Booking or appointments","Visitors choose a date and time"],
+      ["Customer accounts","Customers register and log in"],
+      ["Customer dashboard","After login: orders, tickets, documents, reports"],
+      ["Support tickets","Customers open requests and track them by reference number"],
+      ["Search","Search across products or articles"],
+      ["Filters and comparison","Narrow a catalog by category, price or specs"],
+      ["Branches or map","Locations with a map"],
+      ["Downloads","Brochures, manuals, price lists"],
+      ["Reviews and ratings","Customers rate products or services"],
+      ["Notifications","Email, SMS or WhatsApp messages sent automatically"],
+      ["Reports and dashboards","Charts and exports for management"],
+      ["Connect to other systems","CRM, accounting, ERP, inventory, payment gateway"],
+      ["Visitor analytics","Reports on visits and which pages work"]] },
+   { id:"top3", type:"text", label:"Your three must-haves for the first launch", hint:"Everything else can come in a later phase." },
+   { id:"later", type:"text", label:"Features that can wait for a later phase", hint:"Optional." },
+ ]},
+ { id:"shop", title:"Online sales", lead:"Skip this step if you will not sell or take payments online.", qs:[
+   { id:"sells", type:"radio", label:"Will you sell or take payments online?", options:[["Yes"],["Later"],["No"]] },
+   { id:"productCount", type:"radio", label:"How many products?", options:[["Under 50"],["50 to 500"],["500 to 5,000"],["Over 5,000"],[NA]] },
+   { id:"productType", type:"checks", label:"What do you sell?", two:true, options:[["Physical products"],["Digital products"],["Services or bookings"],["Subscriptions"],["Products with options","Sizes, colors, configurations"]] },
+   { id:"payments", type:"checks", label:"Payment methods", two:true, options:[["Credit / debit cards"],["Apple Pay / Google Pay"],["Cash on delivery"],["Bank transfer"],["Local wallets","Example: Whish, OMT, STC Pay, Mada"],["Invoices for companies"]] },
+   { id:"gateway", type:"text", label:"Payment provider, if you already have one", hint:"Examples: Stripe, Checkout.com, PayTabs, a bank gateway. Otherwise we recommend one for your country." },
+   { id:"shipping", type:"textarea", label:"Delivery, taxes and returns", hint:"Where you deliver, delivery companies, VAT rules, return policy. Short notes are fine." },
+   { id:"stock", type:"radio", label:"Stock control", options:[["Track stock on the site"],["Stock comes from our own system"],["No stock tracking"],[U]] },
+ ]},
+ { id:"users", title:"Users & access", lead:"Who logs in and what each may do. Skip if nobody logs in.", qs:[
+   { id:"userTypes", type:"checks", label:"Who will have an account?", two:true, options:[["Customers"],["Company staff"],["Managers / approvers"],["Partners or dealers"],["Suppliers"],["Nobody, public site only"]] },
+   { id:"userCount", type:"radio", label:"Expected number of accounts in the first year", options:[["Under 100"],["100 to 1,000"],["1,000 to 20,000"],["Over 20,000"],[NA]] },
+   { id:"signin", type:"checks", label:"How should people sign in?", two:true, options:[["Email and password"],["Phone number with a code (OTP)"],["Google / Apple / Microsoft account"],["Company single sign-on (SSO)","Staff use their work login"],["Two-step verification","A second code for extra safety"]] },
+   { id:"roles", type:"textarea", label:"What may each type of user see and do?", hint:"Example: customers see only their own orders; staff see all orders in their branch; managers approve refunds." },
+ ]},
+ { id:"cms", title:"Updating content", lead:"How the site is kept up to date after launch.", qs:[
+   { id:"editing", type:"radio", label:"Who will update text and pictures after launch?", hint:"With a content management system (CMS), your staff edit pages in a simple admin screen, with no developer needed.", options:[
+      ["Our own staff","We want an admin screen to edit content ourselves"],["You, on request","Changes are rare; we will ask when needed"],["Both","We do daily updates; you handle bigger changes"],[U]] },
+   { id:"editors", type:"radio", label:"How many people will edit content?", options:[["1"],["2 to 5"],["6 or more"],[U]] },
+   { id:"approval", type:"radio", label:"Must someone approve content before it is published?", hint:"Example: staff prepare a page, a manager publishes it.", options:[["Yes"],["No"],[U]] },
+   { id:"editWhat", type:"checks", label:"What must your team be able to change themselves?", two:true, options:[["Page text"],["Pictures and videos"],["Products and prices"],["News articles"],["Menus and links"],["Offers and banners"],["Contact details"],["Search-engine titles"]] },
+   { id:"frequency", type:"radio", label:"How often will content change?", options:[["Daily"],["Weekly"],["Monthly"],["Rarely"]] },
+ ]},
+ { id:"design", title:"Design & brand", lead:"How it should look. If you want it to follow an existing site or brand, tell us exactly what to match.", qs:[
+   { id:"brandState", type:"radio", label:"Brand identity", options:[["We have a full brand guide"],["We have a logo and colors only"],["We need a logo and identity designed"],[U]] },
+   { id:"colors", type:"colors", label:"Brand colors", hint:"Pick up to five, or type the codes (example #0F6B57). Leave empty if you want us to propose them." },
+   { id:"fonts", type:"text", label:"Fonts", hint:"Names of the fonts you use for headings and text, for each language. Example: Montserrat for English, Cairo for Arabic. You can attach the font files in the next step." },
+   { id:"style", type:"checks", label:"The feeling it should give", two:true, options:[["Clean and minimal"],["Premium and elegant"],["Bold and energetic"],["Friendly and warm"],["Technical and precise"],["Corporate and formal"],["Playful"],["Traditional"]] },
+   { id:"like", type:"textarea", label:"Websites you like, and what you like in each", hint:"Up to three links. Example: apple.com for the large photos and short text." },
+   { id:"dislike", type:"textarea", label:"Styles or websites you do not like", hint:"Optional, but it saves time." },
+   { id:"match", type:"text", label:"A website or design this project should closely follow", hint:"A link, if there is one specific reference to match." },
+   { id:"matchWhat", type:"checks", label:"What should we match from that reference?", two:true, options:[["Page layout and structure"],["Colors"],["Fonts"],["Photo style"],["Menus and navigation"],["Features and functions"],["Wording and tone"]] },
+   { id:"rights", type:"radio", label:"Do you own, or have written permission to use, the reference's pictures, text and logo?", hint:"We can follow a layout and style freely. Copying another company's photos, text, logo or licensed fonts needs their permission.", options:[["Yes, it is ours or we are authorized"],["No, use it as inspiration only"],[U]] },
+ ]},
+ { id:"files", title:"Attachments", lead:"Add your files here. They are packed into the answer file you send us. Add them last: attachments are not kept if you close this page.", qs:[
+   { id:"f_logo", type:"files", label:"Logo files", hint:"Best: SVG, AI, EPS or PDF. Otherwise a large PNG.", accept:"image/*,.svg,.pdf,.ai,.eps" },
+   { id:"f_brand", type:"files", label:"Brand guide and font files", hint:"PDF brand guide, font files (TTF, OTF, WOFF).", accept:".pdf,.ttf,.otf,.woff,.woff2,.zip" },
+   { id:"f_products", type:"files", label:"Product or service photos", hint:"Real photos of your products, place or team. Large photos are reduced automatically.", accept:"image/*", shrink:true },
+   { id:"f_refs", type:"files", label:"Design references and screenshots", hint:"Screenshots of pages, colors or details you want us to follow.", accept:"image/*,.pdf", shrink:true },
+   { id:"f_docs", type:"files", label:"Documents", hint:"Company profile, product list or price list (PDF, Excel, Word), certificates, existing policies.", accept:".pdf,.doc,.docx,.xls,.xlsx,.csv,.ppt,.pptx,.txt,.zip,image/*" },
+   { id:"bigfiles", type:"text", label:"Link to larger files", hint:"For videos or many photos, paste a Google Drive, OneDrive or Dropbox link here." },
+ ]},
+ { id:"data", title:"Data & records", lead:"What information the system stores. This tells us whether a database is needed and how to design it.", qs:[
+   { id:"records", type:"checks", label:"What must the system store and look up later?", hint:"If you tick none, the site may not need a database at all.", two:true, options:[["Enquiries and leads"],["Customers and contacts"],["Orders and invoices"],["Payments"],["Products and stock"],["Bookings"],["Support tickets"],["Documents and files"],["Staff records"],["Equipment or assets"],["Reports and statistics"]] },
+   { id:"dataExisting", type:"radio", label:"Is there existing data to move into the new system?", options:[["Yes, in Excel or CSV files"],["Yes, in another system or database"],["No, we start empty"],[U]] },
+   { id:"dataVolume", type:"radio", label:"Roughly how many records in the first year?", hint:"Count the largest list, for example customers or orders.", options:[["Under 1,000"],["1,000 to 50,000"],["50,000 to 1 million"],["Over 1 million"],[U]] },
+   { id:"personal", type:"checks", label:"Personal or sensitive information stored", two:true, options:[["Names and contact details"],["ID or passport numbers"],["Payment card details","We recommend never storing these; the payment provider holds them"],["Health information"],["Financial information"],["Children's data"],["Location data"],["None"]] },
+   { id:"exports", type:"textarea", label:"Reports and exports you need", hint:"Examples: monthly sales by branch in Excel; list of open tickets; customer list for accounting." },
+   { id:"retention", type:"text", label:"How long must records be kept, and who may delete them?", hint:"Example: invoices 10 years by law; customers may ask us to delete their data." },
+ ]},
+ { id:"integrations", title:"Connections", lead:"Other systems this project must talk to.", qs:[
+   { id:"systems", type:"checks", label:"Systems to connect", two:true, options:[["CRM","Example: HubSpot, Zoho, Salesforce"],["Accounting","Example: QuickBooks, Xero, Odoo"],["ERP or inventory","Example: SAP, Odoo, Microsoft Dynamics"],["Email marketing","Example: Mailchimp"],["SMS or WhatsApp messaging"],["Payment gateway"],["Delivery companies"],["Maps"],["Calendar","Google or Outlook"],["Company login (SSO)","Microsoft Entra ID, Google Workspace"],["Social media feeds"],["Point of sale (POS)"]] },
+   { id:"systemNames", type:"textarea", label:"Names of the systems you use today", hint:"Example: Odoo for accounting, HubSpot CRM, Aramex for delivery." },
+   { id:"api", type:"radio", label:"Must other systems be able to read data from this one?", hint:"Example: your mobile app or a partner's system needs your product list.", options:[["Yes"],["No"],[U]] },
+ ]},
+ { id:"security", title:"Security & compliance", lead:"How sensitive the information is and what rules apply. Choose \"Not sure\" where needed and we will advise.", qs:[
+   { id:"sensitivity", type:"radio", label:"How sensitive is the information?", options:[
+      ["Public","Only information anyone may see"],["Business","Customer contacts, orders, internal documents"],["Sensitive","Health, financial, identity or children's data"],[U]] },
+   { id:"regulations", type:"checks", label:"Rules or standards to follow", two:true, options:[["GDPR (European visitors)"],["Local data protection law","Example: Saudi PDPL, UAE PDPL"],["PCI DSS (card payments)"],["HIPAA or health data rules"],["ISO 27001 / corporate IT policy"],["Government or bank requirements"],["None that we know"]] },
+   { id:"residency", type:"radio", label:"Must data stay in a specific country?", options:[["Yes"],["No"],[U]] },
+   { id:"residencyWhere", type:"text", label:"If yes, which country or region?", hint:"Example: Saudi Arabia; European Union." },
+   { id:"secNeeds", type:"checks", label:"Security measures required", two:true, options:[["Two-step verification for staff"],["Company single sign-on (SSO)"],["Activity log","A record of who did what and when"],["Data encrypted in storage"],["Independent security test before launch","Penetration test"],["IP or location restrictions for staff"],["Automatic logout after inactivity"],["Protection against automated attacks and spam"]] },
+   { id:"backup", type:"radio", label:"Backups", hint:"How much recent work could you afford to lose if something failed?", options:[["Up to one day"],["Up to one hour"],["Almost nothing"],[U]] },
+   { id:"uptime", type:"radio", label:"How critical is availability?", options:[["Normal","Short interruptions are acceptable"],["Important","We lose sales when it is down"],["Critical","It must stay available, with a written service level"],[U]] },
+   { id:"review", type:"radio", label:"Will your IT or security team review the project?", options:[["Yes"],["No"],[U]] },
+   { id:"nda", type:"radio", label:"Do you need a confidentiality agreement (NDA) before sharing details?", options:[["Yes"],["No"]] },
+ ]},
+ { id:"technical", title:"Technical & hosting", lead:"Practical details. Skip anything you do not know.", qs:[
+   { id:"domain", type:"radio", label:"Website address (domain)", hint:"Example: yourcompany.com", options:[["We own one"],["We need one"],[U]] },
+   { id:"domainName", type:"text", label:"Domain name, and where it is registered", hint:"Example: cedarclinic.com, registered at GoDaddy." },
+   { id:"email", type:"radio", label:"Business email on your domain", hint:"Example: info@yourcompany.com", options:[["We have it"],["We need it"],[U]] },
+   { id:"hosting", type:"radio", label:"Where must it be hosted?", options:[["No preference","Recommend what fits best"],["Microsoft Azure","Company policy or existing Microsoft setup"],["Amazon AWS or Google Cloud"],["Our own servers","Hosted inside our organization"],["Current hosting provider","Tell us which in the notes"]] },
+   { id:"accounts", type:"radio", label:"Who should own the hosting and service accounts?", hint:"We recommend the accounts are in your company's name, so you always own your site and data.", options:[["Our company"],["You manage them for us"],[U]] },
+   { id:"visitors", type:"radio", label:"Expected visitors per month", options:[["Under 5,000"],["5,000 to 50,000"],["50,000 to 500,000"],["Over 500,000"],[U]] },
+   { id:"peaks", type:"text", label:"Busy periods or campaigns", hint:"Example: Ramadan offers, Black Friday, TV advertising. Optional." },
+   { id:"access", type:"radio", label:"Accessibility for people with disabilities", hint:"WCAG AA is the usual standard, and is required for government and many corporate sites.", options:[["Standard good practice"],["Must meet WCAG AA formally"],[U]] },
+   { id:"browsers", type:"text", label:"Special device or browser requirements", hint:"Example: must work on old tablets in our branches; kiosk screens. Optional." },
+ ]},
+ { id:"marketing", title:"Search & marketing", lead:"How people will find you.", qs:[
+   { id:"seo", type:"radio", label:"Search engines (Google)", options:[["Basic setup is enough"],["Search ranking is a priority"],[U]] },
+   { id:"keywords", type:"textarea", label:"Words customers type to find a business like yours", hint:"Example: coffee machine rental Dubai; espresso machine maintenance." },
+   { id:"tracking", type:"checks", label:"Tracking and advertising tools", two:true, options:[["Google Analytics"],["Google Ads"],["Meta (Facebook / Instagram) Pixel"],["TikTok Pixel"],["LinkedIn Insight"],["None yet"]] },
+   { id:"social", type:"textarea", label:"Social media accounts", hint:"Links to your Instagram, Facebook, LinkedIn, TikTok, YouTube." },
+   { id:"redirects", type:"radio", label:"Must old page addresses keep working?", hint:"Important when replacing a site that already ranks on Google.", options:[["Yes"],["No"],[NA]] },
+ ]},
+ { id:"assets", title:"Materials checklist", lead:"What exists today. \"Need\" means you would like us to create or source it.", qs:[
+   { id:"assets", type:"status", label:"Materials", rows:["Logo (vector file)","Brand colors and fonts","Product or service photos","Team or location photos","Videos","Product details and prices","Company profile / about text","Customer testimonials","Certificates or awards","Privacy policy and terms","Social media accounts"] },
+ ]},
+ { id:"support", title:"Launch & support", lead:"What happens after the build.", qs:[
+   { id:"training", type:"radio", label:"Training for your staff", options:[["Yes, a live session"],["Recorded video and a written guide"],["Not needed"],[U]] },
+   { id:"maintenance", type:"radio", label:"After launch", options:[["Monthly maintenance plan","Updates, backups, monitoring and small changes"],["Pay per request"],["We will maintain it ourselves"],[U]] },
+   { id:"supportHours", type:"radio", label:"Support hours you expect", options:[["Working hours"],["Extended hours"],["24 / 7"],[U]] },
+   { id:"handover", type:"checks", label:"What you expect to receive at the end", two:true, options:[["Source code"],["Admin accounts in our name"],["Written documentation"],["Design files"],["Training material"]] },
+ ]},
+ { id:"plan", title:"Budget & timeline", lead:"Helps us propose a realistic first phase. A range is enough.", qs:[
+   { id:"budget", type:"money", label:"Expected budget for building the project", hint:"Type a range or a maximum. Example: 3,000 to 5,000. If you are unsure, tick the level below and we will propose options." },
+   { id:"budgetLevel", type:"radio", label:"Budget level", options:[["Essential","A focused first version; add more later"],["Standard","A complete site with the main features"],["Extended","Custom design, integrations, several phases"],[U]] },
+   { id:"monthly", type:"money", label:"Expected monthly budget after launch", hint:"Hosting, subscriptions and maintenance. Optional." },
+   { id:"payTerms", type:"radio", label:"Preferred payment structure", options:[["By milestone","Example: 40% start, 30% design approval, 30% launch"],["Monthly"],["One payment"],[U]] },
+   { id:"deadline", type:"text", label:"Target launch date, and the reason if fixed", hint:"Example: before our exhibition on 15 March" },
+   { id:"phases", type:"radio", label:"Delivery", options:[["One launch with everything"],["Launch the essentials first, then add phases"],[U]] },
+   { id:"approver", type:"text", label:"Who gives final approval?", hint:"Name and role. One person is best." },
+   { id:"stakeholders", type:"text", label:"Who else must be consulted?", hint:"Example: marketing manager, IT manager, finance." },
+   { id:"procurement", type:"text", label:"Purchasing requirements", hint:"Example: three quotations, vendor registration, a contract template. Optional." },
+   { id:"notes", type:"textarea", label:"Anything else we should know?", hint:"Rules about what we may not claim, partners to mention or avoid, past problems." },
+ ]},
+];
+
+/* ---------------------------------------------------------------- suggestions */
+const BASE_PAGES = ["Home","About us","Contact","Privacy & terms"];
+const SUGGEST = {
+ pages:{
+  "Get enquiries":["Services","Industries or sectors we serve","Our work / case studies","FAQ"],
+  "Sell online":["Products / catalog","Shop, cart & checkout","FAQ"],
+  "Build credibility":["Services","Our work / case studies","Team","News / blog"],
+  "Serve customers":["Services","Customer login & dashboard","Help center / support","FAQ"],
+  "Run internal work":["Customer login & dashboard"],
+ },
+ features:{
+  "Get enquiries":["Contact form","Quote or project request form","WhatsApp or live chat button","Visitor analytics"],
+  "Sell online":["Online store and payments","Customer accounts","Search","Contact form","Newsletter sign-up","Visitor analytics"],
+  "Build credibility":["Contact form","News or blog","Downloads","Visitor analytics"],
+  "Serve customers":["Customer accounts","Customer dashboard","Support tickets","Downloads","Contact form"],
+  "Run internal work":["Customer accounts","Customer dashboard","Connect to other systems"],
+ }
+};
+const TIERS = [
+ { name:"Starter", client:"A focused website that presents your business and brings enquiries. Quick to launch, low running cost.",
+   includes:["Up to about 10 pages","Contact or quote forms sent to your email","Search-engine basics and visitor analytics","Content updated by us on request, or a simple editor"],
+   later:"Add an editing system, more languages or a shop later without rebuilding.",
+   tech:"Next.js on Vercel. Content in code or a hosted CMS free tier. Forms by transactional email; add a small Postgres database only if records must be stored." },
+ { name:"Growth", client:"A complete site your team manages itself, with stored records and connections to your other tools.",
+   includes:["Content management with editor roles","A database for enquiries, customers or orders","Media library for photos and files","Connection to your CRM or payment provider","A test version to approve changes before they go live"],
+   later:"Add a customer portal or app as a separate module on the same foundation.",
+   tech:"Next.js on Vercel. CMS with roles (Payload or Sanity). Postgres (Neon). Object storage for uploads. CRM integration. Staging and production." },
+ { name:"Enterprise", client:"A platform built for many users, strict security and integration with your internal systems, delivered in phases.",
+   includes:["Role-based access and approval workflows","Single sign-on and audit logs where required","Hosting in your required country or cloud","Integration with ERP, CRM and internal systems","Service levels, monitoring and backups agreed in writing"],
+   later:"Each phase is specified and approved separately before work begins.",
+   tech:"Cloud platform per client policy (Azure, AWS, or Vercel Enterprise). Managed Postgres, blob storage, SSO, audit logging. Public site and application separated. Formal security and compliance review." },
+];
+
+/* ---------------------------------------------------------------------- state */
+const KEY = "discovery_v2";
+let A = {}, step = 0; const FILES = {};
+try { const s = JSON.parse(localStorage.getItem(KEY) || "null"); if (s) { A = s.A || {}; step = Math.min(s.step || 0, STEPS.length - 1); } } catch(e){}
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify({A, step})); } catch(e){} };
+const $ = (s, r=document) => r.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const arr = id => Array.isArray(A[id]) ? A[id] : [];
+const has = (id, v) => arr(id).includes(v);
+
+/* --------------------------------------------------------------------- render */
+function field(q){
+  const id = "q_" + q.id, hint = q.hint ? `<p class="hint" id="${id}_h">${esc(q.hint)}</p>` : "", d = q.hint ? ` aria-describedby="${id}_h"` : "";
+  if (q.type === "text") return `<div class="q"><label for="${id}">${esc(q.label)}</label>${hint}<input type="text" id="${id}" data-id="${q.id}" value="${esc(A[q.id]||"")}"${d}></div>`;
+  if (q.type === "textarea") return `<div class="q"><label for="${id}">${esc(q.label)}</label>${hint}<textarea id="${id}" data-id="${q.id}"${d}>${esc(A[q.id]||"")}</textarea></div>`;
+  if (q.type === "select") return `<div class="q"><label for="${id}">${esc(q.label)}</label>${hint}<select id="${id}" data-id="${q.id}"><option value="">Select…</option>${q.options.map(o=>`<option${A[q.id]===o?" selected":""}>${esc(o)}</option>`).join("")}</select></div>`;
+  if (q.type === "radio" || q.type === "checks"){
+    const multi = q.type === "checks";
+    const sug = q.suggest ? `<div class="suggest"><span>Not sure what to pick? We can tick a sensible set based on your main goal.</span><button type="button" class="btn small" data-suggest="${q.suggest}" data-for="${q.id}">Suggest for me</button></div>` : "";
+    const opts = q.options.map((o,i)=>{ const [v,sub] = o; const on = multi ? has(q.id,v) : A[q.id]===v;
+      return `<label class="opt"><input type="${multi?"checkbox":"radio"}" name="${id}" id="${id}_${i}" data-id="${q.id}" value="${esc(v)}"${on?" checked":""}><span><b>${esc(v)}</b>${sub?`<small>${esc(sub)}</small>`:""}</span></label>`; }).join("");
+    return `<fieldset class="q"><legend>${esc(q.label)}</legend>${hint}${sug}<div class="opts${q.two?" two":""}">${opts}</div></fieldset>`;
+  }
+  if (q.type === "colors"){
+    const cur = Array.isArray(A[q.id]) ? A[q.id] : [];
+    return `<div class="q"><div class="label">${esc(q.label)}</div>${hint}<div class="colors">${[0,1,2,3,4].map(i=>`<span class="c1"><input type="color" id="${id}_p${i}" aria-label="Color ${i+1} picker" data-color="${q.id}" data-i="${i}" value="${/^#[0-9a-f]{6}$/i.test(cur[i]||"")?cur[i]:"#cccccc"}"><input type="text" id="${id}_t${i}" aria-label="Color ${i+1} code" data-colortext="${q.id}" data-i="${i}" placeholder="#------" maxlength="7" value="${esc(cur[i]||"")}"></span>`).join("")}</div></div>`;
+  }
+  if (q.type === "money"){
+    const v = A[q.id] || {};
+    return `<div class="q"><label for="${id}">${esc(q.label)}</label>${hint}<div class="money"><select id="${id}_cur" aria-label="Currency" data-money="${q.id}" data-part="cur">${["USD","EUR","AED","SAR","QAR","KWD","EGP","LBP","GBP","Other"].map(c=>`<option${(v.cur||"USD")===c?" selected":""}>${c}</option>`).join("")}</select><input type="text" id="${id}" data-money="${q.id}" data-part="amount" inputmode="text" value="${esc(v.amount||"")}"></div></div>`;
+  }
+  if (q.type === "files"){
+    const list = FILES[q.id] || [];
+    return `<div class="q"><div class="label">${esc(q.label)}</div>${hint}
+      <label class="drop" data-drop="${q.id}"><input type="file" id="${id}" multiple accept="${q.accept||""}" data-files="${q.id}" hidden><b>Choose files</b> or drop them here</label>
+      <div class="fileerr" id="${id}_err" role="alert"></div>
+      <div class="thumbs">${list.map((f,i)=>`<div class="thumb">${f.type.startsWith("image/")?`<img src="${f.data}" alt="">`:`<div class="ico">${esc((f.name.split(".").pop()||"file").toUpperCase().slice(0,5))}</div>`}<span title="${esc(f.name)}">${esc(f.name)}</span><button type="button" aria-label="Remove ${esc(f.name)}" data-rm="${q.id}" data-i="${i}">×</button></div>`).join("")}</div></div>`;
+  }
+  if (q.type === "status"){
+    const cur = A[q.id] || {};
+    const rows = q.rows.map((r,i)=>`<tr><td>${esc(r)}</td>${["Have","Need","Not sure"].map(s=>`<td class="c"><input type="radio" name="${id}_${i}" id="${id}_${i}_${s[0]}" aria-label="${esc(r)}: ${s}" data-status="${q.id}" data-row="${esc(r)}" value="${s}"${cur[r]===s?" checked":""}></td>`).join("")}</tr>`).join("");
+    return `<div class="q"><div class="label">${esc(q.label)}</div><div class="tablewrap"><table><thead><tr><th>Item</th><th class="c">Have</th><th class="c">Need</th><th class="c">Not sure</th></tr></thead><tbody>${rows}</tbody></table></div></div>`;
+  }
+  return "";
+}
+function stepDone(s){ return s.qs.some(q => { if (q.type === "files") return (FILES[q.id]||[]).length > 0; const v = A[q.id]; if (q.type === "money") return !!(v && v.amount); if (q.type === "colors") return Array.isArray(v) && v.some(Boolean); return Array.isArray(v) ? v.length : (v && typeof v === "object") ? Object.keys(v).length : !!v; }); }
+function render(){
+  const s = STEPS[step];
+  $("#steps").innerHTML = STEPS.map((x,i)=>`<button type="button" data-step="${i}" class="${stepDone(x)?"done":""}"${i===step?' aria-current="step"':""}><span class="n">${i+1}</span>${esc(x.title)}</button>`).join("");
+  $("#form").innerHTML = `<h2>${step+1}. ${esc(s.title)}</h2><p class="lead">${esc(s.lead)}</p>${s.qs.map(field).join("")}
+    <div class="nav"><button type="button" class="btn" id="back"${step===0?" disabled":""}>Back</button>
+    <button type="button" class="btn primary" id="next">${step===STEPS.length-1?"Finish":"Next"}</button></div>`;
+  update();
+}
+
+/* ------------------------------------------------------------- recommendation */
+function score(){
+  let n = 0; const f = v => has("features", v);
+  n += ({Medium:1, Large:3}[A.size] || 0);
+  n += (f("Online store and payments")?2:0) + (f("Booking or appointments")?1:0) + (f("Customer accounts")?2:0) + (f("Customer dashboard")?2:0) + (f("Support tickets")?1:0) + (f("Connect to other systems")?2:0);
+  n += arr("languages").length > 1 ? 1 : 0;
+  n += ({"2 to 5":1, "6 or more":2}[A.editors] || 0) + (A.approval === "Yes" ? 1 : 0);
+  n += ({"5,000 to 50,000":1, "50,000 to 500,000":2, "Over 500,000":3}[A.visitors] || 0);
+  n += ({"500 to 5,000":1, "Over 5,000":2}[A.productCount] || 0);
+  n += (["Microsoft Azure","Our own servers"].includes(A.hosting) ? 2 : 0) + (A.compliance === "Yes" ? 2 : 0) + (A.residency === "Yes" ? 1 : 0);
+  n += 0;
+  n += ({"Serve customers":2, "Run internal work":2, "Sell online":1}[A.goal] || 0);
+  n += (has("kind","Web application")?2:0) + (has("kind","Customer portal")?2:0) + (has("kind","Internal system")?2:0) + (has("kind","Mobile app")?1:0) + (A.state==="Rebuild"?1:0);
+  n += ({Sensitive:3, Business:1}[A.sensitivity] || 0) + (A.review === "Yes" ? 1 : 0) + (A.uptime === "Critical" ? 2 : A.uptime === "Important" ? 1 : 0);
+  n += (has("secNeeds","Company single sign-on (SSO)")||has("signin","Company single sign-on (SSO)")?2:0) + (has("secNeeds","Activity log")?1:0) + (has("secNeeds","Independent security test before launch")?1:0);
+  n += arr("regulations").filter(x=>x!=="None that we know").length ? 1 : 0;
+  n += ({"1,000 to 50,000":1, "50,000 to 1 million":2, "Over 1 million":3}[A.dataVolume] || 0) + ({"1,000 to 20,000":1, "Over 20,000":2}[A.userCount] || 0);
+  n += Math.min(3, arr("systems").length > 2 ? 2 : arr("systems").length ? 1 : 0) + (A.sells === "Yes" ? 1 : 0);
+  return n;
+}
+const tierIndex = () => { const n = score(); return n <= 3 ? 0 : n <= 12 ? 1 : 2; };
+function dbNote(){
+  const r = arr("records"), acc = arr("userTypes").filter(x=>x!=="Nobody, public site only").length;
+  if (!r.length && !acc && A.sells !== "Yes") return A.editing && A.editing !== "You, on request" ? "Not required for records. A content management system stores your pages and pictures." : "Not required for the first version.";
+  return "Required, to store " + (r.length ? r.slice(0,4).join(", ").toLowerCase() + (r.length>4?" and more":"") : "accounts and transactions") + ". Uploaded files go to separate file storage.";
+}
+function secNote(){
+  const p = [];
+  if (A.sensitivity) p.push("Data sensitivity: " + A.sensitivity + ".");
+  const reg = arr("regulations").filter(x=>x!=="None that we know"); if (reg.length) p.push("Compliance: " + reg.join(", ") + ".");
+  if (A.residency === "Yes") p.push("Data residency: " + (A.residencyWhere || "country to confirm") + ".");
+  if (arr("secNeeds").length) p.push("Controls: " + arr("secNeeds").join(", ") + ".");
+  if (has("personal","Payment card details")) p.push("Do not store card data; use the gateway's hosted fields.");
+  return p.join(" ") || "No special security requirements stated yet.";
+}
+function needs(){
+  const out = [], st = A.assets || {};
+  Object.keys(st).forEach(k => { if (st[k] === "Need") out.push(k + " (to be created)"); if (st[k] === "Not sure") out.push(k + " (to confirm)"); });
+  if (A.domain === "We need one") out.push("Domain name (to be registered)");
+  if (A.email === "We need it") out.push("Business email (to be set up)");
+  if (A.copy === "We need you to write it") out.push("Page text (to be written by us)");
+  return out;
+}
+function unsure(){
+  const out = [];
+  STEPS.forEach(s => s.qs.forEach(q => { if (A[q.id] === U || A[q.id] === "Not sure") out.push(q.label); }));
+  return out;
+}
+function answered(){ let d = 0; STEPS.forEach(s => { if (stepDone(s)) d++; }); return d; }
+
+function update(){
+  const pct = Math.round(answered() / STEPS.length * 100);
+  $("#barFill").style.width = pct + "%"; $(".bar").setAttribute("aria-valuenow", pct);
+  document.querySelectorAll("#steps button").forEach((b,i)=> b.classList.toggle("done", stepDone(STEPS[i])));
+  const enough = A.goal || A.size || arr("features").length;
+  const rp = $("#recPanel");
+  if (!enough){
+    rp.innerHTML = `<h3>Suggested approach</h3><p class="empty">Answer the questions about your goal and features, and a suggested project size will appear here with what it includes.</p><div class="tiers"><i></i><i></i><i></i></div>`;
+  } else {
+    const i = tierIndex(), t = TIERS[i];
+    rp.innerHTML = `<h3>Suggested approach</h3><div class="tier">${t.name}</div>
+      <div class="tiers" aria-hidden="true">${TIERS.map((_,k)=>`<i class="${k<=i?"on":""}"></i>`).join("")}</div>
+      <p>${esc(t.client)}</p><ul>${t.includes.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
+      <p style="margin-top:10px"><b>Room to grow:</b> ${esc(t.later)}</p>
+      <p style="margin-top:10px"><b>Database:</b> ${esc(dbNote())}</p>
+      <details><summary>Technical note for the project team</summary><p>${esc(t.tech)}</p><p>${esc(secNote())}</p></details>
+      <p class="empty" style="margin-top:8px">This is a starting suggestion. We confirm it with you before any proposal.</p>`;
+  }
+  const n = needs(), u = unsure(), np = $("#needPanel");
+  np.innerHTML = `<h3>Still needed${n.length?`<span class="tag">${n.length}</span>`:""}</h3>` +
+    (n.length ? `<ul>${n.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>` : `<p class="empty">Items you mark as "Need" or "Not sure" will be listed here, so both sides know what is outstanding.</p>`) +
+    (u.length ? `<p style="margin-top:12px"><b>We will advise you on:</b></p><ul>${u.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>` : "");
+  $("#out").value = summary();
+  const nf = Object.values(FILES).flat().length;
+  $("#fileInfo").textContent = nf ? nf + " attachment" + (nf>1?"s":"") + ", " + (totalBytes()/1048576).toFixed(1) + " MB" : "No attachments added yet.";
+}
+
+function summary(){
+  const L = [], t = TIERS[tierIndex()];
+  L.push("PROJECT DISCOVERY SUMMARY", "Date: " + new Date().toISOString().slice(0,10), "");
+  STEPS.forEach(s => {
+    const rows = [];
+    s.qs.forEach(q => { const v = A[q.id];
+      if (q.type === "status"){ const st = v || {}; Object.keys(st).forEach(k => rows.push("  - " + k + ": " + st[k])); }
+      else if (q.type === "files"){ const l = FILES[q.id] || []; if (l.length) rows.push("- " + q.label + ": " + l.map(f=>f.name).join("; ")); }
+      else if (q.type === "money"){ if (v && v.amount) rows.push("- " + q.label + ": " + v.amount + " " + (v.cur||"USD")); }
+      else if (q.type === "colors"){ const c = (v||[]).filter(Boolean); if (c.length) rows.push("- " + q.label + ": " + c.join(", ")); }
+      else if (Array.isArray(v) ? v.length : v) rows.push("- " + q.label + ": " + (Array.isArray(v) ? v.join("; ") : v)); });
+    if (rows.length){ L.push(s.title.toUpperCase()); rows.forEach(r => L.push(r)); L.push(""); }
+  });
+  L.push("SUGGESTED APPROACH", "- Size: " + t.name, "- " + t.client, "- Database: " + dbNote(), "- Technical note: " + t.tech, "- Security note: " + secNote(), "");
+  const n = needs(), u = unsure();
+  if (n.length){ L.push("STILL NEEDED"); n.forEach(x => L.push("- " + x)); L.push(""); }
+  if (u.length){ L.push("CLIENT ASKED FOR ADVICE ON"); u.forEach(x => L.push("- " + x)); }
+  return L.join("\n");
+}
+
+/* --------------------------------------------------------------------- events */
+const form = $("#form");
+form.addEventListener("input", e => {
+  const el = e.target;
+  if (el.dataset.files) return;
+  if (el.dataset.color || el.dataset.colortext){
+    const id = el.dataset.color || el.dataset.colortext, i = +el.dataset.i; A[id] = Array.isArray(A[id]) ? A[id] : [];
+    let v = el.value.trim(); if (el.dataset.colortext && v && !v.startsWith("#")) v = "#" + v;
+    A[id][i] = v; const other = document.getElementById("q_" + id + (el.dataset.color ? "_t" : "_p") + i);
+    if (other && (el.dataset.color || /^#[0-9a-f]{6}$/i.test(v))) other.value = v;
+  }
+  else if (el.dataset.money){ A[el.dataset.money] = A[el.dataset.money] || {cur:"USD"}; A[el.dataset.money][el.dataset.part] = el.value; }
+  else if (el.dataset.status){ A[el.dataset.status] = A[el.dataset.status] || {}; A[el.dataset.status][el.dataset.row] = el.value; }
+  else if (el.dataset.id){
+    const id = el.dataset.id;
+    if (el.type === "checkbox"){ const set = new Set(arr(id)); el.checked ? set.add(el.value) : set.delete(el.value); A[id] = [...set]; }
+    else A[id] = el.value;
+  }
+  save(); update();
+});
+form.addEventListener("click", e => {
+  const s = e.target.closest("[data-suggest]");
+  if (s){
+    const kind = s.dataset.suggest, id = s.dataset.for, goal = SUGGEST[kind][A.goal] ? A.goal : "Get enquiries";
+    const pick = (kind === "pages" ? BASE_PAGES : []).concat(SUGGEST[kind][goal]);
+    A[id] = [...new Set(arr(id).concat(pick))]; save(); render(); return;
+  }
+  const rm = e.target.closest("[data-rm]");
+  if (rm){ FILES[rm.dataset.rm].splice(+rm.dataset.i, 1); render(); return; }
+  if (e.target.id === "back" && step > 0){ step--; save(); render(); scrollTo(0,0); }
+  if (e.target.id === "next"){ if (step < STEPS.length-1){ step++; save(); render(); scrollTo(0,0); } else { $("#copy").focus(); $("#toast").textContent = "All steps done. Copy the summary and send it to us."; } }
+});
+$("#steps").addEventListener("click", e => { const b = e.target.closest("[data-step]"); if (b){ step = +b.dataset.step; save(); render(); } });
+/* ---------------------------------------------------------------- attachments */
+const MAX_ONE = 12 * 1048576, MAX_ALL = 60 * 1048576;
+const totalBytes = () => Object.values(FILES).flat().reduce((n,f)=>n+f.size,0);
+const readURL = f => new Promise((ok,no)=>{ const r = new FileReader(); r.onload = () => ok(r.result); r.onerror = no; r.readAsDataURL(f); });
+async function shrink(file){
+  const url = await readURL(file);
+  if (!/^image\/(jpeg|png|webp)$/.test(file.type)) return {data:url, size:file.size, type:file.type};
+  const img = await new Promise((ok,no)=>{ const i = new Image(); i.onload = () => ok(i); i.onerror = no; i.src = url; });
+  const k = Math.min(1, 1800 / Math.max(img.width, img.height));
+  if (k === 1 && file.size < 900000) return {data:url, size:file.size, type:file.type};
+  const c = document.createElement("canvas"); c.width = Math.round(img.width*k); c.height = Math.round(img.height*k);
+  c.getContext("2d").drawImage(img, 0, 0, c.width, c.height);
+  const data = c.toDataURL("image/jpeg", 0.85);
+  return {data, size:Math.round(data.length*0.75), type:"image/jpeg"};
+}
+async function addFiles(id, list){
+  const q = STEPS.flatMap(s=>s.qs).find(x=>x.id===id), errs = [];
+  FILES[id] = FILES[id] || [];
+  for (const f of list){
+    try {
+      const r = q.shrink ? await shrink(f) : {data: await readURL(f), size:f.size, type:f.type || "application/octet-stream"};
+      if (r.size > MAX_ONE){ errs.push(f.name + " is larger than 12 MB. Share it with a link instead."); continue; }
+      if (totalBytes() + r.size > MAX_ALL){ errs.push("Attachments are over 60 MB in total. Share the rest with a link."); break; }
+      FILES[id].push({name:f.name, type:r.type, size:r.size, data:r.data});
+    } catch(e){ errs.push(f.name + " could not be read."); }
+  }
+  render(); const box = document.getElementById("q_" + id + "_err"); if (box) box.textContent = errs.join(" ");
+}
+form.addEventListener("change", e => { if (e.target.dataset.files){ addFiles(e.target.dataset.files, [...e.target.files]); } });
+form.addEventListener("dragover", e => { const d = e.target.closest("[data-drop]"); if (d){ e.preventDefault(); d.classList.add("over"); } });
+form.addEventListener("dragleave", e => { const d = e.target.closest("[data-drop]"); if (d) d.classList.remove("over"); });
+form.addEventListener("drop", e => { const d = e.target.closest("[data-drop]"); if (d){ e.preventDefault(); addFiles(d.dataset.drop, [...e.dataTransfer.files]); } });
+
+function reportHTML(){
+  const name = A.company || "Client", groups = STEPS.flatMap(s=>s.qs).filter(q=>q.type==="files" && (FILES[q.id]||[]).length);
+  const colors = (A.colors||[]).filter(c=>/^#[0-9a-f]{6}$/i.test(c||""));
+  const att = groups.map(g => `<h2>${esc(g.label)}</h2><div class="g">${FILES[g.id].map(f => f.type.startsWith("image/")
+      ? `<figure><a href="${f.data}" download="${esc(f.name)}"><img src="${f.data}" alt=""></a><figcaption>${esc(f.name)}</figcaption></figure>`
+      : `<figure><a class="file" href="${f.data}" download="${esc(f.name)}">Download</a><figcaption>${esc(f.name)}</figcaption></figure>`).join("")}</div>`).join("");
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Discovery answers: ${esc(name)}</title>
+<style>body{font:15px/1.55 system-ui,sans-serif;max-width:960px;margin:0 auto;padding:24px 16px;color:#17201c;background:#fff}h1{font-size:26px}h2{font-size:17px;margin:28px 0 10px;border-bottom:1px solid #dde3df;padding-bottom:6px}pre{white-space:pre-wrap;font:14px/1.6 ui-monospace,Menlo,monospace;background:#f5f7f5;padding:16px;border-radius:10px}.g{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px}figure{margin:0;border:1px solid #dde3df;border-radius:8px;overflow:hidden}figure img{display:block;width:100%;height:150px;object-fit:contain;background:#f5f7f5}figcaption{padding:6px 8px;font-size:12.5px;word-break:break-all}.file{display:grid;place-items:center;height:150px;background:#e4f0ec;color:#0f6b57;font-weight:700;text-decoration:none}.sw{display:flex;gap:10px;flex-wrap:wrap}.sw span{display:block;width:110px;border:1px solid #dde3df;border-radius:8px;overflow:hidden;font:13px ui-monospace,monospace;text-align:center;padding-bottom:6px}.sw i{display:block;height:60px;margin-bottom:6px}</style></head><body>
+<h1>Discovery answers: ${esc(name)}</h1><p>Saved ${new Date().toISOString().slice(0,10)}. Click any attachment to download the original file.</p>
+${colors.length?`<h2>Brand colors</h2><div class="sw">${colors.map(c=>`<span><i style="background:${c}"></i>${c}</span>`).join("")}</div>`:""}
+<h2>Answers</h2><pre>${esc(summary())}</pre>${att}
+<script type="application/json" id="answers">${JSON.stringify(A).replace(/</g,"\\u003c")}<\/script></body></html>`;
+}
+let downloads = null;
+(async () => { try { downloads = window.claude && window.claude.use ? await window.claude.use("downloads") : null; } catch(e){} })();
+$("#saveFile").addEventListener("click", async () => {
+  const name = "discovery-" + String(A.company || "answers").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,40) + ".html";
+  const blob = new Blob([reportHTML()], {type:"text/html"}), t = $("#toast");
+  if (downloads){
+    try { await downloads.save({filename:name, data:blob}); t.textContent = "Saved. Send that file to us by email or WhatsApp."; }
+    catch(e){ t.textContent = e && e.code === "declined" ? "Save cancelled." : "This view cannot save files. Open the questionnaire file in your browser, or copy the text summary."; }
+    return;
+  }
+  if (location.protocol === "file:" || !window.claude){
+    const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = name; document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+    t.textContent = "Saved to your downloads as " + name + ". Send that file to us by email or WhatsApp.";
+  } else t.textContent = "This view cannot save files. Copy the text summary instead.";
+});
+$("#copy").addEventListener("click", () => {
+  const text = summary(), done = () => { $("#toast").textContent = "Summary copied. Paste it into an email or WhatsApp message."; };
+  const fallback = () => { const d = $("details:last-of-type"); d.open = true; const o = $("#out"); o.focus(); o.select(); $("#toast").textContent = "Select the text below and copy it."; };
+  try { navigator.clipboard.writeText(text).then(done, fallback); } catch(e){ fallback(); }
+});
+let armed = false;
+$("#reset").addEventListener("click", e => {
+  if (!armed){ armed = true; e.target.textContent = "Tap again to clear"; setTimeout(()=>{ armed = false; e.target.textContent = "Clear all"; }, 4000); return; }
+  A = {}; step = 0; armed = false; Object.keys(FILES).forEach(k => delete FILES[k]); e.target.textContent = "Clear all"; save(); render();
+});
+$("#loadExample").addEventListener("click", () => {
+  A = { company:"Example: Cedar Coffee Systems", what:"Example answers. We supply and install commercial coffee machines for hotels and offices, with maintenance contracts.",
+    industry:"Food & hospitality", markets:"Lebanon and UAE; Saudi Arabia next year", size:"Small", goal:"Get enquiries",
+    action:"Request a quote", success:"20 quote requests a month", audience:"Hotel and office purchasing managers, mostly on mobile",
+    pages:["Home","About us","Services","Products / catalog","Our work / case studies","FAQ","Contact","Privacy & terms"], languages:["English","Arabic"], copy:"We will write it, with your guidance",
+    features:["Contact form","Quote or project request form","WhatsApp or live chat button","Downloads","Visitor analytics"], top3:"Quote form, product catalog, Arabic version",
+    editing:"Both", editors:"2 to 5", approval:U,
+    assets:{"Logo (vector file)":"Have","Brand colors and fonts":"Not sure","Product or service photos":"Have","Team or location photos":"Need","Privacy policy and terms":"Need"},
+    domain:"We own one", email:"We have it", hosting:"No preference", residency:"No", compliance:"No",
+    visitors:"Under 5,000", kind:["Company website"], state:"Redesign", sells:"No", records:["Enquiries and leads"], sensitivity:"Business", brandState:"We have a logo and colors only",
+    colors:["#6b3f1d","#f4ede4","#1f1a17"], fonts:"Montserrat for English, Cairo for Arabic", style:["Premium and elegant","Clean and minimal"], rights:"No, use it as inspiration only",
+    budget:{cur:"USD",amount:"4,000 to 6,000"}, budgetLevel:"Standard", payTerms:"By milestone", deadline:"Before 15 March", maintenance:"Monthly maintenance plan" };
+  save(); render();
+});
+render();
+})();
+</script>

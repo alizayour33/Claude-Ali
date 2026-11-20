@@ -1,0 +1,397 @@
+Huaxin
+
+HOME
+PRODUCTS
+ABOUT
+SYSTEM
+BLOG
+SOLUTIONS
+FAQ
+CONTACT
+
+Send Inquiry
+
+EN>
+
+BLOG
+Ice Cream Vending Machine After-Sales Support: Warranty, Spare Parts and Fault Reporting
+Ice Cream Vending Machine After-Sales Support: Warranty, Spare Parts and Fault Reporting
+Date：2026-10-28 Author：Huaxin
+
+Before you sign, agree who diagnoses faults, supplies parts and works on the machine. Warranty checks, spare parts planning and a fault report template.
+
+Ice cream vending machine after-sales support is shared work. The factory diagnoses faults and supplies parts, your site staff run the first checks, and someone local has to be able to work on the machine with tools. When support is slow, the cause is often that one of those roles was never assigned, the part is still at the factory, or the first message about a fault leaves out what the after-sales team needs. All three can be settled before you sign.
+
+Huaxin manufactures the fully automatic machines discussed here at our factory in Dezhou, China, from the floor-standing B Series to the countertop Easy7 and Power7 (see our ice cream vending machine range). This guide is for buyers, distributors and the technicians who will look after the machines. It covers what to confirm in the warranty, how remote, video and on-site work are divided, how to plan spare parts, and how to report a fault. The cases come from our own 2026 orders, with customer details removed.
+
+1 What to confirm in an ice cream vending machine warranty
+
+For commercial equipment, the warranty is what the contract says. Consumer protection rules often do not reach a business buyer. The EU's rules on guarantees for goods, for example, are written for consumers, which the directive defines as natural persons acting outside their trade or business [1]. Ask for the warranty terms for your model and configuration in writing, and attach them to the contract or the pro forma invoice. Three parts of those terms deserve a close read.
+
+When it starts
+
+A warranty can run from the shipment date, the delivery date or the first start-up. For a machine that crosses an ocean or a continent, those dates can be months apart. In one 2026 order for the Netherlands, the machine's cooling test was filmed at our factory on 15 May. An inspection on the overland route held the truck in Belarus for about 20 days, and the machine reached the buyer on 11 August.
+
+Whichever date you agree, keep the dated records that show each stage: the test photos or video we send before shipment, the bill of lading, the signed delivery note, a video of the unpacking and the date of the first start-up. Those records answer most later questions about whether a fault was present on arrival.
+
+What it covers
+
+Question to ask
+
+	
+
+Why it matters
+
+
+
+
+Which components are covered, and for how long?
+
+	
+
+Refrigeration, electronics, motors, the screen and payment hardware can carry different terms.
+
+
+
+
+Parts only, or labor as well?
+
+	
+
+Work at the machine is usually done by a local technician, so a parts-only warranty still leaves a labor bill.
+
+
+
+
+Who pays to ship a replacement part, and the duty and clearance on it?
+
+	
+
+A part sent from China travels as its own shipment and goes through customs at your end.
+
+
+
+
+Does the failed part have to be returned?
+
+	
+
+If it does, agree who arranges and pays for that shipment.
+
+
+
+
+Which parts count as wear parts?
+
+	
+
+Parts that wear with normal use are often handled separately from the rest of the machine.
+
+
+
+
+What about equipment you source locally?
+
+	
+
+A card terminal from a local provider, locally bought cups and your own mix are outside the machine supplier's control. Agree who supports each one.
+
+What it excludes
+
+Ask for exclusions to be listed rather than implied. Typical candidates are wear parts, damage from cleaning or operation that departs from the manual, and damage in transit.
+
+Transit damage is a separate claim from a warranty defect. Under CIF, for example, the risk passes to the buyer once the crate is on board in China, so damage at sea goes to the cargo insurer. Our checklist for importing an ice cream vending machine from China explains who carries the risk under each trade term. This is why we ask buyers to film the unpacking and to report any damage in their after-sales group chat the same day. If a crate arrives damaged, write it on the delivery document before you sign.
+
+Defects should be reported quickly too. Between businesses in two of the 97 states that are party to the UN Convention on Contracts for the International Sale of Goods (CISG), among them China, the United States and Germany, the convention governs the sale unless the contract excludes it [2][3]. It expects the buyer to examine the goods within as short a period as is practicable and to give notice of a lack of conformity within a reasonable time [3][4]. A lawyer can confirm which law governs your contract.
+
+2 Who diagnoses, who guides and who goes to the machine
+
+For an overseas buyer, ice cream vending machine repair usually starts with remote diagnosis from photos, videos, fault codes and back-office data. Our after-sales team then provides online technical guidance, repair videos, parameter checks and spare parts. Whether a technician can come to the site depends on the market and the project. In some places a distributor or local partner does that work; elsewhere it falls to the operator's own technician. Before you order, confirm in writing who that is for each city where your machines will stand.
+
+	
+
+Remote diagnosis
+
+	
+
+Video guidance
+
+	
+
+Work at the machine
+
+
+
+
+Who
+
+	
+
+Huaxin after-sales team
+
+	
+
+Huaxin after-sales team with your site staff
+
+	
+
+Your technician, a distributor or a local service partner, agreed per market and project
+
+
+
+
+What it handles
+
+	
+
+Reading photos, video, fault codes, screen messages and back-office data; parameter checks; changes to selected settings on network-enabled machines
+
+	
+
+Live video calls and repair videos for checks, cleaning, adjustments and part swaps that site staff can do
+
+	
+
+Part replacement that needs tools or training, electrical and refrigeration work, installing payment hardware
+
+
+
+
+What it needs
+
+	
+
+A complete fault report; a network connection and account access for back-office data
+
+	
+
+Someone at the machine during hours that overlap with ours; the part already on site
+
+	
+
+A named person or company, the parts, the manual and training
+
+Remote access has limits worth knowing in advance. On network-enabled machines, selected settings and basic operations can be managed from the back office, and status and fault alerts help operators spot problems earlier. An alert does not repair anything, though, and no setting replaces a worn part. Our guide to remote monitoring, data and alerts sets out what an operator can see, what can be changed remotely and what still needs a visit.
+
+Handover when a new machine arrives
+
+Each buyer gets a group chat with our customer service and technical staff and the salesperson who handled the order. Before the first start, we ask buyers to film the unpacking, leave the machine standing upright for 24 hours, and contact the group so an after-sales specialist can guide the pre-start check. The specialist then takes the site team through start-up, refilling, menu setup, cleaning and basic troubleshooting, by video call where that helps, and sends the manual and cleaning videos. For volume projects, distributors and local service teams, more systematic training at our factory can be arranged.
+
+Some adjustments are planned for this stage. A buyer in Germany intended to buy cups locally, so his salesperson offered sample cups to help him find the same size and suggested adjusting the cup dispenser together over a video call once the machine arrived.
+
+Time zones
+
+Our after-sales team works on China Standard Time, UTC+8. A message sent at 5 p.m. in Milan in winter arrives at midnight in Dezhou, and the gap to the US East Coast is 12 to 13 hours depending on the season. In the Dutch order above, an exchange about the card terminal ran past the end of our after-sales team's day and picked up again the next morning.
+
+The gap costs least when the first message is complete, because the first reply can then be a diagnosis rather than a question. Agree a window when someone at the site and someone on our side can both join a video call, and make sure the person who refills the machine can run the first checks.
+
+3 Building an ice cream vending machine spare parts list
+
+Ask for a recommended spare parts list for your exact model and configuration. A floor-standing B Series machine and a countertop Easy7 are built differently, and cash hardware brings parts that a card-only machine does not need. Changes after delivery change the list as well. After his machine arrived, a buyer in Cyprus decided to use a local card payment provider and needed an MDB connector to link its reader to the machine. He asked for the connector to be sent with his spare parts.
+
+Core mechanical parts such as stirring shafts, lifting rods, dispensing nozzles, freezing cylinders and mix tanks are machined in Huaxin's own workshop from PP, nylon, stainless steel and aluminum, so replacements come from the same workshop as the originals.
+
+How many of each part to hold depends on what its absence would cost you. A practical way to sort the list:
+
+Parts that wear with normal use, such as stirring shafts. Keep these on site.
+
+Parts whose failure stops all sales. A day without the part costs more than the part, so stock them where the machines are.
+
+Parts that affect one function, such as one payment method or one topping. These can often wait for a shipment from the factory.
+
+Then adjust for the number of machines and sites, the distance between them, and how long a part takes to reach you from China, including customs clearance at your end.
+
+One pilot machine or a first batch of ten
+
+For a single pilot machine, a local parts stock is hard to justify. Keep the parts that ship with it, know which failures would stop sales, and plan for anything else to come from our factory. With a first batch of ten, one shared kit can travel in the same shipment as the machines, clear customs on the same entry and sit at one location with a simple log of what goes out. Train one person as first-line technician for all ten. Our article on planning a single-unit pilot or a 10-unit rollout covers the other differences between the two orders.
+
+Check the cartons on arrival
+
+On the day the machines arrive, count the spare parts and their cartons against the packing list, part by part, and photograph them. Report any shortfall in the group chat at once, with the photos, so it can be put right before you need the part.
+
+4 The fault report that gets the fastest answer
+
+When an operator in Italy first reported in writing that toppings were not dispensing, our first question was whether he had filmed it. Later we asked him to film faults for the group chat, because a written description could not show where the problem began. Much of the back-and-forth after a fault is the after-sales team asking for things the site already knew. Put them in the first message.
+
+The example below can serve as a template: copy it into your group chat or email and fill in what applies. To name the step where a machine failed, it helps to know the sequence it follows, which our guide to how an ice cream vending machine works from ordering to pickup walks through.
+
+Example: fault report
+
+Machine: model, site name and a photo of the nameplate
+
+What happened: one sentence on what a customer or staff member saw, for example "cup dropped, no product dispensed"
+
+Step in the cycle: ordering, payment, cup drop, dispensing, toppings or pickup
+
+When: local date and time of the first occurrence, and how often since
+
+What changed before it started: a new batch of mix, new cups, cleaning, a power cut, a move, a settings change
+
+Screen and back office: a photo of any message on the screen; a screenshot of the alert in the back office
+
+Video: one continuous clip from placing an order to the failure, filmed close to where it fails; for noises, a sound recording and a photo of where the sound comes from
+
+Settings and conditions: hardness setting, when the machine was last cleaned, which mix and how it was prepared, rough room temperature
+
+Payment faults: which method failed (cash, card or QR), what the terminal showed, who supplies the terminal and who holds the merchant account
+
+Checks already done: restart, cleaning, cups reloaded, network or SIM checked, a second card tried
+
+Status now: selling normally, selling with one function off, or switched off
+
+Video call: who will be at the machine, and when
+
+Three items save the most time. A continuous video shows what led up to the fault, which a single photo cannot. A screen message or back-office alert tells the team where to look first. And a list of checks already done means nobody asks you to repeat them.
+
+5 Common after-sales issues from our 2026 orders
+Coin acceptors and change settings
+
+The buyer in Germany mentioned above received his machine in July. Two days later he was asking where inserted banknotes went and why customers were getting no change. The cash hardware has to be set up to give change before opening, and on a first machine that step is easy to miss.
+
+An operator in another eurozone country had a different problem. The written configuration listed €1 and €2 coins, but the site needed to accept 50-cent, €1 and €2 coins from every euro country, not only local issues. When our after-sales team looked into it, the coin mechanism recognized the older coin issues it had been tested with, while coins first issued in 2025 had to be added through the mechanism's learning procedure.
+
+Before production, list every coin and note the machine must accept, the change it should give, and whether coins issued by other countries circulate at your site. Ask for the cash hardware to be tested against that list before shipment and for the change-setting instructions to come with the machine. On the first day, run a cash test with real local coins and notes. Our guide to ice cream vending machine payment systems covers the country checks for cash and card hardware.
+
+Card terminals
+
+Two days after delivery, the buyer in the Netherlands reported that the machine worked well and the ice cream tasted good, but the card terminal was not taking payments. The quickest route ran through the terminal provider's local support, who needed to configure the reader with parameters our after-sales team had posted in the buyer's group chat.
+
+Three parties meet at a card terminal: the provider that supplies and configures it, the holder of the merchant account, and the machine. Before delivery, note who holds the merchant account, how to reach the provider's support and which settings the terminal needs for your machine, and post all three in the after-sales group.
+
+Product too hard, a missed cup and a dark screen
+
+An operator in Italy reported that frozen yogurt was coming out almost frozen and sticking to the nozzle, and that the arm then moved on without a cup, so the product landed on the floor. Our first questions were when the machine had last been cleaned and what hardness it was set to. The advice was to lower the hardness slightly and to clean the arm, because something on it had made the sensor detect a cup that was not there. Two weeks later the same operator found the machine switched on with its main screen dark, and our customer service team sent an inspection video to the group chat to walk through the checks.
+
+Hardness depends on the mix as well as the setting, so include both in a report. If you plan to use your own mix, ask us to test it on the machine before you order.
+
+Stirring shafts and other wear parts
+
+Stirring shafts work in contact with the product and wear with use. Keep the recommended quantity on site, label the bags with the machine model, and replace them with factory parts. A locally made copy may not match the original's dimensions or material.
+
+6 Request the warranty terms and a parts list for your model
+
+Send us the model and quantity you are considering, the country and cities where the machines will stand, and the payment hardware you need: coin and note denominations, and the type of card terminal and who supplies it. Add how many sites you plan and how far apart they are, and whether you already have a technician, distributor or service partner locally. We will reply with the warranty terms for that model and a recommended spare parts list for your configuration. You can send the details through our inquiry form.
+
+References / Sources
+
+1. Directive (EU) 2019/771 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the sale of goods, Article 2(2). Text as reproduced by legislation.gov.uk (The National Archives): （https://www.legislation.gov.uk/eudr/2019/771/article/2 ; EUR-Lex: https://eur-lex.europa.eu/eli/dir/2019/771/2026-07-31）
+
+2. United Nations Treaty Collection. Status of Treaties, Chapter X.10: United Nations Convention on Contracts for the International Sale of Goods. （https://treaties.un.org/doc/Publication/MTDSG/Volume%20I/Chapter%20X/X-10.en.pdf）
+
+3. Flechtner, H. M. United Nations Convention on Contracts for the International Sale of Goods, introductory note. United Nations Audiovisual Library of International Law, 2009. （https://legal.un.org/avl/ha/ccisg/ccisg.html）
+
+4. CISG Advisory Council. Opinion No. 2: Examination of the Goods and Notice of Non-Conformity, Articles 38 and 39. 7 June 2004. （https://cisgac.com/?p=1423）
+
+Author's Introduction: Huaxin Co., Ltd. has manufactured commercial automated ice cream vending machines in Dezhou, China, since 2013, with machines shipped to more than 50 countries and regions. Each unit completes a 72-hour stress test before shipment, and certifications such as CE, IECEE CB, NSF/ANSI 6 and ETL vary by model.
+
+PREVIOUS ARTICLE
+
+How Many Ice Cream Vending Machines Do You Need to Make $100K a Year?
+
+NEXT ARTICLE
+
+Best Locations for Ice Cream Vending Machines: A Site Scoring Checklist
+BLOG
+
+Ice Cream Vending Machines: The Quiet Expansion in Western Markets
+
+>>
+
+5 Technical Specifications You Must Check Before Buying an Ice Cream Vending Machine
+
+>>
+
+Ice Cream Vending Machines: To Rent or to Buy? A Question Worth Pondering
+
+>>
+
+Coin-Operated vs. Cashless: Which Payment System for Your Froyo Machine?
+
+>>
+
+Internal mechanical and intelligent system of ice cream vending machine
+
+>>
+
+How Profitable Is an Ice Cream Vending Machine? Sales & Payback Guide
+
+>>
+
+Common Mistakes New Ice Cream Vending Machine Operators Must Avoid
+
+>>
+
+Huaxin at GASTRO SWEET FEST: Supporting Our Czech Partner
+
+>>
+
+Soft Serve Ice Cream Vending vs. Frozen Yogurt: Which Has Better Margins?
+
+>>
+
+Choosing the Best Ice Cream Vending Machine for High-Traffic Locations
+
+>>
+PRODUCT
+
+High-ROI Automatic Soft Serve Ice Cream Vending Machine: 2026 Ultimate Guide for Smart Retail Investors
+
+Smart Automated Soft Serve Ice Cream Vending Machine - High-ROI Self-Service Kiosk for Business
+
+High-Efficiency Automatic Soft Serve Vending Machine: 24/7 Smart Retail Solution for High-Traffic Commercial Venues
+
+Automatic Ice Cream Vending Machine for Commercial Use with 15s Fast Serving, 24/7 Operation & Smart Remote Management System
+
+Ice Cream Vending Machine for Theme Parks and Amusement Venues
+
+Commercial Automatic Gelato Vending Machine - HUAXIN High Efficiency Smart Self-Service Gelato Maker
+
+Talk to a Huaxin Sales Manager
+
+Get machine recommendations, location operation advice, payment options, and a quotation for your market.
+
+Request Quote
+
+Huaxin Technology is a global leader in intelligent ice cream vending machines, providing high-return automated solutions and aiming to lead the unmanned retail sector through innovation.
+
+MORE ABOUT US ➣
+
+QUICK ENTRY
+PRODUCTS
+ABOUT
+SYSTEM
+BLOG
+SOLUTIONS
+FAQ
+CONTACT
+VENDING MACHINES
+Vending Machine Catalog
+Desktop Mini Ice Cream Machines
+B83Max Ice Cream Vending Machines
+Frozen Yogurt Vending Machine
+How to start an ice cream vending business?
+B83 High-Traffic Ice Cream Vending Machine
+SYSTEMS
+Remote Control System
+Expansion System
+Refrigeration System
+INFORMATION
+Cookie Policy
+Refund Policy
+Privacy Policy
+Feed
+SiteMap
+CERTIFIED PATENT
+CONTACT US
+
+No.268, Dexing North Road, Tianqu Sub-district Office, Decheng District, Dezhou City, Shandong Province, China
+
++86 19953410321
+
+Copyright © 2013-Today Huaxin All rights reserved
+
+Hi, Thank you very much for your interest in our ice cream vending machine. I am your project consultant and welcome to contact me.
+
+Messages
+
+Whatsapp
